@@ -241,6 +241,10 @@
       <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
       Sessions
     </a>
+    <a href="#" data-section="profitloss">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+      Profit &amp; Loss
+    </a>
     <a href="#" data-section="fy24">
       <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/><line x1="6" y1="14" x2="8" y2="14"/><line x1="12" y1="14" x2="16" y2="14"/></svg>
       FY24-25 P&amp;L
@@ -482,6 +486,78 @@
         <thead><tr><th>Month</th><th class="text-right">Sessions</th><th class="text-right">Orders</th><th class="text-right">Conversion %</th></tr></thead>
         <tbody></tbody>
       </table>
+    </div>
+  </section>
+
+  <!-- PROFIT & LOSS -->
+  <section id="sec-profitloss" class="section">
+    <div class="section-header">
+      <h1>Profit &amp; Loss Statement</h1>
+      <p id="pl-period">Apr 2025 – Feb 2026 | Stan Edition</p>
+    </div>
+
+    <!-- P&L KPIs -->
+    <div class="kpi-grid" id="pl-kpis"></div>
+
+    <!-- P&L Statement Table -->
+    <div class="chart-card mb-24">
+      <div class="chart-title">P&amp;L Summary</div>
+      <div class="chart-subtitle">Full income statement with estimated operating costs</div>
+      <div class="table-wrapper">
+        <table class="data-table pl-table" id="plSummaryTable">
+          <thead><tr><th>Line Item</th><th class="text-right">Amount (₹)</th><th class="text-right">% of Net Sales</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Monthly P&L -->
+    <div class="chart-grid">
+      <div class="chart-card">
+        <div class="chart-title">Monthly Gross Profit Trend</div>
+        <div class="chart-subtitle">Net Sales vs COGS vs Gross Profit</div>
+        <canvas id="plMonthlyChart"></canvas>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Monthly EBITDA Margin</div>
+        <div class="chart-subtitle">EBITDA margin % by month</div>
+        <canvas id="plEbitdaChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Category Margins -->
+    <div class="chart-grid">
+      <div class="chart-card">
+        <div class="chart-title">Gross Margin by Category</div>
+        <div class="chart-subtitle">Category-level profitability</div>
+        <canvas id="plCategoryChart"></canvas>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Category P&amp;L Breakdown</div>
+        <div class="chart-subtitle">Revenue, COGS, and margin per product category</div>
+        <table class="data-table" id="plCategoryTable">
+          <thead><tr><th>Category</th><th class="text-right">Revenue</th><th class="text-right">COGS</th><th class="text-right">Gross Profit</th><th class="text-right">Margin %</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Monthly P&L Table -->
+    <div class="chart-card mb-24">
+      <div class="chart-title">Monthly P&amp;L</div>
+      <div class="chart-subtitle">Detailed monthly income statement</div>
+      <div class="table-wrapper">
+        <table class="data-table" id="plMonthlyTable">
+          <thead><tr><th>Month</th><th class="text-right">Net Sales</th><th class="text-right">COGS</th><th class="text-right">Gross Profit</th><th class="text-right">GM %</th><th class="text-right">OpEx</th><th class="text-right">EBITDA</th><th class="text-right">EBITDA %</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Pending data note -->
+    <div class="gap-note">
+      <span class="gap-icon">⚠</span>
+      <span id="pl-note">Shipping, packaging, and gateway fees are estimated. Share actual logistics and payment data for precise P&amp;L.</span>
     </div>
   </section>
 

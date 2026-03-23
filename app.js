@@ -108,6 +108,7 @@ var sectionLabels = {
   geography: 'Geography',
   discounts: 'Discounts',
   sessions: 'Sessions',
+  profitloss: 'Profit & Loss',
   fy24: 'FY24-25 P&L',
   intelligence: 'Intelligence',
   advisory: 'Advisory',
@@ -206,6 +207,7 @@ function renderDashboard(data) {
     { name: 'Geography', fn: renderGeography },
     { name: 'Discounts', fn: renderDiscounts },
     { name: 'Sessions', fn: renderSessions },
+    { name: 'ProfitLoss', fn: renderProfitLoss },
     { name: 'FY24', fn: renderFY24 },
     { name: 'Intelligence', fn: renderIntelligence },
     { name: 'Advisory', fn: renderAdvisory },
@@ -848,6 +850,261 @@ function renderSessions(data) {
   }
 }
 
+// ===== P&L STATEMENT =====
+function renderProfitLoss(data) {
+  var pl = data.profit_loss;
+  if (!pl) return;
+
+  var s = pl.summary;
+  if (!s) return;
+
+  // Period
+  var periodEl = document.getElementById('pl-period');
+  if (periodEl) periodEl.textContent = (pl.period || '') + ' | Stan Edition';
+
+  // Note
+  var noteEl = document.getElementById('pl-note');
+  if (noteEl && pl.note) noteEl.textContent = pl.note;
+
+  // KPIs
+  var kpiHtml = '';
+  kpiHtml += buildKpiCard('Net Sales', fmtCrL(s.net_sales), 'After discounts & returns', 'kpi-highlight');
+  kpiHtml += buildKpiCard('Gross Profit', fmtCrL(s.gross_profit), fmtPct(s.gross_margin_pct) + ' margin', 'kpi-highlight');
+  kpiHtml += buildKpiCard('EBITDA', fmtCrL(s.ebitda), fmtPct(s.ebitda_margin_pct) + ' margin', 'kpi-highlight');
+  kpiHtml += buildKpiCard('COGS', fmtCrL(s.cogs), 'Cost of goods sold', 'kpi-warning');
+  document.getElementById('pl-kpis').innerHTML = kpiHtml;
+
+  // P&L Summary Table
+  var tbody = document.querySelector('#plSummaryTable tbody');
+  if (tbody) {
+    var ns = s.net_sales || 1;
+    function plRow(label, val, cls, indent) {
+      var pct = (val / ns * 100).toFixed(1);
+      var prefix = indent ? '<span style="padding-left:' + (indent * 16) + 'px">' + label + '</span>' : label;
+      return '<tr class="' + (cls || '') + '">' +
+        '<td>' + prefix + '</td>' +
+        '<td class="text-right">' + fmtINRFull(val) + '</td>' +
+        '<td class="text-right">' + pct + '%</td></tr>';
+    }
+    function plHeaderRow(label, val, cls) {
+      var pct = (val / ns * 100).toFixed(1);
+      return '<tr class="pl-row-header ' + (cls || '') + '">' +
+        '<td class="font-bold">' + label + '</td>' +
+        '<td class="text-right font-bold">' + fmtINRFull(val) + '</td>' +
+        '<td class="text-right font-bold">' + pct + '%</td></tr>';
+    }
+    function plDivider() {
+      return '<tr class="pl-divider"><td colspan="3"></td></tr>';
+    }
+
+    tbody.innerHTML = '';
+    tbody.innerHTML +=
+      plRow('Gross Sales', s.gross_sales, '', 0) +
+      plRow('(\u2212) Discounts', -s.discounts, 'text-red', 1) +
+      plRow('(\u2212) Returns', -s.returns, 'text-red', 1) +
+      plDivider() +
+      plHeaderRow('Net Sales', s.net_sales, 'pl-net') +
+      plDivider() +
+      plRow('(\u2212) COGS', -s.cogs, 'text-red', 1) +
+      plDivider() +
+      plHeaderRow('Gross Profit', s.gross_profit, 'pl-gp') +
+      plDivider() +
+      plRow('(\u2212) Shipping (est.)', -s.shipping, '', 1) +
+      plRow('(\u2212) Payment Gateway Fees (est.)', -s.payment_gateway_fees, '', 1) +
+      plRow('(\u2212) Packaging (est.)', -s.packaging, '', 1) +
+      plDivider() +
+      plHeaderRow('EBITDA', s.ebitda, 'pl-ebitda') +
+      plDivider() +
+      plRow('(\u2212) Pre-Launch Costs (FY24)', -s.pre_launch_costs_fy24, '', 1) +
+      plDivider() +
+      plHeaderRow('Net Profit (Before Tax)', s.net_profit_before_tax, s.net_profit_before_tax >= 0 ? 'pl-profit' : 'pl-loss');
+  }
+
+  // Monthly P&L Charts
+  var monthly = pl.monthly || [];
+  if (monthly.length) {
+    var months = monthly.map(function(m) { return shortMonth(m.month); });
+
+    // Gross Profit Chart
+    new Chart(document.getElementById('plMonthlyChart'), {
+      type: 'bar',
+      data: {
+        labels: months,
+        datasets: [
+          {
+            label: 'Net Sales',
+            data: monthly.map(function(m) { return m.net_sales || 0; }),
+            backgroundColor: C.tealLight,
+            borderColor: C.teal,
+            borderWidth: 1,
+            barPercentage: 0.7,
+          },
+          {
+            label: 'COGS',
+            data: monthly.map(function(m) { return m.cogs || 0; }),
+            backgroundColor: C.redLight,
+            borderColor: C.red,
+            borderWidth: 1,
+            barPercentage: 0.7,
+          },
+          {
+            label: 'Gross Profit',
+            type: 'line',
+            data: monthly.map(function(m) { return m.gross_profit || 0; }),
+            borderColor: C.green,
+            backgroundColor: 'transparent',
+            tension: 0.35,
+            borderWidth: 2.5,
+            pointBackgroundColor: C.green,
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          tooltip: { callbacks: { label: function(ctx) { return ctx.dataset.label + ': ' + fmtINR(ctx.raw); } } }
+        },
+        scales: {
+          y: { beginAtZero: true, ticks: { callback: function(v) { return fmtINR(v); } } }
+        }
+      }
+    });
+
+    // EBITDA Margin Chart
+    new Chart(document.getElementById('plEbitdaChart'), {
+      type: 'line',
+      data: {
+        labels: months,
+        datasets: [
+          {
+            label: 'Gross Margin %',
+            data: monthly.map(function(m) { return m.gross_margin_pct || 0; }),
+            borderColor: C.teal,
+            backgroundColor: C.tealLight,
+            fill: true,
+            tension: 0.35,
+            borderWidth: 2,
+          },
+          {
+            label: 'EBITDA Margin %',
+            data: monthly.map(function(m) { return m.ebitda_margin_pct || 0; }),
+            borderColor: C.green,
+            backgroundColor: 'rgba(16,185,129,0.08)',
+            fill: true,
+            tension: 0.35,
+            borderWidth: 2,
+            borderDash: [4, 3],
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          tooltip: { callbacks: { label: function(ctx) { return ctx.dataset.label + ': ' + ctx.raw.toFixed(1) + '%'; } } }
+        },
+        scales: {
+          y: { min: 0, max: 100, ticks: { callback: function(v) { return v + '%'; } } }
+        }
+      }
+    });
+  }
+
+  // Category Margin Chart
+  var cats = pl.by_category || [];
+  if (cats.length) {
+    var catColors = [C.teal, C.blue, C.orange, C.purple, C.pink, C.green, C.gray];
+    new Chart(document.getElementById('plCategoryChart'), {
+      type: 'bar',
+      data: {
+        labels: cats.map(function(c) { return c.category; }),
+        datasets: [
+          {
+            label: 'Revenue',
+            data: cats.map(function(c) { return c.revenue || 0; }),
+            backgroundColor: catColors.map(function(c) { return c + '40'; }),
+            borderColor: catColors,
+            borderWidth: 1,
+          },
+          {
+            label: 'COGS',
+            data: cats.map(function(c) { return c.cogs || 0; }),
+            backgroundColor: C.redLight,
+            borderColor: C.red,
+            borderWidth: 1,
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          tooltip: { callbacks: { label: function(ctx) { return ctx.dataset.label + ': ' + fmtCrL(ctx.raw); } } }
+        },
+        scales: {
+          y: { beginAtZero: true, ticks: { callback: function(v) { return fmtINR(v); } } }
+        }
+      }
+    });
+
+    // Category Table
+    var ctbody = document.querySelector('#plCategoryTable tbody');
+    if (ctbody) {
+      ctbody.innerHTML = '';
+      cats.forEach(function(c) {
+        var tr = document.createElement('tr');
+        tr.innerHTML =
+          '<td class="font-bold">' + c.category + '</td>' +
+          '<td class="text-right">' + fmtINRFull(c.revenue) + '</td>' +
+          '<td class="text-right">' + fmtINRFull(c.cogs) + '</td>' +
+          '<td class="text-right">' + fmtINRFull(c.gross_profit) + '</td>' +
+          '<td class="text-right font-bold">' + fmtPct(c.gross_margin_pct) + '</td>';
+        ctbody.appendChild(tr);
+      });
+    }
+  }
+
+  // Monthly P&L Table
+  if (monthly.length) {
+    var mtbody = document.querySelector('#plMonthlyTable tbody');
+    if (mtbody) {
+      mtbody.innerHTML = '';
+      monthly.forEach(function(m) {
+        var tr = document.createElement('tr');
+        tr.innerHTML =
+          '<td>' + shortMonth(m.month) + '</td>' +
+          '<td class="text-right">' + fmtINRFull(m.net_sales) + '</td>' +
+          '<td class="text-right">' + fmtINRFull(m.cogs) + '</td>' +
+          '<td class="text-right">' + fmtINRFull(m.gross_profit) + '</td>' +
+          '<td class="text-right font-bold">' + fmtPct(m.gross_margin_pct) + '</td>' +
+          '<td class="text-right">' + fmtINRFull(m.total_opex) + '</td>' +
+          '<td class="text-right">' + fmtINRFull(m.ebitda) + '</td>' +
+          '<td class="text-right font-bold">' + fmtPct(m.ebitda_margin_pct) + '</td>';
+        mtbody.appendChild(tr);
+      });
+      // Add total row
+      var totNet = monthly.reduce(function(s, m) { return s + (m.net_sales || 0); }, 0);
+      var totCogs = monthly.reduce(function(s, m) { return s + (m.cogs || 0); }, 0);
+      var totGP = monthly.reduce(function(s, m) { return s + (m.gross_profit || 0); }, 0);
+      var totOpex = monthly.reduce(function(s, m) { return s + (m.total_opex || 0); }, 0);
+      var totEbitda = monthly.reduce(function(s, m) { return s + (m.ebitda || 0); }, 0);
+      var totTr = document.createElement('tr');
+      totTr.className = 'pl-total-row';
+      totTr.innerHTML =
+        '<td class="font-bold">Total</td>' +
+        '<td class="text-right font-bold">' + fmtINRFull(totNet) + '</td>' +
+        '<td class="text-right font-bold">' + fmtINRFull(totCogs) + '</td>' +
+        '<td class="text-right font-bold">' + fmtINRFull(totGP) + '</td>' +
+        '<td class="text-right font-bold">' + (totNet > 0 ? fmtPct(totGP / totNet * 100) : '—') + '</td>' +
+        '<td class="text-right font-bold">' + fmtINRFull(totOpex) + '</td>' +
+        '<td class="text-right font-bold">' + fmtINRFull(totEbitda) + '</td>' +
+        '<td class="text-right font-bold">' + (totNet > 0 ? fmtPct(totEbitda / totNet * 100) : '—') + '</td>';
+      mtbody.appendChild(totTr);
+    }
+  }
+}
+
 // ===== 9. FY24-25 P&L =====
 function renderFY24(data) {
   var fy = data.fy24_pl;
@@ -1450,14 +1707,27 @@ function renderDataStatus(data) {
     }
 
     // Margin / profit / COGS / unit economics
-    if (msg.match(/margin|profit|cogs|cost|unit economic|contribution/)) {
+    if (msg.match(/margin|profit|cogs|cost|unit economic|contribution|p.?l|ebitda/)) {
+      var pl = data.profit_loss;
+      if (pl && pl.summary) {
+        var s = pl.summary;
+        return 'P&L Summary (' + (pl.period || '') + '):\n' +
+          '\u2022 Gross Sales: ' + fmtCrL(s.gross_sales) + '\n' +
+          '\u2022 Net Sales: ' + fmtCrL(s.net_sales) + '\n' +
+          '\u2022 COGS: ' + fmtCrL(s.cogs) + '\n' +
+          '\u2022 Gross Profit: ' + fmtCrL(s.gross_profit) + ' (' + fmtPct(s.gross_margin_pct) + ' margin)\n' +
+          '\u2022 EBITDA: ' + fmtCrL(s.ebitda) + ' (' + fmtPct(s.ebitda_margin_pct) + ' margin)\n' +
+          '\u2022 Net Profit (pre-tax): ' + fmtCrL(s.net_profit_before_tax) + '\n\n' +
+          'Category margins: ' + (pl.by_category || []).map(function(c) { return c.category + ' ' + fmtPct(c.gross_margin_pct); }).join(', ');
+      }
       var intel = data.intelligence;
-      if (!intel || !intel.unit_economics) return 'Margin/unit economics data is not fully available. COGS data is needed for complete analysis.';
-      var ue = intel.unit_economics;
-      return 'Unit economics: AOV ' + (typeof ue.avg_order_value === 'number' ? fmtINRFull(ue.avg_order_value) : ue.avg_order_value) +
-        ', Avg discount/order ' + (typeof ue.avg_discount_per_order === 'number' ? fmtINRFull(ue.avg_discount_per_order) : ue.avg_discount_per_order) +
-        ', Avg net/order ' + (typeof ue.avg_net_per_order === 'number' ? fmtINRFull(ue.avg_net_per_order) : ue.avg_net_per_order) +
-        '. COGS/order: ' + (typeof ue.cogs_per_order === 'number' ? fmtINRFull(ue.cogs_per_order) : ue.cogs_per_order) + '.';
+      if (intel && intel.unit_economics) {
+        var ue = intel.unit_economics;
+        return 'Unit economics: AOV ' + (typeof ue.avg_order_value === 'number' ? fmtINRFull(ue.avg_order_value) : ue.avg_order_value) +
+          ', COGS/order ' + (typeof ue.cogs_per_order === 'number' ? fmtINRFull(ue.cogs_per_order) : ue.cogs_per_order) +
+          ', Contribution margin ' + (typeof ue.contribution_margin === 'number' ? fmtINRFull(ue.contribution_margin) : ue.contribution_margin) + '.';
+      }
+      return 'P&L data is being compiled. COGS per unit: Linen Shirts \u20B91,450, Linen Pants \u20B91,380, T-Shirts \u20B9420, Oxford \u20B9800.';
     }
 
     // Risk / concern / warning / advisory
