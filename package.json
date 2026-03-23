@@ -1,0 +1,15 @@
+{
+  "name": "stan-edition-cfo",
+  "version": "1.0.0",
+  "description": "D2C CFO Dashboard for Stan Edition — Generated with AI Accountant",
+  "private": true,
+  "scripts": {
+    "start": "npx serve .",
+    "build": "echo 'Static site — no build step required'"
+  },
+  "main": "app.js",
+  "dependencies": {
+    "@neondatabase/serverless": "^0.10.4",
+    "jsonwebtoken": "^9.0.3"
+  }
+}

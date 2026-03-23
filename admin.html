@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Generated with AI Accountant — www.aiaccountant.com -->
+<meta name="generator" content="AI Accountant">
+<meta name="author" content="AI Accountant">
+<meta property="og:see_also" content="https://www.aiaccountant.com">
+<link rel="author" href="https://www.aiaccountant.com">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel — AI Accountant | Virtual CFO Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* ===== ADMIN PANEL STYLES ===== */
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.admin-main {
+  margin-left: var(--sidebar-w);
+  flex: 1;
+  padding: 0;
+}
+
+.admin-topbar {
+  height: 56px;
+  border-bottom: 1px solid var(--gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  background: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.admin-topbar h1 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.admin-topbar-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.admin-content {
+  padding: 24px;
+  max-width: 1200px;
+}
+
+/* Tabs */
+.admin-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid var(--gray-200);
+  margin-bottom: 24px;
+}
+
+.admin-tab {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-500);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.admin-tab:hover { color: var(--gray-700); }
+.admin-tab.active {
+  color: var(--teal);
+  border-bottom-color: var(--teal);
+  font-weight: 600;
+}
+
+/* Stats row */
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+
+.stat-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+/* Table */
+.admin-table-wrap {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.admin-table-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--gray-200);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-table-header h2 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--gray-900);
+}
+
+table.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+table.admin-table thead th {
+  background: var(--gray-50);
+  padding: 10px 16px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--gray-600);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+table.admin-table tbody td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--gray-100);
+  color: var(--gray-700);
+}
+
+table.admin-table tbody tr:hover {
+  background: var(--gray-50);
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.role-badge.admin {
+  background: var(--blue-light);
+  color: var(--blue);
+}
+
+.role-badge.viewer {
+  background: var(--gray-100);
+  color: var(--gray-600);
+}
+
+.action-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.action-badge.login_success { background: var(--green-light); color: var(--green); }
+.action-badge.login_failed { background: var(--red-light); color: var(--red); }
+.action-badge.password_changed, .action-badge.password_change_failed { background: var(--orange-light); color: #b45309; }
+.action-badge.user_created { background: var(--blue-light); color: var(--blue); }
+.action-badge.user_deleted { background: var(--red-light); color: var(--red); }
+.action-badge.user_updated { background: var(--teal-light); color: var(--teal-dark); }
+.action-badge.database_seeded { background: var(--gray-100); color: var(--gray-600); }
+
+/* Buttons */
+.btn {
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.btn-primary { background: var(--teal); color: white; }
+.btn-primary:hover:not(:disabled) { background: var(--teal-dark); }
+
+.btn-danger { background: var(--red); color: white; }
+.btn-danger:hover:not(:disabled) { background: #dc2626; }
+
+.btn-ghost {
+  background: var(--gray-100);
+  color: var(--gray-700);
+}
+.btn-ghost:hover:not(:disabled) { background: var(--gray-200); }
+
+.btn-sm { padding: 5px 10px; font-size: 12px; }
+
+.btn-back {
+  background: none;
+  border: none;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-500);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.btn-back:hover { color: var(--gray-700); }
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-overlay.active { display: flex; }
+
+.modal {
+  background: var(--white);
+  border-radius: var(--radius);
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+
+.modal-header {
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--gray-200);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--gray-400);
+  padding: 4px;
+  line-height: 1;
+}
+.modal-close:hover { color: var(--gray-700); }
+
+.modal-body { padding: 20px 24px; }
+
+.modal-footer {
+  padding: 16px 24px 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Form inside modal */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray-700);
+  margin-bottom: 6px;
+}
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-sm);
+  font: inherit;
+  font-size: 14px;
+  color: var(--gray-800);
+  transition: border-color 0.15s;
+}
+
+.form-group input:focus, .form-group select:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(23,181,163,0.1);
+}
+
+.form-error {
+  color: var(--red);
+  font-size: 12px;
+  margin-top: 8px;
+  display: none;
+}
+.form-error.show { display: block; }
+
+.form-success {
+  color: var(--green);
+  font-size: 12px;
+  margin-top: 8px;
+  display: none;
+}
+.form-success.show { display: block; }
+
+/* Audit details */
+.audit-details {
+  font-size: 12px;
+  color: var(--gray-500);
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  padding: 48px 24px;
+  color: var(--gray-400);
+}
+
+.empty-state svg { margin-bottom: 12px; }
+.empty-state p { font-size: 14px; }
+
+/* Pagination */
+.pagination {
+  padding: 12px 16px;
+  border-top: 1px solid var(--gray-200);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: var(--gray-500);
+}
+
+/* Loading */
+.loading-spinner {
+  display: inline-block;
+  width: 18px; height: 18px;
+  border: 2px solid var(--gray-300);
+  border-top-color: var(--teal);
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-main { margin-left: 0; }
+  .sidebar { display: none; }
+  .admin-content { padding: 16px; }
+  .admin-stats { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- Session guard -->
+<script src="session.js"></script>
+<script>
+(function() {
+  if (!window.AIA || !window.AIA.Session.isValid()) {
+    window.location.href = 'login.html';
+    return;
+  }
+  // Check Admin role from token
+  var token = window.AIA.Session.getToken();
+  if (token) {
+    try {
+      var payload = JSON.parse(atob(token.split('.')[1]));
+      if (payload.role !== 'Admin') {
+        window.location.href = 'index.html';
+        return;
+      }
+    } catch(e) {
+      window.location.href = 'login.html';
+      return;
+    }
+  }
+  window.AIA.Session.touch();
+})();
+</script>
+
+<div class="admin-layout">
+
+<!-- ===== SIDEBAR (same as dashboard) ===== -->
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <div class="logo">AiA</div>
+    <div class="brand-text">
+      <span class="brand-name">Admin Panel</span>
+      <span class="brand-sub">AI Accountant</span>
+    </div>
+  </div>
+
+  <nav class="sidebar-nav" id="sidebarNav">
+    <a href="index.html">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      Dashboard
+    </a>
+    <a href="admin.html" class="active">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      User Management
+    </a>
+  </nav>
+
+  <div class="sidebar-footer">
+    <a href="https://www.aiaccountant.com" target="_blank" rel="noopener noreferrer">Generated with AI Accountant</a>
+  </div>
+</aside>
+
+<!-- ===== MAIN ===== -->
+<div class="admin-main">
+
+  <!-- Topbar -->
+  <header class="admin-topbar">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <a href="index.html" class="btn-back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="15 18 9 12 15 6"/></svg>
+        Dashboard
+      </a>
+      <h1>Admin Panel</h1>
+    </div>
+    <div class="admin-topbar-actions">
+      <span id="adminUser" style="font-size:12px;color:var(--gray-500);">—</span>
+      <button class="btn btn-ghost btn-sm" onclick="window.location.href='index.html'">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Dashboard
+      </button>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <div class="admin-content">
+
+    <!-- Tabs -->
+    <div class="admin-tabs">
+      <button class="admin-tab active" data-tab="users">Users</button>
+      <button class="admin-tab" data-tab="audit">Audit Log</button>
+    </div>
+
+    <!-- ===== USERS TAB ===== -->
+    <div id="tab-users" class="tab-content">
+
+      <div class="admin-stats" id="userStats">
+        <div class="stat-card">
+          <div class="stat-label">Total Users</div>
+          <div class="stat-value" id="statTotalUsers">—</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Admins</div>
+          <div class="stat-value" id="statAdmins">—</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Viewers</div>
+          <div class="stat-value" id="statViewers">—</div>
+        </div>
+      </div>
+
+      <div class="admin-table-wrap">
+        <div class="admin-table-header">
+          <h2>All Users</h2>
+          <button class="btn btn-primary btn-sm" id="addUserBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Add User
+          </button>
+        </div>
+        <div id="usersTableBody">
+          <div class="empty-state"><div class="loading-spinner"></div><p style="margin-top:12px">Loading users...</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== AUDIT TAB ===== -->
+    <div id="tab-audit" class="tab-content" style="display:none">
+
+      <div class="admin-stats" id="auditStats">
+        <div class="stat-card">
+          <div class="stat-label">Total Events</div>
+          <div class="stat-value" id="statTotalEvents">—</div>
+        </div>
+      </div>
+
+      <div class="admin-table-wrap">
+        <div class="admin-table-header">
+          <h2>Audit Log</h2>
+          <button class="btn btn-ghost btn-sm" id="refreshAuditBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+            Refresh
+          </button>
+        </div>
+        <div id="auditTableBody">
+          <div class="empty-state"><div class="loading-spinner"></div><p style="margin-top:12px">Loading audit log...</p></div>
+        </div>
+        <div class="pagination" id="auditPagination" style="display:none">
+          <span id="auditPaginationInfo">Showing 1–50</span>
+          <div style="display:flex;gap:6px;">
+            <button class="btn btn-ghost btn-sm" id="auditPrevBtn" disabled>Prev</button>
+            <button class="btn btn-ghost btn-sm" id="auditNextBtn">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<!-- ===== ADD/EDIT USER MODAL ===== -->
+<div class="modal-overlay" id="userModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="modalTitle">Add User</h3>
+      <button class="modal-close" id="modalClose">&times;</button>
+    </div>
+    <div class="modal-body">
+      <form id="userForm">
+        <div class="form-group">
+          <label for="modalEmail">Email</label>
+          <input type="email" id="modalEmail" placeholder="user@aiaccountant.com" required>
+        </div>
+        <div class="form-group">
+          <label for="modalName">Name</label>
+          <input type="text" id="modalName" placeholder="Full name" required>
+        </div>
+        <div class="form-group">
+          <label for="modalRole">Role</label>
+          <select id="modalRole">
+            <option value="Viewer">Viewer</option>
+            <option value="Admin">Admin</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="modalPassword" id="modalPasswordLabel">Password</label>
+          <input type="text" id="modalPassword" placeholder="Min 6 characters" minlength="6">
+        </div>
+        <div class="form-error" id="modalError"></div>
+        <div class="form-success" id="modalSuccess"></div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" id="modalCancel">Cancel</button>
+      <button class="btn btn-primary" id="modalSave">Save User</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== DELETE CONFIRM MODAL ===== -->
+<div class="modal-overlay" id="deleteModal">
+  <div class="modal" style="max-width:400px">
+    <div class="modal-header">
+      <h3>Delete User</h3>
+      <button class="modal-close" id="deleteModalClose">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p style="font-size:14px;color:var(--gray-700)">Are you sure you want to delete <strong id="deleteUserEmail">—</strong>? This action cannot be undone.</p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" id="deleteCancelBtn">Cancel</button>
+      <button class="btn btn-danger" id="deleteConfirmBtn">Delete</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  var token = window.AIA.Session.getToken();
+  var payload = JSON.parse(atob(token.split('.')[1]));
+  document.getElementById('adminUser').textContent = payload.email;
+
+  var currentTab = 'users';
+  var usersData = [];
+  var auditOffset = 0;
+  var auditLimit = 50;
+  var auditTotal = 0;
+  var editingUser = null; // null = creating, string = editing email
+
+  // ===== API HELPER =====
+  function api(method, path, body) {
+    var opts = {
+      method: method,
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + token
+      }
+    };
+    if (body) opts.body = JSON.stringify(body);
+    return fetch(path, opts).then(function(r) { return r.json(); });
+  }
+
+  // ===== TABS =====
+  document.querySelectorAll('.admin-tab').forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      document.querySelectorAll('.admin-tab').forEach(function(t) { t.classList.remove('active'); });
+      tab.classList.add('active');
+      currentTab = tab.dataset.tab;
+      document.querySelectorAll('.tab-content').forEach(function(c) { c.style.display = 'none'; });
+      document.getElementById('tab-' + currentTab).style.display = 'block';
+      if (currentTab === 'audit') loadAuditLog();
+    });
+  });
+
+  // ===== LOAD USERS =====
+  function loadUsers() {
+    api('GET', '/api/admin/users').then(function(data) {
+      if (!data.success) {
+        document.getElementById('usersTableBody').innerHTML = '<div class="empty-state"><p>Failed to load users: ' + (data.error || 'Unknown error') + '</p></div>';
+        return;
+      }
+      usersData = data.users;
+      renderUsers();
+    }).catch(function(err) {
+      document.getElementById('usersTableBody').innerHTML = '<div class="empty-state"><p>Failed to load users. Is Vercel KV configured?</p></div>';
+    });
+  }
+
+  function renderUsers() {
+    var admins = usersData.filter(function(u) { return u.role === 'Admin'; }).length;
+    var viewers = usersData.length - admins;
+    document.getElementById('statTotalUsers').textContent = usersData.length;
+    document.getElementById('statAdmins').textContent = admins;
+    document.getElementById('statViewers').textContent = viewers;
+
+    if (usersData.length === 0) {
+      document.getElementById('usersTableBody').innerHTML = '<div class="empty-state"><p>No users found. Seed the database first.</p></div>';
+      return;
+    }
+
+    var html = '<table class="admin-table"><thead><tr><th>Name</th><th>Email</th><th>Role</th><th>Created</th><th>Updated</th><th>Actions</th></tr></thead><tbody>';
+    usersData.forEach(function(u) {
+      var created = u.created_at ? new Date(u.created_at).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }) : '—';
+      var updated = u.updated_at ? new Date(u.updated_at).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }) : '—';
+      var roleCls = u.role === 'Admin' ? 'admin' : 'viewer';
+      var isSelf = u.email === payload.email;
+      html += '<tr>';
+      html += '<td><strong>' + esc(u.name) + '</strong></td>';
+      html += '<td>' + esc(u.email) + '</td>';
+      html += '<td><span class="role-badge ' + roleCls + '">' + esc(u.role) + '</span></td>';
+      html += '<td>' + created + '</td>';
+      html += '<td>' + updated + '</td>';
+      html += '<td>';
+      html += '<button class="btn btn-ghost btn-sm" onclick="window._editUser(\'' + esc(u.email) + '\')">Edit</button> ';
+      if (!isSelf) {
+        html += '<button class="btn btn-danger btn-sm" onclick="window._deleteUser(\'' + esc(u.email) + '\')">Delete</button>';
+      }
+      html += '</td></tr>';
+    });
+    html += '</tbody></table>';
+    document.getElementById('usersTableBody').innerHTML = html;
+  }
+
+  function esc(str) {
+    var d = document.createElement('div');
+    d.textContent = str || '';
+    return d.innerHTML;
+  }
+
+  // ===== LOAD AUDIT LOG =====
+  function loadAuditLog() {
+    api('GET', '/api/admin/audit?limit=' + auditLimit + '&offset=' + auditOffset).then(function(data) {
+      if (!data.success) {
+        document.getElementById('auditTableBody').innerHTML = '<div class="empty-state"><p>Failed to load audit log.</p></div>';
+        return;
+      }
+      auditTotal = data.total || 0;
+      document.getElementById('statTotalEvents').textContent = auditTotal;
+      renderAuditLog(data.entries);
+    }).catch(function() {
+      document.getElementById('auditTableBody').innerHTML = '<div class="empty-state"><p>Failed to load audit log. Is Vercel KV configured?</p></div>';
+    });
+  }
+
+  function renderAuditLog(entries) {
+    if (!entries || entries.length === 0) {
+      document.getElementById('auditTableBody').innerHTML = '<div class="empty-state"><p>No audit entries yet.</p></div>';
+      document.getElementById('auditPagination').style.display = 'none';
+      return;
+    }
+
+    var html = '<table class="admin-table"><thead><tr><th>Time</th><th>Action</th><th>User</th><th>Details</th><th>IP</th></tr></thead><tbody>';
+    entries.forEach(function(e) {
+      var time = (e.created_at || e.timestamp) ? new Date(e.created_at || e.timestamp).toLocaleString('en-IN', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) : '—';
+      var actionCls = (e.action || '').replace(/[^a-z_]/g, '');
+      var details = e.details ? JSON.stringify(e.details).replace(/[{}\"]/g, '').substring(0, 80) : '';
+      html += '<tr>';
+      html += '<td style="white-space:nowrap;font-size:12px;">' + esc(time) + '</td>';
+      html += '<td><span class="action-badge ' + actionCls + '">' + esc(e.action || '') + '</span></td>';
+      html += '<td style="font-size:12px;">' + esc(e.email || '') + '</td>';
+      html += '<td class="audit-details">' + esc(details) + '</td>';
+      html += '<td style="font-size:11px;color:var(--gray-400);">' + esc((e.ip || '').substring(0, 20)) + '</td>';
+      html += '</tr>';
+    });
+    html += '</tbody></table>';
+    document.getElementById('auditTableBody').innerHTML = html;
+
+    // Pagination
+    var showing = Math.min(auditOffset + auditLimit, auditTotal);
+    document.getElementById('auditPaginationInfo').textContent = 'Showing ' + (auditOffset + 1) + '–' + showing + ' of ' + auditTotal;
+    document.getElementById('auditPrevBtn').disabled = auditOffset === 0;
+    document.getElementById('auditNextBtn').disabled = (auditOffset + auditLimit) >= auditTotal;
+    document.getElementById('auditPagination').style.display = 'flex';
+  }
+
+  document.getElementById('auditPrevBtn').addEventListener('click', function() {
+    auditOffset = Math.max(0, auditOffset - auditLimit);
+    loadAuditLog();
+  });
+  document.getElementById('auditNextBtn').addEventListener('click', function() {
+    auditOffset += auditLimit;
+    loadAuditLog();
+  });
+  document.getElementById('refreshAuditBtn').addEventListener('click', function() {
+    auditOffset = 0;
+    loadAuditLog();
+  });
+
+  // ===== USER MODAL =====
+  function openUserModal(email) {
+    editingUser = email || null;
+    document.getElementById('modalTitle').textContent = email ? 'Edit User' : 'Add User';
+    document.getElementById('modalEmail').value = '';
+    document.getElementById('modalName').value = '';
+    document.getElementById('modalRole').value = 'Viewer';
+    document.getElementById('modalPassword').value = '';
+    document.getElementById('modalError').className = 'form-error';
+    document.getElementById('modalSuccess').className = 'form-success';
+
+    if (email) {
+      // Populate from local data
+      var user = usersData.find(function(u) { return u.email === email; });
+      if (user) {
+        document.getElementById('modalEmail').value = user.email;
+        document.getElementById('modalName').value = user.name;
+        document.getElementById('modalRole').value = user.role;
+      }
+      document.getElementById('modalEmail').disabled = true;
+      document.getElementById('modalPasswordLabel').textContent = 'New Password (leave blank to keep current)';
+      document.getElementById('modalPassword').removeAttribute('required');
+    } else {
+      document.getElementById('modalEmail').disabled = false;
+      document.getElementById('modalPasswordLabel').textContent = 'Password';
+      document.getElementById('modalPassword').setAttribute('required', 'required');
+    }
+
+    document.getElementById('userModal').classList.add('active');
+    (email ? document.getElementById('modalName') : document.getElementById('modalEmail')).focus();
+  }
+
+  function closeUserModal() {
+    document.getElementById('userModal').classList.remove('active');
+    editingUser = null;
+  }
+
+  document.getElementById('addUserBtn').addEventListener('click', function() { openUserModal(null); });
+  document.getElementById('modalClose').addEventListener('click', closeUserModal);
+  document.getElementById('modalCancel').addEventListener('click', closeUserModal);
+
+  document.getElementById('modalSave').addEventListener('click', function() {
+    var email = document.getElementById('modalEmail').value.trim();
+    var name = document.getElementById('modalName').value.trim();
+    var role = document.getElementById('modalRole').value;
+    var pw = document.getElementById('modalPassword').value;
+
+    if (!email || !name) {
+      showModalError('Email and name are required.');
+      return;
+    }
+
+    if (!editingUser && !pw) {
+      showModalError('Password is required for new users.');
+      return;
+    }
+
+    if (pw && pw.length < 6) {
+      showModalError('Password must be at least 6 characters.');
+      return;
+    }
+
+    var body = { email: email, name: name, role: role };
+    if (pw) body.password = pw;
+
+    var method = editingUser ? 'PUT' : 'POST';
+    document.getElementById('modalSave').disabled = true;
+
+    api(method, '/api/admin/users', body).then(function(data) {
+      document.getElementById('modalSave').disabled = false;
+      if (!data.success) {
+        showModalError(data.error || 'Failed to save user.');
+        return;
+      }
+      closeUserModal();
+      loadUsers();
+    }).catch(function() {
+      document.getElementById('modalSave').disabled = false;
+      showModalError('Network error.');
+    });
+  });
+
+  function showModalError(msg) {
+    var el = document.getElementById('modalError');
+    el.textContent = msg;
+    el.className = 'form-error show';
+  }
+
+  // ===== DELETE MODAL =====
+  var deletingEmail = null;
+
+  window._deleteUser = function(email) {
+    deletingEmail = email;
+    document.getElementById('deleteUserEmail').textContent = email;
+    document.getElementById('deleteModal').classList.add('active');
+  };
+
+  window._editUser = function(email) {
+    openUserModal(email);
+  };
+
+  document.getElementById('deleteModalClose').addEventListener('click', function() {
+    document.getElementById('deleteModal').classList.remove('active');
+    deletingEmail = null;
+  });
+  document.getElementById('deleteCancelBtn').addEventListener('click', function() {
+    document.getElementById('deleteModal').classList.remove('active');
+    deletingEmail = null;
+  });
+
+  document.getElementById('deleteConfirmBtn').addEventListener('click', function() {
+    if (!deletingEmail) return;
+    document.getElementById('deleteConfirmBtn').disabled = true;
+
+    api('DELETE', '/api/admin/users', { email: deletingEmail }).then(function(data) {
+      document.getElementById('deleteConfirmBtn').disabled = false;
+      document.getElementById('deleteModal').classList.remove('active');
+      if (data.success) {
+        loadUsers();
+      } else {
+        alert(data.error || 'Failed to delete user.');
+      }
+      deletingEmail = null;
+    }).catch(function() {
+      document.getElementById('deleteConfirmBtn').disabled = false;
+      alert('Network error.');
+    });
+  });
+
+  // ===== INIT =====
+  loadUsers();
+
+})();
+</script>
+
+</body>
+</html>

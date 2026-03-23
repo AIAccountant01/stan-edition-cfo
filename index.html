@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Generated with AI Accountant — www.aiaccountant.com -->
+<meta name="generator" content="AI Accountant">
+<meta name="author" content="AI Accountant">
+<meta property="og:see_also" content="https://www.aiaccountant.com">
+<link rel="author" href="https://www.aiaccountant.com">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D2C CFO Dashboard — Stan Edition | AI Accountant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="saas.css">
+</head>
+<body>
+
+<!-- ===== SESSION GUARD — Redirect to login if not authenticated ===== -->
+<script src="session.js"></script>
+<script>
+(function() {
+  if (!window.AIA || !window.AIA.Session.isValid()) {
+    window.location.href = 'login.html';
+  } else {
+    window.AIA.Session.touch();
+    window.AIA.Audit.log('page_view', { page: 'dashboard' });
+  }
+})();
+</script>
+
+<!-- ===== LOADING OVERLAY ===== -->
+<div id="loadingOverlay" style="position:fixed;inset:0;background:rgba(255,255,255,.92);z-index:9999;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;">
+  <div style="width:36px;height:36px;border:3px solid #e5e7eb;border-top-color:#01696F;border-radius:50%;animation:spin .7s linear infinite;"></div>
+  <span style="font-family:Inter,sans-serif;font-size:14px;color:#6b7280;">Loading dashboard data…</span>
+  <style>@keyframes spin{to{transform:rotate(360deg)}}</style>
+</div>
+
+<!-- ===== TOP NAVBAR ===== -->
+<header class="topbar">
+  <div class="topbar-left">
+    <div class="breadcrumb">
+      <span class="bc-item">AI Accountant</span>
+      <svg class="bc-sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg>
+      <span class="bc-item">Stan Edition</span>
+      <svg class="bc-sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg>
+      <span class="bc-item bc-active" id="breadcrumbSection">Overview</span>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <!-- Keyboard shortcut hint -->
+    <div class="shortcut-hint" title="Press Ctrl+K to search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <span>Ctrl+K</span>
+    </div>
+
+    <!-- Notification bell -->
+    <button class="topbar-btn" id="notifBtn" title="Notifications">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+      <span class="notif-badge">3</span>
+    </button>
+
+    <!-- Activity log -->
+    <button class="topbar-btn" id="activityLogBtn" title="Activity Log">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+    </button>
+
+    <!-- User profile -->
+    <div class="user-profile" id="userProfile">
+      <div class="user-avatar" id="userAvatar">?</div>
+      <div class="user-info">
+        <span class="user-name" id="userName">User</span>
+        <span class="user-role">Admin</span>
+      </div>
+      <svg class="user-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+
+    <!-- User dropdown -->
+    <div class="user-dropdown" id="userDropdown">
+      <div class="dropdown-header">
+        <div class="dropdown-avatar" id="dropdownAvatar">?</div>
+        <div>
+          <div class="dropdown-name" id="dropdownName">User</div>
+          <div class="dropdown-email" id="dropdownEmail">user@email.com</div>
+        </div>
+      </div>
+      <div class="dropdown-divider"></div>
+      <div class="dropdown-meta">
+        <div class="meta-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Session: <span id="sessionTime">0m</span> remaining</span>
+        </div>
+        <div class="meta-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Last login: <span id="lastLoginTime">—</span></span>
+        </div>
+      </div>
+      <div class="dropdown-divider"></div>
+      <button class="dropdown-item" id="viewActivityBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        Activity Log
+      </button>
+      <button class="dropdown-item" id="changePasswordBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Change Password
+      </button>
+      <button class="dropdown-item" id="helpBtnDropdown">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        Help & Support
+      </button>
+      <a class="dropdown-item" id="adminPanelBtn" href="admin.html" style="display:none;text-decoration:none;color:inherit;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"/></svg>
+        Admin Panel
+      </a>
+      <div class="dropdown-divider"></div>
+      <button class="dropdown-item dropdown-logout" id="logoutBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        Sign Out
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== NOTIFICATION PANEL ===== -->
+<div class="notif-panel" id="notifPanel">
+  <div class="notif-header">
+    <h3>Notifications</h3>
+    <button class="notif-close" id="notifClose">&times;</button>
+  </div>
+  <div class="notif-list" id="notifList"></div>
+</div>
+
+<!-- ===== ACTIVITY LOG PANEL ===== -->
+<div class="activity-panel" id="activityPanel">
+  <div class="activity-header">
+    <h3>Activity Log</h3>
+    <div class="activity-actions">
+      <button class="activity-clear" id="clearLogBtn" title="Clear log">Clear</button>
+      <button class="activity-close" id="activityClose">&times;</button>
+    </div>
+  </div>
+  <div class="activity-stats" id="activityStats"></div>
+  <div class="activity-list" id="activityList"></div>
+</div>
+
+<!-- ===== COMMAND PALETTE (Ctrl+K) ===== -->
+<div class="cmd-overlay" id="cmdOverlay">
+  <div class="cmd-palette">
+    <div class="cmd-search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="cmdInput" placeholder="Search sections, actions..." autocomplete="off">
+      <kbd>ESC</kbd>
+    </div>
+    <div class="cmd-results" id="cmdResults"></div>
+  </div>
+</div>
+
+<!-- ===== WHATSAPP FLOATING BUTTON ===== -->
+<a class="wa-float-btn" href="https://wa.me/917019889788" target="_blank" rel="noopener noreferrer" title="Stan Edition <> VA Accountant">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span class="wa-float-label">Stan Edition &lt;&gt; VA Accountant</span>
+</a>
+
+<!-- ===== SIDEBAR ===== -->
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <div class="logo">AiA</div>
+    <div class="brand-text">
+      <span class="brand-name">Stan Edition</span>
+      <span class="brand-sub">D2C CFO Dashboard</span>
+    </div>
+  </div>
+
+  <nav class="sidebar-nav" id="sidebarNav">
+    <a href="#" data-section="overview" class="active">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      Overview
+    </a>
+    <a href="#" data-section="revenue">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      Revenue
+    </a>
+    <a href="#" data-section="products">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+      Products
+    </a>
+    <a href="#" data-section="payments">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+      Payments
+    </a>
+    <a href="#" data-section="customers">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      Customers
+    </a>
+    <a href="#" data-section="geography">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      Geography
+    </a>
+    <a href="#" data-section="discounts">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      Discounts
+    </a>
+    <a href="#" data-section="sessions">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      Sessions
+    </a>
+    <a href="#" data-section="fy24">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/><line x1="6" y1="14" x2="8" y2="14"/><line x1="12" y1="14" x2="16" y2="14"/></svg>
+      FY24-25 P&amp;L
+    </a>
+    <a href="#" data-section="intelligence">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+      Intelligence
+    </a>
+    <a href="#" data-section="advisory">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      Advisory
+    </a>
+    <a href="#" data-section="datastatus">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      Data Status
+    </a>
+  </nav>
+
+  <div class="sidebar-period">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    Apr 2025 – Feb 2026
+  </div>
+
+  <div class="sidebar-footer">
+    <a href="https://www.aiaccountant.com" target="_blank" rel="noopener noreferrer">Generated with AI Accountant</a>
+  </div>
+</aside>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main class="main">
+
+  <!-- OVERVIEW -->
+  <section id="sec-overview" class="section active">
+    <div class="section-header">
+      <h1>D2C CFO Dashboard — Stan Edition</h1>
+      <p>Performance summary (Apr 2025 – Feb 2026) | stanedition.com</p>
+    </div>
+    <div class="kpi-grid" id="overview-kpis"></div>
+    <div class="chart-grid">
+      <div class="chart-card">
+        <div class="chart-title">Monthly Revenue Trend</div>
+        <div class="chart-subtitle">Gross Sales vs Net Sales vs Discounts (Apr '25 – Feb '26)</div>
+        <canvas id="overviewRevenueChart"></canvas>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Monthly Orders &amp; Sessions</div>
+        <div class="chart-subtitle">Orders (bars) vs Sessions (line)</div>
+        <canvas id="overviewOrdersChart"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVENUE -->
+  <section id="sec-revenue" class="section">
+    <div class="section-header">
+      <h1>Revenue</h1>
+      <p>Sales analysis and discount impact — Apr 2025 – Feb 2026</p>
+    </div>
+    <div class="kpi-grid" id="revenue-kpis"></div>
+    <div class="chart-grid full">
+      <div class="chart-card full-width">
+        <div class="chart-title">Daily Sales Trend</div>
+        <div class="chart-subtitle">Gross vs Net sales by day</div>
+        <canvas id="revenueDailyChart"></canvas>
+      </div>
+    </div>
+    <div class="chart-card mb-24">
+      <div class="chart-title">Monthly Revenue Breakdown</div>
+      <div class="chart-subtitle">Detailed monthly figures</div>
+      <div class="table-wrapper">
+        <table class="data-table" id="revenueMonthlyTable">
+          <thead><tr><th>Month</th><th class="text-right">Orders</th><th class="text-right">Gross Sales</th><th class="text-right">Net Sales</th><th class="text-right">Discounts</th><th class="text-right">Returns</th><th class="text-right">Sessions</th><th class="text-right">Conv %</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="gap-note">
+      <span class="gap-icon">⚠</span>
+      <span id="revenue-channelNote">—</span>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="sec-products" class="section">
+    <div class="section-header">
+      <h1>Products</h1>
+      <p>Product performance, category mix, and concentration risk</p>
+    </div>
+    <div class="kpi-grid" id="products-kpis"></div>
+    <div class="chart-grid">
+      <div class="chart-card">
+        <div class="chart-title">Category Breakdown</div>
+        <div class="chart-subtitle">Revenue share by product category</div>
+        <canvas id="productCategoryChart"></canvas>
+      </div>
+      <div class="chart-card" id="products-concentration-card">
+        <div class="chart-title">Concentration Risk</div>
+        <div class="chart-subtitle" id="products-concentrationSub">—</div>
+        <div id="products-concentration-alert"></div>
+      </div>
+    </div>
+    <div class="chart-card mb-24">
+      <div class="chart-title">Top 20 Products</div>
+      <div class="chart-subtitle">Ranked by gross sales</div>
+      <div class="table-wrapper">
+        <table class="data-table" id="productsTable">
+          <thead><tr><th>#</th><th>Product</th><th class="text-right">Units</th><th class="text-right">Gross Sales</th><th class="text-right">Discounts</th><th class="text-right">Returns</th><th class="text-right">Net Sales</th><th class="text-right">ASP</th><th class="text-right">Share %</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAYMENTS -->
+  <section id="sec-payments" class="section">
+    <div class="section-header">
+      <h1>Payments</h1>
+      <p>Payment method distribution — COD vs Prepaid analysis</p>
+    </div>
+    <div class="kpi-grid" id="payments-kpis"></div>
+    <div class="chart-grid">
+      <div class="chart-card">
+        <div class="chart-title">Payment Method Distribution</div>
+        <div class="chart-subtitle">Share of orders by payment method</div>
+        <canvas id="paymentDoughnutChart"></canvas>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Payment Methods Breakdown</div>
+        <div class="chart-subtitle">All payment methods with revenue</div>
+        <table class="data-table" id="paymentMethodsTable">
+          <thead><tr><th>Method</th><th class="text-right">Orders</th><th class="text-right">Share %</th><th class="text-right">Revenue</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="gap-note">
+      <span class="gap-icon">⚠</span>
+      <span id="payments-note">—</span>
+    </div>
+  </section>
+
+  <!-- CUSTOMERS -->
+  <section id="sec-customers" class="section">
+    <div class="section-header">
+      <h1>Customers</h1>
+      <p>Customer retention, repeat rate, and lifetime value analysis</p>
+    </div>
+    <div class="kpi-grid" id="customers-kpis"></div>
+    <div class="chart-grid">
+      <div class="chart-card">
+        <div class="chart-title">Order Frequency Distribution</div>
+        <div class="chart-subtitle">Number of customers by order count</div>
+        <canvas id="orderFreqChart"></canvas>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Marketing Opt-in</div>
+        <div class="chart-subtitle">SMS/Email marketing consent rate</div>
+        <canvas id="optInChart"></canvas>
+      </div>
+    </div>
+    <div class="gap-note">
+      <span class="gap-icon">⚠</span>
+      <span id="customers-note">—</span>
+    </div>
+  </section>
+
+  <!-- GEOGRAPHY -->
+  <section id="sec-geography" class="section">
+    <div class="section-header">
+      <h1>Geography</h1>
+      <p>Regional distribution of orders and revenue</p>
+    </div>
+    <div class="chart-grid">
+      <div class="chart-card">
+        <div class="chart-title">Top 15 States</div>
+        <div class="chart-subtitle">Orders and revenue by state</div>
+        <table class="data-table" id="geoStatesTable">
+          <thead><tr><th>#</th><th>State</th><th class="text-right">Orders</th><th class="text-right">Revenue</th><th class="text-right">Share %</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Top 15 Cities</div>
+        <div class="chart-subtitle">Orders and revenue by city</div>
+        <table class="data-table" id="geoCitiesTable">
+          <thead><tr><th>#</th><th>City</th><th class="text-right">Orders</th><th class="text-right">Revenue</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="gap-note">
+      <span class="gap-icon">⚠</span>
+      <span id="geography-note">—</span>
+    </div>
+  </section>
+
+  <!-- DISCOUNTS -->
+  <section id="sec-discounts" class="section">
+    <div class="section-header">
+      <h1>Discounts</h1>
+      <p>Discount code analysis and impact on revenue</p>
+    </div>
+    <div class="kpi-grid" id="discounts-kpis"></div>
+    <div class="chart-card mb-24">
+      <div class="chart-title">Top 15 Discount Codes</div>
+      <div class="chart-subtitle">By number of orders and discount value</div>
+      <div class="table-wrapper">
+        <table class="data-table" id="discountsTable">
+          <thead><tr><th>Code</th><th class="text-right">Orders</th><th class="text-right">Amount</th><th class="text-right">Gross Sales</th><th class="text-right">Avg/Order</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <div id="discounts-insights"></div>
+  </section>
+
+  <!-- SESSIONS -->
+  <section id="sec-sessions" class="section">
+    <div class="section-header">
+      <h1>Sessions &amp; Traffic</h1>
+      <p>Website traffic, sessions, and conversion analysis</p>
+    </div>
+    <div class="kpi-grid" id="sessions-kpis"></div>
+    <div class="chart-grid full">
+      <div class="chart-card full-width">
+        <div class="chart-title">Daily Sessions &amp; Visitors</div>
+        <div class="chart-subtitle">Traffic trends over time</div>
+        <canvas id="sessionsDailyChart"></canvas>
+      </div>
+    </div>
+    <div class="chart-card mb-24">
+      <div class="chart-title">Monthly Conversion Rate</div>
+      <div class="chart-subtitle">Sessions, orders, and conversion percentage by month</div>
+      <table class="data-table" id="sessionsConvTable">
+        <thead><tr><th>Month</th><th class="text-right">Sessions</th><th class="text-right">Orders</th><th class="text-right">Conversion %</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- FY24-25 P&L -->
+  <section id="sec-fy24" class="section">
+    <div class="section-header">
+      <h1>FY 2024-25 P&amp;L</h1>
+      <p id="fy24-note">—</p>
+    </div>
+    <div class="kpi-grid" id="fy24-kpis"></div>
+    <div class="chart-grid">
+      <div class="chart-card">
+        <div class="chart-title">Monthly Meta Ads Spend</div>
+        <div class="chart-subtitle">FY24-25 pre-launch advertising</div>
+        <canvas id="fy24MetaChart"></canvas>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Cost Breakdown</div>
+        <div class="chart-subtitle">Pre-launch expense categories</div>
+        <canvas id="fy24BreakdownChart"></canvas>
+      </div>
+    </div>
+    <div id="fy24-insights"></div>
+  </section>
+
+  <!-- INTELLIGENCE -->
+  <section id="sec-intelligence" class="section">
+    <div class="section-header">
+      <h1>Intelligence</h1>
+      <p>Cross-functional analysis — connecting sales, payments, and operations</p>
+    </div>
+
+    <!-- Funnel -->
+    <div class="section-header mt-32">
+      <h2>Sales Funnel</h2>
+      <p>From sessions to net revenue</p>
+    </div>
+    <div class="intel-funnel" id="intelFunnel"></div>
+
+    <!-- Unit Economics -->
+    <div class="section-header mt-32">
+      <h2>Unit Economics</h2>
+      <p>Per-order profitability breakdown</p>
+    </div>
+    <div class="unit-econ-grid" id="unitEconGrid"></div>
+
+    <!-- COD Risk -->
+    <div class="section-header mt-32">
+      <h2>COD Risk Analysis</h2>
+      <p>Cash-on-delivery exposure and implications</p>
+    </div>
+    <div class="card" id="codRiskCard"></div>
+
+    <!-- Discount Dependency -->
+    <div class="section-header mt-32">
+      <h2>Discount Dependency</h2>
+      <p>How reliant is growth on discounts?</p>
+    </div>
+    <div class="card" id="discountDependencyCard"></div>
+
+    <!-- Product Concentration -->
+    <div class="section-header mt-32">
+      <h2>Product Concentration</h2>
+      <p>Revenue diversification risk</p>
+    </div>
+    <div class="card" id="productConcentrationCard"></div>
+  </section>
+
+  <!-- ADVISORY -->
+  <section id="sec-advisory" class="section">
+    <div class="section-header">
+      <h1>Proactive Advisory</h1>
+      <p>Key insights and recommended actions — prioritized by severity</p>
+    </div>
+    <div id="advisoryContainer"></div>
+  </section>
+
+  <!-- DATA STATUS -->
+  <section id="sec-datastatus" class="section">
+    <div class="section-header">
+      <h1>Data Status</h1>
+      <p>Available data sources and pending items for complete analysis</p>
+    </div>
+    <div class="status-grid">
+      <div class="chart-card">
+        <div class="chart-title" style="color:var(--green);">✓ Available Data</div>
+        <div class="chart-subtitle">Successfully integrated</div>
+        <table class="data-table" id="dataAvailableTable">
+          <thead><tr><th>Data Source</th><th>Source</th><th>Period</th><th class="text-right">Records</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title" style="color:var(--red);">✗ Pending Data</div>
+        <div class="chart-subtitle">Needed for complete analysis</div>
+        <table class="data-table" id="dataPendingTable">
+          <thead><tr><th>Data Item</th><th>Priority</th><th>Note</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== CHANGE PASSWORD MODAL ===== -->
+<div id="changePwdOverlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:10000;display:none;align-items:center;justify-content:center;">
+  <div style="background:#fff;border-radius:12px;padding:28px 32px;width:420px;max-width:92vw;box-shadow:0 20px 60px rgba(0,0,0,.2);">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+      <h3 style="margin:0;font-size:17px;font-weight:700;color:#111827;">Change Password</h3>
+      <button id="changePwdClose" style="background:none;border:none;cursor:pointer;padding:4px;color:#6b7280;" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <form id="changePwdForm">
+      <div style="margin-bottom:14px;">
+        <label style="display:block;font-size:13px;font-weight:500;color:#374151;margin-bottom:5px;">Current Password</label>
+        <input type="password" id="cpCurrentPwd" required style="width:100%;padding:9px 12px;border:1px solid #d1d5db;border-radius:8px;font-size:14px;outline:none;box-sizing:border-box;" placeholder="Enter current password">
+      </div>
+      <div style="margin-bottom:14px;">
+        <label style="display:block;font-size:13px;font-weight:500;color:#374151;margin-bottom:5px;">New Password</label>
+        <input type="password" id="cpNewPwd" required minlength="6" style="width:100%;padding:9px 12px;border:1px solid #d1d5db;border-radius:8px;font-size:14px;outline:none;box-sizing:border-box;" placeholder="Minimum 6 characters">
+      </div>
+      <div style="margin-bottom:18px;">
+        <label style="display:block;font-size:13px;font-weight:500;color:#374151;margin-bottom:5px;">Confirm New Password</label>
+        <input type="password" id="cpConfirmPwd" required minlength="6" style="width:100%;padding:9px 12px;border:1px solid #d1d5db;border-radius:8px;font-size:14px;outline:none;box-sizing:border-box;" placeholder="Re-enter new password">
+      </div>
+      <div id="cpError" style="display:none;padding:8px 12px;background:#fef2f2;border:1px solid #fecaca;border-radius:8px;color:#dc2626;font-size:13px;margin-bottom:14px;">
+        <span id="cpErrorMsg"></span>
+      </div>
+      <div id="cpSuccess" style="display:none;padding:8px 12px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;color:#16a34a;font-size:13px;margin-bottom:14px;">
+        Password changed successfully.
+      </div>
+      <button type="submit" id="cpSubmitBtn" style="width:100%;padding:10px;background:#01696F;color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;">
+        Update Password
+      </button>
+    </form>
+  </div>
+</div>
+
+<script>
+// Populate user profile from JWT token
+(function() {
+  var token = window.AIA && window.AIA.Session.getToken();
+  if (token) {
+    try {
+      var p = JSON.parse(atob(token.split('.')[1]));
+      var name = p.name || p.email.split('@')[0];
+      var initials = name.split(' ').map(function(w){return w[0]}).join('').toUpperCase().substring(0,2);
+      document.getElementById('userName').textContent = name;
+      document.getElementById('userAvatar').textContent = initials;
+      document.getElementById('dropdownName').textContent = name;
+      document.getElementById('dropdownEmail').textContent = p.email;
+      document.getElementById('dropdownAvatar').textContent = initials;
+      if (p.role === 'Admin') {
+        var adminBtn = document.getElementById('adminPanelBtn');
+        if (adminBtn) adminBtn.style.display = 'flex';
+      }
+    } catch(e) {}
+  }
+})();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="app.js"></script>
+<script src="saas.js"></script>
+</body>
+</html>

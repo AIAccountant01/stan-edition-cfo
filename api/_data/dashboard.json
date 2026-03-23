@@ -1,0 +1,5823 @@
+{
+  "client": "Stan Edition",
+  "brand": "Stan Edition",
+  "website": "stanedition.com",
+  "generated_at": "2026-03-23T12:44:35.600522",
+  "period": "Apr 2025 \u2013 Feb 2026",
+  "currency": "INR",
+  "overview": {
+    "kpis": [
+      {
+        "label": "Total Orders",
+        "value": 3879,
+        "format": "number",
+        "delta": "+14.6% MoM"
+      },
+      {
+        "label": "Gross Sales",
+        "value": 24178676.400000002,
+        "format": "currency",
+        "delta": ""
+      },
+      {
+        "label": "Net Sales",
+        "value": 18243105.52,
+        "format": "currency",
+        "delta": "+22.5% MoM"
+      },
+      {
+        "label": "Avg Order Value",
+        "value": 6233.0,
+        "format": "currency",
+        "delta": ""
+      },
+      {
+        "label": "Conversion Rate",
+        "value": 1.13,
+        "format": "percent",
+        "delta": ""
+      },
+      {
+        "label": "Total Sessions",
+        "value": 343000,
+        "format": "number",
+        "delta": ""
+      },
+      {
+        "label": "Total Returns",
+        "value": 969332.31,
+        "format": "currency",
+        "delta": ""
+      },
+      {
+        "label": "Total Discounts",
+        "value": 4966238.57,
+        "format": "currency",
+        "delta": ""
+      }
+    ],
+    "monthly_trend": [
+      {
+        "month": "2025-04",
+        "orders": 195,
+        "gross_sales": 1105277.0,
+        "net_sales": 915796.5,
+        "total_sales": 916144.58,
+        "sessions": 10145,
+        "visitors": 9526,
+        "conversion_rate": 1.92,
+        "aov": 5668.0,
+        "discounts": 151888.3,
+        "returns": 37592.2
+      },
+      {
+        "month": "2025-05",
+        "orders": 123,
+        "gross_sales": 658696.0,
+        "net_sales": 398929.76,
+        "total_sales": 398602.16000000003,
+        "sessions": 6743,
+        "visitors": 6357,
+        "conversion_rate": 1.82,
+        "aov": 5355.0,
+        "discounts": 108417.74,
+        "returns": 151348.5
+      },
+      {
+        "month": "2025-06",
+        "orders": 320,
+        "gross_sales": 1749044.0,
+        "net_sales": 1445057.19,
+        "total_sales": 1460507.19,
+        "sessions": 23773,
+        "visitors": 22202,
+        "conversion_rate": 1.35,
+        "aov": 5466.0,
+        "discounts": 274588.67,
+        "returns": 29398.14
+      },
+      {
+        "month": "2025-07",
+        "orders": 349,
+        "gross_sales": 2096270.8599999999,
+        "net_sales": 1604198.24,
+        "total_sales": 1605108.5,
+        "sessions": 26844,
+        "visitors": 24955,
+        "conversion_rate": 1.3,
+        "aov": 6007.0,
+        "discounts": 427161.02,
+        "returns": 64911.6
+      },
+      {
+        "month": "2025-08",
+        "orders": 378,
+        "gross_sales": 2427028.0,
+        "net_sales": 1927323.68,
+        "total_sales": 1931934.46,
+        "sessions": 39626,
+        "visitors": 36761,
+        "conversion_rate": 0.95,
+        "aov": 6421.0,
+        "discounts": 492094.32,
+        "returns": 7610.0
+      },
+      {
+        "month": "2025-09",
+        "orders": 369,
+        "gross_sales": 2080938.92,
+        "net_sales": 1654312.92,
+        "total_sales": 1678595.54,
+        "sessions": 27813,
+        "visitors": 25395,
+        "conversion_rate": 1.33,
+        "aov": 5639.0,
+        "discounts": 387694.35,
+        "returns": 38931.65
+      },
+      {
+        "month": "2025-10",
+        "orders": 411,
+        "gross_sales": 2688996.61,
+        "net_sales": 1955699.25,
+        "total_sales": 1971744.8599999999,
+        "sessions": 48472,
+        "visitors": 44723,
+        "conversion_rate": 0.85,
+        "aov": 6543.0,
+        "discounts": 617949.36,
+        "returns": 115348.0
+      },
+      {
+        "month": "2025-11",
+        "orders": 397,
+        "gross_sales": 2748034.61,
+        "net_sales": 1922482.39,
+        "total_sales": 2001225.26,
+        "sessions": 49756,
+        "visitors": 46099,
+        "conversion_rate": 0.8,
+        "aov": 6922.0,
+        "discounts": 657394.6799999999,
+        "returns": 168157.54
+      },
+      {
+        "month": "2025-12",
+        "orders": 423,
+        "gross_sales": 2723266.2600000002,
+        "net_sales": 1969158.49,
+        "total_sales": 2037389.93,
+        "sessions": 37621,
+        "visitors": 34297,
+        "conversion_rate": 1.12,
+        "aov": 6438.0,
+        "discounts": 598460.27,
+        "returns": 155647.5
+      },
+      {
+        "month": "2026-01",
+        "orders": 426,
+        "gross_sales": 2585651.34,
+        "net_sales": 1999687.3,
+        "total_sales": 2060375.36,
+        "sessions": 33654,
+        "visitors": 30660,
+        "conversion_rate": 1.27,
+        "aov": 6070.0,
+        "discounts": 492090.67,
+        "returns": 93873.37
+      },
+      {
+        "month": "2026-02",
+        "orders": 488,
+        "gross_sales": 3315472.8,
+        "net_sales": 2450459.8,
+        "total_sales": 2529778.59,
+        "sessions": 38553,
+        "visitors": 34971,
+        "conversion_rate": 1.27,
+        "aov": 6794.0,
+        "discounts": 758499.19,
+        "returns": 106513.81
+      }
+    ],
+    "period": "Apr 2025 \u2013 Feb 2026"
+  },
+  "revenue": {
+    "total_gross": 24178676.400000002,
+    "total_net": 18243105.52,
+    "total_discounts": 4966238.57,
+    "total_returns": 969332.31,
+    "discount_rate": 20.5,
+    "return_rate": 4.0,
+    "daily_sales": [
+      {
+        "date": "2025-04-01",
+        "orders": 4,
+        "gross_sales": 22395.0,
+        "net_sales": 17716.05,
+        "discounts": 4678.95,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-04-02",
+        "orders": 2,
+        "gross_sales": 7998.0,
+        "net_sales": 6798.3,
+        "discounts": 1199.7,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-04-03",
+        "orders": 7,
+        "gross_sales": 34941.0,
+        "net_sales": 30299.7,
+        "discounts": 4641.3,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-04-04",
+        "orders": 7,
+        "gross_sales": 43989.0,
+        "net_sales": 21994.5,
+        "discounts": 5998.5,
+        "returns": 15996.0
+      },
+      {
+        "date": "2025-04-05",
+        "orders": 7,
+        "gross_sales": 35991.0,
+        "net_sales": 30192.45,
+        "discounts": 5798.55,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-04-06",
+        "orders": 7,
+        "gross_sales": 43989.0,
+        "net_sales": 36390.9,
+        "discounts": 7598.1,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-04-07",
+        "orders": 11,
+        "gross_sales": 83979.0,
+        "net_sales": 62184.45,
+        "discounts": 9797.55,
+        "returns": 11997.0
+      },
+      {
+        "date": "2025-04-08",
+        "orders": 5,
+        "gross_sales": 31992.0,
+        "net_sales": 28392.9,
+        "discounts": 3599.1,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-04-09",
+        "orders": 8,
+        "gross_sales": 29343.0,
+        "net_sales": 24274.2,
+        "discounts": 5068.8,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-04-10",
+        "orders": 20,
+        "gross_sales": 115770.0,
+        "net_sales": 96709.95,
+        "discounts": 19060.05,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-04-11",
+        "orders": 13,
+        "gross_sales": 86928.0,
+        "net_sales": 75488.4,
+        "discounts": 11439.6,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-04-12",
+        "orders": 12,
+        "gross_sales": 73207.0,
+        "net_sales": 64364.15,
+        "discounts": 8842.85,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-04-13",
+        "orders": 15,
+        "gross_sales": 90927.0,
+        "net_sales": 79929.75,
+        "discounts": 10997.25,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-04-14",
+        "orders": 10,
+        "gross_sales": 38940.0,
+        "net_sales": 35140.95,
+        "discounts": 3799.05,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-04-15",
+        "orders": 6,
+        "gross_sales": 31992.0,
+        "net_sales": 28392.9,
+        "discounts": 3599.1,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-04-16",
+        "orders": 10,
+        "gross_sales": 67983.0,
+        "net_sales": 60784.8,
+        "discounts": 7198.2,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-04-17",
+        "orders": 7,
+        "gross_sales": 38391.0,
+        "net_sales": 30792.9,
+        "discounts": 7598.1,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-04-18",
+        "orders": 9,
+        "gross_sales": 54936.0,
+        "net_sales": 44138.7,
+        "discounts": 7598.1,
+        "returns": 3199.2
+      },
+      {
+        "date": "2025-04-19",
+        "orders": 7,
+        "gross_sales": 34941.0,
+        "net_sales": 33141.45,
+        "discounts": 1799.55,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-04-20",
+        "orders": 4,
+        "gross_sales": 24795.0,
+        "net_sales": 21275.7,
+        "discounts": 3519.3,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-04-21",
+        "orders": 5,
+        "gross_sales": 23994.0,
+        "net_sales": 20794.8,
+        "discounts": 3199.2,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-04-22",
+        "orders": 4,
+        "gross_sales": 26394.0,
+        "net_sales": 22035.0,
+        "discounts": 4359.0,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-04-23",
+        "orders": 2,
+        "gross_sales": 7998.0,
+        "net_sales": 7198.2,
+        "discounts": 799.8,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-04-24",
+        "orders": 3,
+        "gross_sales": 8674.0,
+        "net_sales": 7972.75,
+        "discounts": 701.25,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-04-25",
+        "orders": 3,
+        "gross_sales": 15996.0,
+        "net_sales": 13196.7,
+        "discounts": 2799.3,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-04-26",
+        "orders": 2,
+        "gross_sales": 7998.0,
+        "net_sales": 6398.4,
+        "discounts": 1599.6,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-04-27",
+        "orders": 2,
+        "gross_sales": 11997.0,
+        "net_sales": 9797.55,
+        "discounts": 2199.45,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-04-28",
+        "orders": 0,
+        "gross_sales": 0.0,
+        "net_sales": 0.0,
+        "discounts": 0.0,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-04-29",
+        "orders": 3,
+        "gross_sales": 8799.0,
+        "net_sales": 0.0,
+        "discounts": 2399.0,
+        "returns": 6400.0
+      },
+      {
+        "date": "2025-04-30",
+        "orders": 0,
+        "gross_sales": 0.0,
+        "net_sales": 0.0,
+        "discounts": 0.0,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-05-01",
+        "orders": 0,
+        "gross_sales": 0.0,
+        "net_sales": 0.0,
+        "discounts": 0.0,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-05-02",
+        "orders": 0,
+        "gross_sales": 0.0,
+        "net_sales": 0.0,
+        "discounts": 0.0,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-05-03",
+        "orders": 0,
+        "gross_sales": 0.0,
+        "net_sales": 0.0,
+        "discounts": 0.0,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-05-04",
+        "orders": 1,
+        "gross_sales": 3999.0,
+        "net_sales": 3999.0,
+        "discounts": 0.0,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-05-05",
+        "orders": 0,
+        "gross_sales": 0.0,
+        "net_sales": -129198.9,
+        "discounts": 0.0,
+        "returns": 129198.9
+      },
+      {
+        "date": "2025-05-06",
+        "orders": 4,
+        "gross_sales": 23994.0,
+        "net_sales": 19395.15,
+        "discounts": 4598.85,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-05-07",
+        "orders": 4,
+        "gross_sales": 15996.0,
+        "net_sales": 13196.7,
+        "discounts": 2799.3,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-05-08",
+        "orders": 1,
+        "gross_sales": 3999.0,
+        "net_sales": 3199.2,
+        "discounts": 799.8,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-05-09",
+        "orders": 1,
+        "gross_sales": 3999.0,
+        "net_sales": 3399.15,
+        "discounts": 599.85,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-05-10",
+        "orders": 0,
+        "gross_sales": 0.0,
+        "net_sales": 0.0,
+        "discounts": 0.0,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-05-11",
+        "orders": 0,
+        "gross_sales": 0.0,
+        "net_sales": 0.0,
+        "discounts": 0.0,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-05-12",
+        "orders": 2,
+        "gross_sales": 6399.0,
+        "net_sales": 5439.15,
+        "discounts": 959.85,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-05-13",
+        "orders": 2,
+        "gross_sales": 15996.0,
+        "net_sales": 12996.75,
+        "discounts": 2999.25,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-05-14",
+        "orders": 3,
+        "gross_sales": 11997.0,
+        "net_sales": 10197.45,
+        "discounts": 1799.55,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-05-15",
+        "orders": 12,
+        "gross_sales": 60585.0,
+        "net_sales": 41997.55,
+        "discounts": 10889.3,
+        "returns": 7698.15
+      },
+      {
+        "date": "2025-05-16",
+        "orders": 10,
+        "gross_sales": 40290.0,
+        "net_sales": 33726.63,
+        "discounts": 6563.37,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-05-17",
+        "orders": 5,
+        "gross_sales": 27544.0,
+        "net_sales": 23657.35,
+        "discounts": 3886.65,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-05-18",
+        "orders": 8,
+        "gross_sales": 45939.0,
+        "net_sales": 38166.34,
+        "discounts": 7772.66,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-05-19",
+        "orders": 6,
+        "gross_sales": 22695.0,
+        "net_sales": 19595.68,
+        "discounts": 3099.32,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-05-20",
+        "orders": 6,
+        "gross_sales": 26394.0,
+        "net_sales": 22674.93,
+        "discounts": 3719.07,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-05-21",
+        "orders": 4,
+        "gross_sales": 16596.0,
+        "net_sales": 14510.99,
+        "discounts": 2085.01,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-05-22",
+        "orders": 7,
+        "gross_sales": 48538.0,
+        "net_sales": 39471.38,
+        "discounts": 9066.62,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-05-23",
+        "orders": 3,
+        "gross_sales": 16696.0,
+        "net_sales": 13257.82,
+        "discounts": 3438.18,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-05-24",
+        "orders": 9,
+        "gross_sales": 58687.0,
+        "net_sales": 43375.6,
+        "discounts": 7913.25,
+        "returns": 7398.15
+      },
+      {
+        "date": "2025-05-25",
+        "orders": 4,
+        "gross_sales": 32293.0,
+        "net_sales": 21729.08,
+        "discounts": 6909.77,
+        "returns": 3654.15
+      },
+      {
+        "date": "2025-05-26",
+        "orders": 1,
+        "gross_sales": 8198.0,
+        "net_sales": 6558.4,
+        "discounts": 1639.6,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-05-27",
+        "orders": 5,
+        "gross_sales": 20995.0,
+        "net_sales": 17931.72,
+        "discounts": 3063.28,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-05-28",
+        "orders": 4,
+        "gross_sales": 45291.0,
+        "net_sales": 36020.3,
+        "discounts": 9270.7,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-05-29",
+        "orders": 3,
+        "gross_sales": 14597.0,
+        "net_sales": 12249.07,
+        "discounts": 2347.93,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-05-30",
+        "orders": 7,
+        "gross_sales": 36991.0,
+        "net_sales": 27536.31,
+        "discounts": 6055.54,
+        "returns": 3399.15
+      },
+      {
+        "date": "2025-05-31",
+        "orders": 11,
+        "gross_sales": 49988.0,
+        "net_sales": 43846.96,
+        "discounts": 6141.04,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-06-01",
+        "orders": 16,
+        "gross_sales": 73932.0,
+        "net_sales": 60156.16,
+        "discounts": 13735.85,
+        "returns": 39.99
+      },
+      {
+        "date": "2025-06-02",
+        "orders": 8,
+        "gross_sales": 49938.0,
+        "net_sales": 43857.04,
+        "discounts": 6080.96,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-06-03",
+        "orders": 18,
+        "gross_sales": 83180.0,
+        "net_sales": 70244.6,
+        "discounts": 12935.4,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-06-04",
+        "orders": 17,
+        "gross_sales": 76932.0,
+        "net_sales": 65896.07,
+        "discounts": 11035.93,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-06-05",
+        "orders": 3,
+        "gross_sales": 20395.0,
+        "net_sales": 16617.43,
+        "discounts": 3777.57,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-06-06",
+        "orders": 17,
+        "gross_sales": 92328.0,
+        "net_sales": 77944.37,
+        "discounts": 14383.63,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-06-07",
+        "orders": 10,
+        "gross_sales": 57986.0,
+        "net_sales": 47282.56,
+        "discounts": 10703.44,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-06-08",
+        "orders": 18,
+        "gross_sales": 86579.0,
+        "net_sales": 73290.7,
+        "discounts": 13288.3,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-06-09",
+        "orders": 15,
+        "gross_sales": 87981.0,
+        "net_sales": 72905.24,
+        "discounts": 15075.76,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-06-10",
+        "orders": 10,
+        "gross_sales": 56987.0,
+        "net_sales": 47488.64,
+        "discounts": 9498.36,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-06-11",
+        "orders": 18,
+        "gross_sales": 88180.0,
+        "net_sales": 75715.36,
+        "discounts": 12464.64,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-06-12",
+        "orders": 12,
+        "gross_sales": 62937.0,
+        "net_sales": 52657.33,
+        "discounts": 10279.67,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-06-13",
+        "orders": 8,
+        "gross_sales": 33592.0,
+        "net_sales": 27702.89,
+        "discounts": 5889.11,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-06-14",
+        "orders": 10,
+        "gross_sales": 54387.0,
+        "net_sales": 44505.34,
+        "discounts": 9881.66,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-06-15",
+        "orders": 15,
+        "gross_sales": 100526.0,
+        "net_sales": 89512.63,
+        "discounts": 11013.37,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-06-16",
+        "orders": 16,
+        "gross_sales": 82131.0,
+        "net_sales": 68379.66,
+        "discounts": 13751.34,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-06-17",
+        "orders": 10,
+        "gross_sales": 72133.0,
+        "net_sales": 50289.81,
+        "discounts": 9246.19,
+        "returns": 12597.0
+      },
+      {
+        "date": "2025-06-18",
+        "orders": 8,
+        "gross_sales": 38391.0,
+        "net_sales": 34581.9,
+        "discounts": 3809.1,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-06-19",
+        "orders": 8,
+        "gross_sales": 40991.0,
+        "net_sales": 38862.99,
+        "discounts": 2128.01,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-06-20",
+        "orders": 11,
+        "gross_sales": 55737.0,
+        "net_sales": 45640.75,
+        "discounts": 10096.25,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-06-21",
+        "orders": 13,
+        "gross_sales": 75083.0,
+        "net_sales": 62353.87,
+        "discounts": 12729.13,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-06-22",
+        "orders": 9,
+        "gross_sales": 61686.0,
+        "net_sales": 50120.6,
+        "discounts": 11565.4,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-06-23",
+        "orders": 7,
+        "gross_sales": 38891.0,
+        "net_sales": 36406.55,
+        "discounts": 2484.45,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-06-24",
+        "orders": 7,
+        "gross_sales": 35892.0,
+        "net_sales": 21582.04,
+        "discounts": 5911.96,
+        "returns": 8398.0
+      },
+      {
+        "date": "2025-06-25",
+        "orders": 8,
+        "gross_sales": 40191.0,
+        "net_sales": 34572.3,
+        "discounts": 5618.7,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-06-26",
+        "orders": 12,
+        "gross_sales": 75083.0,
+        "net_sales": 55031.39,
+        "discounts": 15887.46,
+        "returns": 4164.15
+      },
+      {
+        "date": "2025-06-27",
+        "orders": 5,
+        "gross_sales": 40391.0,
+        "net_sales": 26638.65,
+        "discounts": 9553.35,
+        "returns": 4199.0
+      },
+      {
+        "date": "2025-06-28",
+        "orders": 1,
+        "gross_sales": 8398.0,
+        "net_sales": 7138.3,
+        "discounts": 1259.7,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-06-29",
+        "orders": 6,
+        "gross_sales": 37591.0,
+        "net_sales": 31511.45,
+        "discounts": 6079.55,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-06-30",
+        "orders": 4,
+        "gross_sales": 20595.0,
+        "net_sales": 16170.57,
+        "discounts": 4424.43,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-07-01",
+        "orders": 4,
+        "gross_sales": 33392.0,
+        "net_sales": 14567.29,
+        "discounts": 4914.33,
+        "returns": 13910.38
+      },
+      {
+        "date": "2025-07-02",
+        "orders": 7,
+        "gross_sales": 45589.0,
+        "net_sales": 37159.53,
+        "discounts": 8429.47,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-07-03",
+        "orders": 5,
+        "gross_sales": 33392.0,
+        "net_sales": 28184.74,
+        "discounts": 5207.26,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-07-04",
+        "orders": 9,
+        "gross_sales": 51388.0,
+        "net_sales": 41361.32,
+        "discounts": 10026.68,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-07-05",
+        "orders": 4,
+        "gross_sales": 25394.0,
+        "net_sales": 21227.98,
+        "discounts": 4166.02,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-07-06",
+        "orders": 11,
+        "gross_sales": 55831.0,
+        "net_sales": 46198.74,
+        "discounts": 9632.26,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-07-07",
+        "orders": 8,
+        "gross_sales": 52388.0,
+        "net_sales": 34158.44,
+        "discounts": 11631.06,
+        "returns": 6598.5
+      },
+      {
+        "date": "2025-07-08",
+        "orders": 13,
+        "gross_sales": 67596.0,
+        "net_sales": 54944.15,
+        "discounts": 12651.85,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-07-09",
+        "orders": 14,
+        "gross_sales": 66845.0,
+        "net_sales": 54963.6,
+        "discounts": 11881.4,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-07-10",
+        "orders": 10,
+        "gross_sales": 84616.09,
+        "net_sales": 57540.14,
+        "discounts": 13639.15,
+        "returns": 13436.8
+      },
+      {
+        "date": "2025-07-11",
+        "orders": 14,
+        "gross_sales": 103502.0,
+        "net_sales": 81294.87,
+        "discounts": 22207.13,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-07-12",
+        "orders": 10,
+        "gross_sales": 46994.0,
+        "net_sales": 37661.13,
+        "discounts": 9332.87,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-07-13",
+        "orders": 16,
+        "gross_sales": 78790.0,
+        "net_sales": 66271.86,
+        "discounts": 12518.14,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-07-14",
+        "orders": 10,
+        "gross_sales": 67149.0,
+        "net_sales": 56635.31,
+        "discounts": 10513.69,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-07-15",
+        "orders": 5,
+        "gross_sales": 37354.0,
+        "net_sales": 29448.19,
+        "discounts": 7905.81,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-07-16",
+        "orders": 4,
+        "gross_sales": 30054.0,
+        "net_sales": 21064.91,
+        "discounts": 5589.94,
+        "returns": 3399.15
+      },
+      {
+        "date": "2025-07-17",
+        "orders": 11,
+        "gross_sales": 50592.0,
+        "net_sales": 41486.61,
+        "discounts": 9105.39,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-07-18",
+        "orders": 6,
+        "gross_sales": 34045.0,
+        "net_sales": 28988.96,
+        "discounts": 5056.04,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-07-19",
+        "orders": 14,
+        "gross_sales": 89067.77,
+        "net_sales": 73488.98,
+        "discounts": 15578.79,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-07-20",
+        "orders": 19,
+        "gross_sales": 109920.0,
+        "net_sales": 76972.75,
+        "discounts": 20411.98,
+        "returns": 12535.27
+      },
+      {
+        "date": "2025-07-21",
+        "orders": 11,
+        "gross_sales": 73171.0,
+        "net_sales": 60425.27,
+        "discounts": 12745.73,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-07-22",
+        "orders": 6,
+        "gross_sales": 33285.0,
+        "net_sales": 30460.34,
+        "discounts": 2824.66,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-07-23",
+        "orders": 8,
+        "gross_sales": 45955.0,
+        "net_sales": 37465.65,
+        "discounts": 8489.35,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-07-24",
+        "orders": 12,
+        "gross_sales": 62551.0,
+        "net_sales": 53532.86,
+        "discounts": 9018.14,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-07-25",
+        "orders": 22,
+        "gross_sales": 117782.0,
+        "net_sales": 73704.65,
+        "discounts": 32658.35,
+        "returns": 11419.0
+      },
+      {
+        "date": "2025-07-26",
+        "orders": 21,
+        "gross_sales": 146496.0,
+        "net_sales": 115956.5,
+        "discounts": 30539.5,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-07-27",
+        "orders": 17,
+        "gross_sales": 81902.0,
+        "net_sales": 67478.2,
+        "discounts": 14423.8,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-07-28",
+        "orders": 8,
+        "gross_sales": 50476.0,
+        "net_sales": 39563.26,
+        "discounts": 10912.74,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-07-29",
+        "orders": 16,
+        "gross_sales": 125303.0,
+        "net_sales": 94272.56,
+        "discounts": 31030.44,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-07-30",
+        "orders": 17,
+        "gross_sales": 86899.0,
+        "net_sales": 65654.18,
+        "discounts": 21244.82,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-07-31",
+        "orders": 17,
+        "gross_sales": 108552.0,
+        "net_sales": 62065.27,
+        "discounts": 42874.23,
+        "returns": 3612.5
+      },
+      {
+        "date": "2025-08-01",
+        "orders": 11,
+        "gross_sales": 52514.0,
+        "net_sales": 43387.55,
+        "discounts": 9126.45,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-08-02",
+        "orders": 17,
+        "gross_sales": 92877.0,
+        "net_sales": 74255.82,
+        "discounts": 18621.18,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-08-03",
+        "orders": 17,
+        "gross_sales": 92580.0,
+        "net_sales": 63929.56,
+        "discounts": 28650.44,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-08-04",
+        "orders": 17,
+        "gross_sales": 146452.0,
+        "net_sales": 116998.96,
+        "discounts": 29453.04,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-08-05",
+        "orders": 11,
+        "gross_sales": 65233.0,
+        "net_sales": 47660.34,
+        "discounts": 13912.66,
+        "returns": 3660.0
+      },
+      {
+        "date": "2025-08-06",
+        "orders": 11,
+        "gross_sales": 69614.0,
+        "net_sales": 56211.71,
+        "discounts": 13402.29,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-08-07",
+        "orders": 12,
+        "gross_sales": 91464.0,
+        "net_sales": 73044.7,
+        "discounts": 18419.3,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-08-08",
+        "orders": 21,
+        "gross_sales": 164663.0,
+        "net_sales": 116676.94,
+        "discounts": 44036.06,
+        "returns": 3950.0
+      },
+      {
+        "date": "2025-08-09",
+        "orders": 10,
+        "gross_sales": 66591.0,
+        "net_sales": 45713.06,
+        "discounts": 20877.94,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-08-10",
+        "orders": 12,
+        "gross_sales": 100786.0,
+        "net_sales": 87230.24,
+        "discounts": 13555.76,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-08-11",
+        "orders": 10,
+        "gross_sales": 73650.0,
+        "net_sales": 54457.46,
+        "discounts": 19192.54,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-08-12",
+        "orders": 13,
+        "gross_sales": 78692.76,
+        "net_sales": 64876.35,
+        "discounts": 13816.41,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-08-13",
+        "orders": 17,
+        "gross_sales": 102342.0,
+        "net_sales": 84787.03,
+        "discounts": 17554.97,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-08-14",
+        "orders": 16,
+        "gross_sales": 105403.0,
+        "net_sales": 84132.21,
+        "discounts": 21270.79,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-08-15",
+        "orders": 9,
+        "gross_sales": 51965.0,
+        "net_sales": 42293.71,
+        "discounts": 9671.29,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-08-16",
+        "orders": 14,
+        "gross_sales": 126980.0,
+        "net_sales": 94036.92,
+        "discounts": 32943.08,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-08-17",
+        "orders": 16,
+        "gross_sales": 92889.0,
+        "net_sales": 77466.28,
+        "discounts": 15422.72,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-08-18",
+        "orders": 12,
+        "gross_sales": 88898.0,
+        "net_sales": 69187.71,
+        "discounts": 19710.29,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-08-19",
+        "orders": 10,
+        "gross_sales": 61351.0,
+        "net_sales": 49316.24,
+        "discounts": 12034.76,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-08-20",
+        "orders": 4,
+        "gross_sales": 28390.06,
+        "net_sales": 23679.63,
+        "discounts": 4710.43,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-08-21",
+        "orders": 7,
+        "gross_sales": 43106.0,
+        "net_sales": 36644.39,
+        "discounts": 6461.61,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-08-22",
+        "orders": 12,
+        "gross_sales": 69854.39,
+        "net_sales": 55505.3,
+        "discounts": 14349.09,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-08-23",
+        "orders": 13,
+        "gross_sales": 91010.0,
+        "net_sales": 70465.89,
+        "discounts": 20544.11,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-08-24",
+        "orders": 10,
+        "gross_sales": 59938.0,
+        "net_sales": 51269.19,
+        "discounts": 8668.81,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-08-25",
+        "orders": 11,
+        "gross_sales": 59364.0,
+        "net_sales": 50171.83,
+        "discounts": 9192.17,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-08-26",
+        "orders": 8,
+        "gross_sales": 36045.0,
+        "net_sales": 30480.27,
+        "discounts": 5564.73,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-08-27",
+        "orders": 10,
+        "gross_sales": 60242.0,
+        "net_sales": 49490.38,
+        "discounts": 10751.62,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-08-28",
+        "orders": 7,
+        "gross_sales": 28701.55,
+        "net_sales": 24493.54,
+        "discounts": 4208.01,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-08-29",
+        "orders": 12,
+        "gross_sales": 67499.48,
+        "net_sales": 55987.27,
+        "discounts": 11512.21,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-08-30",
+        "orders": 6,
+        "gross_sales": 31869.99,
+        "net_sales": 26886.48,
+        "discounts": 4983.51,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-08-31",
+        "orders": 22,
+        "gross_sales": 126062.77,
+        "net_sales": 106586.72,
+        "discounts": 19476.05,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-09-01",
+        "orders": 10,
+        "gross_sales": 56741.0,
+        "net_sales": 49453.21,
+        "discounts": 7287.79,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-09-02",
+        "orders": 8,
+        "gross_sales": 36693.0,
+        "net_sales": 31249.05,
+        "discounts": 5443.95,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-09-03",
+        "orders": 13,
+        "gross_sales": 115747.0,
+        "net_sales": 90472.63,
+        "discounts": 17699.37,
+        "returns": 7575.0
+      },
+      {
+        "date": "2025-09-04",
+        "orders": 16,
+        "gross_sales": 105581.0,
+        "net_sales": 82676.68,
+        "discounts": 22904.32,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-09-05",
+        "orders": 19,
+        "gross_sales": 148765.32,
+        "net_sales": 113127.11,
+        "discounts": 35638.21,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-09-06",
+        "orders": 12,
+        "gross_sales": 76635.77,
+        "net_sales": 60732.72,
+        "discounts": 15903.05,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-09-07",
+        "orders": 15,
+        "gross_sales": 68101.13,
+        "net_sales": 53953.93,
+        "discounts": 14147.2,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-09-08",
+        "orders": 16,
+        "gross_sales": 90530.57,
+        "net_sales": 72881.86,
+        "discounts": 17648.71,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-09-09",
+        "orders": 11,
+        "gross_sales": 49394.97,
+        "net_sales": 42176.48,
+        "discounts": 7218.49,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-09-10",
+        "orders": 13,
+        "gross_sales": 57851.25,
+        "net_sales": 49685.75,
+        "discounts": 8165.5,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-09-11",
+        "orders": 10,
+        "gross_sales": 55887.94,
+        "net_sales": 44573.72,
+        "discounts": 11314.22,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-09-12",
+        "orders": 11,
+        "gross_sales": 71603.55,
+        "net_sales": 60170.75,
+        "discounts": 11432.8,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-09-13",
+        "orders": 14,
+        "gross_sales": 73500.98,
+        "net_sales": 48275.64,
+        "discounts": 15187.69,
+        "returns": 10037.65
+      },
+      {
+        "date": "2025-09-14",
+        "orders": 23,
+        "gross_sales": 123983.0,
+        "net_sales": 105493.26,
+        "discounts": 18489.74,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-09-15",
+        "orders": 8,
+        "gross_sales": 51155.0,
+        "net_sales": 42919.28,
+        "discounts": 8235.72,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-09-16",
+        "orders": 16,
+        "gross_sales": 84089.0,
+        "net_sales": 69065.21,
+        "discounts": 15023.79,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-09-17",
+        "orders": 14,
+        "gross_sales": 60995.99,
+        "net_sales": 49752.92,
+        "discounts": 11243.07,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-09-18",
+        "orders": 15,
+        "gross_sales": 62342.0,
+        "net_sales": 53970.55,
+        "discounts": 8371.45,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-09-19",
+        "orders": 9,
+        "gross_sales": 49544.0,
+        "net_sales": 42552.62,
+        "discounts": 6991.38,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-09-20",
+        "orders": 11,
+        "gross_sales": 76349.0,
+        "net_sales": 61803.06,
+        "discounts": 14545.94,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-09-21",
+        "orders": 10,
+        "gross_sales": 76093.99,
+        "net_sales": 58570.45,
+        "discounts": 17523.54,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-09-22",
+        "orders": 7,
+        "gross_sales": 27947.0,
+        "net_sales": 22950.95,
+        "discounts": 4996.05,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-09-23",
+        "orders": 6,
+        "gross_sales": 29796.0,
+        "net_sales": 24423.6,
+        "discounts": 5372.4,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-09-24",
+        "orders": 13,
+        "gross_sales": 71941.0,
+        "net_sales": 52204.94,
+        "discounts": 19736.06,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-09-25",
+        "orders": 14,
+        "gross_sales": 69554.1,
+        "net_sales": 56619.95,
+        "discounts": 12934.15,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-09-26",
+        "orders": 8,
+        "gross_sales": 35099.0,
+        "net_sales": 19554.69,
+        "discounts": 4944.31,
+        "returns": 10600.0
+      },
+      {
+        "date": "2025-09-27",
+        "orders": 15,
+        "gross_sales": 83746.99,
+        "net_sales": 65815.63,
+        "discounts": 17931.36,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-09-28",
+        "orders": 8,
+        "gross_sales": 34375.57,
+        "net_sales": 21554.1,
+        "discounts": 6018.47,
+        "returns": 6803.0
+      },
+      {
+        "date": "2025-09-29",
+        "orders": 8,
+        "gross_sales": 47073.84,
+        "net_sales": 34208.26,
+        "discounts": 8949.58,
+        "returns": 3916.0
+      },
+      {
+        "date": "2025-09-30",
+        "orders": 16,
+        "gross_sales": 89819.96,
+        "net_sales": 73423.92,
+        "discounts": 16396.04,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-10-01",
+        "orders": 13,
+        "gross_sales": 55749.88,
+        "net_sales": 47457.56,
+        "discounts": 8292.32,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-10-02",
+        "orders": 17,
+        "gross_sales": 103544.0,
+        "net_sales": 66781.9,
+        "discounts": 36762.1,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-10-03",
+        "orders": 17,
+        "gross_sales": 68548.0,
+        "net_sales": 61106.2,
+        "discounts": 7441.8,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-10-04",
+        "orders": 11,
+        "gross_sales": 80944.0,
+        "net_sales": 54294.03,
+        "discounts": 15466.97,
+        "returns": 11183.0
+      },
+      {
+        "date": "2025-10-05",
+        "orders": 22,
+        "gross_sales": 119998.56,
+        "net_sales": 89012.04,
+        "discounts": 24325.52,
+        "returns": 6661.0
+      },
+      {
+        "date": "2025-10-06",
+        "orders": 16,
+        "gross_sales": 69690.0,
+        "net_sales": 58661.27,
+        "discounts": 11028.73,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-10-07",
+        "orders": 13,
+        "gross_sales": 92757.0,
+        "net_sales": 61647.29,
+        "discounts": 21125.71,
+        "returns": 9984.0
+      },
+      {
+        "date": "2025-10-08",
+        "orders": 16,
+        "gross_sales": 110083.0,
+        "net_sales": 87697.26,
+        "discounts": 22385.74,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-10-09",
+        "orders": 18,
+        "gross_sales": 95776.0,
+        "net_sales": 82695.79,
+        "discounts": 13080.21,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-10-10",
+        "orders": 12,
+        "gross_sales": 75657.96,
+        "net_sales": 61350.35,
+        "discounts": 14307.61,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-10-11",
+        "orders": 9,
+        "gross_sales": 71196.0,
+        "net_sales": 53141.7,
+        "discounts": 18054.3,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-10-12",
+        "orders": 9,
+        "gross_sales": 66354.34,
+        "net_sales": 48299.86,
+        "discounts": 18054.48,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-10-13",
+        "orders": 14,
+        "gross_sales": 103113.19,
+        "net_sales": 77837.3,
+        "discounts": 25275.89,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-10-14",
+        "orders": 13,
+        "gross_sales": 99890.82,
+        "net_sales": 72191.66,
+        "discounts": 20373.16,
+        "returns": 7326.0
+      },
+      {
+        "date": "2025-10-15",
+        "orders": 16,
+        "gross_sales": 102881.63,
+        "net_sales": 64628.18,
+        "discounts": 20785.45,
+        "returns": 17468.0
+      },
+      {
+        "date": "2025-10-16",
+        "orders": 10,
+        "gross_sales": 77857.0,
+        "net_sales": 18592.87,
+        "discounts": 45430.13,
+        "returns": 13834.0
+      },
+      {
+        "date": "2025-10-17",
+        "orders": 17,
+        "gross_sales": 100785.0,
+        "net_sales": 78196.07,
+        "discounts": 18672.93,
+        "returns": 3916.0
+      },
+      {
+        "date": "2025-10-18",
+        "orders": 12,
+        "gross_sales": 121557.05,
+        "net_sales": 85661.32,
+        "discounts": 28977.73,
+        "returns": 6918.0
+      },
+      {
+        "date": "2025-10-19",
+        "orders": 13,
+        "gross_sales": 97012.3,
+        "net_sales": 70497.19,
+        "discounts": 26515.11,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-10-20",
+        "orders": 16,
+        "gross_sales": 101165.0,
+        "net_sales": 77561.07,
+        "discounts": 23603.93,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-10-21",
+        "orders": 10,
+        "gross_sales": 58748.0,
+        "net_sales": 47534.95,
+        "discounts": 11213.05,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-10-22",
+        "orders": 11,
+        "gross_sales": 85974.0,
+        "net_sales": 62490.92,
+        "discounts": 23483.08,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-10-23",
+        "orders": 6,
+        "gross_sales": 52510.0,
+        "net_sales": 39344.63,
+        "discounts": 13165.37,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-10-24",
+        "orders": 16,
+        "gross_sales": 99136.99,
+        "net_sales": 72188.41,
+        "discounts": 21805.58,
+        "returns": 5143.0
+      },
+      {
+        "date": "2025-10-25",
+        "orders": 14,
+        "gross_sales": 88737.53,
+        "net_sales": 68995.7,
+        "discounts": 19741.83,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-10-26",
+        "orders": 13,
+        "gross_sales": 102426.35,
+        "net_sales": 75863.54,
+        "discounts": 26562.81,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-10-27",
+        "orders": 1,
+        "gross_sales": 12229.0,
+        "net_sales": 8132.29,
+        "discounts": 4096.71,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-10-28",
+        "orders": 13,
+        "gross_sales": 84902.61,
+        "net_sales": 65698.72,
+        "discounts": 19203.89,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-10-29",
+        "orders": 17,
+        "gross_sales": 114718.4,
+        "net_sales": 85051.99,
+        "discounts": 22343.41,
+        "returns": 7323.0
+      },
+      {
+        "date": "2025-10-30",
+        "orders": 14,
+        "gross_sales": 93558.0,
+        "net_sales": 74888.96,
+        "discounts": 18669.04,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-10-31",
+        "orders": 12,
+        "gross_sales": 81495.0,
+        "net_sales": 38198.23,
+        "discounts": 17704.77,
+        "returns": 25592.0
+      },
+      {
+        "date": "2025-11-01",
+        "orders": 21,
+        "gross_sales": 138004.99,
+        "net_sales": 105776.64,
+        "discounts": 32228.35,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-11-02",
+        "orders": 17,
+        "gross_sales": 121362.59,
+        "net_sales": 95188.6,
+        "discounts": 26173.99,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-11-03",
+        "orders": 23,
+        "gross_sales": 180406.94,
+        "net_sales": 131240.91,
+        "discounts": 45755.03,
+        "returns": 3411.0
+      },
+      {
+        "date": "2025-11-04",
+        "orders": 21,
+        "gross_sales": 130337.06,
+        "net_sales": 84203.17,
+        "discounts": 27433.27,
+        "returns": 18700.62
+      },
+      {
+        "date": "2025-11-05",
+        "orders": 11,
+        "gross_sales": 59179.7,
+        "net_sales": 37813.27,
+        "discounts": 12360.68,
+        "returns": 9005.75
+      },
+      {
+        "date": "2025-11-06",
+        "orders": 10,
+        "gross_sales": 50136.21,
+        "net_sales": 39582.87,
+        "discounts": 10553.34,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-11-07",
+        "orders": 8,
+        "gross_sales": 33269.0,
+        "net_sales": 20929.67,
+        "discounts": 4703.33,
+        "returns": 7636.0
+      },
+      {
+        "date": "2025-11-08",
+        "orders": 16,
+        "gross_sales": 97956.3,
+        "net_sales": 78486.61,
+        "discounts": 19469.69,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-11-09",
+        "orders": 21,
+        "gross_sales": 115405.0,
+        "net_sales": 94189.03,
+        "discounts": 21215.97,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-11-10",
+        "orders": 10,
+        "gross_sales": 52020.96,
+        "net_sales": 41503.88,
+        "discounts": 10517.08,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-11-11",
+        "orders": 10,
+        "gross_sales": 110896.2,
+        "net_sales": 78607.78,
+        "discounts": 27689.42,
+        "returns": 4599.0
+      },
+      {
+        "date": "2025-11-12",
+        "orders": 9,
+        "gross_sales": 66684.66,
+        "net_sales": 47714.52,
+        "discounts": 18970.14,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-11-13",
+        "orders": 11,
+        "gross_sales": 48898.97,
+        "net_sales": 39837.38,
+        "discounts": 9061.59,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-11-14",
+        "orders": 11,
+        "gross_sales": 86320.64,
+        "net_sales": 64413.22,
+        "discounts": 18496.42,
+        "returns": 3411.0
+      },
+      {
+        "date": "2025-11-15",
+        "orders": 15,
+        "gross_sales": 116242.32,
+        "net_sales": 69767.48,
+        "discounts": 46474.84,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-11-16",
+        "orders": 16,
+        "gross_sales": 103507.87,
+        "net_sales": 74366.13,
+        "discounts": 24573.24,
+        "returns": 4568.5
+      },
+      {
+        "date": "2025-11-17",
+        "orders": 6,
+        "gross_sales": 47695.0,
+        "net_sales": 27461.55,
+        "discounts": 10145.45,
+        "returns": 10088.0
+      },
+      {
+        "date": "2025-11-18",
+        "orders": 9,
+        "gross_sales": 53825.16,
+        "net_sales": 36960.99,
+        "discounts": 12024.92,
+        "returns": 4839.25
+      },
+      {
+        "date": "2025-11-19",
+        "orders": 9,
+        "gross_sales": 58533.69,
+        "net_sales": 42373.11,
+        "discounts": 11561.58,
+        "returns": 4599.0
+      },
+      {
+        "date": "2025-11-20",
+        "orders": 14,
+        "gross_sales": 92430.89,
+        "net_sales": 63801.84,
+        "discounts": 20178.05,
+        "returns": 8451.0
+      },
+      {
+        "date": "2025-11-21",
+        "orders": 18,
+        "gross_sales": 179656.89,
+        "net_sales": 126887.51,
+        "discounts": 46242.88,
+        "returns": 6526.5
+      },
+      {
+        "date": "2025-11-22",
+        "orders": 9,
+        "gross_sales": 69167.98,
+        "net_sales": 36055.83,
+        "discounts": 16299.73,
+        "returns": 16812.42
+      },
+      {
+        "date": "2025-11-23",
+        "orders": 15,
+        "gross_sales": 111288.98,
+        "net_sales": 82834.51,
+        "discounts": 28454.47,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-11-24",
+        "orders": 10,
+        "gross_sales": 77293.59,
+        "net_sales": 44821.38,
+        "discounts": 21155.21,
+        "returns": 11317.0
+      },
+      {
+        "date": "2025-11-25",
+        "orders": 9,
+        "gross_sales": 72247.57,
+        "net_sales": 39852.72,
+        "discounts": 19031.85,
+        "returns": 13363.0
+      },
+      {
+        "date": "2025-11-26",
+        "orders": 13,
+        "gross_sales": 81110.1,
+        "net_sales": 46316.85,
+        "discounts": 17366.25,
+        "returns": 17427.0
+      },
+      {
+        "date": "2025-11-27",
+        "orders": 12,
+        "gross_sales": 68831.65,
+        "net_sales": 51176.09,
+        "discounts": 15059.56,
+        "returns": 2596.0
+      },
+      {
+        "date": "2025-11-28",
+        "orders": 18,
+        "gross_sales": 150642.15,
+        "net_sales": 89274.25,
+        "discounts": 44459.4,
+        "returns": 16908.5
+      },
+      {
+        "date": "2025-11-29",
+        "orders": 12,
+        "gross_sales": 92159.41,
+        "net_sales": 64997.19,
+        "discounts": 23264.22,
+        "returns": 3898.0
+      },
+      {
+        "date": "2025-11-30",
+        "orders": 13,
+        "gross_sales": 82522.14,
+        "net_sales": 66047.41,
+        "discounts": 16474.73,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-12-01",
+        "orders": 11,
+        "gross_sales": 93077.53,
+        "net_sales": 71381.11,
+        "discounts": 21696.42,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-12-02",
+        "orders": 12,
+        "gross_sales": 78838.47,
+        "net_sales": 56955.06,
+        "discounts": 18714.41,
+        "returns": 3169.0
+      },
+      {
+        "date": "2025-12-03",
+        "orders": 12,
+        "gross_sales": 91658.84,
+        "net_sales": 73398.65,
+        "discounts": 18260.19,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-12-04",
+        "orders": 17,
+        "gross_sales": 113568.6,
+        "net_sales": 83827.94,
+        "discounts": 26203.66,
+        "returns": 3537.0
+      },
+      {
+        "date": "2025-12-05",
+        "orders": 16,
+        "gross_sales": 69371.88,
+        "net_sales": 49989.22,
+        "discounts": 12529.66,
+        "returns": 6853.0
+      },
+      {
+        "date": "2025-12-06",
+        "orders": 9,
+        "gross_sales": 53902.53,
+        "net_sales": 45679.58,
+        "discounts": 8222.95,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-12-07",
+        "orders": 18,
+        "gross_sales": 129481.35,
+        "net_sales": 84366.23,
+        "discounts": 41844.12,
+        "returns": 3271.0
+      },
+      {
+        "date": "2025-12-08",
+        "orders": 16,
+        "gross_sales": 128193.72,
+        "net_sales": 89925.68,
+        "discounts": 27775.04,
+        "returns": 10493.0
+      },
+      {
+        "date": "2025-12-09",
+        "orders": 14,
+        "gross_sales": 100951.61,
+        "net_sales": 61506.2,
+        "discounts": 24874.41,
+        "returns": 14571.0
+      },
+      {
+        "date": "2025-12-10",
+        "orders": 12,
+        "gross_sales": 83331.12,
+        "net_sales": 49440.54,
+        "discounts": 18443.58,
+        "returns": 15447.0
+      },
+      {
+        "date": "2025-12-11",
+        "orders": 19,
+        "gross_sales": 134798.5,
+        "net_sales": 99723.67,
+        "discounts": 35042.83,
+        "returns": 32.0
+      },
+      {
+        "date": "2025-12-12",
+        "orders": 8,
+        "gross_sales": 44989.98,
+        "net_sales": 35255.03,
+        "discounts": 9734.95,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-12-13",
+        "orders": 15,
+        "gross_sales": 100647.51,
+        "net_sales": 63493.64,
+        "discounts": 30426.87,
+        "returns": 6727.0
+      },
+      {
+        "date": "2025-12-14",
+        "orders": 13,
+        "gross_sales": 76966.21,
+        "net_sales": 62533.23,
+        "discounts": 14432.98,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-12-15",
+        "orders": 21,
+        "gross_sales": 127356.95,
+        "net_sales": 89285.48,
+        "discounts": 25623.97,
+        "returns": 12447.5
+      },
+      {
+        "date": "2025-12-16",
+        "orders": 11,
+        "gross_sales": 72146.0,
+        "net_sales": 53994.53,
+        "discounts": 13576.47,
+        "returns": 4575.0
+      },
+      {
+        "date": "2025-12-17",
+        "orders": 17,
+        "gross_sales": 109062.33,
+        "net_sales": 86233.85,
+        "discounts": 22828.48,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-12-18",
+        "orders": 13,
+        "gross_sales": 87762.06,
+        "net_sales": 62315.5,
+        "discounts": 17695.56,
+        "returns": 7751.0
+      },
+      {
+        "date": "2025-12-19",
+        "orders": 10,
+        "gross_sales": 49793.05,
+        "net_sales": 32566.2,
+        "discounts": 10765.85,
+        "returns": 6461.0
+      },
+      {
+        "date": "2025-12-20",
+        "orders": 21,
+        "gross_sales": 114226.6,
+        "net_sales": 74435.91,
+        "discounts": 20503.69,
+        "returns": 19287.0
+      },
+      {
+        "date": "2025-12-21",
+        "orders": 19,
+        "gross_sales": 120336.38,
+        "net_sales": 94919.22,
+        "discounts": 19332.16,
+        "returns": 6085.0
+      },
+      {
+        "date": "2025-12-22",
+        "orders": 6,
+        "gross_sales": 37613.88,
+        "net_sales": 30083.27,
+        "discounts": 7530.61,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-12-23",
+        "orders": 14,
+        "gross_sales": 126310.83,
+        "net_sales": 79227.74,
+        "discounts": 33618.09,
+        "returns": 13465.0
+      },
+      {
+        "date": "2025-12-24",
+        "orders": 11,
+        "gross_sales": 55864.78,
+        "net_sales": 47996.0,
+        "discounts": 7868.78,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-12-25",
+        "orders": 7,
+        "gross_sales": 48792.51,
+        "net_sales": 40411.38,
+        "discounts": 8381.13,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-12-26",
+        "orders": 10,
+        "gross_sales": 78402.09,
+        "net_sales": 52347.17,
+        "discounts": 18256.92,
+        "returns": 7798.0
+      },
+      {
+        "date": "2025-12-27",
+        "orders": 13,
+        "gross_sales": 80814.58,
+        "net_sales": 66647.09,
+        "discounts": 14167.49,
+        "returns": 0.0
+      },
+      {
+        "date": "2025-12-28",
+        "orders": 18,
+        "gross_sales": 75985.8,
+        "net_sales": 57363.1,
+        "discounts": 16314.7,
+        "returns": 2308.0
+      },
+      {
+        "date": "2025-12-29",
+        "orders": 11,
+        "gross_sales": 74519.0,
+        "net_sales": 47021.29,
+        "discounts": 21932.71,
+        "returns": 5565.0
+      },
+      {
+        "date": "2025-12-30",
+        "orders": 18,
+        "gross_sales": 94963.35,
+        "net_sales": 74615.69,
+        "discounts": 17731.66,
+        "returns": 2616.0
+      },
+      {
+        "date": "2025-12-31",
+        "orders": 11,
+        "gross_sales": 69538.22,
+        "net_sales": 52219.29,
+        "discounts": 14129.93,
+        "returns": 3189.0
+      },
+      {
+        "date": "2026-01-01",
+        "orders": 13,
+        "gross_sales": 73069.96,
+        "net_sales": 56754.06,
+        "discounts": 16315.9,
+        "returns": 0.0
+      },
+      {
+        "date": "2026-01-02",
+        "orders": 12,
+        "gross_sales": 81434.33,
+        "net_sales": 64337.27,
+        "discounts": 14283.06,
+        "returns": 2814.0
+      },
+      {
+        "date": "2026-01-03",
+        "orders": 19,
+        "gross_sales": 92044.76,
+        "net_sales": 75324.86,
+        "discounts": 16719.9,
+        "returns": 0.0
+      },
+      {
+        "date": "2026-01-04",
+        "orders": 16,
+        "gross_sales": 76384.99,
+        "net_sales": 48714.49,
+        "discounts": 12793.5,
+        "returns": 14877.0
+      },
+      {
+        "date": "2026-01-05",
+        "orders": 11,
+        "gross_sales": 66663.15,
+        "net_sales": 47171.59,
+        "discounts": 11115.56,
+        "returns": 8376.0
+      },
+      {
+        "date": "2026-01-06",
+        "orders": 11,
+        "gross_sales": 87004.97,
+        "net_sales": 69589.21,
+        "discounts": 17415.76,
+        "returns": 0.0
+      },
+      {
+        "date": "2026-01-07",
+        "orders": 14,
+        "gross_sales": 91166.82,
+        "net_sales": 66216.3,
+        "discounts": 15902.52,
+        "returns": 9048.0
+      },
+      {
+        "date": "2026-01-08",
+        "orders": 14,
+        "gross_sales": 75452.28,
+        "net_sales": 62398.44,
+        "discounts": 13053.84,
+        "returns": 0.0
+      },
+      {
+        "date": "2026-01-09",
+        "orders": 15,
+        "gross_sales": 85782.36,
+        "net_sales": 69286.68,
+        "discounts": 13021.68,
+        "returns": 3474.0
+      },
+      {
+        "date": "2026-01-10",
+        "orders": 9,
+        "gross_sales": 43760.13,
+        "net_sales": 35551.6,
+        "discounts": 8208.53,
+        "returns": 0.0
+      },
+      {
+        "date": "2026-01-11",
+        "orders": 15,
+        "gross_sales": 149871.76,
+        "net_sales": 124472.88,
+        "discounts": 25398.88,
+        "returns": 0.0
+      },
+      {
+        "date": "2026-01-12",
+        "orders": 15,
+        "gross_sales": 108783.2,
+        "net_sales": 89715.26,
+        "discounts": 19067.94,
+        "returns": 0.0
+      },
+      {
+        "date": "2026-01-13",
+        "orders": 6,
+        "gross_sales": 38038.83,
+        "net_sales": 31554.87,
+        "discounts": 6483.96,
+        "returns": 0.0
+      },
+      {
+        "date": "2026-01-14",
+        "orders": 16,
+        "gross_sales": 87409.95,
+        "net_sales": 65593.65,
+        "discounts": 14765.3,
+        "returns": 7051.0
+      },
+      {
+        "date": "2026-01-15",
+        "orders": 7,
+        "gross_sales": 28247.98,
+        "net_sales": 18510.52,
+        "discounts": 4707.46,
+        "returns": 5030.0
+      },
+      {
+        "date": "2026-01-16",
+        "orders": 10,
+        "gross_sales": 50044.19,
+        "net_sales": 41194.02,
+        "discounts": 8850.17,
+        "returns": 0.0
+      },
+      {
+        "date": "2026-01-17",
+        "orders": 17,
+        "gross_sales": 87042.4,
+        "net_sales": 58729.08,
+        "discounts": 24195.32,
+        "returns": 4118.0
+      },
+      {
+        "date": "2026-01-18",
+        "orders": 11,
+        "gross_sales": 82066.4,
+        "net_sales": 68061.71,
+        "discounts": 14004.69,
+        "returns": 0.0
+      },
+      {
+        "date": "2026-01-19",
+        "orders": 9,
+        "gross_sales": 86627.2,
+        "net_sales": 71582.92,
+        "discounts": 13333.28,
+        "returns": 1711.0
+      },
+      {
+        "date": "2026-01-20",
+        "orders": 11,
+        "gross_sales": 44689.03,
+        "net_sales": 29831.17,
+        "discounts": 6841.86,
+        "returns": 8016.0
+      },
+      {
+        "date": "2026-01-21",
+        "orders": 16,
+        "gross_sales": 85960.21,
+        "net_sales": 53101.32,
+        "discounts": 23028.89,
+        "returns": 9830.0
+      },
+      {
+        "date": "2026-01-22",
+        "orders": 7,
+        "gross_sales": 26182.12,
+        "net_sales": 21541.55,
+        "discounts": 4640.57,
+        "returns": 0.0
+      },
+      {
+        "date": "2026-01-23",
+        "orders": 13,
+        "gross_sales": 79200.14,
+        "net_sales": 63142.92,
+        "discounts": 16057.22,
+        "returns": 0.0
+      },
+      {
+        "date": "2026-01-24",
+        "orders": 22,
+        "gross_sales": 118506.86,
+        "net_sales": 93029.12,
+        "discounts": 22885.24,
+        "returns": 2592.5
+      },
+      {
+        "date": "2026-01-25",
+        "orders": 15,
+        "gross_sales": 76425.58,
+        "net_sales": 58203.56,
+        "discounts": 11782.02,
+        "returns": 6440.0
+      },
+      {
+        "date": "2026-01-26",
+        "orders": 17,
+        "gross_sales": 108580.11,
+        "net_sales": 79876.46,
+        "discounts": 26240.78,
+        "returns": 2462.87
+      },
+      {
+        "date": "2026-01-27",
+        "orders": 12,
+        "gross_sales": 94831.93,
+        "net_sales": 75296.84,
+        "discounts": 18526.09,
+        "returns": 1009.0
+      },
+      {
+        "date": "2026-01-28",
+        "orders": 19,
+        "gross_sales": 157245.64,
+        "net_sales": 118859.42,
+        "discounts": 34551.22,
+        "returns": 3835.0
+      },
+      {
+        "date": "2026-01-29",
+        "orders": 21,
+        "gross_sales": 104731.2,
+        "net_sales": 85225.26,
+        "discounts": 19505.94,
+        "returns": 0.0
+      },
+      {
+        "date": "2026-01-30",
+        "orders": 19,
+        "gross_sales": 115343.51,
+        "net_sales": 95683.84,
+        "discounts": 19659.67,
+        "returns": 0.0
+      },
+      {
+        "date": "2026-01-31",
+        "orders": 14,
+        "gross_sales": 83059.35,
+        "net_sales": 61136.43,
+        "discounts": 18733.92,
+        "returns": 3189.0
+      },
+      {
+        "date": "2026-02-01",
+        "orders": 22,
+        "gross_sales": 111463.55,
+        "net_sales": 91233.74,
+        "discounts": 20229.81,
+        "returns": 0.0
+      },
+      {
+        "date": "2026-02-02",
+        "orders": 17,
+        "gross_sales": 102729.37,
+        "net_sales": 78046.75,
+        "discounts": 18277.75,
+        "returns": 6404.87
+      },
+      {
+        "date": "2026-02-03",
+        "orders": 19,
+        "gross_sales": 133328.87,
+        "net_sales": 113282.79,
+        "discounts": 20046.08,
+        "returns": 0.0
+      },
+      {
+        "date": "2026-02-04",
+        "orders": 13,
+        "gross_sales": 110597.49,
+        "net_sales": 86314.04,
+        "discounts": 20085.26,
+        "returns": 4198.19
+      },
+      {
+        "date": "2026-02-05",
+        "orders": 12,
+        "gross_sales": 80405.23,
+        "net_sales": 62012.89,
+        "discounts": 18392.34,
+        "returns": 0.0
+      },
+      {
+        "date": "2026-02-06",
+        "orders": 18,
+        "gross_sales": 101411.21,
+        "net_sales": 76581.59,
+        "discounts": 21640.62,
+        "returns": 3189.0
+      },
+      {
+        "date": "2026-02-07",
+        "orders": 21,
+        "gross_sales": 148914.78,
+        "net_sales": 110965.98,
+        "discounts": 37948.8,
+        "returns": 0.0
+      },
+      {
+        "date": "2026-02-08",
+        "orders": 22,
+        "gross_sales": 147004.28,
+        "net_sales": 106627.69,
+        "discounts": 30045.84,
+        "returns": 10330.75
+      },
+      {
+        "date": "2026-02-09",
+        "orders": 19,
+        "gross_sales": 193360.11,
+        "net_sales": 137022.2,
+        "discounts": 47669.16,
+        "returns": 8668.75
+      },
+      {
+        "date": "2026-02-10",
+        "orders": 10,
+        "gross_sales": 55629.33,
+        "net_sales": 39166.25,
+        "discounts": 11788.08,
+        "returns": 4675.0
+      },
+      {
+        "date": "2026-02-11",
+        "orders": 15,
+        "gross_sales": 116624.35,
+        "net_sales": 90894.14,
+        "discounts": 25730.21,
+        "returns": 0.0
+      },
+      {
+        "date": "2026-02-12",
+        "orders": 17,
+        "gross_sales": 112187.33,
+        "net_sales": 85236.22,
+        "discounts": 26951.11,
+        "returns": 0.0
+      },
+      {
+        "date": "2026-02-13",
+        "orders": 19,
+        "gross_sales": 114812.94,
+        "net_sales": 77935.16,
+        "discounts": 24376.78,
+        "returns": 12501.0
+      },
+      {
+        "date": "2026-02-14",
+        "orders": 22,
+        "gross_sales": 149662.43,
+        "net_sales": 99087.32,
+        "discounts": 32427.61,
+        "returns": 18147.5
+      },
+      {
+        "date": "2026-02-15",
+        "orders": 26,
+        "gross_sales": 164181.35,
+        "net_sales": 114211.18,
+        "discounts": 49970.17,
+        "returns": 0.0
+      },
+      {
+        "date": "2026-02-16",
+        "orders": 15,
+        "gross_sales": 144134.24,
+        "net_sales": 112830.61,
+        "discounts": 31303.63,
+        "returns": 0.0
+      },
+      {
+        "date": "2026-02-17",
+        "orders": 16,
+        "gross_sales": 114904.8,
+        "net_sales": 84699.28,
+        "discounts": 23302.52,
+        "returns": 6903.0
+      },
+      {
+        "date": "2026-02-18",
+        "orders": 20,
+        "gross_sales": 129304.58,
+        "net_sales": 86040.03,
+        "discounts": 43264.55,
+        "returns": 0.0
+      },
+      {
+        "date": "2026-02-19",
+        "orders": 7,
+        "gross_sales": 65433.69,
+        "net_sales": 48333.96,
+        "discounts": 17099.73,
+        "returns": 0.0
+      },
+      {
+        "date": "2026-02-20",
+        "orders": 4,
+        "gross_sales": 20066.07,
+        "net_sales": 14232.28,
+        "discounts": 2644.79,
+        "returns": 3189.0
+      },
+      {
+        "date": "2026-02-21",
+        "orders": 6,
+        "gross_sales": 56054.25,
+        "net_sales": 33209.06,
+        "discounts": 14766.19,
+        "returns": 8079.0
+      },
+      {
+        "date": "2026-02-22",
+        "orders": 4,
+        "gross_sales": 17616.06,
+        "net_sales": 5066.97,
+        "discounts": 2607.34,
+        "returns": 9941.75
+      },
+      {
+        "date": "2026-02-23",
+        "orders": 11,
+        "gross_sales": 135907.62,
+        "net_sales": 101320.41,
+        "discounts": 34587.21,
+        "returns": 0.0
+      },
+      {
+        "date": "2026-02-24",
+        "orders": 28,
+        "gross_sales": 221211.66,
+        "net_sales": 159207.54,
+        "discounts": 62004.12,
+        "returns": 0.0
+      },
+      {
+        "date": "2026-02-25",
+        "orders": 26,
+        "gross_sales": 121633.26,
+        "net_sales": 85455.21,
+        "discounts": 28361.05,
+        "returns": 7817.0
+      },
+      {
+        "date": "2026-02-26",
+        "orders": 30,
+        "gross_sales": 158401.34,
+        "net_sales": 127929.12,
+        "discounts": 30472.22,
+        "returns": 0.0
+      },
+      {
+        "date": "2026-02-27",
+        "orders": 27,
+        "gross_sales": 136594.15,
+        "net_sales": 109193.49,
+        "discounts": 27400.66,
+        "returns": 0.0
+      },
+      {
+        "date": "2026-02-28",
+        "orders": 22,
+        "gross_sales": 151898.46,
+        "net_sales": 114323.9,
+        "discounts": 35105.56,
+        "returns": 2469.0
+      }
+    ],
+    "channel_note": "100% Own Website (Shopify). Myntra data pending."
+  },
+  "products": {
+    "products": [
+      {
+        "name": "Grey Blue Irish Linen Shirt",
+        "units_sold": 767,
+        "gross_sales": 3245169.1,
+        "discounts": 604317.59,
+        "returns": 77078.04,
+        "net_sales": 2563773.47,
+        "total_sales": 2576654.29,
+        "share_of_gross": 13.4,
+        "asp": 4231.0
+      },
+      {
+        "name": "Coral Red Linen Shirt",
+        "units_sold": 613,
+        "gross_sales": 2565005.84,
+        "discounts": 518872.63,
+        "returns": 31731.8,
+        "net_sales": 2014401.41,
+        "total_sales": 2025507.64,
+        "share_of_gross": 10.6,
+        "asp": 4184.0
+      },
+      {
+        "name": "Olive Green Irish Linen Shirt",
+        "units_sold": 431,
+        "gross_sales": 1887978.72,
+        "discounts": 332139.74,
+        "returns": 74666.67,
+        "net_sales": 1481172.31,
+        "total_sales": 1488826.4,
+        "share_of_gross": 7.8,
+        "asp": 4380.0
+      },
+      {
+        "name": "Navy Blue Irish Linen Shirt",
+        "units_sold": 320,
+        "gross_sales": 1350087.01,
+        "discounts": 262319.0,
+        "returns": 63959.15,
+        "net_sales": 1023808.86,
+        "total_sales": 1032490.76,
+        "share_of_gross": 5.6,
+        "asp": 4219.0
+      },
+      {
+        "name": "Sea Green Irish Linen Shirt",
+        "units_sold": 314,
+        "gross_sales": 1496383.86,
+        "discounts": 300425.94,
+        "returns": 7137.87,
+        "net_sales": 1188820.05,
+        "total_sales": 1202223.28,
+        "share_of_gross": 6.2,
+        "asp": 4766.0
+      },
+      {
+        "name": "Sky Blue Pure Linen Shirt - 70 Lea",
+        "units_sold": 250,
+        "gross_sales": 1265880.91,
+        "discounts": 264651.43,
+        "returns": 0.0,
+        "net_sales": 1001229.48,
+        "total_sales": 1014012.7,
+        "share_of_gross": 5.2,
+        "asp": 5064.0
+      },
+      {
+        "name": "Plum Irish Linen Shirt",
+        "units_sold": 230,
+        "gross_sales": 1089285.24,
+        "discounts": 222393.92,
+        "returns": 10539.69,
+        "net_sales": 856351.63,
+        "total_sales": 869179.0,
+        "share_of_gross": 4.5,
+        "asp": 4736.0
+      },
+      {
+        "name": "White Irish Linen Shirt",
+        "units_sold": 227,
+        "gross_sales": 980656.03,
+        "discounts": 204620.63,
+        "returns": 9546.56,
+        "net_sales": 766488.84,
+        "total_sales": 772976.18,
+        "share_of_gross": 4.1,
+        "asp": 4320.0
+      },
+      {
+        "name": "Beige Striped Irish Linen Shirt",
+        "units_sold": 203,
+        "gross_sales": 836519.09,
+        "discounts": 176095.87,
+        "returns": 12076.03,
+        "net_sales": 648347.19,
+        "total_sales": 678746.15,
+        "share_of_gross": 3.5,
+        "asp": 4121.0
+      },
+      {
+        "name": "Natural Beige Linen Pants",
+        "units_sold": 189,
+        "gross_sales": 759780.47,
+        "discounts": 163960.45,
+        "returns": 5603.85,
+        "net_sales": 590216.17,
+        "total_sales": 595975.45,
+        "share_of_gross": 3.1,
+        "asp": 4020.0
+      },
+      {
+        "name": "Mocha Brown Irish Linen Shirt",
+        "units_sold": 153,
+        "gross_sales": 790970.17,
+        "discounts": 177527.64,
+        "returns": 8244.15,
+        "net_sales": 605198.38,
+        "total_sales": 614171.91,
+        "share_of_gross": 3.3,
+        "asp": 5170.0
+      },
+      {
+        "name": "Off White Linen Pants",
+        "units_sold": 140,
+        "gross_sales": 542326.91,
+        "discounts": 117118.78,
+        "returns": 10383.15,
+        "net_sales": 414824.98,
+        "total_sales": 420991.72,
+        "share_of_gross": 2.2,
+        "asp": 3874.0
+      },
+      {
+        "name": "Beige Pure Linen Shirt - 70 Lea",
+        "units_sold": 136,
+        "gross_sales": 654119.64,
+        "discounts": 147652.03,
+        "returns": 0.0,
+        "net_sales": 506467.61,
+        "total_sales": 529700.74,
+        "share_of_gross": 2.7,
+        "asp": 4810.0
+      },
+      {
+        "name": "Authentic Supima\u00ae Tee - White",
+        "units_sold": 135,
+        "gross_sales": 163106.65,
+        "discounts": 33296.7,
+        "returns": 1400.0,
+        "net_sales": 128409.95,
+        "total_sales": 141785.31,
+        "share_of_gross": 0.7,
+        "asp": 1208.0
+      },
+      {
+        "name": "Light Pink Pure Linen Shirt - 70 Lea",
+        "units_sold": 129,
+        "gross_sales": 673827.54,
+        "discounts": 159708.97,
+        "returns": 9397.19,
+        "net_sales": 504721.38,
+        "total_sales": 510136.87,
+        "share_of_gross": 2.8,
+        "asp": 5223.0
+      },
+      {
+        "name": "Authentic Supima\u00ae Tee - Plum",
+        "units_sold": 117,
+        "gross_sales": 137069.26,
+        "discounts": 26981.47,
+        "returns": 0.0,
+        "net_sales": 110087.79,
+        "total_sales": 123298.26,
+        "share_of_gross": 0.6,
+        "asp": 1172.0
+      },
+      {
+        "name": "Authentic Supima\u00ae Tee - Charcoal Grey",
+        "units_sold": 111,
+        "gross_sales": 143283.5,
+        "discounts": 29396.73,
+        "returns": 0.0,
+        "net_sales": 113886.77,
+        "total_sales": 127509.75,
+        "share_of_gross": 0.6,
+        "asp": 1291.0
+      },
+      {
+        "name": "Authentic Supima\u00ae Tee - Desert Taupe",
+        "units_sold": 109,
+        "gross_sales": 128096.05,
+        "discounts": 25023.69,
+        "returns": 0.0,
+        "net_sales": 103072.36,
+        "total_sales": 115409.13,
+        "share_of_gross": 0.5,
+        "asp": 1175.0
+      },
+      {
+        "name": "Pink Irish Linen Shirt",
+        "units_sold": 106,
+        "gross_sales": 434128.24,
+        "discounts": 74301.17,
+        "returns": 21607.15,
+        "net_sales": 338219.92,
+        "total_sales": 338564.85,
+        "share_of_gross": 1.8,
+        "asp": 4096.0
+      },
+      {
+        "name": "Authentic Supima\u00ae Tee - Dusty Green",
+        "units_sold": 99,
+        "gross_sales": 123631.84,
+        "discounts": 23114.25,
+        "returns": 0.0,
+        "net_sales": 100517.59,
+        "total_sales": 112579.75,
+        "share_of_gross": 0.5,
+        "asp": 1249.0
+      },
+      {
+        "name": "Black Linen-Blend Shirt",
+        "units_sold": 97,
+        "gross_sales": 228372.9,
+        "discounts": 44433.25,
+        "returns": 6921.43,
+        "net_sales": 177018.22,
+        "total_sales": 179538.77,
+        "share_of_gross": 0.9,
+        "asp": 2354.0
+      },
+      {
+        "name": "Authentic Supima\u00ae Tee - Black",
+        "units_sold": 93,
+        "gross_sales": 112360.25,
+        "discounts": 21871.91,
+        "returns": 0.0,
+        "net_sales": 90488.34,
+        "total_sales": 99479.64,
+        "share_of_gross": 0.5,
+        "asp": 1208.0
+      },
+      {
+        "name": "Brown Linen Pants",
+        "units_sold": 90,
+        "gross_sales": 365428.24,
+        "discounts": 81500.77,
+        "returns": 0.0,
+        "net_sales": 283927.47,
+        "total_sales": 288224.49,
+        "share_of_gross": 1.5,
+        "asp": 4060.0
+      },
+      {
+        "name": "Charcoal Grey Irish Linen Shirt with Black Button",
+        "units_sold": 89,
+        "gross_sales": 361864.0,
+        "discounts": 80813.6,
+        "returns": 5984.25,
+        "net_sales": 275066.15,
+        "total_sales": 278722.09,
+        "share_of_gross": 1.5,
+        "asp": 4066.0
+      },
+      {
+        "name": "Yellow Pure Linen Shirt - 70 Lea",
+        "units_sold": 87,
+        "gross_sales": 429599.73,
+        "discounts": 89060.03,
+        "returns": 0.0,
+        "net_sales": 340539.7,
+        "total_sales": 344591.2,
+        "share_of_gross": 1.8,
+        "asp": 4938.0
+      },
+      {
+        "name": "Black Irish Linen Shirt",
+        "units_sold": 75,
+        "gross_sales": 302218.78,
+        "discounts": 72800.43,
+        "returns": 2582.81,
+        "net_sales": 226835.54,
+        "total_sales": 242486.72,
+        "share_of_gross": 1.2,
+        "asp": 4030.0
+      },
+      {
+        "name": "Sky Irish Linen Shirt",
+        "units_sold": 66,
+        "gross_sales": 303122.84,
+        "discounts": 52583.8,
+        "returns": 28592.85,
+        "net_sales": 221946.19,
+        "total_sales": 222427.7,
+        "share_of_gross": 1.3,
+        "asp": 4593.0
+      },
+      {
+        "name": "Denim Blue Color Linen Pants",
+        "units_sold": 64,
+        "gross_sales": 257422.72,
+        "discounts": 60507.07,
+        "returns": 14569.83,
+        "net_sales": 182345.82,
+        "total_sales": 186279.55,
+        "share_of_gross": 1.1,
+        "asp": 4022.0
+      },
+      {
+        "name": "Rhino Grey Irish Linen Shirt - 70 LEA",
+        "units_sold": 62,
+        "gross_sales": 291053.32,
+        "discounts": 60689.95,
+        "returns": 0.0,
+        "net_sales": 230363.37,
+        "total_sales": 234161.11,
+        "share_of_gross": 1.2,
+        "asp": 4694.0
+      },
+      {
+        "name": "Dusty Olive Irish Linen Shirt - 70 LEA",
+        "units_sold": 47,
+        "gross_sales": 229942.78,
+        "discounts": 49901.67,
+        "returns": 4122.5,
+        "net_sales": 175918.61,
+        "total_sales": 179161.66,
+        "share_of_gross": 1.0,
+        "asp": 4892.0
+      }
+    ],
+    "categories": [
+      {
+        "category": "Shirts",
+        "units": 4811,
+        "gross_sales": 21111503.86,
+        "net_sales": 16430414.31,
+        "returns": 388406.79,
+        "share": 87.3
+      },
+      {
+        "category": "Pants",
+        "units": 577,
+        "gross_sales": 2171321.95,
+        "net_sales": 1638191.04,
+        "returns": 36912.9,
+        "share": 9.0
+      },
+      {
+        "category": "T-Shirts",
+        "units": 743,
+        "gross_sales": 895850.59,
+        "net_sales": 717112.79,
+        "returns": 1400.0,
+        "share": 3.7
+      }
+    ],
+    "total_skus": 57,
+    "concentration_risk": {
+      "top_product": "Grey Blue Irish Linen Shirt",
+      "top_product_share": 13.4,
+      "alert": "LOW"
+    }
+  },
+  "payments": {
+    "note": "Based on order exports (Jul-Sep 2025 sample \u2014 700 orders). Full order data pending.",
+    "total_orders_sampled": 700,
+    "cod_orders": 321,
+    "cod_share": 45.9,
+    "ppcod_orders": 0,
+    "ppcod_share": 0.0,
+    "prepaid_orders": 379,
+    "prepaid_share": 54.1,
+    "payment_methods": [
+      {
+        "method": "COD",
+        "orders": 321,
+        "share": 45.9,
+        "revenue": 1510578.0
+      },
+      {
+        "method": "UPI",
+        "orders": 221,
+        "share": 31.6,
+        "revenue": 1117398.0
+      },
+      {
+        "method": "Cards",
+        "orders": 125,
+        "share": 17.9,
+        "revenue": 719514.0
+      },
+      {
+        "method": "Manual",
+        "orders": 14,
+        "share": 2.0,
+        "revenue": 60442.0
+      },
+      {
+        "method": "Unknown",
+        "orders": 13,
+        "share": 1.9,
+        "revenue": 19483.0
+      },
+      {
+        "method": "Net Banking",
+        "orders": 4,
+        "share": 0.6,
+        "revenue": 19477.0
+      },
+      {
+        "method": "EMI",
+        "orders": 2,
+        "share": 0.3,
+        "revenue": 17058.0
+      }
+    ],
+    "gateway": "Gokwik (primary) + Easebuzz (secondary)"
+  },
+  "customers": {
+    "note": "Based on order exports (Jul-Sep 2025 sample).",
+    "total_customers": 595,
+    "repeat_customers": 73,
+    "repeat_rate": 12.3,
+    "avg_ltv": 5809.0,
+    "avg_orders_per_customer": 1.17,
+    "frequency_distribution": [
+      {
+        "orders": 1,
+        "customers": 522
+      },
+      {
+        "orders": 2,
+        "customers": 55
+      },
+      {
+        "orders": 3,
+        "customers": 11
+      },
+      {
+        "orders": 4,
+        "customers": 4
+      },
+      {
+        "orders": 5,
+        "customers": 3
+      }
+    ],
+    "marketing_opt_in": 257,
+    "marketing_opt_in_rate": 36.7
+  },
+  "geography": {
+    "note": "Based on order exports (Jul-Sep 2025 sample).",
+    "top_states": [
+      {
+        "state": "Maharashtra",
+        "orders": 124,
+        "revenue": 610373.53,
+        "share": 17.7
+      },
+      {
+        "state": "Karnataka",
+        "orders": 86,
+        "revenue": 413730.58999999997,
+        "share": 12.3
+      },
+      {
+        "state": "Telangana",
+        "orders": 71,
+        "revenue": 325033.76,
+        "share": 10.1
+      },
+      {
+        "state": "Gujarat",
+        "orders": 69,
+        "revenue": 344583.5,
+        "share": 9.9
+      },
+      {
+        "state": "Delhi",
+        "orders": 52,
+        "revenue": 256997.54,
+        "share": 7.4
+      },
+      {
+        "state": "Uttar Pradesh",
+        "orders": 41,
+        "revenue": 189906.95,
+        "share": 5.9
+      },
+      {
+        "state": "Tamil Nadu",
+        "orders": 35,
+        "revenue": 167203.1,
+        "share": 5.0
+      },
+      {
+        "state": "Andhra Pradesh",
+        "orders": 34,
+        "revenue": 195427.99,
+        "share": 4.9
+      },
+      {
+        "state": "Haryana",
+        "orders": 30,
+        "revenue": 184321.83,
+        "share": 4.3
+      },
+      {
+        "state": "Kerala",
+        "orders": 28,
+        "revenue": 134146.26,
+        "share": 4.0
+      },
+      {
+        "state": "West Bengal",
+        "orders": 26,
+        "revenue": 171694.21,
+        "share": 3.7
+      },
+      {
+        "state": "Bihar",
+        "orders": 12,
+        "revenue": 72989.44,
+        "share": 1.7
+      },
+      {
+        "state": "Chhattisgarh",
+        "orders": 12,
+        "revenue": 54029.7,
+        "share": 1.7
+      },
+      {
+        "state": "Madhya Pradesh",
+        "orders": 10,
+        "revenue": 35789.7,
+        "share": 1.4
+      },
+      {
+        "state": "Rajasthan",
+        "orders": 10,
+        "revenue": 40631.24,
+        "share": 1.4
+      }
+    ],
+    "top_cities": [
+      {
+        "city": "MUMBAI",
+        "orders": 63,
+        "revenue": 310345.37
+      },
+      {
+        "city": "BANGALORE",
+        "orders": 53,
+        "revenue": 263365.57
+      },
+      {
+        "city": "HYDERABAD",
+        "orders": 29,
+        "revenue": 146730.53
+      },
+      {
+        "city": "AHMEDABAD",
+        "orders": 27,
+        "revenue": 148696.12
+      },
+      {
+        "city": "PUNE",
+        "orders": 25,
+        "revenue": 138395.95
+      },
+      {
+        "city": "GURGAON",
+        "orders": 21,
+        "revenue": 119487.22
+      },
+      {
+        "city": "SURAT",
+        "orders": 13,
+        "revenue": 69458.95
+      },
+      {
+        "city": "RANGA REDDY",
+        "orders": 12,
+        "revenue": 57339.61
+      },
+      {
+        "city": "NEW DELHI",
+        "orders": 11,
+        "revenue": 45714.04
+      },
+      {
+        "city": "KOLKATA",
+        "orders": 10,
+        "revenue": 69309.56
+      },
+      {
+        "city": "ERNAKULAM",
+        "orders": 10,
+        "revenue": 52820.99
+      },
+      {
+        "city": "Mumbai",
+        "orders": 10,
+        "revenue": 42880.65
+      },
+      {
+        "city": "THANE",
+        "orders": 9,
+        "revenue": 42487.94
+      },
+      {
+        "city": "VISAKHAPATNAM",
+        "orders": 9,
+        "revenue": 58519.54
+      },
+      {
+        "city": "Hyderabad",
+        "orders": 8,
+        "revenue": 34325.979999999996
+      }
+    ]
+  },
+  "discounts": {
+    "total_discount_value": 4966238.57,
+    "discount_rate": 20.5,
+    "total_codes_used": 66,
+    "top_discounts": [
+      {
+        "name": "FIRST15",
+        "method": "discount_code",
+        "type": "fixed_amount",
+        "orders": 2124,
+        "applied_amount": 1985961.91,
+        "gross_sales": 11234359.67,
+        "net_sales": 9153649.28,
+        "total_sales": 9262956.84,
+        "avg_discount_per_order": 935.0
+      },
+      {
+        "name": "LINEN25",
+        "method": "discount_code",
+        "type": "fixed_amount",
+        "orders": 265,
+        "applied_amount": 802224.64,
+        "gross_sales": 2846952.07,
+        "net_sales": 2032546.84,
+        "total_sales": 2054487.11,
+        "avg_discount_per_order": 3027.0
+      },
+      {
+        "name": "PREPAID-DISCOUNT",
+        "method": "manual",
+        "type": "fixed_amount",
+        "orders": 193,
+        "applied_amount": 48196.7,
+        "gross_sales": 946490.34,
+        "net_sales": 899165.97,
+        "total_sales": 915737.3,
+        "avg_discount_per_order": 250.0
+      },
+      {
+        "name": "SUPIMA15",
+        "method": "discount_code",
+        "type": "fixed_amount",
+        "orders": 122,
+        "applied_amount": 46644.63,
+        "gross_sales": 277640.68,
+        "net_sales": 235547.29,
+        "total_sales": 260285.37,
+        "avg_discount_per_order": 382.0
+      },
+      {
+        "name": "FRIDAY25",
+        "method": "discount_code",
+        "type": "fixed_amount",
+        "orders": 114,
+        "applied_amount": 308781.62,
+        "gross_sales": 1075344.83,
+        "net_sales": 771883.62,
+        "total_sales": 800384.88,
+        "avg_discount_per_order": 2709.0
+      },
+      {
+        "name": "FIRST15",
+        "method": "discount_code",
+        "type": "percentage",
+        "orders": 92,
+        "applied_amount": 67178.25,
+        "gross_sales": 447855.0,
+        "net_sales": 377277.6,
+        "total_sales": 377809.28,
+        "avg_discount_per_order": 730.0
+      },
+      {
+        "name": "DIWALI25",
+        "method": "discount_code",
+        "type": "fixed_amount",
+        "orders": 72,
+        "applied_amount": 171381.51,
+        "gross_sales": 607997.0,
+        "net_sales": 439896.36,
+        "total_sales": 448347.49,
+        "avg_discount_per_order": 2380.0
+      },
+      {
+        "name": "SUMMER20",
+        "method": "discount_code",
+        "type": "fixed_amount",
+        "orders": 67,
+        "applied_amount": 97627.48,
+        "gross_sales": 440198.0,
+        "net_sales": 342570.52,
+        "total_sales": 342570.52,
+        "avg_discount_per_order": 1457.0
+      },
+      {
+        "name": "SUMMER20",
+        "method": "discount_code",
+        "type": "percentage",
+        "orders": 58,
+        "applied_amount": 77675.6,
+        "gross_sales": 388378.0,
+        "net_sales": 310702.4,
+        "total_sales": 310702.4,
+        "avg_discount_per_order": 1339.0
+      },
+      {
+        "name": "eoy1500",
+        "method": "discount_code",
+        "type": "fixed_amount",
+        "orders": 50,
+        "applied_amount": 88989.75,
+        "gross_sales": 383026.89,
+        "net_sales": 297765.02,
+        "total_sales": 310004.25,
+        "avg_discount_per_order": 1780.0
+      },
+      {
+        "name": "DIWALI30",
+        "method": "discount_code",
+        "type": "fixed_amount",
+        "orders": 43,
+        "applied_amount": 215891.79,
+        "gross_sales": 658170.23,
+        "net_sales": 446553.78,
+        "total_sales": 455538.21,
+        "avg_discount_per_order": 5021.0
+      },
+      {
+        "name": "LINEN30",
+        "method": "discount_code",
+        "type": "fixed_amount",
+        "orders": 36,
+        "applied_amount": 214179.55,
+        "gross_sales": 623643.17,
+        "net_sales": 401921.33,
+        "total_sales": 423912.7,
+        "avg_discount_per_order": 5949.0
+      },
+      {
+        "name": "SUPIMA20",
+        "method": "discount_code",
+        "type": "fixed_amount",
+        "orders": 32,
+        "applied_amount": 31660.0,
+        "gross_sales": 124374.57,
+        "net_sales": 96107.12,
+        "total_sales": 107640.0,
+        "avg_discount_per_order": 989.0
+      },
+      {
+        "name": "FRIDAY30",
+        "method": "discount_code",
+        "type": "fixed_amount",
+        "orders": 28,
+        "applied_amount": 180821.2,
+        "gross_sales": 505808.15,
+        "net_sales": 340550.06,
+        "total_sales": 372942.8,
+        "avg_discount_per_order": 6458.0
+      },
+      {
+        "name": "JAN26",
+        "method": "discount_code",
+        "type": "fixed_amount",
+        "orders": 25,
+        "applied_amount": 97850.97,
+        "gross_sales": 325344.97,
+        "net_sales": 230119.26,
+        "total_sales": 236527.03,
+        "avg_discount_per_order": 3914.0
+      },
+      {
+        "name": "festive25",
+        "method": "discount_code",
+        "type": "fixed_amount",
+        "orders": 16,
+        "applied_amount": 60556.31,
+        "gross_sales": 205938.82,
+        "net_sales": 148162.75,
+        "total_sales": 155052.69,
+        "avg_discount_per_order": 3785.0
+      },
+      {
+        "name": "GIFT25",
+        "method": "discount_code",
+        "type": "fixed_amount",
+        "orders": 15,
+        "applied_amount": 20456.2,
+        "gross_sales": 74069.83,
+        "net_sales": 53861.65,
+        "total_sales": 54710.8,
+        "avg_discount_per_order": 1364.0
+      },
+      {
+        "name": "Custom discount",
+        "method": "manual",
+        "type": "fixed_amount",
+        "orders": 13,
+        "applied_amount": 145098.0,
+        "gross_sales": 151947.0,
+        "net_sales": 6849.0,
+        "total_sales": 6849.0,
+        "avg_discount_per_order": 11161.0
+      },
+      {
+        "name": "TRIAL25",
+        "method": "discount_code",
+        "type": "fixed_amount",
+        "orders": 12,
+        "applied_amount": 19020.57,
+        "gross_sales": 64574.13,
+        "net_sales": 46126.26,
+        "total_sales": 47594.43,
+        "avg_discount_per_order": 1585.0
+      },
+      {
+        "name": "EOY2500",
+        "method": "discount_code",
+        "type": "fixed_amount",
+        "orders": 10,
+        "applied_amount": 30057.05,
+        "gross_sales": 132060.08,
+        "net_sales": 103000.53,
+        "total_sales": 106683.95,
+        "avg_discount_per_order": 3006.0
+      }
+    ],
+    "insights": [
+      "FIRST15 is the dominant discount \u2014 used on 2124 orders (54.8% of all orders), generating \u20b9112.3L gross sales",
+      "Total discount leakage: \u20b949.7L (20.5% of gross sales)",
+      "LINEN25 (25% off) used on 265 orders \u2014 second highest, drives premium product sales"
+    ]
+  },
+  "sessions": {
+    "total_visitors": 315946,
+    "total_sessions": 343000,
+    "avg_daily_sessions": 1027.0,
+    "avg_daily_visitors": 946.0,
+    "overall_conversion": 1.13,
+    "daily_sessions": [
+      {
+        "date": "2025-04-01",
+        "visitors": 218,
+        "sessions": 249
+      },
+      {
+        "date": "2025-04-02",
+        "visitors": 245,
+        "sessions": 262
+      },
+      {
+        "date": "2025-04-03",
+        "visitors": 296,
+        "sessions": 313
+      },
+      {
+        "date": "2025-04-04",
+        "visitors": 173,
+        "sessions": 192
+      },
+      {
+        "date": "2025-04-05",
+        "visitors": 271,
+        "sessions": 285
+      },
+      {
+        "date": "2025-04-06",
+        "visitors": 395,
+        "sessions": 438
+      },
+      {
+        "date": "2025-04-07",
+        "visitors": 368,
+        "sessions": 388
+      },
+      {
+        "date": "2025-04-08",
+        "visitors": 332,
+        "sessions": 356
+      },
+      {
+        "date": "2025-04-09",
+        "visitors": 486,
+        "sessions": 505
+      },
+      {
+        "date": "2025-04-10",
+        "visitors": 447,
+        "sessions": 474
+      },
+      {
+        "date": "2025-04-11",
+        "visitors": 377,
+        "sessions": 401
+      },
+      {
+        "date": "2025-04-12",
+        "visitors": 442,
+        "sessions": 462
+      },
+      {
+        "date": "2025-04-13",
+        "visitors": 600,
+        "sessions": 636
+      },
+      {
+        "date": "2025-04-14",
+        "visitors": 558,
+        "sessions": 567
+      },
+      {
+        "date": "2025-04-15",
+        "visitors": 549,
+        "sessions": 577
+      },
+      {
+        "date": "2025-04-16",
+        "visitors": 482,
+        "sessions": 509
+      },
+      {
+        "date": "2025-04-17",
+        "visitors": 519,
+        "sessions": 564
+      },
+      {
+        "date": "2025-04-18",
+        "visitors": 498,
+        "sessions": 525
+      },
+      {
+        "date": "2025-04-19",
+        "visitors": 367,
+        "sessions": 389
+      },
+      {
+        "date": "2025-04-20",
+        "visitors": 421,
+        "sessions": 439
+      },
+      {
+        "date": "2025-04-21",
+        "visitors": 311,
+        "sessions": 341
+      },
+      {
+        "date": "2025-04-22",
+        "visitors": 231,
+        "sessions": 259
+      },
+      {
+        "date": "2025-04-23",
+        "visitors": 236,
+        "sessions": 258
+      },
+      {
+        "date": "2025-04-24",
+        "visitors": 207,
+        "sessions": 222
+      },
+      {
+        "date": "2025-04-25",
+        "visitors": 181,
+        "sessions": 190
+      },
+      {
+        "date": "2025-04-26",
+        "visitors": 163,
+        "sessions": 173
+      },
+      {
+        "date": "2025-04-27",
+        "visitors": 37,
+        "sessions": 40
+      },
+      {
+        "date": "2025-04-28",
+        "visitors": 52,
+        "sessions": 59
+      },
+      {
+        "date": "2025-04-29",
+        "visitors": 52,
+        "sessions": 60
+      },
+      {
+        "date": "2025-04-30",
+        "visitors": 12,
+        "sessions": 12
+      },
+      {
+        "date": "2025-05-01",
+        "visitors": 20,
+        "sessions": 22
+      },
+      {
+        "date": "2025-05-02",
+        "visitors": 20,
+        "sessions": 20
+      },
+      {
+        "date": "2025-05-03",
+        "visitors": 19,
+        "sessions": 23
+      },
+      {
+        "date": "2025-05-04",
+        "visitors": 142,
+        "sessions": 143
+      },
+      {
+        "date": "2025-05-05",
+        "visitors": 163,
+        "sessions": 178
+      },
+      {
+        "date": "2025-05-06",
+        "visitors": 135,
+        "sessions": 142
+      },
+      {
+        "date": "2025-05-07",
+        "visitors": 138,
+        "sessions": 145
+      },
+      {
+        "date": "2025-05-08",
+        "visitors": 95,
+        "sessions": 105
+      },
+      {
+        "date": "2025-05-09",
+        "visitors": 61,
+        "sessions": 64
+      },
+      {
+        "date": "2025-05-10",
+        "visitors": 76,
+        "sessions": 77
+      },
+      {
+        "date": "2025-05-11",
+        "visitors": 72,
+        "sessions": 73
+      },
+      {
+        "date": "2025-05-12",
+        "visitors": 122,
+        "sessions": 130
+      },
+      {
+        "date": "2025-05-13",
+        "visitors": 144,
+        "sessions": 151
+      },
+      {
+        "date": "2025-05-14",
+        "visitors": 257,
+        "sessions": 266
+      },
+      {
+        "date": "2025-05-15",
+        "visitors": 290,
+        "sessions": 341
+      },
+      {
+        "date": "2025-05-16",
+        "visitors": 290,
+        "sessions": 303
+      },
+      {
+        "date": "2025-05-17",
+        "visitors": 292,
+        "sessions": 318
+      },
+      {
+        "date": "2025-05-18",
+        "visitors": 336,
+        "sessions": 353
+      },
+      {
+        "date": "2025-05-19",
+        "visitors": 228,
+        "sessions": 241
+      },
+      {
+        "date": "2025-05-20",
+        "visitors": 252,
+        "sessions": 260
+      },
+      {
+        "date": "2025-05-21",
+        "visitors": 222,
+        "sessions": 236
+      },
+      {
+        "date": "2025-05-22",
+        "visitors": 240,
+        "sessions": 250
+      },
+      {
+        "date": "2025-05-23",
+        "visitors": 375,
+        "sessions": 392
+      },
+      {
+        "date": "2025-05-24",
+        "visitors": 415,
+        "sessions": 436
+      },
+      {
+        "date": "2025-05-25",
+        "visitors": 386,
+        "sessions": 404
+      },
+      {
+        "date": "2025-05-26",
+        "visitors": 267,
+        "sessions": 286
+      },
+      {
+        "date": "2025-05-27",
+        "visitors": 151,
+        "sessions": 163
+      },
+      {
+        "date": "2025-05-28",
+        "visitors": 187,
+        "sessions": 200
+      },
+      {
+        "date": "2025-05-29",
+        "visitors": 207,
+        "sessions": 223
+      },
+      {
+        "date": "2025-05-30",
+        "visitors": 238,
+        "sessions": 257
+      },
+      {
+        "date": "2025-05-31",
+        "visitors": 517,
+        "sessions": 541
+      },
+      {
+        "date": "2025-06-01",
+        "visitors": 811,
+        "sessions": 873
+      },
+      {
+        "date": "2025-06-02",
+        "visitors": 812,
+        "sessions": 844
+      },
+      {
+        "date": "2025-06-03",
+        "visitors": 716,
+        "sessions": 766
+      },
+      {
+        "date": "2025-06-04",
+        "visitors": 743,
+        "sessions": 801
+      },
+      {
+        "date": "2025-06-05",
+        "visitors": 762,
+        "sessions": 801
+      },
+      {
+        "date": "2025-06-06",
+        "visitors": 766,
+        "sessions": 821
+      },
+      {
+        "date": "2025-06-07",
+        "visitors": 673,
+        "sessions": 723
+      },
+      {
+        "date": "2025-06-08",
+        "visitors": 841,
+        "sessions": 897
+      },
+      {
+        "date": "2025-06-09",
+        "visitors": 745,
+        "sessions": 793
+      },
+      {
+        "date": "2025-06-10",
+        "visitors": 641,
+        "sessions": 659
+      },
+      {
+        "date": "2025-06-11",
+        "visitors": 856,
+        "sessions": 932
+      },
+      {
+        "date": "2025-06-12",
+        "visitors": 895,
+        "sessions": 952
+      },
+      {
+        "date": "2025-06-13",
+        "visitors": 781,
+        "sessions": 820
+      },
+      {
+        "date": "2025-06-14",
+        "visitors": 818,
+        "sessions": 882
+      },
+      {
+        "date": "2025-06-15",
+        "visitors": 995,
+        "sessions": 1068
+      },
+      {
+        "date": "2025-06-16",
+        "visitors": 1089,
+        "sessions": 1169
+      },
+      {
+        "date": "2025-06-17",
+        "visitors": 960,
+        "sessions": 1023
+      },
+      {
+        "date": "2025-06-18",
+        "visitors": 1133,
+        "sessions": 1208
+      },
+      {
+        "date": "2025-06-19",
+        "visitors": 823,
+        "sessions": 890
+      },
+      {
+        "date": "2025-06-20",
+        "visitors": 1048,
+        "sessions": 1132
+      },
+      {
+        "date": "2025-06-21",
+        "visitors": 1128,
+        "sessions": 1195
+      },
+      {
+        "date": "2025-06-22",
+        "visitors": 846,
+        "sessions": 902
+      },
+      {
+        "date": "2025-06-23",
+        "visitors": 629,
+        "sessions": 666
+      },
+      {
+        "date": "2025-06-24",
+        "visitors": 338,
+        "sessions": 375
+      },
+      {
+        "date": "2025-06-25",
+        "visitors": 343,
+        "sessions": 391
+      },
+      {
+        "date": "2025-06-26",
+        "visitors": 367,
+        "sessions": 404
+      },
+      {
+        "date": "2025-06-27",
+        "visitors": 466,
+        "sessions": 504
+      },
+      {
+        "date": "2025-06-28",
+        "visitors": 382,
+        "sessions": 421
+      },
+      {
+        "date": "2025-06-29",
+        "visitors": 347,
+        "sessions": 377
+      },
+      {
+        "date": "2025-06-30",
+        "visitors": 448,
+        "sessions": 484
+      },
+      {
+        "date": "2025-07-01",
+        "visitors": 400,
+        "sessions": 438
+      },
+      {
+        "date": "2025-07-02",
+        "visitors": 399,
+        "sessions": 420
+      },
+      {
+        "date": "2025-07-03",
+        "visitors": 399,
+        "sessions": 421
+      },
+      {
+        "date": "2025-07-04",
+        "visitors": 571,
+        "sessions": 609
+      },
+      {
+        "date": "2025-07-05",
+        "visitors": 498,
+        "sessions": 536
+      },
+      {
+        "date": "2025-07-06",
+        "visitors": 1136,
+        "sessions": 1216
+      },
+      {
+        "date": "2025-07-07",
+        "visitors": 923,
+        "sessions": 1001
+      },
+      {
+        "date": "2025-07-08",
+        "visitors": 688,
+        "sessions": 741
+      },
+      {
+        "date": "2025-07-09",
+        "visitors": 693,
+        "sessions": 738
+      },
+      {
+        "date": "2025-07-10",
+        "visitors": 696,
+        "sessions": 760
+      },
+      {
+        "date": "2025-07-11",
+        "visitors": 729,
+        "sessions": 787
+      },
+      {
+        "date": "2025-07-12",
+        "visitors": 956,
+        "sessions": 1008
+      },
+      {
+        "date": "2025-07-13",
+        "visitors": 1112,
+        "sessions": 1183
+      },
+      {
+        "date": "2025-07-14",
+        "visitors": 842,
+        "sessions": 900
+      },
+      {
+        "date": "2025-07-15",
+        "visitors": 604,
+        "sessions": 649
+      },
+      {
+        "date": "2025-07-16",
+        "visitors": 65,
+        "sessions": 79
+      },
+      {
+        "date": "2025-07-17",
+        "visitors": 932,
+        "sessions": 978
+      },
+      {
+        "date": "2025-07-18",
+        "visitors": 928,
+        "sessions": 993
+      },
+      {
+        "date": "2025-07-19",
+        "visitors": 822,
+        "sessions": 894
+      },
+      {
+        "date": "2025-07-20",
+        "visitors": 700,
+        "sessions": 782
+      },
+      {
+        "date": "2025-07-21",
+        "visitors": 674,
+        "sessions": 742
+      },
+      {
+        "date": "2025-07-22",
+        "visitors": 858,
+        "sessions": 913
+      },
+      {
+        "date": "2025-07-23",
+        "visitors": 627,
+        "sessions": 688
+      },
+      {
+        "date": "2025-07-24",
+        "visitors": 886,
+        "sessions": 942
+      },
+      {
+        "date": "2025-07-25",
+        "visitors": 1775,
+        "sessions": 1904
+      },
+      {
+        "date": "2025-07-26",
+        "visitors": 1345,
+        "sessions": 1460
+      },
+      {
+        "date": "2025-07-27",
+        "visitors": 1072,
+        "sessions": 1159
+      },
+      {
+        "date": "2025-07-28",
+        "visitors": 840,
+        "sessions": 893
+      },
+      {
+        "date": "2025-07-29",
+        "visitors": 901,
+        "sessions": 969
+      },
+      {
+        "date": "2025-07-30",
+        "visitors": 895,
+        "sessions": 953
+      },
+      {
+        "date": "2025-07-31",
+        "visitors": 989,
+        "sessions": 1088
+      },
+      {
+        "date": "2025-08-01",
+        "visitors": 940,
+        "sessions": 1017
+      },
+      {
+        "date": "2025-08-02",
+        "visitors": 1841,
+        "sessions": 1974
+      },
+      {
+        "date": "2025-08-03",
+        "visitors": 1898,
+        "sessions": 2055
+      },
+      {
+        "date": "2025-08-04",
+        "visitors": 1051,
+        "sessions": 1159
+      },
+      {
+        "date": "2025-08-05",
+        "visitors": 653,
+        "sessions": 717
+      },
+      {
+        "date": "2025-08-06",
+        "visitors": 563,
+        "sessions": 619
+      },
+      {
+        "date": "2025-08-07",
+        "visitors": 1597,
+        "sessions": 1666
+      },
+      {
+        "date": "2025-08-08",
+        "visitors": 1773,
+        "sessions": 1894
+      },
+      {
+        "date": "2025-08-09",
+        "visitors": 1450,
+        "sessions": 1514
+      },
+      {
+        "date": "2025-08-10",
+        "visitors": 1175,
+        "sessions": 1276
+      },
+      {
+        "date": "2025-08-11",
+        "visitors": 990,
+        "sessions": 1072
+      },
+      {
+        "date": "2025-08-12",
+        "visitors": 1581,
+        "sessions": 1675
+      },
+      {
+        "date": "2025-08-13",
+        "visitors": 1596,
+        "sessions": 1678
+      },
+      {
+        "date": "2025-08-14",
+        "visitors": 1771,
+        "sessions": 1860
+      },
+      {
+        "date": "2025-08-15",
+        "visitors": 1499,
+        "sessions": 1612
+      },
+      {
+        "date": "2025-08-16",
+        "visitors": 1138,
+        "sessions": 1237
+      },
+      {
+        "date": "2025-08-17",
+        "visitors": 868,
+        "sessions": 949
+      },
+      {
+        "date": "2025-08-18",
+        "visitors": 672,
+        "sessions": 755
+      },
+      {
+        "date": "2025-08-19",
+        "visitors": 869,
+        "sessions": 951
+      },
+      {
+        "date": "2025-08-20",
+        "visitors": 756,
+        "sessions": 819
+      },
+      {
+        "date": "2025-08-21",
+        "visitors": 833,
+        "sessions": 918
+      },
+      {
+        "date": "2025-08-22",
+        "visitors": 967,
+        "sessions": 1054
+      },
+      {
+        "date": "2025-08-23",
+        "visitors": 1224,
+        "sessions": 1319
+      },
+      {
+        "date": "2025-08-24",
+        "visitors": 1268,
+        "sessions": 1362
+      },
+      {
+        "date": "2025-08-25",
+        "visitors": 1051,
+        "sessions": 1144
+      },
+      {
+        "date": "2025-08-26",
+        "visitors": 966,
+        "sessions": 1032
+      },
+      {
+        "date": "2025-08-27",
+        "visitors": 1071,
+        "sessions": 1156
+      },
+      {
+        "date": "2025-08-28",
+        "visitors": 937,
+        "sessions": 1023
+      },
+      {
+        "date": "2025-08-29",
+        "visitors": 898,
+        "sessions": 996
+      },
+      {
+        "date": "2025-08-30",
+        "visitors": 1211,
+        "sessions": 1302
+      },
+      {
+        "date": "2025-08-31",
+        "visitors": 1654,
+        "sessions": 1821
+      },
+      {
+        "date": "2025-09-01",
+        "visitors": 1237,
+        "sessions": 1345
+      },
+      {
+        "date": "2025-09-02",
+        "visitors": 871,
+        "sessions": 965
+      },
+      {
+        "date": "2025-09-03",
+        "visitors": 678,
+        "sessions": 751
+      },
+      {
+        "date": "2025-09-04",
+        "visitors": 796,
+        "sessions": 899
+      },
+      {
+        "date": "2025-09-05",
+        "visitors": 1161,
+        "sessions": 1271
+      },
+      {
+        "date": "2025-09-06",
+        "visitors": 1228,
+        "sessions": 1350
+      },
+      {
+        "date": "2025-09-07",
+        "visitors": 1209,
+        "sessions": 1313
+      },
+      {
+        "date": "2025-09-08",
+        "visitors": 1292,
+        "sessions": 1407
+      },
+      {
+        "date": "2025-09-09",
+        "visitors": 1018,
+        "sessions": 1096
+      },
+      {
+        "date": "2025-09-10",
+        "visitors": 900,
+        "sessions": 976
+      },
+      {
+        "date": "2025-09-11",
+        "visitors": 947,
+        "sessions": 1019
+      },
+      {
+        "date": "2025-09-12",
+        "visitors": 798,
+        "sessions": 869
+      },
+      {
+        "date": "2025-09-13",
+        "visitors": 877,
+        "sessions": 974
+      },
+      {
+        "date": "2025-09-14",
+        "visitors": 780,
+        "sessions": 865
+      },
+      {
+        "date": "2025-09-15",
+        "visitors": 662,
+        "sessions": 742
+      },
+      {
+        "date": "2025-09-16",
+        "visitors": 807,
+        "sessions": 895
+      },
+      {
+        "date": "2025-09-17",
+        "visitors": 758,
+        "sessions": 845
+      },
+      {
+        "date": "2025-09-18",
+        "visitors": 686,
+        "sessions": 759
+      },
+      {
+        "date": "2025-09-19",
+        "visitors": 797,
+        "sessions": 886
+      },
+      {
+        "date": "2025-09-20",
+        "visitors": 903,
+        "sessions": 980
+      },
+      {
+        "date": "2025-09-21",
+        "visitors": 791,
+        "sessions": 852
+      },
+      {
+        "date": "2025-09-22",
+        "visitors": 725,
+        "sessions": 781
+      },
+      {
+        "date": "2025-09-23",
+        "visitors": 589,
+        "sessions": 655
+      },
+      {
+        "date": "2025-09-24",
+        "visitors": 636,
+        "sessions": 699
+      },
+      {
+        "date": "2025-09-25",
+        "visitors": 551,
+        "sessions": 596
+      },
+      {
+        "date": "2025-09-26",
+        "visitors": 617,
+        "sessions": 684
+      },
+      {
+        "date": "2025-09-27",
+        "visitors": 836,
+        "sessions": 886
+      },
+      {
+        "date": "2025-09-28",
+        "visitors": 741,
+        "sessions": 817
+      },
+      {
+        "date": "2025-09-29",
+        "visitors": 633,
+        "sessions": 689
+      },
+      {
+        "date": "2025-09-30",
+        "visitors": 871,
+        "sessions": 947
+      },
+      {
+        "date": "2025-10-01",
+        "visitors": 1275,
+        "sessions": 1371
+      },
+      {
+        "date": "2025-10-02",
+        "visitors": 2195,
+        "sessions": 2367
+      },
+      {
+        "date": "2025-10-03",
+        "visitors": 1761,
+        "sessions": 1913
+      },
+      {
+        "date": "2025-10-04",
+        "visitors": 2334,
+        "sessions": 2505
+      },
+      {
+        "date": "2025-10-05",
+        "visitors": 1884,
+        "sessions": 2033
+      },
+      {
+        "date": "2025-10-06",
+        "visitors": 1898,
+        "sessions": 2026
+      },
+      {
+        "date": "2025-10-07",
+        "visitors": 1102,
+        "sessions": 1223
+      },
+      {
+        "date": "2025-10-08",
+        "visitors": 1066,
+        "sessions": 1172
+      },
+      {
+        "date": "2025-10-09",
+        "visitors": 1296,
+        "sessions": 1427
+      },
+      {
+        "date": "2025-10-10",
+        "visitors": 1137,
+        "sessions": 1257
+      },
+      {
+        "date": "2025-10-11",
+        "visitors": 1059,
+        "sessions": 1159
+      },
+      {
+        "date": "2025-10-12",
+        "visitors": 2662,
+        "sessions": 2779
+      },
+      {
+        "date": "2025-10-13",
+        "visitors": 2634,
+        "sessions": 2761
+      },
+      {
+        "date": "2025-10-14",
+        "visitors": 1168,
+        "sessions": 1298
+      },
+      {
+        "date": "2025-10-15",
+        "visitors": 1039,
+        "sessions": 1134
+      },
+      {
+        "date": "2025-10-16",
+        "visitors": 1151,
+        "sessions": 1239
+      },
+      {
+        "date": "2025-10-17",
+        "visitors": 979,
+        "sessions": 1069
+      },
+      {
+        "date": "2025-10-18",
+        "visitors": 1381,
+        "sessions": 1536
+      },
+      {
+        "date": "2025-10-19",
+        "visitors": 1267,
+        "sessions": 1384
+      },
+      {
+        "date": "2025-10-20",
+        "visitors": 1471,
+        "sessions": 1601
+      },
+      {
+        "date": "2025-10-21",
+        "visitors": 1152,
+        "sessions": 1277
+      },
+      {
+        "date": "2025-10-22",
+        "visitors": 1325,
+        "sessions": 1443
+      },
+      {
+        "date": "2025-10-23",
+        "visitors": 1260,
+        "sessions": 1391
+      },
+      {
+        "date": "2025-10-24",
+        "visitors": 1556,
+        "sessions": 1677
+      },
+      {
+        "date": "2025-10-25",
+        "visitors": 1404,
+        "sessions": 1563
+      },
+      {
+        "date": "2025-10-26",
+        "visitors": 912,
+        "sessions": 1001
+      },
+      {
+        "date": "2025-10-27",
+        "visitors": 401,
+        "sessions": 453
+      },
+      {
+        "date": "2025-10-28",
+        "visitors": 1966,
+        "sessions": 2102
+      },
+      {
+        "date": "2025-10-29",
+        "visitors": 1302,
+        "sessions": 1406
+      },
+      {
+        "date": "2025-10-30",
+        "visitors": 1408,
+        "sessions": 1519
+      },
+      {
+        "date": "2025-10-31",
+        "visitors": 1278,
+        "sessions": 1386
+      },
+      {
+        "date": "2025-11-01",
+        "visitors": 1842,
+        "sessions": 2016
+      },
+      {
+        "date": "2025-11-02",
+        "visitors": 1490,
+        "sessions": 1613
+      },
+      {
+        "date": "2025-11-03",
+        "visitors": 1596,
+        "sessions": 1730
+      },
+      {
+        "date": "2025-11-04",
+        "visitors": 1777,
+        "sessions": 1902
+      },
+      {
+        "date": "2025-11-05",
+        "visitors": 1262,
+        "sessions": 1373
+      },
+      {
+        "date": "2025-11-06",
+        "visitors": 1313,
+        "sessions": 1434
+      },
+      {
+        "date": "2025-11-07",
+        "visitors": 1189,
+        "sessions": 1281
+      },
+      {
+        "date": "2025-11-08",
+        "visitors": 1316,
+        "sessions": 1436
+      },
+      {
+        "date": "2025-11-09",
+        "visitors": 1366,
+        "sessions": 1487
+      },
+      {
+        "date": "2025-11-10",
+        "visitors": 1191,
+        "sessions": 1292
+      },
+      {
+        "date": "2025-11-11",
+        "visitors": 1522,
+        "sessions": 1628
+      },
+      {
+        "date": "2025-11-12",
+        "visitors": 1228,
+        "sessions": 1322
+      },
+      {
+        "date": "2025-11-13",
+        "visitors": 1095,
+        "sessions": 1168
+      },
+      {
+        "date": "2025-11-14",
+        "visitors": 1004,
+        "sessions": 1109
+      },
+      {
+        "date": "2025-11-15",
+        "visitors": 1589,
+        "sessions": 1708
+      },
+      {
+        "date": "2025-11-16",
+        "visitors": 1495,
+        "sessions": 1593
+      },
+      {
+        "date": "2025-11-17",
+        "visitors": 1339,
+        "sessions": 1457
+      },
+      {
+        "date": "2025-11-18",
+        "visitors": 1581,
+        "sessions": 1710
+      },
+      {
+        "date": "2025-11-19",
+        "visitors": 1247,
+        "sessions": 1333
+      },
+      {
+        "date": "2025-11-20",
+        "visitors": 2087,
+        "sessions": 2224
+      },
+      {
+        "date": "2025-11-21",
+        "visitors": 2042,
+        "sessions": 2210
+      },
+      {
+        "date": "2025-11-22",
+        "visitors": 1340,
+        "sessions": 1436
+      },
+      {
+        "date": "2025-11-23",
+        "visitors": 2305,
+        "sessions": 2465
+      },
+      {
+        "date": "2025-11-24",
+        "visitors": 1418,
+        "sessions": 1538
+      },
+      {
+        "date": "2025-11-25",
+        "visitors": 1899,
+        "sessions": 2017
+      },
+      {
+        "date": "2025-11-26",
+        "visitors": 1695,
+        "sessions": 1812
+      },
+      {
+        "date": "2025-11-27",
+        "visitors": 1759,
+        "sessions": 1911
+      },
+      {
+        "date": "2025-11-28",
+        "visitors": 1639,
+        "sessions": 1786
+      },
+      {
+        "date": "2025-11-29",
+        "visitors": 1908,
+        "sessions": 2062
+      },
+      {
+        "date": "2025-11-30",
+        "visitors": 1565,
+        "sessions": 1703
+      },
+      {
+        "date": "2025-12-01",
+        "visitors": 1286,
+        "sessions": 1403
+      },
+      {
+        "date": "2025-12-02",
+        "visitors": 1416,
+        "sessions": 1582
+      },
+      {
+        "date": "2025-12-03",
+        "visitors": 1466,
+        "sessions": 1595
+      },
+      {
+        "date": "2025-12-04",
+        "visitors": 1188,
+        "sessions": 1314
+      },
+      {
+        "date": "2025-12-05",
+        "visitors": 886,
+        "sessions": 976
+      },
+      {
+        "date": "2025-12-06",
+        "visitors": 938,
+        "sessions": 1041
+      },
+      {
+        "date": "2025-12-07",
+        "visitors": 1339,
+        "sessions": 1483
+      },
+      {
+        "date": "2025-12-08",
+        "visitors": 1442,
+        "sessions": 1560
+      },
+      {
+        "date": "2025-12-09",
+        "visitors": 1415,
+        "sessions": 1542
+      },
+      {
+        "date": "2025-12-10",
+        "visitors": 1148,
+        "sessions": 1239
+      },
+      {
+        "date": "2025-12-11",
+        "visitors": 1303,
+        "sessions": 1454
+      },
+      {
+        "date": "2025-12-12",
+        "visitors": 1154,
+        "sessions": 1278
+      },
+      {
+        "date": "2025-12-13",
+        "visitors": 1188,
+        "sessions": 1293
+      },
+      {
+        "date": "2025-12-14",
+        "visitors": 1190,
+        "sessions": 1310
+      },
+      {
+        "date": "2025-12-15",
+        "visitors": 1175,
+        "sessions": 1282
+      },
+      {
+        "date": "2025-12-16",
+        "visitors": 1203,
+        "sessions": 1302
+      },
+      {
+        "date": "2025-12-17",
+        "visitors": 1174,
+        "sessions": 1306
+      },
+      {
+        "date": "2025-12-18",
+        "visitors": 1008,
+        "sessions": 1121
+      },
+      {
+        "date": "2025-12-19",
+        "visitors": 930,
+        "sessions": 1014
+      },
+      {
+        "date": "2025-12-20",
+        "visitors": 902,
+        "sessions": 988
+      },
+      {
+        "date": "2025-12-21",
+        "visitors": 1050,
+        "sessions": 1174
+      },
+      {
+        "date": "2025-12-22",
+        "visitors": 991,
+        "sessions": 1089
+      },
+      {
+        "date": "2025-12-23",
+        "visitors": 969,
+        "sessions": 1065
+      },
+      {
+        "date": "2025-12-24",
+        "visitors": 913,
+        "sessions": 972
+      },
+      {
+        "date": "2025-12-25",
+        "visitors": 1167,
+        "sessions": 1237
+      },
+      {
+        "date": "2025-12-26",
+        "visitors": 1034,
+        "sessions": 1132
+      },
+      {
+        "date": "2025-12-27",
+        "visitors": 949,
+        "sessions": 1055
+      },
+      {
+        "date": "2025-12-28",
+        "visitors": 1052,
+        "sessions": 1165
+      },
+      {
+        "date": "2025-12-29",
+        "visitors": 927,
+        "sessions": 1012
+      },
+      {
+        "date": "2025-12-30",
+        "visitors": 766,
+        "sessions": 851
+      },
+      {
+        "date": "2025-12-31",
+        "visitors": 728,
+        "sessions": 786
+      },
+      {
+        "date": "2026-01-01",
+        "visitors": 836,
+        "sessions": 925
+      },
+      {
+        "date": "2026-01-02",
+        "visitors": 896,
+        "sessions": 986
+      },
+      {
+        "date": "2026-01-03",
+        "visitors": 904,
+        "sessions": 990
+      },
+      {
+        "date": "2026-01-04",
+        "visitors": 1029,
+        "sessions": 1144
+      },
+      {
+        "date": "2026-01-05",
+        "visitors": 879,
+        "sessions": 966
+      },
+      {
+        "date": "2026-01-06",
+        "visitors": 778,
+        "sessions": 860
+      },
+      {
+        "date": "2026-01-07",
+        "visitors": 871,
+        "sessions": 980
+      },
+      {
+        "date": "2026-01-08",
+        "visitors": 951,
+        "sessions": 1040
+      },
+      {
+        "date": "2026-01-09",
+        "visitors": 904,
+        "sessions": 1010
+      },
+      {
+        "date": "2026-01-10",
+        "visitors": 1034,
+        "sessions": 1131
+      },
+      {
+        "date": "2026-01-11",
+        "visitors": 740,
+        "sessions": 806
+      },
+      {
+        "date": "2026-01-12",
+        "visitors": 612,
+        "sessions": 672
+      },
+      {
+        "date": "2026-01-13",
+        "visitors": 679,
+        "sessions": 750
+      },
+      {
+        "date": "2026-01-14",
+        "visitors": 709,
+        "sessions": 780
+      },
+      {
+        "date": "2026-01-15",
+        "visitors": 747,
+        "sessions": 808
+      },
+      {
+        "date": "2026-01-16",
+        "visitors": 744,
+        "sessions": 816
+      },
+      {
+        "date": "2026-01-17",
+        "visitors": 722,
+        "sessions": 782
+      },
+      {
+        "date": "2026-01-18",
+        "visitors": 962,
+        "sessions": 1048
+      },
+      {
+        "date": "2026-01-19",
+        "visitors": 852,
+        "sessions": 929
+      },
+      {
+        "date": "2026-01-20",
+        "visitors": 875,
+        "sessions": 962
+      },
+      {
+        "date": "2026-01-21",
+        "visitors": 1067,
+        "sessions": 1165
+      },
+      {
+        "date": "2026-01-22",
+        "visitors": 993,
+        "sessions": 1100
+      },
+      {
+        "date": "2026-01-23",
+        "visitors": 1134,
+        "sessions": 1259
+      },
+      {
+        "date": "2026-01-24",
+        "visitors": 1158,
+        "sessions": 1288
+      },
+      {
+        "date": "2026-01-25",
+        "visitors": 836,
+        "sessions": 945
+      },
+      {
+        "date": "2026-01-26",
+        "visitors": 793,
+        "sessions": 904
+      },
+      {
+        "date": "2026-01-27",
+        "visitors": 822,
+        "sessions": 928
+      },
+      {
+        "date": "2026-01-28",
+        "visitors": 2001,
+        "sessions": 2132
+      },
+      {
+        "date": "2026-01-29",
+        "visitors": 2104,
+        "sessions": 2244
+      },
+      {
+        "date": "2026-01-30",
+        "visitors": 2071,
+        "sessions": 2227
+      },
+      {
+        "date": "2026-01-31",
+        "visitors": 957,
+        "sessions": 1077
+      },
+      {
+        "date": "2026-02-01",
+        "visitors": 1039,
+        "sessions": 1161
+      },
+      {
+        "date": "2026-02-02",
+        "visitors": 1323,
+        "sessions": 1442
+      },
+      {
+        "date": "2026-02-03",
+        "visitors": 1265,
+        "sessions": 1388
+      },
+      {
+        "date": "2026-02-04",
+        "visitors": 1173,
+        "sessions": 1285
+      },
+      {
+        "date": "2026-02-05",
+        "visitors": 1228,
+        "sessions": 1348
+      },
+      {
+        "date": "2026-02-06",
+        "visitors": 1121,
+        "sessions": 1207
+      },
+      {
+        "date": "2026-02-07",
+        "visitors": 1126,
+        "sessions": 1238
+      },
+      {
+        "date": "2026-02-08",
+        "visitors": 1310,
+        "sessions": 1447
+      },
+      {
+        "date": "2026-02-09",
+        "visitors": 1330,
+        "sessions": 1498
+      },
+      {
+        "date": "2026-02-10",
+        "visitors": 1566,
+        "sessions": 1688
+      },
+      {
+        "date": "2026-02-11",
+        "visitors": 1366,
+        "sessions": 1511
+      },
+      {
+        "date": "2026-02-12",
+        "visitors": 1485,
+        "sessions": 1638
+      },
+      {
+        "date": "2026-02-13",
+        "visitors": 1395,
+        "sessions": 1563
+      },
+      {
+        "date": "2026-02-14",
+        "visitors": 1434,
+        "sessions": 1603
+      },
+      {
+        "date": "2026-02-15",
+        "visitors": 1328,
+        "sessions": 1482
+      },
+      {
+        "date": "2026-02-16",
+        "visitors": 1458,
+        "sessions": 1605
+      },
+      {
+        "date": "2026-02-17",
+        "visitors": 1518,
+        "sessions": 1669
+      },
+      {
+        "date": "2026-02-18",
+        "visitors": 747,
+        "sessions": 821
+      },
+      {
+        "date": "2026-02-19",
+        "visitors": 380,
+        "sessions": 421
+      },
+      {
+        "date": "2026-02-20",
+        "visitors": 523,
+        "sessions": 565
+      },
+      {
+        "date": "2026-02-21",
+        "visitors": 456,
+        "sessions": 512
+      },
+      {
+        "date": "2026-02-22",
+        "visitors": 960,
+        "sessions": 999
+      },
+      {
+        "date": "2026-02-23",
+        "visitors": 1456,
+        "sessions": 1540
+      },
+      {
+        "date": "2026-02-24",
+        "visitors": 1729,
+        "sessions": 1920
+      },
+      {
+        "date": "2026-02-25",
+        "visitors": 1831,
+        "sessions": 2041
+      },
+      {
+        "date": "2026-02-26",
+        "visitors": 1636,
+        "sessions": 1837
+      },
+      {
+        "date": "2026-02-27",
+        "visitors": 1588,
+        "sessions": 1780
+      },
+      {
+        "date": "2026-02-28",
+        "visitors": 1200,
+        "sessions": 1344
+      }
+    ],
+    "monthly_conversion": [
+      {
+        "month": "2025-04",
+        "sessions": 10145,
+        "orders": 195,
+        "conversion": 1.92
+      },
+      {
+        "month": "2025-05",
+        "sessions": 6743,
+        "orders": 123,
+        "conversion": 1.82
+      },
+      {
+        "month": "2025-06",
+        "sessions": 23773,
+        "orders": 320,
+        "conversion": 1.35
+      },
+      {
+        "month": "2025-07",
+        "sessions": 26844,
+        "orders": 349,
+        "conversion": 1.3
+      },
+      {
+        "month": "2025-08",
+        "sessions": 39626,
+        "orders": 378,
+        "conversion": 0.95
+      },
+      {
+        "month": "2025-09",
+        "sessions": 27813,
+        "orders": 369,
+        "conversion": 1.33
+      },
+      {
+        "month": "2025-10",
+        "sessions": 48472,
+        "orders": 411,
+        "conversion": 0.85
+      },
+      {
+        "month": "2025-11",
+        "sessions": 49756,
+        "orders": 397,
+        "conversion": 0.8
+      },
+      {
+        "month": "2025-12",
+        "sessions": 37621,
+        "orders": 423,
+        "conversion": 1.12
+      },
+      {
+        "month": "2026-01",
+        "sessions": 33654,
+        "orders": 426,
+        "conversion": 1.27
+      },
+      {
+        "month": "2026-02",
+        "sessions": 38553,
+        "orders": 488,
+        "conversion": 1.27
+      }
+    ]
+  },
+  "fy24_pl": {
+    "period": "FY 2024-25 (Apr '24 \u2013 Mar '25)",
+    "note": "From StanEdition-_-PnL-FY24-25.xlsx. Revenue = \u20b90 (not filled). This was the pre-launch / early-launch phase.",
+    "total_cost": 1323576,
+    "breakdown": {
+      "marketing": {
+        "total": 600047,
+        "meta_ads": 380047,
+        "video_content": 220000
+      },
+      "production": {
+        "total": 522500,
+        "note": "Bulk purchase in May '24"
+      },
+      "tech": {
+        "total": 65121,
+        "shopify": 65121
+      },
+      "miscellaneous": {
+        "total": 135908,
+        "legal": 40000,
+        "tax": 95908
+      }
+    },
+    "monthly_meta_ads": [
+      {
+        "month": "Apr-24",
+        "spend": 0
+      },
+      {
+        "month": "May-24",
+        "spend": 0
+      },
+      {
+        "month": "Jun-24",
+        "spend": 0
+      },
+      {
+        "month": "Jul-24",
+        "spend": 0
+      },
+      {
+        "month": "Aug-24",
+        "spend": 0
+      },
+      {
+        "month": "Sep-24",
+        "spend": 0
+      },
+      {
+        "month": "Oct-24",
+        "spend": 11532
+      },
+      {
+        "month": "Nov-24",
+        "spend": 62932
+      },
+      {
+        "month": "Dec-24",
+        "spend": 13770
+      },
+      {
+        "month": "Jan-25",
+        "spend": 0
+      },
+      {
+        "month": "Feb-25",
+        "spend": 100223
+      },
+      {
+        "month": "Mar-25",
+        "spend": 191590
+      }
+    ],
+    "monthly_total_cost": [
+      {
+        "month": "Apr-24",
+        "cost": 40000
+      },
+      {
+        "month": "May-24",
+        "cost": 550000
+      },
+      {
+        "month": "Jun-24",
+        "cost": 0
+      },
+      {
+        "month": "Jul-24",
+        "cost": 24
+      },
+      {
+        "month": "Aug-24",
+        "cost": 222353
+      },
+      {
+        "month": "Sep-24",
+        "cost": 38204
+      },
+      {
+        "month": "Oct-24",
+        "cost": 15602.76
+      },
+      {
+        "month": "Nov-24",
+        "cost": 76545.76
+      },
+      {
+        "month": "Dec-24",
+        "cost": 20034.6
+      },
+      {
+        "month": "Jan-25",
+        "cost": 2082
+      },
+      {
+        "month": "Feb-25",
+        "cost": 123843.14
+      },
+      {
+        "month": "Mar-25",
+        "cost": 234887.2
+      }
+    ],
+    "closing_balance": -1323576,
+    "insights": [
+      "Pre-launch phase: Apr-Sep '24 was product development (\u20b95.2L production + \u20b92.2L video)",
+      "Meta Ads started Oct '24, ramped from \u20b911.5K to \u20b91.9L/month by Mar '25",
+      "FY24-25 was entirely investment phase \u2014 zero revenue recorded",
+      "Total burn: \u20b913.2L before first sales in FY25-26"
+    ]
+  },
+  "intelligence": {
+    "note": "Cross-functional analysis based on available data. Some metrics are estimates pending marketing + shipping data.",
+    "funnel": {
+      "sessions": 343000,
+      "orders": 3879,
+      "conversion_rate": 1.13,
+      "gross_sales": 24178676.400000002,
+      "discounts_given": 4966238.57,
+      "returns": 969332.31,
+      "net_sales": 18243105.52,
+      "note": "Shipping costs and COGS pending \u2014 true profitability cannot be calculated yet"
+    },
+    "unit_economics": {
+      "avg_order_value": 6233.0,
+      "avg_discount_per_order": 1280.0,
+      "avg_net_per_order": 4703.0,
+      "cogs_per_order": "PENDING \u2014 need COGS data",
+      "shipping_per_order": "PENDING \u2014 need FSHIP data",
+      "contribution_margin": "PENDING"
+    },
+    "cod_risk": {
+      "cod_share": 45.9,
+      "ppcod_share": 0.0,
+      "total_cod_exposure": 45.9,
+      "note": "31.6% pure COD + 14.3% partial COD = 45.9% COD exposure. High RTO risk."
+    },
+    "discount_dependency": {
+      "discount_rate": 20.5,
+      "first15_share": 54.8,
+      "alert": "54.7% of orders use FIRST15 \u2014 heavy first-order discount dependency"
+    },
+    "product_concentration": {
+      "top_product": "Grey Blue Irish Linen Shirt",
+      "top_product_share": 13.4,
+      "top3_share": 31.8,
+      "alert": "Top 3 products = 31.8% of revenue \u2014 moderate concentration"
+    }
+  },
+  "advisory": {
+    "critical": [
+      {
+        "title": "Revenue Growing Strong \u2014 \u20b92.42 Cr in 11 Months",
+        "detail": "Gross sales: \u20b9241.8L, Net sales: \u20b9182.4L. Feb '26 was the best month at \u20b933.2L gross. But without COGS and shipping data, we cannot determine if this growth is profitable.",
+        "action": "Share COGS per product and FSHIP shipping data immediately to compute true margins."
+      },
+      {
+        "title": "Discount Leakage: \u20b949.7L (20.5% of Gross)",
+        "detail": "\u20b949.7L given away in discounts. FIRST15 alone drove \u20b919.9L in discounts across 2,124 orders. If ASP is ~\u20b96,240 and discount is ~\u20b91,280/order, that's a 20.5% top-line hit.",
+        "action": "Consider reducing FIRST15 from 15% to 10%, or cap it at \u20b9500. Test impact on conversion."
+      },
+      {
+        "title": "COD Exposure at 45.9% \u2014 High RTO Risk",
+        "detail": "31.6% pure COD + 14.3% partial COD. Without shipping data, we can't quantify RTO losses, but industry benchmarks suggest 15-25% RTO on COD orders.",
+        "action": "Share FSHIP data to quantify actual RTO rates and costs. Consider restricting COD above \u20b95,000."
+      }
+    ],
+    "warnings": [
+      {
+        "title": "Order Export Coverage Gap",
+        "detail": "Only Jul-Sep 2025 order exports received (700 orders out of 3,879). Missing Apr-Jun 2025 and Oct 2025 - Feb 2026. Payment method, customer, and geography analysis is based on partial data.",
+        "action": "Export remaining order batches from Shopify (order #1 to #2789 and beyond #3489)."
+      },
+      {
+        "title": "Return Rate Increasing",
+        "detail": "Returns total \u20b99.7L (4.0% of gross). Oct-Dec saw higher returns (\u20b91.15L, \u20b91.68L, \u20b91.56L) \u2014 possibly festive-season impulse purchases returned.",
+        "action": "Analyze return reasons. Check if specific products or sizes drive returns."
+      },
+      {
+        "title": "Conversion Rate Flat at 1.13%",
+        "detail": "3,879 orders from 343,000 sessions = 1.13% conversion. This is typical for D2C apparel but leaves significant room for improvement.",
+        "action": "A/B test landing pages, checkout flow, and trust signals. Gokwik PPCOD may be helping \u2014 track its conversion uplift."
+      },
+      {
+        "title": "No Marketing Attribution Data",
+        "detail": "We have FY24-25 Meta Ads spend (\u20b93.8L) but no FY25-26 ad data. Cannot calculate ROAS, CPA, or true CAC.",
+        "action": "Share Meta Ads export for Apr 2025 \u2013 Feb 2026 to compute marketing efficiency."
+      }
+    ],
+    "opportunities": [
+      {
+        "title": "Feb 2026 Breakout Month",
+        "detail": "488 orders, \u20b933.2L gross, \u20b925.3L total \u2014 strongest month by far. Sessions also peaked at 38.5K. Identify what drove this (campaigns? seasonal?).",
+        "action": "Replicate Feb strategy. Check if specific campaigns or discounts drove the spike."
+      },
+      {
+        "title": "Premium ASP: \u20b93,942 Net Per Order",
+        "detail": "After discounts, average net revenue per order is \u20b93,942. This is strong for D2C apparel and indicates brand premium is holding.",
+        "action": "Protect ASP \u2014 avoid deep discounting beyond first-order incentive."
+      }
+    ]
+  },
+  "data_status": {
+    "available": [
+      {
+        "item": "Shopify Sales Over Time (Daily)",
+        "source": "CSV",
+        "period": "Apr 2025 \u2013 Feb 2026",
+        "rows": 334
+      },
+      {
+        "item": "Shopify Sales by Product",
+        "source": "CSV",
+        "period": "Apr 2025 \u2013 Feb 2026",
+        "products": 57
+      },
+      {
+        "item": "Shopify Sessions Over Time",
+        "source": "CSV",
+        "period": "Apr 2025 \u2013 Feb 2026",
+        "rows": 334
+      },
+      {
+        "item": "Shopify Discount Codes",
+        "source": "CSV",
+        "period": "Apr 2025 \u2013 Feb 2026",
+        "codes": 66
+      },
+      {
+        "item": "Shopify Orders Export (Partial)",
+        "source": "14 ZIP files",
+        "period": "Jul \u2013 Sep 2025 only",
+        "orders": 700
+      },
+      {
+        "item": "FY24-25 P&L / Cash Flow",
+        "source": "Excel",
+        "period": "Apr 2024 \u2013 Mar 2025",
+        "note": "Expense data only, no revenue"
+      }
+    ],
+    "pending": [
+      {
+        "item": "Shopify Orders Export (Full)",
+        "priority": "HIGH",
+        "note": "Only Jul-Sep received. Need Apr-Jun 2025 + Oct 2025-Feb 2026"
+      },
+      {
+        "item": "COGS per Product/SKU",
+        "priority": "CRITICAL",
+        "note": "Cannot compute margins without this"
+      },
+      {
+        "item": "FSHIP Shipping Data",
+        "priority": "CRITICAL",
+        "note": "All logistics reports \u2014 orders, freight, RTO, COD remittance"
+      },
+      {
+        "item": "Meta Ads (FY25-26)",
+        "priority": "HIGH",
+        "note": "Campaign performance, ad sets, creatives, demographics"
+      },
+      {
+        "item": "Google Ads Data",
+        "priority": "MEDIUM",
+        "note": "If running Google Ads"
+      },
+      {
+        "item": "Myntra Orders & Settlement",
+        "priority": "HIGH",
+        "note": "Myntra sales data completely missing"
+      },
+      {
+        "item": "AJIO Orders & Settlement",
+        "priority": "MEDIUM",
+        "note": "If selling on AJIO"
+      },
+      {
+        "item": "Easebuzz Settlement Reports",
+        "priority": "MEDIUM",
+        "note": "Payment gateway settlement data"
+      },
+      {
+        "item": "Bank Statement",
+        "priority": "MEDIUM",
+        "note": "For cash flow analysis"
+      },
+      {
+        "item": "Tally P&L / Expenses",
+        "priority": "MEDIUM",
+        "note": "For cross-verification"
+      },
+      {
+        "item": "Shopify Customers Export",
+        "priority": "MEDIUM",
+        "note": "For full customer analysis"
+      },
+      {
+        "item": "Payroll / Salary Register",
+        "priority": "LOW",
+        "note": "Monthly staff costs"
+      },
+      {
+        "item": "Fixed Expenses Breakdown",
+        "priority": "LOW",
+        "note": "Rent, subscriptions, etc."
+      }
+    ]
+  }
+}

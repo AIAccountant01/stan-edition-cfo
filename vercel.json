@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/**/*.js", "use": "@vercel/node" },
+    { "src": "*.html", "use": "@vercel/static" },
+    { "src": "*.css", "use": "@vercel/static" },
+    { "src": "app.js", "use": "@vercel/static" },
+    { "src": "login.js", "use": "@vercel/static" },
+    { "src": "saas.js", "use": "@vercel/static" },
+    { "src": "session.js", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/api/admin/users", "dest": "/api/admin/users.js" },
+    { "src": "/api/admin/audit", "dest": "/api/admin/audit.js" },
+    { "src": "/api/auth", "dest": "/api/auth.js" },
+    { "src": "/api/data", "dest": "/api/data.js" },
+    { "src": "/api/migrate", "dest": "/api/migrate.js" },
+    { "src": "/api/change-password", "dest": "/api/change-password.js" },
+    { "src": "^/$", "dest": "/login.html" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}
