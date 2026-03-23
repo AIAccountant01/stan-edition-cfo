@@ -112,6 +112,7 @@ var sectionLabels = {
   intelligence: 'Intelligence',
   advisory: 'Advisory',
   datastatus: 'Data Status',
+  upload: 'Upload Data',
 };
 
 // ===== NAV LOGIC =====
@@ -189,6 +190,9 @@ function fetchDashboardData() {
 
 // ===== RENDER DASHBOARD =====
 function renderDashboard(data) {
+  // Store data globally for chatbot
+  window._dashData = data;
+
   // Show all sections briefly for chart init
   var sections = document.querySelectorAll('.section');
   sections.forEach(function(s) { s.style.display = 'block'; });
@@ -1117,3 +1121,438 @@ function renderDataStatus(data) {
     });
   }
 }
+
+// ===== UPLOAD DATA — UI Logic =====
+(function() {
+  var dropzone = document.getElementById('uploadDropzone');
+  var fileInput = document.getElementById('uploadFileInput');
+  var fileList = document.getElementById('uploadFileList');
+  var fileName = document.getElementById('uploadFileName');
+  var fileRemove = document.getElementById('uploadFileRemove');
+  var uploadBtn = document.getElementById('uploadBtn');
+  var uploadType = document.getElementById('uploadType');
+  var uploadStatus = document.getElementById('uploadStatus');
+  var selectedFile = null;
+
+  if (!dropzone) return;
+
+  // Drag & drop
+  dropzone.addEventListener('dragover', function(e) {
+    e.preventDefault();
+    dropzone.classList.add('dragover');
+  });
+  dropzone.addEventListener('dragleave', function(e) {
+    e.preventDefault();
+    dropzone.classList.remove('dragover');
+  });
+  dropzone.addEventListener('drop', function(e) {
+    e.preventDefault();
+    dropzone.classList.remove('dragover');
+    var files = e.dataTransfer.files;
+    if (files.length > 0) selectFile(files[0]);
+  });
+
+  // Click to browse
+  dropzone.addEventListener('click', function() { fileInput.click(); });
+  fileInput.addEventListener('change', function() {
+    if (fileInput.files.length > 0) selectFile(fileInput.files[0]);
+  });
+
+  // Remove file
+  fileRemove.addEventListener('click', function() {
+    selectedFile = null;
+    fileList.style.display = 'none';
+    uploadBtn.disabled = true;
+    fileInput.value = '';
+  });
+
+  function selectFile(file) {
+    if (!file.name.toLowerCase().endsWith('.csv')) {
+      showStatus('error', 'Only CSV files are supported. Please select a .csv file.');
+      return;
+    }
+    selectedFile = file;
+    fileName.textContent = file.name + ' (' + (file.size / 1024).toFixed(1) + ' KB)';
+    fileList.style.display = 'block';
+    uploadBtn.disabled = false;
+    uploadStatus.style.display = 'none';
+  }
+
+  // Upload
+  uploadBtn.addEventListener('click', function() {
+    if (!selectedFile) return;
+    var token = window.AIA && window.AIA.Session.getToken();
+    if (!token) { window.location.href = 'login.html'; return; }
+
+    uploadBtn.disabled = true;
+    showStatus('processing', 'Reading file and uploading...');
+
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      var csvData = e.target.result;
+      var type = uploadType.value;
+
+      fetch('/api/upload', {
+        method: 'POST',
+        headers: {
+          'Authorization': 'Bearer ' + token,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ csvData: csvData, type: type, filename: selectedFile.name })
+      })
+      .then(function(res) {
+        if (res.status === 401) { window.location.href = 'login.html'; throw new Error('Unauthorized'); }
+        return res.json();
+      })
+      .then(function(data) {
+        if (data.success) {
+          showStatus('success', 'Upload successful! Processed ' + data.summary.rows_processed + ' rows (' + data.summary.type + '). Dashboard is refreshing...');
+          selectedFile = null;
+          fileList.style.display = 'none';
+          fileInput.value = '';
+          // Refresh dashboard data
+          fetchDashboardData();
+          // Refresh upload history
+          loadUploadHistory();
+        } else {
+          showStatus('error', 'Upload failed: ' + (data.error || 'Unknown error'));
+          uploadBtn.disabled = false;
+        }
+      })
+      .catch(function(err) {
+        if (err.message !== 'Unauthorized') {
+          showStatus('error', 'Upload failed: ' + err.message);
+          uploadBtn.disabled = false;
+        }
+      });
+    };
+    reader.onerror = function() {
+      showStatus('error', 'Failed to read file.');
+      uploadBtn.disabled = false;
+    };
+    reader.readAsText(selectedFile);
+  });
+
+  function showStatus(type, message) {
+    uploadStatus.style.display = 'block';
+    uploadStatus.className = 'upload-status ' + type;
+    uploadStatus.textContent = message;
+  }
+
+  // Load upload history
+  function loadUploadHistory() {
+    var token = window.AIA && window.AIA.Session.getToken();
+    if (!token) return;
+    var historyEl = document.getElementById('uploadHistoryList');
+    if (!historyEl) return;
+
+    fetch('/api/upload-history', {
+      method: 'GET',
+      headers: { 'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json' }
+    })
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+      if (!data.success || !data.history || data.history.length === 0) {
+        historyEl.innerHTML = '<p style="font-size:13px;color:#9ca3af;">No uploads yet.</p>';
+        return;
+      }
+      var html = '<table class="upload-history-table"><thead><tr><th>Date</th><th>Uploaded By</th><th>Source</th></tr></thead><tbody>';
+      data.history.forEach(function(h) {
+        var date = new Date(h.created_at);
+        var dateStr = date.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }) + ' ' + date.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' });
+        html += '<tr><td>' + dateStr + '</td><td>' + (h.uploaded_by || '—') + '</td><td>' + (h.upload_source || '—') + '</td></tr>';
+      });
+      html += '</tbody></table>';
+      historyEl.innerHTML = html;
+    })
+    .catch(function() {
+      historyEl.innerHTML = '<p style="font-size:13px;color:#9ca3af;">Could not load history.</p>';
+    });
+  }
+
+  // Load history on page load (with slight delay)
+  setTimeout(loadUploadHistory, 1500);
+})();
+
+// ===== CHATBOT — Client-side Logic =====
+(function() {
+  var widget = document.getElementById('chatWidget');
+  var toggleBtn = document.getElementById('chatToggleBtn');
+  var minimizeBtn = document.getElementById('chatMinimize');
+  var messagesEl = document.getElementById('chatMessages');
+  var inputEl = document.getElementById('chatInput');
+  var sendBtn = document.getElementById('chatSend');
+  var suggestionsEl = document.getElementById('chatSuggestions');
+
+  if (!widget || !toggleBtn) return;
+
+  // Toggle widget
+  toggleBtn.addEventListener('click', function() {
+    widget.classList.toggle('open');
+    toggleBtn.classList.toggle('hidden');
+    if (widget.classList.contains('open')) {
+      inputEl.focus();
+    }
+  });
+
+  minimizeBtn.addEventListener('click', function() {
+    widget.classList.remove('open');
+    toggleBtn.classList.remove('hidden');
+  });
+
+  // Suggestion chips
+  var chips = document.querySelectorAll('.chat-chip');
+  chips.forEach(function(chip) {
+    chip.addEventListener('click', function() {
+      var msg = chip.getAttribute('data-msg');
+      if (msg) sendMessage(msg);
+    });
+  });
+
+  // Send on Enter
+  inputEl.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') { e.preventDefault(); sendMessage(inputEl.value); }
+  });
+
+  // Send on click
+  sendBtn.addEventListener('click', function() { sendMessage(inputEl.value); });
+
+  function sendMessage(text) {
+    text = (text || '').trim();
+    if (!text) return;
+    inputEl.value = '';
+
+    // Add user message
+    addMessage(text, 'user');
+
+    // Hide suggestions after first message
+    if (suggestionsEl) suggestionsEl.style.display = 'none';
+
+    // Show typing indicator
+    var typingEl = addMessage('Thinking...', 'typing');
+
+    // Try client-side first
+    var data = window._dashData;
+    if (data) {
+      setTimeout(function() {
+        var reply = chatbotRespond(text, data);
+        typingEl.remove();
+        addMessage(reply, 'bot');
+      }, 300 + Math.random() * 400);
+    } else {
+      // Fallback to server
+      var token = window.AIA && window.AIA.Session.getToken();
+      fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: text })
+      })
+      .then(function(res) { return res.json(); })
+      .then(function(resp) {
+        typingEl.remove();
+        addMessage(resp.reply || 'Sorry, I could not process that.', 'bot');
+      })
+      .catch(function() {
+        typingEl.remove();
+        addMessage('Sorry, something went wrong. Please try again.', 'bot');
+      });
+    }
+  }
+
+  function addMessage(text, type) {
+    var div = document.createElement('div');
+    div.className = 'chat-msg ' + type;
+    div.innerHTML = '<div class="chat-msg-content">' + escapeHtml(text) + '</div>';
+    messagesEl.appendChild(div);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+    return div;
+  }
+
+  function escapeHtml(str) {
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n/g, '<br>');
+  }
+
+  // ===== Client-side chatbot response engine =====
+  function chatbotRespond(message, data) {
+    var msg = message.toLowerCase().trim();
+
+    // Greeting
+    if (msg.match(/^(hi|hello|hey|good morning|good afternoon|good evening)/)) {
+      return "Hello! I'm your CFO Assistant for Stan Edition. I can help with revenue, products, customers, payments, geography, discounts, sessions, margins, and risks. What would you like to know?";
+    }
+
+    // Revenue / Sales
+    if (msg.match(/revenue|sales|gross|net sales|how much.*made|total sales|turnover/)) {
+      var rev = data.revenue;
+      if (!rev) return 'Revenue data is not available yet.';
+      return 'Stan Edition generated ' + fmtCrL(rev.total_gross) + ' in gross sales and ' + fmtCrL(rev.total_net) + ' in net sales (' + (data.period || '') + '). Discount rate is ' + fmtPct(rev.discount_rate) + ' (' + fmtCrL(rev.total_discounts) + ') and return rate is ' + fmtPct(rev.return_rate) + ' (' + fmtCrL(rev.total_returns) + ').';
+    }
+
+    // Top products
+    if (msg.match(/top product|best sell|popular|which product|product performance/)) {
+      var prods = data.products && data.products.products;
+      if (!prods || !prods.length) return 'Product data is not available yet.';
+      var top5 = prods.slice(0, 5);
+      var lines = top5.map(function(p, i) { return (i + 1) + '. ' + p.name + ' \u2014 ' + fmtINRFull(p.gross_sales) + ' (' + (p.share_of_gross || 0).toFixed(1) + '% share)'; });
+      return 'Top 5 products by gross sales:\n' + lines.join('\n');
+    }
+
+    // Customer metrics
+    if (msg.match(/customer|retention|repeat|ltv|lifetime value|buyer/)) {
+      var c = data.customers;
+      if (!c) return 'Customer data is not available yet.';
+      return 'Total customers: ' + fmtNum(c.total_customers) + '. Repeat rate: ' + fmtPct(c.repeat_rate) + ' (' + fmtNum(c.repeat_customers) + ' repeat buyers). Average LTV: ' + fmtINRFull(c.avg_ltv) + '. Avg orders per customer: ' + (c.avg_orders_per_customer || 0).toFixed(2) + '.';
+    }
+
+    // Payment methods
+    if (msg.match(/payment|cod|upi|prepaid|gateway|refund/)) {
+      var pay = data.payments;
+      if (!pay) return 'Payment data is not available yet.';
+      var gw = pay.gateway_summary || {};
+      var reply = 'Payment summary: ' + fmtNum(gw.total_transactions) + ' transactions, ' + fmtCrL(gw.gross_payments) + ' gross. Refund rate: ' + fmtPct(gw.refund_rate_pct) + '. Net: ' + fmtCrL(gw.net_payments) + '.';
+      var bt = pay.by_type || [];
+      if (bt.length > 0) {
+        reply += '\n\nBreakdown: ' + bt.slice(0, 5).map(function(b) { return b.type + ' (' + fmtPct(b.pct_of_gross) + ')'; }).join(', ') + '.';
+      }
+      return reply;
+    }
+
+    // Geography / states / cities
+    if (msg.match(/geography|state|city|region|where|location|top state|top city/)) {
+      var geo = data.geography;
+      if (!geo) return 'Geography data is not available yet.';
+      var states = (geo.states || []).slice(0, 5);
+      var reply = 'Top 5 states by revenue:\n' + states.map(function(s, i) { return (i + 1) + '. ' + s.state + ' \u2014 ' + fmtINRFull(s.revenue) + ' (' + fmtPct(s.pct_revenue) + ')'; }).join('\n');
+      var cities = (geo.cities || []).slice(0, 5);
+      if (cities.length > 0) {
+        reply += '\n\nTop 5 cities:\n' + cities.map(function(c, i) { return (i + 1) + '. ' + c.city + ' \u2014 ' + fmtNum(c.orders) + ' orders'; }).join('\n');
+      }
+      return reply;
+    }
+
+    // Discounts
+    if (msg.match(/discount|coupon|promo|code/)) {
+      var disc = data.discounts;
+      if (!disc) return 'Discount data is not available yet.';
+      var reply = 'Total discount value: ' + fmtCrL(disc.total_discount_value) + '. Discount rate: ' + fmtPct(disc.discount_rate) + '. Codes used: ' + fmtNum(disc.total_codes_used) + '.';
+      var top3 = (disc.top_discounts || []).slice(0, 3);
+      if (top3.length > 0) {
+        reply += '\n\nTop codes: ' + top3.map(function(d) { return d.name + ' (' + d.orders + ' orders, ' + fmtINRFull(d.applied_amount) + ')'; }).join(', ') + '.';
+      }
+      return reply;
+    }
+
+    // Sessions / traffic / conversion
+    if (msg.match(/session|traffic|visitor|conversion rate|website/)) {
+      var sess = data.sessions;
+      if (!sess) return 'Session data is not available yet.';
+      return 'Total sessions: ' + fmtNum(sess.total_sessions) + ' (' + fmtNum(sess.total_visitors) + ' unique visitors). Avg daily: ' + fmtNum(sess.avg_daily_sessions) + ' sessions. Overall conversion rate: ' + fmtPct(sess.overall_conversion) + '.';
+    }
+
+    // Margin / profit / COGS / unit economics
+    if (msg.match(/margin|profit|cogs|cost|unit economic|contribution/)) {
+      var intel = data.intelligence;
+      if (!intel || !intel.unit_economics) return 'Margin/unit economics data is not fully available. COGS data is needed for complete analysis.';
+      var ue = intel.unit_economics;
+      return 'Unit economics: AOV ' + (typeof ue.avg_order_value === 'number' ? fmtINRFull(ue.avg_order_value) : ue.avg_order_value) +
+        ', Avg discount/order ' + (typeof ue.avg_discount_per_order === 'number' ? fmtINRFull(ue.avg_discount_per_order) : ue.avg_discount_per_order) +
+        ', Avg net/order ' + (typeof ue.avg_net_per_order === 'number' ? fmtINRFull(ue.avg_net_per_order) : ue.avg_net_per_order) +
+        '. COGS/order: ' + (typeof ue.cogs_per_order === 'number' ? fmtINRFull(ue.cogs_per_order) : ue.cogs_per_order) + '.';
+    }
+
+    // Risk / concern / warning / advisory
+    if (msg.match(/risk|concern|warning|advisory|alert|issue|problem/)) {
+      var adv = data.advisory;
+      if (!adv) return 'Advisory data is not available yet.';
+      var items = [];
+      if (adv.critical) {
+        adv.critical.forEach(function(c) { items.push('\uD83D\uDEA8 CRITICAL: ' + c.title); });
+      }
+      if (adv.warnings) {
+        adv.warnings.slice(0, 3).forEach(function(w) { items.push('\u26A0 WARNING: ' + w.title); });
+      }
+      if (adv.opportunities) {
+        adv.opportunities.slice(0, 2).forEach(function(o) { items.push('\u2705 OPPORTUNITY: ' + o.title); });
+      }
+      if (items.length === 0) return 'No critical risks or warnings found.';
+      return 'Key risks and advisories:\n' + items.join('\n');
+    }
+
+    // Monthly trend / compare / growth
+    if (msg.match(/trend|month|compare|growth|mom|month.over.month/)) {
+      var trend = data.overview && data.overview.monthly_trend;
+      if (!trend || trend.length < 2) return 'Monthly trend data is not available yet.';
+      var last = trend[trend.length - 1];
+      var prev = trend[trend.length - 2];
+      var orderGrowth = prev.orders > 0 ? (((last.orders - prev.orders) / prev.orders) * 100).toFixed(1) : '\u2014';
+      var revenueGrowth = prev.gross_sales > 0 ? (((last.gross_sales - prev.gross_sales) / prev.gross_sales) * 100).toFixed(1) : '\u2014';
+      return 'Latest month: ' + fmtNum(last.orders) + ' orders, ' + fmtCrL(last.gross_sales) + ' gross sales.\nMoM growth: Orders ' + orderGrowth + '%, Revenue ' + revenueGrowth + '%.';
+    }
+
+    // AOV / average order value
+    if (msg.match(/aov|average order|order value/)) {
+      var kpis = data.overview && data.overview.kpis;
+      if (!kpis) return 'KPI data is not available yet.';
+      var aovKpi = kpis.find(function(k) { return k.label === 'Avg Order Value'; });
+      return 'Average Order Value: ' + fmtCrL(aovKpi ? aovKpi.value : 0) + '. This reflects the average gross sale per order before discounts and returns.';
+    }
+
+    // Total orders
+    if (msg.match(/how many order|total order|order count|order volume/)) {
+      var kpis = data.overview && data.overview.kpis;
+      if (!kpis) return 'KPI data is not available yet.';
+      var orderKpi = kpis.find(function(k) { return k.label === 'Total Orders'; });
+      return 'Total orders: ' + fmtNum(orderKpi ? orderKpi.value : 0) + ' (' + (data.period || '') + ').';
+    }
+
+    // FY24 / P&L
+    if (msg.match(/fy24|fy 24|p.?l|pre.?launch|spend|expense/)) {
+      var fy = data.fy24_pl;
+      if (!fy) return 'FY24-25 P&L data is not available yet.';
+      return 'FY24-25 total pre-launch spend: ' + fmtCrL(fy.total_cost) + ' (' + (fy.period || '') + '). Breakdown: Marketing ' + fmtCrL(fy.breakdown && fy.breakdown.marketing ? fy.breakdown.marketing.total : 0) + ', Production ' + fmtCrL(fy.breakdown && fy.breakdown.production ? fy.breakdown.production.total : 0) + '.';
+    }
+
+    // Summary / overview
+    if (msg.match(/summary|overview|how.*business|performance|dashboard|key metric/)) {
+      var kpis = data.overview && data.overview.kpis;
+      if (!kpis) return 'Dashboard data is not available yet.';
+      var lines = kpis.map(function(k) {
+        var val = k.format === 'currency' ? fmtCrL(k.value) : k.format === 'percent' ? fmtPct(k.value) : fmtNum(k.value);
+        return k.label + ': ' + val;
+      });
+      return 'Stan Edition Dashboard Summary (' + (data.period || '') + '):\n' + lines.join('\n');
+    }
+
+    // COD risk
+    if (msg.match(/cod risk|cash on delivery|cod exposure/)) {
+      var intel = data.intelligence;
+      if (!intel || !intel.cod_risk) return 'COD risk data is not available.';
+      var cod = intel.cod_risk;
+      return 'COD Risk: COD share ' + fmtPct(cod.cod_share) + ', PPCOD share ' + fmtPct(cod.ppcod_share) + ', total COD exposure ' + fmtPct(cod.total_cod_exposure) + '. ' + (cod.note || '');
+    }
+
+    // Product concentration
+    if (msg.match(/concentration|diversif/)) {
+      var intel = data.intelligence;
+      if (!intel || !intel.product_concentration) return 'Product concentration data is not available.';
+      var pc = intel.product_concentration;
+      return 'Product Concentration: Top product (' + (pc.top_product || '\u2014') + ') holds ' + fmtPct(pc.top_product_share) + ' share. Top 3 products: ' + fmtPct(pc.top3_share) + '. ' + (pc.alert || '');
+    }
+
+    // SKUs / categories
+    if (msg.match(/sku|categor|how many product/)) {
+      var prod = data.products;
+      if (!prod) return 'Product data is not available yet.';
+      var cats = prod.categories || [];
+      return 'Total SKUs: ' + fmtNum(prod.total_skus) + '. Categories: ' + cats.map(function(c) { return c.category; }).join(', ') + '.';
+    }
+
+    // Help
+    if (msg.match(/help|what can you|what do you|capability/)) {
+      return "I can help with:\n\u2022 Revenue & sales analysis\n\u2022 Top products & categories\n\u2022 Customer metrics & retention\n\u2022 Payment method breakdown\n\u2022 Geographic distribution\n\u2022 Discount analysis\n\u2022 Session & traffic data\n\u2022 Margin & unit economics\n\u2022 Risk & advisory insights\n\u2022 Monthly trends & growth\n\u2022 FY24-25 P&L\n\nTry: \"What's the revenue?\" or \"Top products\" or \"Show me risks\"";
+    }
+
+    // Default
+    return "I can help with: revenue, products, customers, payments, geography, discounts, sessions, margins, trends, risks, and more. Try asking something specific like \"What's the revenue?\" or \"Top products\".";
+  }
+})();

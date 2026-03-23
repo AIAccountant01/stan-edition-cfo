@@ -48,6 +48,19 @@ module.exports = async function handler(req, res) {
     await sql`CREATE INDEX IF NOT EXISTS idx_audit_log_action  ON audit_log (action)`;
     await sql`CREATE INDEX IF NOT EXISTS idx_audit_log_email   ON audit_log (email)`;
 
+    // Dashboard data table — stores uploaded/processed dashboard JSON
+    await sql`
+      CREATE TABLE IF NOT EXISTS dashboard_data (
+        id            SERIAL PRIMARY KEY,
+        client_name   VARCHAR(255) NOT NULL DEFAULT 'Stan Edition',
+        data_json     JSONB NOT NULL,
+        uploaded_by   VARCHAR(255) NOT NULL,
+        upload_source VARCHAR(100) DEFAULT 'manual',
+        created_at    TIMESTAMPTZ NOT NULL DEFAULT NOW()
+      )
+    `;
+    await sql`CREATE INDEX IF NOT EXISTS idx_dashboard_data_client ON dashboard_data (client_name, created_at DESC)`;
+
     // ===== SEED USERS =====
     const seedUsers = [
       { email: 'help@aiaccountant.com', password: 'aiaccountant2026', name: 'Help', role: 'Admin' },
@@ -75,7 +88,7 @@ module.exports = async function handler(req, res) {
     await sql`
       INSERT INTO audit_log (action, email, details)
       VALUES ('database_migrated', 'system', ${JSON.stringify({
-        tablesCreated: ['users', 'audit_log'],
+        tablesCreated: ['users', 'audit_log', 'dashboard_data'],
         usersSeeded: results.filter(r => !r.skipped).length,
         usersSkipped: results.filter(r => r.skipped).length
       })})
