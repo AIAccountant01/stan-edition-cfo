@@ -2,7 +2,7 @@
   "client": "Stan Edition",
   "brand": "Stan Edition",
   "website": "stanedition.com",
-  "generated_at": "2026-03-23T14:31:10.230393",
+  "generated_at": "2026-03-23T14:43:43.607883",
   "period": "Apr 2025 \u2013 Feb 2026",
   "currency": "INR",
   "overview": {
@@ -227,7 +227,18 @@
         "format": "currency",
         "delta": ""
       }
-    ]
+    ],
+    "returns_kpi": {
+      "total_returns": 969332,
+      "return_rate_pct": 5.3
+    },
+    "tax_kpi": {
+      "total_tax_collected": 903
+    },
+    "payments_kpi": {
+      "net_payments": 14615418,
+      "refund_rate_pct": 4.0
+    }
   },
   "revenue": {
     "total_gross": 24178676.400000002,
@@ -3338,74 +3349,163 @@
     ]
   },
   "payments": {
-    "methods": [
+    "gateway_summary": {
+      "total_transactions": 3526,
+      "gross_payments": 15217930,
+      "total_refunded": 602511,
+      "net_payments": 14615418,
+      "refund_rate_pct": 4.0
+    },
+    "by_gateway": [
       {
-        "method": "Gokwik UPI",
-        "orders": 765,
-        "revenue": 2504600
+        "gateway": "Gokwik UPI",
+        "transactions": 1433,
+        "gross_payments": 6447625,
+        "refunded": 262922,
+        "net_payments": 6184703,
+        "pct_of_gross": 42.4
       },
       {
-        "method": "cash_on_delivery",
-        "orders": 536,
-        "revenue": 1927159
+        "gateway": "Gokwik Cards",
+        "transactions": 862,
+        "gross_payments": 4643712,
+        "refunded": 317706,
+        "net_payments": 4326005,
+        "pct_of_gross": 30.5
       },
       {
-        "method": "Gokwik Cards",
-        "orders": 321,
-        "revenue": 1071330
+        "gateway": "cash_on_delivery",
+        "transactions": 417,
+        "gross_payments": 1986835,
+        "refunded": 0,
+        "net_payments": 1986835,
+        "pct_of_gross": 13.1
       },
       {
-        "method": "Gokwik PPCOD",
-        "orders": 149,
-        "revenue": 558736
+        "gateway": "manual",
+        "transactions": 200,
+        "gross_payments": 1035412,
+        "refunded": 0,
+        "net_payments": 1035412,
+        "pct_of_gross": 6.8
       },
       {
-        "method": "Gokwik PPCOD + manual",
-        "orders": 123,
-        "revenue": 465216
+        "gateway": "1 Razorpay",
+        "transactions": 83,
+        "gross_payments": 392872,
+        "refunded": 0,
+        "net_payments": 392872,
+        "pct_of_gross": 2.6
       },
       {
-        "method": "Cash on Delivery (COD)",
-        "orders": 30,
-        "revenue": 108815
+        "gateway": "Cash on Delivery (COD)",
+        "transactions": 73,
+        "gross_payments": 378854,
+        "refunded": 0,
+        "net_payments": 378854,
+        "pct_of_gross": 2.5
       },
       {
-        "method": "1Razorpay - UPI, Cards, Wallets, NB",
-        "orders": 18,
-        "revenue": 62341
+        "gateway": "Gokwik Netbanking",
+        "transactions": 31,
+        "gross_payments": 176784,
+        "refunded": 9830,
+        "net_payments": 166954,
+        "pct_of_gross": 1.2
       },
       {
-        "method": "Gokwik Netbanking",
-        "orders": 14,
-        "revenue": 49502
+        "gateway": "Gokwik EMI",
+        "transactions": 11,
+        "gross_payments": 63040,
+        "refunded": 0,
+        "net_payments": 63040,
+        "pct_of_gross": 0.4
       },
       {
-        "method": "Gokwik EMI",
-        "orders": 7,
-        "revenue": 28091
+        "gateway": "Gokwik PPCOD",
+        "transactions": 401,
+        "gross_payments": 31100,
+        "refunded": 350,
+        "net_payments": 30750,
+        "pct_of_gross": 0.2
       },
       {
-        "method": "manual",
-        "orders": 9,
-        "revenue": 23515
+        "gateway": "GOKWIK UPI",
+        "transactions": 4,
+        "gross_payments": 25438,
+        "refunded": 0,
+        "net_payments": 25438,
+        "pct_of_gross": 0.2
       },
       {
-        "method": "Gokwik Wallets",
-        "orders": 4,
-        "revenue": 13562
-      },
-      {
-        "method": "GOKWIK UPI",
-        "orders": 2,
-        "revenue": 7550
-      },
-      {
-        "method": "Cash on Delivery (COD) + manual",
-        "orders": 1,
-        "revenue": 3050
+        "gateway": "Gokwik Wallets",
+        "transactions": 11,
+        "gross_payments": 36258,
+        "refunded": 11703,
+        "net_payments": 24555,
+        "pct_of_gross": 0.2
       }
     ],
-    "note": "From order exports (Apr 2025 \u2013 Feb 2026)"
+    "by_type": [
+      {
+        "type": "UPI",
+        "transactions": 1437,
+        "gross": 6473063,
+        "refunded": 262922,
+        "net": 6210141,
+        "pct_of_gross": 42.5
+      },
+      {
+        "type": "Cards",
+        "transactions": 862,
+        "gross": 4643712,
+        "refunded": 317706,
+        "net": 4326005,
+        "pct_of_gross": 30.5
+      },
+      {
+        "type": "COD",
+        "transactions": 891,
+        "gross": 2396789,
+        "refunded": 350,
+        "net": 2396439,
+        "pct_of_gross": 15.7
+      },
+      {
+        "type": "Other",
+        "transactions": 283,
+        "gross": 1428283,
+        "refunded": 0,
+        "net": 1428283,
+        "pct_of_gross": 9.4
+      },
+      {
+        "type": "Netbanking",
+        "transactions": 31,
+        "gross": 176784,
+        "refunded": 9830,
+        "net": 166954,
+        "pct_of_gross": 1.2
+      },
+      {
+        "type": "EMI",
+        "transactions": 11,
+        "gross": 63040,
+        "refunded": 0,
+        "net": 63040,
+        "pct_of_gross": 0.4
+      },
+      {
+        "type": "Wallets",
+        "transactions": 11,
+        "gross": 36258,
+        "refunded": 11703,
+        "net": 24555,
+        "pct_of_gross": 0.2
+      }
+    ],
+    "period": "Apr 2025 \u2013 Feb 2026",
+    "note": "Primary gateway: Gokwik (UPI + Cards). COD ~13% of transactions."
   },
   "customers": {
     "note": "Based on order exports (Jul-Sep 2025 sample).",
@@ -3755,7 +3855,7 @@
         "revenue": 44167
       }
     ],
-    "note": "Based on 3,200 orders from Apr 2025 \u2013 Feb 2026"
+    "note": "Based on 3,200 orders from order exports"
   },
   "discounts": {
     "total_discount_value": 4966238.57,
@@ -6080,13 +6180,31 @@
       {
         "source": "Order Exports",
         "period": "Apr 2025 \u2013 Feb 2026",
-        "records": "3,200 orders (64 files)",
+        "records": "3,200 orders",
         "status": "complete"
       },
       {
         "source": "COGS per Category",
         "period": "-",
         "records": "5 categories",
+        "status": "complete"
+      },
+      {
+        "source": "Taxes Report",
+        "period": "Apr 2025 \u2013 Feb 2026",
+        "records": "\u20b9903 total",
+        "status": "complete"
+      },
+      {
+        "source": "Returns Report",
+        "period": "Apr 2025 \u2013 Feb 2026",
+        "records": "334 days",
+        "status": "complete"
+      },
+      {
+        "source": "Payment Gateways",
+        "period": "Apr 2025 \u2013 Feb 2026",
+        "records": "3,526 txns",
         "status": "complete"
       },
       {
@@ -6100,38 +6218,32 @@
       {
         "source": "Order Exports (May-Jun 2025)",
         "period": "May-Jun 2025",
-        "priority": "MEDIUM",
-        "impact": "Only 50 orders for Apr, none for May-Jun"
+        "priority": "MEDIUM"
       },
       {
         "source": "FSHIP Shipping Data",
         "period": "FY25-26",
-        "priority": "HIGH",
-        "impact": "Shipping cost & delivery metrics"
+        "priority": "HIGH"
       },
       {
         "source": "Meta Ads Data",
         "period": "FY25-26",
-        "priority": "HIGH",
-        "impact": "ROAS, CAC analysis"
+        "priority": "HIGH"
       },
       {
         "source": "Myntra Orders",
         "period": "FY25-26",
-        "priority": "HIGH",
-        "impact": "Marketplace revenue"
+        "priority": "HIGH"
       },
       {
         "source": "Easebuzz Settlements",
         "period": "FY25-26",
-        "priority": "MEDIUM",
-        "impact": "Payment reconciliation"
+        "priority": "MEDIUM"
       },
       {
         "source": "Bank Statement",
         "period": "FY25-26",
-        "priority": "MEDIUM",
-        "impact": "Cash flow"
+        "priority": "MEDIUM"
       }
     ]
   },
@@ -6144,99 +6256,56 @@
       "paid_orders": 1503,
       "pending_orders": 250,
       "refunded_orders": 68,
-      "fulfilled_orders": 1938,
-      "unfulfilled_orders": 42
+      "fulfilled_orders": 1938
     },
     "monthly": [
-      {
-        "month": "2025-04",
-        "orders": 50,
-        "gmv": 116002,
-        "aov": 3515,
-        "subtotal": 116002,
-        "shipping": 0,
-        "taxes": 0,
-        "discounts": 11717
-      },
       {
         "month": "2025-07",
         "orders": 308,
         "gmv": 727191,
-        "aov": 3414,
-        "subtotal": 727007,
-        "shipping": 0,
-        "taxes": 184,
-        "discounts": 134712
+        "aov": 3414
       },
       {
         "month": "2025-08",
         "orders": 378,
         "gmv": 926123,
-        "aov": 3690,
-        "subtotal": 926123,
-        "shipping": 0,
-        "taxes": 485,
-        "discounts": 158269
+        "aov": 3690
       },
       {
         "month": "2025-09",
         "orders": 369,
         "gmv": 768567,
-        "aov": 3229,
-        "subtotal": 768567,
-        "shipping": 0,
-        "taxes": 3662,
-        "discounts": 129648
+        "aov": 3229
       },
       {
         "month": "2025-10",
         "orders": 411,
         "gmv": 881625,
-        "aov": 3512,
-        "subtotal": 881625,
-        "shipping": 0,
-        "taxes": 1316,
-        "discounts": 142203
+        "aov": 3512
       },
       {
         "month": "2025-11",
         "orders": 397,
         "gmv": 773920,
-        "aov": 3380,
-        "subtotal": 773920,
-        "shipping": 0,
-        "taxes": 10515,
-        "discounts": 137990
+        "aov": 3380
       },
       {
         "month": "2025-12",
         "orders": 423,
         "gmv": 832463,
-        "aov": 3398,
-        "subtotal": 832459,
-        "shipping": 0,
-        "taxes": 6828,
-        "discounts": 148009
+        "aov": 3398
       },
       {
         "month": "2026-01",
         "orders": 426,
         "gmv": 889717,
-        "aov": 3307,
-        "subtotal": 889083,
-        "shipping": 0,
-        "taxes": 9422,
-        "discounts": 170069
+        "aov": 3307
       },
       {
         "month": "2026-02",
         "orders": 438,
         "gmv": 913071,
-        "aov": 3553,
-        "subtotal": 912941,
-        "shipping": 0,
-        "taxes": 9386,
-        "discounts": 166077
+        "aov": 3553
       }
     ],
     "fulfillment": [
@@ -6327,14 +6396,6 @@
     ],
     "monthly": [
       {
-        "month": "2025-04",
-        "units": 50,
-        "revenue": 195702,
-        "cogs": 72500,
-        "gross_profit": 123202,
-        "margin_pct": 63.0
-      },
-      {
         "month": "2025-07",
         "units": 308,
         "revenue": 1242946,
@@ -6403,20 +6464,20 @@
       {
         "product": "Coral Red Linen Shirt",
         "category": "Linen Shirts",
-        "units": 251,
-        "revenue": 1052497,
-        "cogs": 363950,
-        "gross_profit": 688547,
-        "margin_pct": 65.4
+        "units": 313,
+        "revenue": 1300037,
+        "cogs": 453850,
+        "gross_profit": 846187,
+        "margin_pct": 65.1
       },
       {
         "product": "Grey Linen Shirt",
         "category": "Linen Shirts",
-        "units": 235,
-        "revenue": 983679,
-        "cogs": 340750,
-        "gross_profit": 642929,
-        "margin_pct": 65.4
+        "units": 307,
+        "revenue": 1270239,
+        "cogs": 445150,
+        "gross_profit": 825089,
+        "margin_pct": 65.0
       },
       {
         "product": "Sky Blue Pure Linen Shirt - 70 Lea",
@@ -6536,15 +6597,6 @@
         "margin_pct": 64.4
       },
       {
-        "product": "(Bestseller) Grey Linen Shirt",
-        "category": "Linen Shirts",
-        "units": 72,
-        "revenue": 286560,
-        "cogs": 104400,
-        "gross_profit": 182160,
-        "margin_pct": 63.6
-      },
-      {
         "product": "Yellow Pure Linen Shirt - 70 Lea",
         "category": "Linen Shirts",
         "units": 49,
@@ -6563,15 +6615,6 @@
         "margin_pct": 64.5
       },
       {
-        "product": "(Bestseller) Coral Red Linen Shirt",
-        "category": "Linen Shirts",
-        "units": 62,
-        "revenue": 247540,
-        "cogs": 89900,
-        "gross_profit": 157640,
-        "margin_pct": 63.7
-      },
-      {
         "product": "Charcoal Grey Irish Linen Shirt with Black Button",
         "category": "Linen Shirts",
         "units": 50,
@@ -6579,8 +6622,110 @@
         "cogs": 72500,
         "gross_profit": 128894,
         "margin_pct": 64.0
+      },
+      {
+        "product": "Rhino Grey Irish Linen Shirt - 70 LEA",
+        "category": "Linen Shirts",
+        "units": 37,
+        "revenue": 175673,
+        "cogs": 53650,
+        "gross_profit": 122023,
+        "margin_pct": 69.5
+      },
+      {
+        "product": "Brown Linen Pants",
+        "category": "Linen Pants",
+        "units": 37,
+        "revenue": 153530,
+        "cogs": 51060,
+        "gross_profit": 102470,
+        "margin_pct": 66.7
       }
     ]
   },
-  "order_export_coverage": "Apr 2025 \u2013 Feb 2026 (3,200 unique orders from 64 export files)"
+  "order_export_coverage": "Apr 2025 \u2013 Feb 2026 (3,200 unique orders from 64 export files)",
+  "taxes": {
+    "total_sales_tax": 903,
+    "by_state": [
+      {
+        "state": "Telangana",
+        "total_tax": 459,
+        "tax_types": [
+          "IGST"
+        ],
+        "pct_of_total": 50.8
+      },
+      {
+        "state": "Uttar Pradesh",
+        "total_tax": 348,
+        "tax_types": [
+          "IGST"
+        ],
+        "pct_of_total": 38.6
+      },
+      {
+        "state": "Maharashtra",
+        "total_tax": 96,
+        "tax_types": [
+          "IGST",
+          "SGST"
+        ],
+        "pct_of_total": 10.6
+      }
+    ],
+    "period": "Apr 2025 \u2013 Feb 2026",
+    "note": "GST breakdown by state from Shopify taxes report. Karnataka (home state) uses CGST+SGST, other states use IGST."
+  },
+  "returns": {
+    "total_returns": 969332,
+    "return_rate_pct": 5.3,
+    "days_with_returns": 110,
+    "monthly": [
+      {
+        "month": "2025-04",
+        "returns_value": 37592
+      },
+      {
+        "month": "2025-05",
+        "returns_value": 151348
+      },
+      {
+        "month": "2025-06",
+        "returns_value": 29398
+      },
+      {
+        "month": "2025-07",
+        "returns_value": 64912
+      },
+      {
+        "month": "2025-08",
+        "returns_value": 7610
+      },
+      {
+        "month": "2025-09",
+        "returns_value": 38932
+      },
+      {
+        "month": "2025-10",
+        "returns_value": 115348
+      },
+      {
+        "month": "2025-11",
+        "returns_value": 168158
+      },
+      {
+        "month": "2025-12",
+        "returns_value": 155648
+      },
+      {
+        "month": "2026-01",
+        "returns_value": 93873
+      },
+      {
+        "month": "2026-02",
+        "returns_value": 106514
+      }
+    ],
+    "period": "Apr 2025 \u2013 Feb 2026"
+  }
 }
