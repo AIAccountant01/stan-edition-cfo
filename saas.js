@@ -279,7 +279,7 @@
   const helpBtnDropdown = document.getElementById('helpBtnDropdown');
 
   function openWhatsApp() {
-    window.open('https://wa.me/917019889788', '_blank');
+    window.open('https://chat.whatsapp.com/DzwI005mqevJ4heDodeM0e?mode=gi_t', '_blank');
   }
 
   if (helpBtnDropdown) helpBtnDropdown.addEventListener('click', function() {

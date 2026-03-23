@@ -2,7 +2,7 @@
   "client": "Stan Edition",
   "brand": "Stan Edition",
   "website": "stanedition.com",
-  "generated_at": "2026-03-23T12:44:35.600522",
+  "generated_at": "2026-03-23T14:21:26.661435",
   "period": "Apr 2025 \u2013 Feb 2026",
   "currency": "INR",
   "overview": {
@@ -3221,28 +3221,49 @@
     ],
     "categories": [
       {
-        "category": "Shirts",
-        "units": 4811,
-        "gross_sales": 21111503.86,
-        "net_sales": 16430414.31,
-        "returns": 388406.79,
-        "share": 87.3
+        "category": "Linen Shirts",
+        "units_sold": 1597,
+        "revenue": 6874706,
+        "avg_price": 4308,
+        "unique_skus": 89,
+        "cogs_per_unit": null,
+        "gross_margin": null
+      },
+      {
+        "category": "Linen Pants",
+        "units_sold": 155,
+        "revenue": 636428,
+        "avg_price": 4107,
+        "unique_skus": 19,
+        "cogs_per_unit": null,
+        "gross_margin": null
+      },
+      {
+        "category": "T-Shirts (Supima)",
+        "units_sold": 160,
+        "revenue": 224250,
+        "avg_price": 1402,
+        "unique_skus": 28,
+        "cogs_per_unit": null,
+        "gross_margin": null
+      },
+      {
+        "category": "Oxford Shirts",
+        "units_sold": 26,
+        "revenue": 54800,
+        "avg_price": 2108,
+        "unique_skus": 13,
+        "cogs_per_unit": null,
+        "gross_margin": null
       },
       {
         "category": "Pants",
-        "units": 577,
-        "gross_sales": 2171321.95,
-        "net_sales": 1638191.04,
-        "returns": 36912.9,
-        "share": 9.0
-      },
-      {
-        "category": "T-Shirts",
-        "units": 743,
-        "gross_sales": 895850.59,
-        "net_sales": 717112.79,
-        "returns": 1400.0,
-        "share": 3.7
+        "units_sold": 23,
+        "revenue": 36500,
+        "avg_price": 1586,
+        "unique_skus": 9,
+        "cogs_per_unit": null,
+        "gross_margin": null
       }
     ],
     "total_skus": 57,
@@ -3250,62 +3271,110 @@
       "top_product": "Grey Blue Irish Linen Shirt",
       "top_product_share": 13.4,
       "alert": "LOW"
-    }
+    },
+    "size_distribution": [
+      {
+        "size": "M",
+        "units": 578
+      },
+      {
+        "size": "L",
+        "units": 531
+      },
+      {
+        "size": "S",
+        "units": 304
+      },
+      {
+        "size": "XL",
+        "units": 247
+      },
+      {
+        "size": "2XL",
+        "units": 84
+      },
+      {
+        "size": "32",
+        "units": 68
+      },
+      {
+        "size": "34",
+        "units": 50
+      },
+      {
+        "size": "30",
+        "units": 33
+      },
+      {
+        "size": "36",
+        "units": 24
+      }
+    ]
   },
   "payments": {
-    "note": "Based on order exports (Jul-Sep 2025 sample \u2014 700 orders). Full order data pending.",
-    "total_orders_sampled": 700,
-    "cod_orders": 321,
-    "cod_share": 45.9,
-    "ppcod_orders": 0,
-    "ppcod_share": 0.0,
-    "prepaid_orders": 379,
-    "prepaid_share": 54.1,
-    "payment_methods": [
+    "methods": [
       {
-        "method": "COD",
-        "orders": 321,
-        "share": 45.9,
-        "revenue": 1510578.0
+        "method": "Gokwik UPI",
+        "orders": 448,
+        "revenue": 1473906
       },
       {
-        "method": "UPI",
-        "orders": 221,
-        "share": 31.6,
-        "revenue": 1117398.0
+        "method": "cash_on_delivery",
+        "orders": 367,
+        "revenue": 1305603
       },
       {
-        "method": "Cards",
-        "orders": 125,
-        "share": 17.9,
-        "revenue": 719514.0
+        "method": "Gokwik Cards",
+        "orders": 188,
+        "revenue": 627455
       },
       {
-        "method": "Manual",
-        "orders": 14,
-        "share": 2.0,
-        "revenue": 60442.0
+        "method": "Gokwik PPCOD + manual",
+        "orders": 108,
+        "revenue": 408082
       },
       {
-        "method": "Unknown",
-        "orders": 13,
-        "share": 1.9,
-        "revenue": 19483.0
+        "method": "Gokwik PPCOD",
+        "orders": 78,
+        "revenue": 301179
       },
       {
-        "method": "Net Banking",
+        "method": "Gokwik Netbanking",
+        "orders": 9,
+        "revenue": 35293
+      },
+      {
+        "method": "manual",
+        "orders": 8,
+        "revenue": 23462
+      },
+      {
+        "method": "Cash on Delivery (COD)",
+        "orders": 5,
+        "revenue": 19571
+      },
+      {
+        "method": "1Razorpay - UPI, Cards, Wallets, NB",
         "orders": 4,
-        "share": 0.6,
-        "revenue": 19477.0
+        "revenue": 16530
       },
       {
-        "method": "EMI",
-        "orders": 2,
-        "share": 0.3,
-        "revenue": 17058.0
+        "method": "Gokwik EMI",
+        "orders": 3,
+        "revenue": 11686
+      },
+      {
+        "method": "Gokwik Wallets",
+        "orders": 3,
+        "revenue": 9227
+      },
+      {
+        "method": "GOKWIK UPI",
+        "orders": 1,
+        "revenue": 3432
       }
     ],
-    "gateway": "Gokwik (primary) + Easebuzz (secondary)"
+    "note": "From order exports (Jul-Dec 2025). Easebuzz/Gokwik settlements pending."
   },
   "customers": {
     "note": "Based on order exports (Jul-Sep 2025 sample).",
@@ -3340,176 +3409,291 @@
     "marketing_opt_in_rate": 36.7
   },
   "geography": {
-    "note": "Based on order exports (Jul-Sep 2025 sample).",
-    "top_states": [
+    "states": [
       {
         "state": "Maharashtra",
-        "orders": 124,
-        "revenue": 610373.53,
-        "share": 17.7
+        "orders": 270,
+        "revenue": 900174,
+        "pct_revenue": 21.2
       },
       {
         "state": "Karnataka",
-        "orders": 86,
-        "revenue": 413730.58999999997,
-        "share": 12.3
-      },
-      {
-        "state": "Telangana",
-        "orders": 71,
-        "revenue": 325033.76,
-        "share": 10.1
+        "orders": 153,
+        "revenue": 513274,
+        "pct_revenue": 12.1
       },
       {
         "state": "Gujarat",
-        "orders": 69,
-        "revenue": 344583.5,
-        "share": 9.9
+        "orders": 123,
+        "revenue": 408608,
+        "pct_revenue": 9.6
+      },
+      {
+        "state": "Telangana",
+        "orders": 115,
+        "revenue": 402324,
+        "pct_revenue": 9.5
       },
       {
         "state": "Delhi",
-        "orders": 52,
-        "revenue": 256997.54,
-        "share": 7.4
-      },
-      {
-        "state": "Uttar Pradesh",
-        "orders": 41,
-        "revenue": 189906.95,
-        "share": 5.9
+        "orders": 72,
+        "revenue": 254409,
+        "pct_revenue": 6.0
       },
       {
         "state": "Tamil Nadu",
-        "orders": 35,
-        "revenue": 167203.1,
-        "share": 5.0
+        "orders": 68,
+        "revenue": 243819,
+        "pct_revenue": 5.7
       },
       {
-        "state": "Andhra Pradesh",
-        "orders": 34,
-        "revenue": 195427.99,
-        "share": 4.9
-      },
-      {
-        "state": "Haryana",
-        "orders": 30,
-        "revenue": 184321.83,
-        "share": 4.3
+        "state": "Uttar Pradesh",
+        "orders": 67,
+        "revenue": 234261,
+        "pct_revenue": 5.5
       },
       {
         "state": "Kerala",
-        "orders": 28,
-        "revenue": 134146.26,
-        "share": 4.0
+        "orders": 57,
+        "revenue": 186061,
+        "pct_revenue": 4.4
+      },
+      {
+        "state": "Haryana",
+        "orders": 45,
+        "revenue": 165050,
+        "pct_revenue": 3.9
+      },
+      {
+        "state": "Andhra Pradesh",
+        "orders": 49,
+        "revenue": 161282,
+        "pct_revenue": 3.8
       },
       {
         "state": "West Bengal",
-        "orders": 26,
-        "revenue": 171694.21,
-        "share": 3.7
+        "orders": 36,
+        "revenue": 131599,
+        "pct_revenue": 3.1
       },
       {
-        "state": "Bihar",
-        "orders": 12,
-        "revenue": 72989.44,
-        "share": 1.7
-      },
-      {
-        "state": "Chhattisgarh",
-        "orders": 12,
-        "revenue": 54029.7,
-        "share": 1.7
-      },
-      {
-        "state": "Madhya Pradesh",
-        "orders": 10,
-        "revenue": 35789.7,
-        "share": 1.4
+        "state": "Odisha",
+        "orders": 21,
+        "revenue": 82128,
+        "pct_revenue": 1.9
       },
       {
         "state": "Rajasthan",
+        "orders": 20,
+        "revenue": 75935,
+        "pct_revenue": 1.8
+      },
+      {
+        "state": "Chhattisgarh",
+        "orders": 18,
+        "revenue": 69900,
+        "pct_revenue": 1.6
+      },
+      {
+        "state": "Punjab",
+        "orders": 13,
+        "revenue": 53660,
+        "pct_revenue": 1.3
+      },
+      {
+        "state": "Goa",
+        "orders": 15,
+        "revenue": 52414,
+        "pct_revenue": 1.2
+      },
+      {
+        "state": "Jammu and Kashmir",
+        "orders": 14,
+        "revenue": 51509,
+        "pct_revenue": 1.2
+      },
+      {
+        "state": "Madhya Pradesh",
+        "orders": 14,
+        "revenue": 48253,
+        "pct_revenue": 1.1
+      },
+      {
+        "state": "Bihar",
+        "orders": 13,
+        "revenue": 42140,
+        "pct_revenue": 1.0
+      },
+      {
+        "state": "Chandigarh",
         "orders": 10,
-        "revenue": 40631.24,
-        "share": 1.4
+        "revenue": 36251,
+        "pct_revenue": 0.9
+      },
+      {
+        "state": "Assam",
+        "orders": 9,
+        "revenue": 35705,
+        "pct_revenue": 0.8
+      },
+      {
+        "state": "Manipur",
+        "orders": 4,
+        "revenue": 16642,
+        "pct_revenue": 0.4
+      },
+      {
+        "state": "Jharkhand",
+        "orders": 5,
+        "revenue": 13228,
+        "pct_revenue": 0.3
+      },
+      {
+        "state": "Uttarakhand",
+        "orders": 4,
+        "revenue": 12352,
+        "pct_revenue": 0.3
+      },
+      {
+        "state": "Himachal Pradesh",
+        "orders": 3,
+        "revenue": 11638,
+        "pct_revenue": 0.3
+      },
+      {
+        "state": "Tripura",
+        "orders": 3,
+        "revenue": 11134,
+        "pct_revenue": 0.3
+      },
+      {
+        "state": "Nagaland",
+        "orders": 3,
+        "revenue": 9206,
+        "pct_revenue": 0.2
+      },
+      {
+        "state": "Meghalaya",
+        "orders": 2,
+        "revenue": 8168,
+        "pct_revenue": 0.2
+      },
+      {
+        "state": "Andaman and Nicobar Islands",
+        "orders": 2,
+        "revenue": 6309,
+        "pct_revenue": 0.1
+      },
+      {
+        "state": "Puducherry",
+        "orders": 1,
+        "revenue": 3206,
+        "pct_revenue": 0.1
       }
     ],
-    "top_cities": [
+    "cities": [
       {
         "city": "MUMBAI",
-        "orders": 63,
-        "revenue": 310345.37
+        "orders": 116,
+        "revenue": 361501
       },
       {
         "city": "BANGALORE",
-        "orders": 53,
-        "revenue": 263365.57
-      },
-      {
-        "city": "HYDERABAD",
-        "orders": 29,
-        "revenue": 146730.53
+        "orders": 84,
+        "revenue": 272122
       },
       {
         "city": "AHMEDABAD",
-        "orders": 27,
-        "revenue": 148696.12
+        "orders": 39,
+        "revenue": 139098
       },
       {
         "city": "PUNE",
-        "orders": 25,
-        "revenue": 138395.95
+        "orders": 39,
+        "revenue": 133250
+      },
+      {
+        "city": "HYDERABAD",
+        "orders": 40,
+        "revenue": 129578
       },
       {
         "city": "GURGAON",
-        "orders": 21,
-        "revenue": 119487.22
-      },
-      {
-        "city": "SURAT",
-        "orders": 13,
-        "revenue": 69458.95
-      },
-      {
-        "city": "RANGA REDDY",
-        "orders": 12,
-        "revenue": 57339.61
-      },
-      {
-        "city": "NEW DELHI",
-        "orders": 11,
-        "revenue": 45714.04
-      },
-      {
-        "city": "KOLKATA",
-        "orders": 10,
-        "revenue": 69309.56
-      },
-      {
-        "city": "ERNAKULAM",
-        "orders": 10,
-        "revenue": 52820.99
+        "orders": 30,
+        "revenue": 109129
       },
       {
         "city": "Mumbai",
-        "orders": 10,
-        "revenue": 42880.65
+        "orders": 26,
+        "revenue": 97398
       },
       {
         "city": "THANE",
-        "orders": 9,
-        "revenue": 42487.94
+        "orders": 27,
+        "revenue": 94188
       },
       {
-        "city": "VISAKHAPATNAM",
-        "orders": 9,
-        "revenue": 58519.54
+        "city": "SURAT",
+        "orders": 21,
+        "revenue": 67834
       },
       {
-        "city": "Hyderabad",
-        "orders": 8,
-        "revenue": 34325.979999999996
+        "city": "RANGA REDDY",
+        "orders": 19,
+        "revenue": 67228
+      },
+      {
+        "city": "ERNAKULAM",
+        "orders": 20,
+        "revenue": 63926
+      },
+      {
+        "city": "KOLKATA",
+        "orders": 14,
+        "revenue": 55932
+      },
+      {
+        "city": "NEW DELHI",
+        "orders": 16,
+        "revenue": 52016
+      },
+      {
+        "city": "MEDCHAL MALKAJGIRI",
+        "orders": 14,
+        "revenue": 49155
+      },
+      {
+        "city": "SOUTH EAST",
+        "orders": 13,
+        "revenue": 47273
+      },
+      {
+        "city": "CHENNAI",
+        "orders": 14,
+        "revenue": 46626
+      },
+      {
+        "city": "GAUTAM BUDDHA NAGAR",
+        "orders": 13,
+        "revenue": 44684
+      },
+      {
+        "city": "COIMBATORE",
+        "orders": 12,
+        "revenue": 40927
+      },
+      {
+        "city": "RAIGAD",
+        "orders": 11,
+        "revenue": 35916
+      },
+      {
+        "city": "24 PARAGANAS NORTH",
+        "orders": 10,
+        "revenue": 35001
       }
-    ]
+    ],
+    "note": "Based on 1,950 orders from Jul-Dec 2025 order exports"
   },
   "discounts": {
     "total_discount_value": 4966238.57,
@@ -3741,6 +3925,98 @@
       "FIRST15 is the dominant discount \u2014 used on 2124 orders (54.8% of all orders), generating \u20b9112.3L gross sales",
       "Total discount leakage: \u20b949.7L (20.5% of gross sales)",
       "LINEN25 (25% off) used on 265 orders \u2014 second highest, drives premium product sales"
+    ],
+    "order_level": [
+      {
+        "code": "FIRST15",
+        "orders": 893,
+        "total_discount": 645295,
+        "avg_order_value": 3428
+      },
+      {
+        "code": "PREPAID-DISCOUNT",
+        "orders": 89,
+        "total_discount": 17638,
+        "avg_order_value": 3765
+      },
+      {
+        "code": "SUPIMA15",
+        "orders": 35,
+        "total_discount": 8548,
+        "avg_order_value": 1157
+      },
+      {
+        "code": "Custom discount",
+        "orders": 6,
+        "total_discount": 17937,
+        "avg_order_value": 800
+      },
+      {
+        "code": "TRIAL25",
+        "orders": 6,
+        "total_discount": 5598,
+        "avg_order_value": 2388
+      },
+      {
+        "code": "IND25",
+        "orders": 3,
+        "total_discount": 3260,
+        "avg_order_value": 2693
+      },
+      {
+        "code": "SUMMER20",
+        "orders": 3,
+        "total_discount": 3092,
+        "avg_order_value": 3519
+      },
+      {
+        "code": "FIRST20",
+        "orders": 2,
+        "total_discount": 1880,
+        "avg_order_value": 3359
+      },
+      {
+        "code": "Shantanu99",
+        "orders": 2,
+        "total_discount": 8763,
+        "avg_order_value": 43
+      },
+      {
+        "code": "WELCOME20",
+        "orders": 2,
+        "total_discount": 1730,
+        "avg_order_value": 2740
+      },
+      {
+        "code": "C2PDISCOUNT",
+        "orders": 1,
+        "total_discount": 818,
+        "avg_order_value": 3432
+      },
+      {
+        "code": "FRIDAY25",
+        "orders": 1,
+        "total_discount": 1863,
+        "avg_order_value": 4617
+      },
+      {
+        "code": "RAJ20",
+        "orders": 1,
+        "total_discount": 1020,
+        "avg_order_value": 3230
+      },
+      {
+        "code": "festive25",
+        "orders": 1,
+        "total_discount": 1136,
+        "avg_order_value": 2814
+      },
+      {
+        "code": "furst order",
+        "orders": 1,
+        "total_discount": 850,
+        "avg_order_value": 3100
+      }
     ]
   },
   "sessions": {
@@ -5716,108 +5992,186 @@
   "data_status": {
     "available": [
       {
-        "item": "Shopify Sales Over Time (Daily)",
-        "source": "CSV",
+        "source": "Shopify Sales CSV",
         "period": "Apr 2025 \u2013 Feb 2026",
-        "rows": 334
+        "records": "334 days",
+        "status": "complete"
       },
       {
-        "item": "Shopify Sales by Product",
-        "source": "CSV",
+        "source": "Shopify Products CSV",
+        "period": "Current",
+        "records": "57 products",
+        "status": "complete"
+      },
+      {
+        "source": "Shopify Sessions CSV",
         "period": "Apr 2025 \u2013 Feb 2026",
-        "products": 57
+        "records": "343K sessions",
+        "status": "complete"
       },
       {
-        "item": "Shopify Sessions Over Time",
-        "source": "CSV",
+        "source": "Shopify Discounts CSV",
         "period": "Apr 2025 \u2013 Feb 2026",
-        "rows": 334
+        "records": "66 codes",
+        "status": "complete"
       },
       {
-        "item": "Shopify Discount Codes",
-        "source": "CSV",
-        "period": "Apr 2025 \u2013 Feb 2026",
-        "codes": 66
+        "source": "Order Exports",
+        "period": "Jul \u2013 Dec 2025",
+        "records": "1,950 orders (39 files)",
+        "status": "partial"
       },
       {
-        "item": "Shopify Orders Export (Partial)",
-        "source": "14 ZIP files",
-        "period": "Jul \u2013 Sep 2025 only",
-        "orders": 700
-      },
-      {
-        "item": "FY24-25 P&L / Cash Flow",
-        "source": "Excel",
+        "source": "FY24-25 P&L",
         "period": "Apr 2024 \u2013 Mar 2025",
-        "note": "Expense data only, no revenue"
+        "records": "\u20b913.2L spend",
+        "status": "complete"
       }
     ],
     "pending": [
       {
-        "item": "Shopify Orders Export (Full)",
-        "priority": "HIGH",
-        "note": "Only Jul-Sep received. Need Apr-Jun 2025 + Oct 2025-Feb 2026"
+        "source": "Order Exports (remaining)",
+        "period": "Apr-Jun 2025 + Jan-Feb 2026",
+        "priority": "HIGH"
       },
       {
-        "item": "COGS per Product/SKU",
-        "priority": "CRITICAL",
-        "note": "Cannot compute margins without this"
+        "source": "COGS per category",
+        "period": "-",
+        "priority": "CRITICAL"
       },
       {
-        "item": "FSHIP Shipping Data",
-        "priority": "CRITICAL",
-        "note": "All logistics reports \u2014 orders, freight, RTO, COD remittance"
+        "source": "FSHIP Shipping Data",
+        "period": "FY25-26",
+        "priority": "CRITICAL"
       },
       {
-        "item": "Meta Ads (FY25-26)",
-        "priority": "HIGH",
-        "note": "Campaign performance, ad sets, creatives, demographics"
+        "source": "Meta Ads Data",
+        "period": "FY25-26",
+        "priority": "HIGH"
       },
       {
-        "item": "Google Ads Data",
-        "priority": "MEDIUM",
-        "note": "If running Google Ads"
+        "source": "Myntra Orders",
+        "period": "FY25-26",
+        "priority": "HIGH"
       },
       {
-        "item": "Myntra Orders & Settlement",
-        "priority": "HIGH",
-        "note": "Myntra sales data completely missing"
+        "source": "Easebuzz Settlements",
+        "period": "FY25-26",
+        "priority": "MEDIUM"
       },
       {
-        "item": "AJIO Orders & Settlement",
-        "priority": "MEDIUM",
-        "note": "If selling on AJIO"
-      },
-      {
-        "item": "Easebuzz Settlement Reports",
-        "priority": "MEDIUM",
-        "note": "Payment gateway settlement data"
-      },
-      {
-        "item": "Bank Statement",
-        "priority": "MEDIUM",
-        "note": "For cash flow analysis"
-      },
-      {
-        "item": "Tally P&L / Expenses",
-        "priority": "MEDIUM",
-        "note": "For cross-verification"
-      },
-      {
-        "item": "Shopify Customers Export",
-        "priority": "MEDIUM",
-        "note": "For full customer analysis"
-      },
-      {
-        "item": "Payroll / Salary Register",
-        "priority": "LOW",
-        "note": "Monthly staff costs"
-      },
-      {
-        "item": "Fixed Expenses Breakdown",
-        "priority": "LOW",
-        "note": "Rent, subscriptions, etc."
+        "source": "Bank Statement",
+        "period": "FY25-26",
+        "priority": "MEDIUM"
       }
     ]
-  }
+  },
+  "orders": {
+    "summary": {
+      "total_orders_in_exports": 1950,
+      "export_coverage": "Jul 2025 \u2013 Dec 2025",
+      "total_gmv": 4240638,
+      "avg_order_value": 3450,
+      "paid_orders": 989,
+      "pending_orders": 114,
+      "refunded_orders": 39,
+      "fulfilled_orders": 1200,
+      "unfulfilled_orders": 23
+    },
+    "monthly": [
+      {
+        "month": "2025-07",
+        "orders": 308,
+        "gmv": 727191,
+        "aov": 3414,
+        "subtotal": 727007,
+        "shipping": 0,
+        "taxes": 184,
+        "discounts": 134712
+      },
+      {
+        "month": "2025-08",
+        "orders": 378,
+        "gmv": 926123,
+        "aov": 3690,
+        "subtotal": 926123,
+        "shipping": 0,
+        "taxes": 485,
+        "discounts": 158269
+      },
+      {
+        "month": "2025-09",
+        "orders": 369,
+        "gmv": 768567,
+        "aov": 3229,
+        "subtotal": 768567,
+        "shipping": 0,
+        "taxes": 3662,
+        "discounts": 129648
+      },
+      {
+        "month": "2025-10",
+        "orders": 411,
+        "gmv": 881625,
+        "aov": 3512,
+        "subtotal": 881625,
+        "shipping": 0,
+        "taxes": 1316,
+        "discounts": 142203
+      },
+      {
+        "month": "2025-11",
+        "orders": 397,
+        "gmv": 773920,
+        "aov": 3380,
+        "subtotal": 773920,
+        "shipping": 0,
+        "taxes": 10515,
+        "discounts": 137990
+      },
+      {
+        "month": "2025-12",
+        "orders": 87,
+        "gmv": 163212,
+        "aov": 3473,
+        "subtotal": 163212,
+        "shipping": 0,
+        "taxes": 2473,
+        "discounts": 23155
+      }
+    ],
+    "fulfillment": [
+      {
+        "status": "fulfilled",
+        "count": 1200
+      },
+      {
+        "status": "unfulfilled",
+        "count": 23
+      },
+      {
+        "status": "restocked",
+        "count": 6
+      }
+    ]
+  },
+  "cogs": {
+    "status": "awaiting_data",
+    "note": "COGS per category to be provided by client",
+    "categories_identified": [
+      "Linen Shirts",
+      "Linen Pants",
+      "T-Shirts (Supima)",
+      "Oxford Shirts",
+      "Pants"
+    ],
+    "per_unit_costs": {
+      "Linen Shirts": null,
+      "Linen Pants": null,
+      "T-Shirts (Supima)": null,
+      "Oxford Shirts": null,
+      "Pants": null
+    }
+  },
+  "order_export_coverage": "Jul 2025 \u2013 Dec 2025 (1,950 unique orders from 39 export files)"
 }
