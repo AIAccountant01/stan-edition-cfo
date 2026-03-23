@@ -3,9 +3,12 @@
 const { neon } = require('@neondatabase/serverless');
 
 function getSQL() {
-  const url = process.env.POSTGRES_URL || process.env.DATABASE_URL;
+  const url = process.env.POSTGRES_URL
+    || process.env.DATABASE_URL
+    || process.env.POSTGRES_URL_NON_POOLING
+    || process.env.NEON_DATABASE_URL;
   if (!url) {
-    throw new Error('POSTGRES_URL or DATABASE_URL environment variable is not set');
+    throw new Error('POSTGRES_URL or DATABASE_URL environment variable is not set. Available env keys: ' + Object.keys(process.env).filter(k => k.includes('POSTGRES') || k.includes('DATABASE') || k.includes('NEON') || k.includes('PG')).join(', '));
   }
   return neon(url);
 }
