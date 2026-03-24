@@ -1,5 +1,5 @@
 // Vercel Serverless Function — GET /api/data
-// Returns dashboard data from DB first, falls back to static JSON
+// Returns dashboard data: static JSON as source of truth, DB as override when uploads happen
 const { getSQL } = require('./lib/db');
 const { setCors, verifyToken } = require('./lib/auth-middleware');
 const dashboardData = require('./_data/dashboard.json');
@@ -22,17 +22,16 @@ module.exports = async function handler(req, res) {
   }
 
   try {
-    // Try DB first
+    // Check DB for user-uploaded data (takes priority if uploaded after deploy)
     var sql = getSQL();
-    var rows = await sql`SELECT data_json FROM dashboard_data WHERE client_name = 'Stan Edition' ORDER BY created_at DESC LIMIT 1`;
+    var rows = await sql`SELECT data_json, created_at FROM dashboard_data WHERE client_name = 'Stan Edition' AND upload_source = 'csv_upload' ORDER BY created_at DESC LIMIT 1`;
     if (rows.length > 0) {
       return res.status(200).json(rows[0].data_json);
     }
   } catch (err) {
-    // DB read failed — fall back to static JSON
     console.error('[data.js] DB read failed, using static JSON:', err.message);
   }
 
-  // Fall back to static JSON
+  // Static JSON is the canonical source (updated with each deploy)
   return res.status(200).json(dashboardData);
 };
