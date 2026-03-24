@@ -878,20 +878,20 @@ function renderProfitLoss(data) {
   var tbody = document.querySelector('#plSummaryTable tbody');
   if (tbody) {
     var ns = s.net_sales || 1;
-    function plRow(label, val, cls, indent) {
-      var pct = (val / ns * 100).toFixed(1);
+    function plRow(label, val, cls, indent, showPct) {
+      var pctStr = showPct !== false ? (val / ns * 100).toFixed(1) + '%' : '';
       var prefix = indent ? '<span style="padding-left:' + (indent * 16) + 'px">' + label + '</span>' : label;
       return '<tr class="' + (cls || '') + '">' +
         '<td>' + prefix + '</td>' +
         '<td class="text-right">' + fmtINRFull(val) + '</td>' +
-        '<td class="text-right">' + pct + '%</td></tr>';
+        '<td class="text-right">' + pctStr + '</td></tr>';
     }
-    function plHeaderRow(label, val, cls) {
-      var pct = (val / ns * 100).toFixed(1);
+    function plHeaderRow(label, val, cls, showPct) {
+      var pctStr = showPct !== false ? (val / ns * 100).toFixed(1) + '%' : '';
       return '<tr class="pl-row-header ' + (cls || '') + '">' +
         '<td class="font-bold">' + label + '</td>' +
         '<td class="text-right font-bold">' + fmtINRFull(val) + '</td>' +
-        '<td class="text-right font-bold">' + pct + '%</td></tr>';
+        '<td class="text-right font-bold">' + pctStr + '</td></tr>';
     }
     function plDivider() {
       return '<tr class="pl-divider"><td colspan="3"></td></tr>';
@@ -899,7 +899,7 @@ function renderProfitLoss(data) {
 
     tbody.innerHTML = '';
     tbody.innerHTML +=
-      plRow('Gross Sales', s.gross_sales, '', 0) +
+      plRow('Gross Sales', s.gross_sales, '', 0, false) +
       plRow('(\u2212) Discounts', -s.discounts, 'text-red', 1) +
       plRow('(\u2212) Returns', -s.returns, 'text-red', 1) +
       plDivider() +
@@ -914,8 +914,6 @@ function renderProfitLoss(data) {
       plRow('(\u2212) Packaging (est.)', -s.packaging, '', 1) +
       plDivider() +
       plHeaderRow('EBITDA', s.ebitda, 'pl-ebitda') +
-      plDivider() +
-      plRow('(\u2212) Pre-Launch Costs (FY24)', -s.pre_launch_costs_fy24, '', 1) +
       plDivider() +
       plHeaderRow('Net Profit (Before Tax)', s.net_profit_before_tax, s.net_profit_before_tax >= 0 ? 'pl-profit' : 'pl-loss');
   }
@@ -1775,11 +1773,11 @@ function renderDataStatus(data) {
       return 'Total orders: ' + fmtNum(orderKpi ? orderKpi.value : 0) + ' (' + (data.period || '') + ').';
     }
 
-    // FY24 / P&L
-    if (msg.match(/fy24|fy 24|p.?l|pre.?launch|spend|expense/)) {
+    // Pre-launch spend
+    if (msg.match(/pre.?launch|fy24|fy 24/)) {
       var fy = data.fy24_pl;
-      if (!fy) return 'FY24-25 P&L data is not available yet.';
-      return 'FY24-25 total pre-launch spend: ' + fmtCrL(fy.total_cost) + ' (' + (fy.period || '') + '). Breakdown: Marketing ' + fmtCrL(fy.breakdown && fy.breakdown.marketing ? fy.breakdown.marketing.total : 0) + ', Production ' + fmtCrL(fy.breakdown && fy.breakdown.production ? fy.breakdown.production.total : 0) + '.';
+      if (!fy) return 'FY24-25 pre-launch data is not loaded in this dashboard. The current P&L covers FY25-26 (Apr 2025 - Feb 2026).';
+      return 'FY24-25 pre-launch spend: ' + fmtCrL(fy.total_cost) + '. Note: This is excluded from the current P&L which covers FY25-26 only.';
     }
 
     // Summary / overview
@@ -1819,7 +1817,7 @@ function renderDataStatus(data) {
 
     // Help
     if (msg.match(/help|what can you|what do you|capability/)) {
-      return "I can help with:\n\u2022 Revenue & sales analysis\n\u2022 Top products & categories\n\u2022 Customer metrics & retention\n\u2022 Payment method breakdown\n\u2022 Geographic distribution\n\u2022 Discount analysis\n\u2022 Session & traffic data\n\u2022 Margin & unit economics\n\u2022 Risk & advisory insights\n\u2022 Monthly trends & growth\n\u2022 FY24-25 P&L\n\nTry: \"What's the revenue?\" or \"Top products\" or \"Show me risks\"";
+      return "I can help with:\n\u2022 Revenue & sales analysis\n\u2022 Top products & categories\n\u2022 Customer metrics & retention\n\u2022 Payment method breakdown\n\u2022 Geographic distribution\n\u2022 Discount analysis\n\u2022 Session & traffic data\n\u2022 P&L, margins & unit economics\n\u2022 Risk & advisory insights\n\u2022 Monthly trends & growth\n\nTry: \"What's the revenue?\" or \"Top products\" or \"Show me risks\"";
     }
 
     // Default
