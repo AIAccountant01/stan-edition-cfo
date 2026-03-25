@@ -614,6 +614,52 @@ function renderPayments(data) {
       tbody.appendChild(tr);
     });
   }
+
+  // Reconciliation card
+  var recon = pay.reconciliation;
+  if (recon) {
+    var reconEl = document.getElementById('payments-reconciliation');
+    var reconContent = document.getElementById('reconciliation-content');
+    if (reconEl && reconContent) {
+      reconEl.style.display = '';
+      var html = '';
+      // Revenue column
+      html += '<div class="recon-col">';
+      html += '<h4>Revenue (Order Exports)</h4>';
+      html += '<div class="recon-row"><span class="label">Gross Sales</span><span class="value">' + fmtCrL(recon.revenue_gross) + '</span></div>';
+      html += '<div class="recon-row"><span class="label">(-) Discounts</span><span class="value">' + fmtCrL(recon.revenue_discounts) + '</span></div>';
+      html += '<div class="recon-row"><span class="label">(-) Returns</span><span class="value">' + fmtCrL(recon.revenue_returns) + '</span></div>';
+      html += '<div class="recon-row total"><span class="label">Net Sales</span><span class="value">' + fmtCrL(recon.revenue_net) + '</span></div>';
+      html += '<div class="recon-row"><span class="label">Orders</span><span class="value">' + fmtNum(recon.revenue_orders) + '</span></div>';
+      html += '</div>';
+      // Payments column
+      html += '<div class="recon-col">';
+      html += '<h4>Payments (Gateway CSV)</h4>';
+      html += '<div class="recon-row"><span class="label">Gross Payments</span><span class="value">' + fmtCrL(recon.payments_gross) + '</span></div>';
+      html += '<div class="recon-row"><span class="label">(-) Refunded</span><span class="value">' + fmtCrL(recon.payments_refunded) + '</span></div>';
+      html += '<div class="recon-row total"><span class="label">Net Payments</span><span class="value">' + fmtCrL(recon.payments_net) + '</span></div>';
+      html += '<div class="recon-row"><span class="label">Transactions</span><span class="value">' + fmtNum(recon.payments_transactions) + '</span></div>';
+      html += '<div class="recon-row gap"><span class="label">Coverage Gap</span><span class="value">' + fmtNum(recon.revenue_orders - recon.payments_transactions) + ' orders</span></div>';
+      html += '</div>';
+      // Coverage bar
+      html += '<div class="recon-coverage">';
+      html += '<span class="note">Data Coverage</span>';
+      html += '<div class="bar-outer"><div class="bar-inner" style="width:' + recon.order_coverage_pct + '%"></div></div>';
+      html += '<span class="pct">' + recon.order_coverage_pct + '%</span>';
+      html += '</div>';
+      // Explanation
+      html += '<div class="recon-explain">';
+      html += '<h4>\u2139 Why Revenue \u2260 Payments</h4>';
+      html += '<ul>';
+      var reasons = recon.explanation || [];
+      for (var i = 0; i < reasons.length; i++) {
+        html += '<li>' + reasons[i] + '</li>';
+      }
+      html += '</ul>';
+      html += '</div>';
+      reconContent.innerHTML = html;
+    }
+  }
 }
 
 // ===== 5. CUSTOMERS =====
