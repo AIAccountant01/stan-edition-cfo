@@ -67,7 +67,8 @@ module.exports = async function handler(req, res) {
       { email: 'admin@aiaccountant.com', password: 'admin2026', name: 'Admin', role: 'Admin' },
       { email: 'ronit@aiaccountant.com', password: 'ronit@123', name: 'Ronit', role: 'Admin' },
       { email: 'shantanu@stanedition.com', password: 'stan2026', name: 'Shantanu', role: 'Viewer' },
-      { email: 'demo@aiaccountant.com', password: 'demo2026', name: 'Demo', role: 'Viewer' }
+      { email: 'demo@aiaccountant.com', password: 'demo2026', name: 'Demo', role: 'Viewer' },
+      { email: 'contact@stanedition.com', password: 'stanedition2026', name: 'Stan Edition', role: 'Viewer' }
     ];
 
     const results = [];
