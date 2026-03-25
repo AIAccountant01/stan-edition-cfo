@@ -4,6 +4,14 @@
 (function() {
   'use strict';
 
+  // Auto-detect base path for API calls (works behind Cloudflare proxy)
+  var API_BASE = (function() {
+    var path = window.location.pathname;
+    var lastSlash = path.lastIndexOf('/');
+    var dir = path.substring(0, lastSlash);
+    return dir === '' ? '' : dir;
+  })();
+
   // ===== POPULATE USER INFO FROM SESSION =====
   const session = window.AIA ? window.AIA.Session.get() : null;
   if (session) {
@@ -381,7 +389,7 @@
       submitBtn.textContent = 'Updating...';
       submitBtn.disabled = true;
 
-      fetch('/api/change-password', {
+      fetch(API_BASE + '/api/change-password', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -3,6 +3,14 @@
 (function() {
   'use strict';
 
+  // Auto-detect base path for API calls (works behind Cloudflare proxy)
+  var API_BASE = (function() {
+    var path = window.location.pathname;
+    var lastSlash = path.lastIndexOf('/');
+    var dir = path.substring(0, lastSlash);
+    return dir === '' ? '' : dir;
+  })();
+
   // ===== DOM REFS =====
   const form = document.getElementById('loginForm');
   const emailInput = document.getElementById('email');
@@ -64,7 +72,7 @@
     setLoading(true);
 
     // Authenticate via API
-    fetch('/api/auth', {
+    fetch(API_BASE + '/api/auth', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email: email, password: password })

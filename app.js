@@ -1,6 +1,19 @@
 // ===== AI ACCOUNTANT — STAN EDITION DASHBOARD APP ===== //
 // Fetches data from /api/data and populates the entire dashboard
 
+// ===== API BASE PATH =====
+// Auto-detect base path so API calls work behind Cloudflare proxy
+// e.g. on Vercel: '' → fetch('/api/data')
+// e.g. on aiaccountant.com/stanedition/: '/stanedition' → fetch('/stanedition/api/data')
+var API_BASE = (function() {
+  var path = window.location.pathname;
+  // Find the directory containing index.html/login.html
+  var lastSlash = path.lastIndexOf('/');
+  var dir = path.substring(0, lastSlash); // e.g. '/stanedition' or ''
+  // If we're at root, return ''
+  return dir === '' ? '' : dir;
+})();
+
 // ===== CHART DEFAULTS =====
 Chart.defaults.font.family = "'Inter', sans-serif";
 Chart.defaults.font.size = 12;
@@ -162,7 +175,7 @@ function fetchDashboardData() {
     return;
   }
 
-  fetch('/api/data', {
+  fetch(API_BASE + '/api/data', {
     method: 'GET',
     headers: {
       'Authorization': 'Bearer ' + token,
@@ -1447,7 +1460,7 @@ function renderDataStatus(data) {
       var csvData = e.target.result;
       var type = uploadType.value;
 
-      fetch('/api/upload', {
+      fetch(API_BASE + '/api/upload', {
         method: 'POST',
         headers: {
           'Authorization': 'Bearer ' + token,
@@ -1501,7 +1514,7 @@ function renderDataStatus(data) {
     var historyEl = document.getElementById('uploadHistoryList');
     if (!historyEl) return;
 
-    fetch('/api/upload-history', {
+    fetch(API_BASE + '/api/upload-history', {
       method: 'GET',
       headers: { 'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json' }
     })
@@ -1597,7 +1610,7 @@ function renderDataStatus(data) {
     } else {
       // Fallback to server
       var token = window.AIA && window.AIA.Session.getToken();
-      fetch('/api/chat', {
+      fetch(API_BASE + '/api/chat', {
         method: 'POST',
         headers: { 'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: text })
