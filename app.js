@@ -126,6 +126,7 @@ var sectionLabels = {
   intelligence: 'Intelligence',
   advisory: 'Advisory',
   datastatus: 'Data Status',
+  useractivity: 'User Activity',
   upload: 'Upload Data',
 };
 
@@ -243,6 +244,9 @@ function renderDashboard(data) {
     var chart = Chart.getChart(c);
     if (chart) chart.resize();
   });
+
+  // Render User Activity (admin-only, fetches from audit API)
+  try { renderUserActivity(); } catch(e) { console.error('[Dashboard] UserActivity:', e); }
 
   // Hide loading overlay
   var overlay = document.getElementById('loadingOverlay');
@@ -1434,6 +1438,222 @@ function renderDataStatus(data) {
       pendBody.appendChild(tr);
     });
   }
+}
+
+// ===== 13. USER ACTIVITY (Admin Only) =====
+function renderUserActivity() {
+  var token = window.AIA && window.AIA.Session.getToken();
+  if (!token) return;
+
+  // Decode JWT to check role (base64url decode)
+  var userRole = '';
+  try {
+    var payload = JSON.parse(atob(token.split('.')[1].replace(/-/g, '+').replace(/_/g, '/')));
+    userRole = payload.role || '';
+  } catch(e) { return; }
+
+  // Only show for Admin users
+  if (userRole !== 'Admin') return;
+
+  // Show the nav item
+  var navItem = document.getElementById('nav-useractivity');
+  if (navItem) navItem.style.display = '';
+
+  // Fetch audit log from API
+  fetch(API_BASE + '/api/admin/audit?limit=200', {
+    headers: { 'Authorization': 'Bearer ' + token }
+  })
+  .then(function(r) { return r.json(); })
+  .then(function(res) {
+    if (!res.success || !res.entries) return;
+
+    var entries = res.entries;
+    var total = res.total || entries.length;
+
+    // Compute per-user summary
+    var userMap = {};
+    entries.forEach(function(e) {
+      var email = e.email || 'unknown';
+      if (!userMap[email]) {
+        userMap[email] = {
+          email: email,
+          name: (e.details && e.details.name) || email.split('@')[0],
+          role: (e.details && e.details.role) || '—',
+          logins: 0,
+          failed: 0,
+          lastLogin: null,
+          loginTimes: [],
+          ips: new Set()
+        };
+      }
+      var u = userMap[email];
+      if (e.action === 'login_success') {
+        u.logins++;
+        u.loginTimes.push(new Date(e.created_at));
+        if (!u.lastLogin || new Date(e.created_at) > new Date(u.lastLogin)) {
+          u.lastLogin = e.created_at;
+        }
+        if (e.ip) u.ips.add(e.ip);
+      } else if (e.action === 'login_failed') {
+        u.failed++;
+      }
+    });
+
+    // Convert to array and sort by last login
+    var users = Object.values(userMap).sort(function(a, b) {
+      if (!a.lastLogin) return 1;
+      if (!b.lastLogin) return -1;
+      return new Date(b.lastLogin) - new Date(a.lastLogin);
+    });
+
+    // Estimate session duration: gap between consecutive logins from same user
+    // JWT expires after 30 min, so max session = 30 min unless re-login
+    users.forEach(function(u) {
+      if (u.loginTimes.length < 2) {
+        u.estSessionMin = u.logins > 0 ? 30 : 0; // at least one 30-min session per login
+      } else {
+        u.loginTimes.sort(function(a, b) { return a - b; });
+        var totalMin = 0;
+        for (var i = 0; i < u.loginTimes.length; i++) {
+          if (i < u.loginTimes.length - 1) {
+            var gap = (u.loginTimes[i + 1] - u.loginTimes[i]) / (1000 * 60);
+            totalMin += Math.min(gap, 30); // cap at 30 min per session
+          } else {
+            totalMin += 30; // last session assumed full
+          }
+        }
+        u.estSessionMin = Math.round(totalMin);
+      }
+    });
+
+    // KPIs
+    var totalLogins = entries.filter(function(e) { return e.action === 'login_success'; }).length;
+    var totalFailed = entries.filter(function(e) { return e.action === 'login_failed'; }).length;
+    var uniqueUsers = users.filter(function(u) { return u.logins > 0; }).length;
+    var totalEstMin = users.reduce(function(s, u) { return s + u.estSessionMin; }, 0);
+
+    var kpiHtml = '';
+    kpiHtml += buildKpiCard('Total Logins', fmtNum(totalLogins), 'Across all users', 'kpi-highlight');
+    kpiHtml += buildKpiCard('Active Users', fmtNum(uniqueUsers), 'Users who logged in', 'kpi-highlight');
+    kpiHtml += buildKpiCard('Failed Attempts', fmtNum(totalFailed), totalFailed > 5 ? 'Review suspicious activity' : 'Normal range', totalFailed > 5 ? 'kpi-warning' : '');
+    var totalHrs = (totalEstMin / 60).toFixed(1);
+    kpiHtml += buildKpiCard('Est. Total Usage', totalHrs + 'h', 'Based on login frequency', '');
+    document.getElementById('useractivity-kpis').innerHTML = kpiHtml;
+
+    // User summary table
+    var summTbody = document.querySelector('#userSummaryTable tbody');
+    if (summTbody) {
+      summTbody.innerHTML = '';
+      users.forEach(function(u) {
+        if (u.logins === 0 && u.failed === 0) return;
+        var lastStr = u.lastLogin ? fmtDateTimeIST(u.lastLogin) : '—';
+        var sessStr = u.estSessionMin > 0 ? formatDuration(u.estSessionMin) : '—';
+        var tr = document.createElement('tr');
+        tr.innerHTML =
+          '<td><strong>' + u.email + '</strong><div class="kpi-sub">' + u.name + '</div></td>' +
+          '<td><span class="priority-badge ' + (u.role === 'Admin' ? 'critical' : 'medium') + '">' + u.role + '</span></td>' +
+          '<td class="text-right">' + fmtNum(u.logins) + '</td>' +
+          '<td class="text-right">' + (u.failed > 0 ? '<span style="color:var(--red);">' + u.failed + '</span>' : '0') + '</td>' +
+          '<td>' + lastStr + '</td>' +
+          '<td>' + sessStr + ' <span class="kpi-sub">(' + u.ips.size + ' IP' + (u.ips.size !== 1 ? 's' : '') + ')</span></td>';
+        summTbody.appendChild(tr);
+      });
+    }
+
+    // Login distribution chart
+    var chartUsers = users.filter(function(u) { return u.logins > 0; });
+    if (chartUsers.length) {
+      new Chart(document.getElementById('loginDistChart'), {
+        type: 'bar',
+        data: {
+          labels: chartUsers.map(function(u) { return u.email.split('@')[0]; }),
+          datasets: [{
+            label: 'Successful Logins',
+            data: chartUsers.map(function(u) { return u.logins; }),
+            backgroundColor: C.teal,
+            barPercentage: 0.55,
+          }, {
+            label: 'Failed Attempts',
+            data: chartUsers.map(function(u) { return u.failed; }),
+            backgroundColor: C.red || '#ef4444',
+            barPercentage: 0.55,
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { position: 'bottom' } },
+          scales: {
+            y: { beginAtZero: true, ticks: { stepSize: 1 } }
+          }
+        }
+      });
+    }
+
+    // Activity log table (recent 50)
+    var logTbody = document.querySelector('#activityLogTable tbody');
+    if (logTbody) {
+      logTbody.innerHTML = '';
+      entries.slice(0, 50).forEach(function(e) {
+        var timeStr = fmtDateTimeIST(e.created_at);
+        var actionCls = e.action === 'login_success' ? 'color:var(--green);' :
+                        e.action === 'login_failed' ? 'color:var(--red);' : '';
+        var actionLabel = e.action.replace(/_/g, ' ').replace(/\b\w/g, function(c) { return c.toUpperCase(); });
+        var device = parseDevice(e.user_agent || '');
+        var details = '';
+        if (e.details) {
+          if (e.details.reason) details = e.details.reason.replace(/_/g, ' ');
+          else if (e.details.targetUser) details = 'Created: ' + e.details.targetUser;
+          else if (e.details.name) details = e.details.name + ' (' + (e.details.role || '') + ')';
+        }
+        var tr = document.createElement('tr');
+        tr.innerHTML =
+          '<td style="white-space:nowrap;">' + timeStr + '</td>' +
+          '<td>' + (e.email || '—') + '</td>' +
+          '<td style="' + actionCls + 'font-weight:600;">' + actionLabel + '</td>' +
+          '<td><code style="font-size:11px;background:#f3f4f6;padding:2px 6px;border-radius:4px;">' + (e.ip || '—') + '</code></td>' +
+          '<td style="font-size:12px;">' + device + '</td>' +
+          '<td style="font-size:12px;">' + details + '</td>';
+        logTbody.appendChild(tr);
+      });
+    }
+  })
+  .catch(function(err) {
+    console.error('[UserActivity] Failed to load audit log:', err);
+  });
+}
+
+// Helper: format IST datetime
+function fmtDateTimeIST(isoStr) {
+  try {
+    var d = new Date(isoStr);
+    return d.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: true });
+  } catch(e) { return isoStr; }
+}
+
+// Helper: format duration in minutes
+function formatDuration(minutes) {
+  if (minutes < 60) return minutes + ' min';
+  var h = Math.floor(minutes / 60);
+  var m = minutes % 60;
+  return h + 'h ' + (m > 0 ? m + 'm' : '');
+}
+
+// Helper: parse user agent to readable device string
+function parseDevice(ua) {
+  if (!ua || ua === 'curl/8.14.1') return 'API / CLI';
+  var browser = 'Unknown';
+  var os = 'Unknown';
+  if (ua.indexOf('Chrome') > -1 && ua.indexOf('Edg') === -1) browser = 'Chrome';
+  else if (ua.indexOf('Safari') > -1 && ua.indexOf('Chrome') === -1) browser = 'Safari';
+  else if (ua.indexOf('Firefox') > -1) browser = 'Firefox';
+  else if (ua.indexOf('Edg') > -1) browser = 'Edge';
+  if (ua.indexOf('Windows') > -1) os = 'Windows';
+  else if (ua.indexOf('Macintosh') > -1) os = 'Mac';
+  else if (ua.indexOf('Linux') > -1) os = 'Linux';
+  else if (ua.indexOf('iPhone') > -1) os = 'iPhone';
+  else if (ua.indexOf('Android') > -1) os = 'Android';
+  return browser + ' / ' + os;
 }
 
 // ===== UPLOAD DATA — UI Logic =====

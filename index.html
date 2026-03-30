@@ -261,6 +261,10 @@
       <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
       Data Status
     </a>
+    <a href="#" data-section="useractivity" id="nav-useractivity" style="display:none;">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><path d="M12 14l3 3-3 3"/></svg>
+      User Activity
+    </a>
     <a href="#" data-section="upload">
       <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
       Upload Data
@@ -664,6 +668,44 @@
           <tbody></tbody>
         </table>
       </div>
+    </div>
+  </section>
+
+  <!-- USER ACTIVITY (Admin Only) -->
+  <section id="sec-useractivity" class="section">
+    <div class="section-header">
+      <h1>User Activity</h1>
+      <p>Login history, session tracking, and access audit — Admin only</p>
+    </div>
+    <div class="kpi-grid" id="useractivity-kpis"></div>
+    <div class="chart-grid">
+      <div class="chart-card">
+        <div class="chart-title">User Summary</div>
+        <div class="chart-subtitle">Login count and last activity per user</div>
+        <table class="data-table" id="userSummaryTable">
+          <thead><tr><th>User</th><th>Role</th><th class="text-right">Logins</th><th class="text-right">Failed</th><th>Last Login</th><th>Est. Sessions</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Login Distribution</div>
+        <div class="chart-subtitle">Logins per user</div>
+        <canvas id="loginDistChart"></canvas>
+      </div>
+    </div>
+    <div class="chart-card mb-24">
+      <div class="chart-title">Recent Activity Log</div>
+      <div class="chart-subtitle">Last 50 login events with IP and device details</div>
+      <div class="table-wrapper">
+        <table class="data-table" id="activityLogTable">
+          <thead><tr><th>Time (IST)</th><th>User</th><th>Action</th><th>IP Address</th><th>Device</th><th>Details</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="gap-note">
+      <span class="gap-icon">ℹ</span>
+      <span>JWT tokens expire after 30 minutes. Session duration is estimated from login frequency. Only admin users can view this section.</span>
     </div>
   </section>
 
