@@ -41,7 +41,8 @@
         "label": "Total Sessions",
         "value": 343000,
         "format": "number",
-        "delta": ""
+        "delta": "",
+        "sub": "2,408 unique customers"
       },
       {
         "label": "Total Returns",
@@ -205,45 +206,47 @@
     "profitability_kpis": [
       {
         "label": "Gross Profit",
-        "value": 12174284.52,
+        "value": 13973995.52,
         "format": "currency"
       },
       {
         "label": "Gross Margin",
-        "value": 66.7,
+        "value": 76.6,
         "format": "percent"
       },
       {
         "label": "COGS",
-        "value": 6068821.0,
+        "value": 4269110,
         "format": "currency"
       },
       {
-        "label": "EBITDA",
-        "value": 11402127.52,
+        "label": "EBITDA (Est.)",
+        "value": 13232836.52,
         "format": "currency"
       },
       {
         "label": "EBITDA Margin",
-        "value": 62.5,
+        "value": 72.5,
         "format": "percent"
       },
       {
         "label": "Avg COGS/Unit",
-        "value": 1325.0,
+        "value": 1325,
         "format": "currency"
       }
     ],
     "returns_kpi": {
-      "total_returns": 969332,
-      "return_rate_pct": 5.3
+      "total_returns": 969332.31,
+      "return_rate": 4.0
     },
     "tax_kpi": {
-      "total_tax_collected": 903
+      "total_tax": 332850.91,
+      "effective_rate": 1.82
     },
     "payments_kpi": {
-      "net_payments": 14615418,
-      "refund_rate_pct": 4.0
+      "coverage": "91.0%",
+      "transactions": 3526,
+      "gross": 15217930
     }
   },
   "revenue": {
@@ -3309,7 +3312,7 @@
         "gross_margin_pct": 16.6
       }
     ],
-    "total_skus": 57,
+    "total_skus": 30,
     "concentration_risk": {
       "top_product": "Grey Blue Irish Linen Shirt",
       "top_product_share": 13.4,
@@ -3352,7 +3355,9 @@
         "size": "36",
         "units": 29
       }
-    ]
+    ],
+    "coverage_pct": 91.6,
+    "coverage_note": "Product-level data covers 91.6% of gross sales (\u20b92.21 Cr of \u20b92.42 Cr). Remaining 8.400000000000006% includes multi-item orders and uncategorized products."
   },
   "payments": {
     "gateway_summary": {
@@ -3535,354 +3540,419 @@
     }
   },
   "customers": {
-    "note": "Based on order exports (Jul-Sep 2025 sample).",
-    "total_customers": 595,
-    "repeat_customers": 73,
-    "repeat_rate": 12.3,
-    "avg_ltv": 5809.0,
-    "avg_orders_per_customer": 1.17,
+    "total_customers": 2408,
+    "new_customers": 1928,
+    "repeat_customers": 480,
+    "repeat_rate": 19.9,
+    "avg_ltv": 2825,
+    "avg_orders_per_customer": 1.32,
     "frequency_distribution": [
       {
         "orders": 1,
-        "customers": 522
+        "customers": 1928
       },
       {
         "orders": 2,
-        "customers": 55
+        "customers": 319
       },
       {
         "orders": 3,
-        "customers": 11
+        "customers": 91
       },
       {
         "orders": 4,
-        "customers": 4
+        "customers": 39
       },
       {
         "orders": 5,
-        "customers": 3
+        "customers": 16
+      },
+      {
+        "orders": 6,
+        "customers": 6
+      },
+      {
+        "orders": 7,
+        "customers": 4
+      },
+      {
+        "orders": 8,
+        "customers": 4
+      },
+      {
+        "orders": 9,
+        "customers": 1
       }
     ],
-    "marketing_opt_in": 257,
-    "marketing_opt_in_rate": 36.7
+    "marketing_opt_in": 362,
+    "marketing_opt_in_rate": 15.0,
+    "note": "Based on 3200 order line items from 64 order export files, covering 3180 unique orders.",
+    "data_coverage": "3180 of 3,879 orders (82.0%)"
   },
   "geography": {
     "states": [
       {
         "state": "Maharashtra",
         "orders": 475,
-        "revenue": 1590815,
-        "pct_revenue": 23.3
+        "revenue": 1590814.73,
+        "customers": 385,
+        "aov": 3349,
+        "pct_of_orders": 23.9,
+        "pct_of_revenue": 23.3
       },
       {
         "state": "Karnataka",
         "orders": 265,
-        "revenue": 861320,
-        "pct_revenue": 12.6
+        "revenue": 861320.13,
+        "customers": 217,
+        "aov": 3250,
+        "pct_of_orders": 13.3,
+        "pct_of_revenue": 12.6
       },
       {
         "state": "Gujarat",
         "orders": 208,
-        "revenue": 716115,
-        "pct_revenue": 10.5
+        "revenue": 716114.54,
+        "customers": 154,
+        "aov": 3443,
+        "pct_of_orders": 10.5,
+        "pct_of_revenue": 10.5
       },
       {
         "state": "Telangana",
         "orders": 193,
-        "revenue": 670104,
-        "pct_revenue": 9.8
+        "revenue": 670103.54,
+        "customers": 156,
+        "aov": 3472,
+        "pct_of_orders": 9.7,
+        "pct_of_revenue": 9.8
       },
       {
         "state": "Tamil Nadu",
         "orders": 121,
-        "revenue": 429037,
-        "pct_revenue": 6.3
+        "revenue": 429037.19,
+        "customers": 98,
+        "aov": 3546,
+        "pct_of_orders": 6.1,
+        "pct_of_revenue": 6.3
       },
       {
         "state": "Kerala",
         "orders": 100,
-        "revenue": 349769,
-        "pct_revenue": 5.1
+        "revenue": 349769.18,
+        "customers": 79,
+        "aov": 3498,
+        "pct_of_orders": 5.0,
+        "pct_of_revenue": 5.1
       },
       {
         "state": "Delhi",
         "orders": 97,
-        "revenue": 336712,
-        "pct_revenue": 4.9
+        "revenue": 336711.78,
+        "customers": 77,
+        "aov": 3471,
+        "pct_of_orders": 4.9,
+        "pct_of_revenue": 4.9
       },
       {
         "state": "Uttar Pradesh",
         "orders": 82,
-        "revenue": 291985,
-        "pct_revenue": 4.3
-      },
-      {
-        "state": "Haryana",
-        "orders": 73,
-        "revenue": 265671,
-        "pct_revenue": 3.9
+        "revenue": 291985.24,
+        "customers": 72,
+        "aov": 3561,
+        "pct_of_orders": 4.1,
+        "pct_of_revenue": 4.3
       },
       {
         "state": "Andhra Pradesh",
         "orders": 81,
-        "revenue": 265135,
-        "pct_revenue": 3.9
+        "revenue": 265135.2,
+        "customers": 64,
+        "aov": 3273,
+        "pct_of_orders": 4.1,
+        "pct_of_revenue": 3.9
+      },
+      {
+        "state": "Haryana",
+        "orders": 73,
+        "revenue": 265671.45,
+        "customers": 65,
+        "aov": 3639,
+        "pct_of_orders": 3.7,
+        "pct_of_revenue": 3.9
       },
       {
         "state": "West Bengal",
         "orders": 45,
-        "revenue": 158020,
-        "pct_revenue": 2.3
+        "revenue": 158019.88,
+        "customers": 36,
+        "aov": 3512,
+        "pct_of_orders": 2.3,
+        "pct_of_revenue": 2.3
       },
       {
         "state": "Rajasthan",
         "orders": 30,
-        "revenue": 112267,
-        "pct_revenue": 1.6
+        "revenue": 112266.89,
+        "customers": 25,
+        "aov": 3742,
+        "pct_of_orders": 1.5,
+        "pct_of_revenue": 1.6
       },
       {
         "state": "Chhattisgarh",
         "orders": 28,
-        "revenue": 110973,
-        "pct_revenue": 1.6
+        "revenue": 110972.88,
+        "customers": 23,
+        "aov": 3963,
+        "pct_of_orders": 1.4,
+        "pct_of_revenue": 1.6
       },
       {
         "state": "Odisha",
         "orders": 26,
-        "revenue": 99651,
-        "pct_revenue": 1.5
-      },
-      {
-        "state": "Punjab",
-        "orders": 23,
-        "revenue": 92634,
-        "pct_revenue": 1.4
-      },
-      {
-        "state": "Goa",
-        "orders": 22,
-        "revenue": 78795,
-        "pct_revenue": 1.2
+        "revenue": 99650.55,
+        "customers": 19,
+        "aov": 3833,
+        "pct_of_orders": 1.3,
+        "pct_of_revenue": 1.5
       },
       {
         "state": "Madhya Pradesh",
         "orders": 23,
-        "revenue": 67924,
-        "pct_revenue": 1.0
+        "revenue": 67923.74,
+        "customers": 21,
+        "aov": 2953,
+        "pct_of_orders": 1.2,
+        "pct_of_revenue": 1.0
       },
       {
-        "state": "Jammu and Kashmir",
-        "orders": 15,
-        "revenue": 55207,
-        "pct_revenue": 0.8
+        "state": "Punjab",
+        "orders": 23,
+        "revenue": 92634.1,
+        "customers": 17,
+        "aov": 4028,
+        "pct_of_orders": 1.2,
+        "pct_of_revenue": 1.4
+      },
+      {
+        "state": "Goa",
+        "orders": 22,
+        "revenue": 78795.13,
+        "customers": 19,
+        "aov": 3582,
+        "pct_of_orders": 1.1,
+        "pct_of_revenue": 1.2
       },
       {
         "state": "Bihar",
         "orders": 17,
-        "revenue": 53141,
-        "pct_revenue": 0.8
+        "revenue": 53140.87,
+        "customers": 17,
+        "aov": 3126,
+        "pct_of_orders": 0.9,
+        "pct_of_revenue": 0.8
+      },
+      {
+        "state": "Jammu and Kashmir",
+        "orders": 15,
+        "revenue": 55206.6,
+        "customers": 12,
+        "aov": 3680,
+        "pct_of_orders": 0.8,
+        "pct_of_revenue": 0.8
       },
       {
         "state": "Assam",
         "orders": 13,
-        "revenue": 48166,
-        "pct_revenue": 0.7
+        "revenue": 48166.19,
+        "customers": 13,
+        "aov": 3705,
+        "pct_of_orders": 0.7,
+        "pct_of_revenue": 0.7
       },
       {
         "state": "Chandigarh",
         "orders": 10,
-        "revenue": 36251,
-        "pct_revenue": 0.5
+        "revenue": 36251.0,
+        "customers": 5,
+        "aov": 3625,
+        "pct_of_orders": 0.5,
+        "pct_of_revenue": 0.5
       },
       {
         "state": "Jharkhand",
         "orders": 9,
-        "revenue": 29300,
-        "pct_revenue": 0.4
-      },
-      {
-        "state": "Manipur",
-        "orders": 5,
-        "revenue": 20551,
-        "pct_revenue": 0.3
+        "revenue": 29299.91,
+        "customers": 6,
+        "aov": 3256,
+        "pct_of_orders": 0.5,
+        "pct_of_revenue": 0.4
       },
       {
         "state": "Uttarakhand",
         "orders": 6,
-        "revenue": 18780,
-        "pct_revenue": 0.3
+        "revenue": 18779.63,
+        "customers": 6,
+        "aov": 3130,
+        "pct_of_orders": 0.3,
+        "pct_of_revenue": 0.3
+      },
+      {
+        "state": "Manipur",
+        "orders": 5,
+        "revenue": 20551.34,
+        "customers": 4,
+        "aov": 4110,
+        "pct_of_orders": 0.3,
+        "pct_of_revenue": 0.3
       },
       {
         "state": "Himachal Pradesh",
         "orders": 4,
-        "revenue": 15336,
-        "pct_revenue": 0.2
-      },
-      {
-        "state": "Meghalaya",
-        "orders": 3,
-        "revenue": 12843,
-        "pct_revenue": 0.2
+        "revenue": 15335.7,
+        "customers": 2,
+        "aov": 3834,
+        "pct_of_orders": 0.2,
+        "pct_of_revenue": 0.2
       },
       {
         "state": "Tripura",
         "orders": 3,
-        "revenue": 11134,
-        "pct_revenue": 0.2
+        "revenue": 11133.52,
+        "customers": 3,
+        "aov": 3711,
+        "pct_of_orders": 0.2,
+        "pct_of_revenue": 0.2
       },
       {
-        "state": "Puducherry",
+        "state": "Meghalaya",
         "orders": 3,
-        "revenue": 11111,
-        "pct_revenue": 0.2
+        "revenue": 12843.15,
+        "customers": 3,
+        "aov": 4281,
+        "pct_of_orders": 0.2,
+        "pct_of_revenue": 0.2
       },
       {
         "state": "Nagaland",
         "orders": 3,
-        "revenue": 9206,
-        "pct_revenue": 0.1
+        "revenue": 9206.37,
+        "customers": 3,
+        "aov": 3069,
+        "pct_of_orders": 0.2,
+        "pct_of_revenue": 0.1
+      },
+      {
+        "state": "Puducherry",
+        "orders": 3,
+        "revenue": 11110.78,
+        "customers": 2,
+        "aov": 3704,
+        "pct_of_orders": 0.2,
+        "pct_of_revenue": 0.2
       },
       {
         "state": "Andaman and Nicobar Islands",
         "orders": 2,
-        "revenue": 6309,
-        "pct_revenue": 0.1
+        "revenue": 6309.15,
+        "customers": 2,
+        "aov": 3155,
+        "pct_of_orders": 0.1,
+        "pct_of_revenue": 0.1
       },
       {
         "state": "Sikkim",
         "orders": 1,
-        "revenue": 4419,
-        "pct_revenue": 0.1
+        "revenue": 4419.15,
+        "customers": 1,
+        "aov": 4419,
+        "pct_of_orders": 0.1,
+        "pct_of_revenue": 0.1
       }
     ],
-    "cities": [
+    "top_cities": [
       {
-        "city": "MUMBAI",
+        "city": "MUMBAI, Maharashtra",
         "orders": 199,
-        "revenue": 654604
+        "revenue": 654604.25
       },
       {
-        "city": "BANGALORE",
+        "city": "BANGALORE, Karnataka",
         "orders": 155,
-        "revenue": 476925
+        "revenue": 476924.61
       },
       {
-        "city": "HYDERABAD",
-        "orders": 78,
-        "revenue": 261539
-      },
-      {
-        "city": "PUNE",
+        "city": "PUNE, Maharashtra",
         "orders": 79,
-        "revenue": 252084
+        "revenue": 252084.15
       },
       {
-        "city": "AHMEDABAD",
+        "city": "HYDERABAD, Telangana",
+        "orders": 78,
+        "revenue": 261538.98
+      },
+      {
+        "city": "AHMEDABAD, Gujarat",
         "orders": 63,
-        "revenue": 221980
+        "revenue": 221979.55
       },
       {
-        "city": "THANE",
+        "city": "THANE, Maharashtra",
         "orders": 50,
-        "revenue": 167279
+        "revenue": 167278.91
       },
       {
-        "city": "Mumbai",
+        "city": "Mumbai, Maharashtra",
         "orders": 46,
-        "revenue": 164591
+        "revenue": 164591.4
       },
       {
-        "city": "GURGAON",
+        "city": "GURGAON, Haryana",
         "orders": 43,
-        "revenue": 151929
+        "revenue": 151928.92
       },
       {
-        "city": "ERNAKULAM",
+        "city": "SURAT, Gujarat",
         "orders": 33,
-        "revenue": 108858
+        "revenue": 108452.51
       },
       {
-        "city": "SURAT",
+        "city": "ERNAKULAM, Kerala",
         "orders": 33,
-        "revenue": 108453
+        "revenue": 108858.04
       },
       {
-        "city": "RANGA REDDY",
+        "city": "RANGA REDDY, Telangana",
         "orders": 30,
-        "revenue": 101574
+        "revenue": 101573.85
       },
       {
-        "city": "CHENNAI",
+        "city": "CHENNAI, Tamil Nadu",
         "orders": 27,
-        "revenue": 91049
+        "revenue": 91048.68
       },
       {
-        "city": "NEW DELHI",
+        "city": "NEW DELHI, Delhi",
         "orders": 21,
-        "revenue": 69147
+        "revenue": 69147.36
       },
       {
-        "city": "KOLKATA",
-        "orders": 18,
-        "revenue": 67833
-      },
-      {
-        "city": "MEDCHAL MALKAJGIRI",
-        "orders": 19,
-        "revenue": 64974
-      },
-      {
-        "city": "COIMBATORE",
+        "city": "COIMBATORE, Tamil Nadu",
         "orders": 20,
-        "revenue": 62649
+        "revenue": 62649.07
       },
       {
-        "city": "DAKSHINA KANNADA",
-        "orders": 18,
-        "revenue": 61137
-      },
-      {
-        "city": "GAUTAM BUDDHA NAGAR",
-        "orders": 16,
-        "revenue": 54805
-      },
-      {
-        "city": "SOUTH EAST",
-        "orders": 16,
-        "revenue": 53127
-      },
-      {
-        "city": "MALAPPURAM",
-        "orders": 14,
-        "revenue": 51953
-      },
-      {
-        "city": "VADODARA",
-        "orders": 14,
-        "revenue": 50871
-      },
-      {
-        "city": "Bengaluru",
-        "orders": 13,
-        "revenue": 49671
-      },
-      {
-        "city": "RAIGAD",
-        "orders": 15,
-        "revenue": 46342
-      },
-      {
-        "city": "Hyderabad",
-        "orders": 14,
-        "revenue": 44435
-      },
-      {
-        "city": "SANGAREDDY",
-        "orders": 12,
-        "revenue": 44167
+        "city": "MEDCHAL MALKAJGIRI, Telangana",
+        "orders": 19,
+        "revenue": 64974.15
       }
     ],
-    "note": "Based on 3,200 orders from order exports"
+    "total_states": 31,
+    "coverage_orders": 1986,
+    "coverage_pct": 51.2,
+    "note": "Geographic data from 3200 order export rows. Covers 1986 unique orders (51.2% of 3,879 total). 679 orders have no geographic data in the exports.",
+    "period": "Apr 2025 \u2013 Feb 2026"
   },
   "discounts": {
     "total_discount_value": 4966238.57,
@@ -6673,36 +6743,198 @@
   },
   "order_export_coverage": "Apr 2025 \u2013 Feb 2026 (3,200 unique orders from 64 export files)",
   "taxes": {
-    "total_sales_tax": 903,
+    "total_sales_tax": 332850.91,
     "by_state": [
       {
-        "state": "Telangana",
-        "total_tax": 459,
-        "tax_types": [
-          "IGST"
-        ],
-        "pct_of_total": 50.8
-      },
-      {
-        "state": "Uttar Pradesh",
-        "total_tax": 348,
-        "tax_types": [
-          "IGST"
-        ],
-        "pct_of_total": 38.6
-      },
-      {
         "state": "Maharashtra",
-        "total_tax": 96,
+        "total_tax": 103149.65,
         "tax_types": [
           "IGST",
           "SGST"
         ],
-        "pct_of_total": 10.6
+        "pct_of_total": 31.0
+      },
+      {
+        "state": "Telangana",
+        "total_tax": 47539.89,
+        "tax_types": [
+          "IGST"
+        ],
+        "pct_of_total": 14.3
+      },
+      {
+        "state": "Karnataka",
+        "total_tax": 45524.1,
+        "tax_types": [
+          "CGST",
+          "SGST"
+        ],
+        "pct_of_total": 13.7
+      },
+      {
+        "state": "Gujarat",
+        "total_tax": 37925.36,
+        "tax_types": [
+          "IGST"
+        ],
+        "pct_of_total": 11.4
+      },
+      {
+        "state": "Tamil Nadu",
+        "total_tax": 16438.28,
+        "tax_types": [
+          "IGST"
+        ],
+        "pct_of_total": 4.9
+      },
+      {
+        "state": "Kerala",
+        "total_tax": 13589.55,
+        "tax_types": [
+          "IGST"
+        ],
+        "pct_of_total": 4.1
+      },
+      {
+        "state": "Delhi",
+        "total_tax": 12585.97,
+        "tax_types": [
+          "IGST"
+        ],
+        "pct_of_total": 3.8
+      },
+      {
+        "state": "Haryana",
+        "total_tax": 10335.26,
+        "tax_types": [
+          "IGST"
+        ],
+        "pct_of_total": 3.1
+      },
+      {
+        "state": "Andhra Pradesh",
+        "total_tax": 8284.85,
+        "tax_types": [
+          "IGST"
+        ],
+        "pct_of_total": 2.5
+      },
+      {
+        "state": "Chhattisgarh",
+        "total_tax": 7138.8,
+        "tax_types": [
+          "IGST"
+        ],
+        "pct_of_total": 2.1
+      },
+      {
+        "state": "Uttar Pradesh",
+        "total_tax": 6692.93,
+        "tax_types": [
+          "IGST"
+        ],
+        "pct_of_total": 2.0
+      },
+      {
+        "state": "Goa",
+        "total_tax": 6290.84,
+        "tax_types": [
+          "IGST"
+        ],
+        "pct_of_total": 1.9
+      },
+      {
+        "state": "Rajasthan",
+        "total_tax": 5908.35,
+        "tax_types": [
+          "IGST"
+        ],
+        "pct_of_total": 1.8
+      },
+      {
+        "state": "West Bengal",
+        "total_tax": 5000.87,
+        "tax_types": [
+          "IGST"
+        ],
+        "pct_of_total": 1.5
+      },
+      {
+        "state": "Assam",
+        "total_tax": 2573.96,
+        "tax_types": [
+          "IGST"
+        ],
+        "pct_of_total": 0.8
+      },
+      {
+        "state": "Madhya Pradesh",
+        "total_tax": 1179.2,
+        "tax_types": [
+          "IGST"
+        ],
+        "pct_of_total": 0.4
+      },
+      {
+        "state": "Bihar",
+        "total_tax": 739.5,
+        "tax_types": [
+          "IGST"
+        ],
+        "pct_of_total": 0.2
+      },
+      {
+        "state": "Jharkhand",
+        "total_tax": 601.12,
+        "tax_types": [
+          "IGST"
+        ],
+        "pct_of_total": 0.2
+      },
+      {
+        "state": "Dadra and Nagar Haveli",
+        "total_tax": 487.23,
+        "tax_types": [
+          "IGST"
+        ],
+        "pct_of_total": 0.1
+      },
+      {
+        "state": "Odisha",
+        "total_tax": 324.45,
+        "tax_types": [
+          "IGST"
+        ],
+        "pct_of_total": 0.1
+      },
+      {
+        "state": "Himachal Pradesh",
+        "total_tax": 216.3,
+        "tax_types": [
+          "IGST"
+        ],
+        "pct_of_total": 0.1
+      },
+      {
+        "state": "Chandigarh",
+        "total_tax": 216.3,
+        "tax_types": [
+          "IGST"
+        ],
+        "pct_of_total": 0.1
+      },
+      {
+        "state": "Punjab",
+        "total_tax": 108.15,
+        "tax_types": [
+          "IGST"
+        ],
+        "pct_of_total": 0.0
       }
     ],
     "period": "Apr 2025 \u2013 Feb 2026",
-    "note": "GST breakdown by state from Shopify taxes report. Karnataka (home state) uses CGST+SGST, other states use IGST."
+    "note": "GST breakdown from Shopify taxes report. 23 states with tax activity. Karnataka (home state) uses CGST+SGST, other states use IGST.",
+    "effective_tax_rate": 1.82
   },
   "returns": {
     "total_returns": 969332,
@@ -7077,5 +7309,71 @@
       "Packaging and warehousing actuals",
       "Employee/contractor costs"
     ]
+  },
+  "pnl": {
+    "gross_sales": 24178676.400000002,
+    "total_discounts": 4966238.57,
+    "net_sales": 18243105.52,
+    "total_cogs": 4269110,
+    "gross_profit": 13973995.52,
+    "gross_margin": 76.6,
+    "cogs_breakdown": [
+      {
+        "category": "Linen Shirts",
+        "quantity": 2581,
+        "unit_cost": 1450,
+        "total_cogs": 3742450,
+        "revenue": 11354428,
+        "gross_margin_pct": 67.0
+      },
+      {
+        "category": "Linen Pants",
+        "quantity": 226,
+        "unit_cost": 1380,
+        "total_cogs": 311880,
+        "revenue": 893328,
+        "gross_margin_pct": 65.1
+      },
+      {
+        "category": "T-Shirts (Supima)",
+        "quantity": 351,
+        "unit_cost": 420,
+        "total_cogs": 147420,
+        "revenue": 468650,
+        "gross_margin_pct": 68.5
+      },
+      {
+        "category": "Oxford Shirts",
+        "quantity": 33,
+        "unit_cost": 800,
+        "total_cogs": 26400,
+        "revenue": 67600,
+        "gross_margin_pct": 60.9
+      },
+      {
+        "category": "Pants",
+        "quantity": 32,
+        "unit_cost": 1280,
+        "total_cogs": 40960,
+        "revenue": 49100,
+        "gross_margin_pct": 16.6
+      }
+    ],
+    "avg_cogs_per_unit": 1325,
+    "total_units_sold": 3223,
+    "estimated_opex": 741159,
+    "opex_breakdown": [
+      {
+        "item": "Returns Handling",
+        "amount": 193866
+      },
+      {
+        "item": "Platform/Payment Fees (~3%)",
+        "amount": 547293
+      }
+    ],
+    "ebitda": 13232836.52,
+    "ebitda_margin": 72.5,
+    "note": "COGS calculated from actual units \u00d7 user-provided unit costs. 3223 units across 5 categories. OpEx is estimated (returns handling + platform fees)."
   }
 }
