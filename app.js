@@ -763,8 +763,8 @@ function renderGeography(data) {
     });
   }
 
-  // Cities table — JSON uses geo.cities (not geo.top_cities)
-  var cities = geo.cities || [];
+  // Cities table
+  var cities = geo.top_cities || geo.cities || [];
   var ctBody = document.querySelector('#geoCitiesTable tbody');
   if (ctBody) {
     ctBody.innerHTML = '';
@@ -1957,7 +1957,7 @@ function parseDevice(ua) {
       if (!geo) return 'Geography data is not available yet.';
       var states = (geo.states || []).slice(0, 5);
       var reply = 'Top 5 states by revenue:\n' + states.map(function(s, i) { return (i + 1) + '. ' + s.state + ' \u2014 ' + fmtINRFull(s.revenue) + ' (' + fmtPct(s.pct_revenue) + ')'; }).join('\n');
-      var cities = (geo.cities || []).slice(0, 5);
+      var cities = (geo.top_cities || geo.cities || []).slice(0, 5);
       if (cities.length > 0) {
         reply += '\n\nTop 5 cities:\n' + cities.map(function(c, i) { return (i + 1) + '. ' + c.city + ' \u2014 ' + fmtNum(c.orders) + ' orders'; }).join('\n');
       }
