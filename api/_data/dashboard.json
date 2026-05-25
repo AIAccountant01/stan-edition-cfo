@@ -234,18 +234,29 @@
       },
       {
         "label": "EBITDA (Est.)",
-        "value": 15196819.9,
+        "value": 15202766.46,
         "format": "currency"
       },
       {
         "label": "EBITDA Margin",
-        "value": 69.7,
+        "value": 69.8,
         "format": "percent"
       },
       {
         "label": "Avg COGS/Unit",
         "value": 1325,
         "format": "currency"
+      },
+      {
+        "label": "Net Profit (after Ads)",
+        "value": 10973830.67,
+        "format": "currency",
+        "sub": "Includes estimated historical ad spend"
+      },
+      {
+        "label": "Net Margin (after Ads)",
+        "value": 50.4,
+        "format": "percent"
       }
     ],
     "returns_kpi": {
@@ -7492,14 +7503,18 @@
       "cogs": 5673330,
       "gross_profit": 16118002.43,
       "gross_margin_pct": 74.0,
-      "shipping": 370639.86,
-      "payment_gateway_fees": 435826.54,
-      "packaging": 114716.13,
-      "total_operating_expenses": 921182.53,
-      "ebitda": 15196819.9,
-      "ebitda_margin_pct": 69.7,
-      "net_profit_before_tax": 15196819.9,
-      "period": "Apr 2025 \u2013 Mar 2026"
+      "shipping": 370452.65,
+      "payment_gateway_fees": 435826.66,
+      "packaging": 108956.66,
+      "total_operating_expenses": 915235.97,
+      "ebitda": 15202766.46,
+      "ebitda_margin_pct": 69.8,
+      "net_profit_before_tax": 15202766.46,
+      "period": "Apr 2025 \u2013 Mar 2026",
+      "opex_note": "Shipping (1.7%), Payment Gateway (2.0%), and Packaging (0.5%) extrapolated proportionally to net sales using March 2026 actuals as benchmark. Replace with actuals when FSHIP / Easebuzz / packaging vendor invoices arrive.",
+      "ad_spend": 4228935.79,
+      "net_profit_after_ads": 10973830.67,
+      "net_margin_after_ads_pct": 50.4
     },
     "monthly": [
       {
@@ -7511,13 +7526,17 @@
         "cogs": 214611,
         "gross_profit": 701185.5,
         "gross_margin_pct": 76.6,
-        "shipping": 15600,
-        "gateway_fees": 18316.0,
-        "packaging": 4875,
-        "total_opex": 38791.0,
-        "ebitda": 680710.5,
-        "ebitda_margin_pct": 74.3,
-        "orders": 195
+        "shipping": 15568.54,
+        "packaging": 4578.98,
+        "total_opex": 38463.45,
+        "ebitda": 662722.05,
+        "ebitda_margin_pct": 72.4,
+        "orders": 195,
+        "payment_gateway_fees": 18315.93,
+        "ad_spend": 177664.52,
+        "ad_spend_is_estimate": true,
+        "net_profit_after_ads": 485057.53,
+        "net_margin_after_ads_pct": 53.0
       },
       {
         "month": "2025-05",
@@ -7528,13 +7547,17 @@
         "cogs": 135370,
         "gross_profit": 263559.76,
         "gross_margin_pct": 66.1,
-        "shipping": 9840,
-        "gateway_fees": 7979.0,
-        "packaging": 3075,
-        "total_opex": 20894.0,
-        "ebitda": 250644.76,
-        "ebitda_margin_pct": 62.8,
-        "orders": 123
+        "shipping": 6781.81,
+        "packaging": 1994.65,
+        "total_opex": 16755.06,
+        "ebitda": 246804.7,
+        "ebitda_margin_pct": 61.9,
+        "orders": 123,
+        "payment_gateway_fees": 7978.6,
+        "ad_spend": 77392.37,
+        "ad_spend_is_estimate": true,
+        "net_profit_after_ads": 169412.33,
+        "net_margin_after_ads_pct": 42.5
       },
       {
         "month": "2025-06",
@@ -7545,13 +7568,17 @@
         "cogs": 352182,
         "gross_profit": 1092875.19,
         "gross_margin_pct": 75.6,
-        "shipping": 25600,
-        "gateway_fees": 28901.0,
-        "packaging": 8000,
-        "total_opex": 62501.0,
-        "ebitda": 1059275.19,
-        "ebitda_margin_pct": 73.3,
-        "orders": 320
+        "shipping": 24565.97,
+        "packaging": 7225.29,
+        "total_opex": 60692.4,
+        "ebitda": 1032182.79,
+        "ebitda_margin_pct": 71.4,
+        "orders": 320,
+        "payment_gateway_fees": 28901.14,
+        "ad_spend": 280341.09,
+        "ad_spend_is_estimate": true,
+        "net_profit_after_ads": 751841.7,
+        "net_margin_after_ads_pct": 52.0
       },
       {
         "month": "2025-07",
@@ -7562,13 +7589,17 @@
         "cogs": 373217,
         "gross_profit": 1230981.24,
         "gross_margin_pct": 76.7,
-        "shipping": 27920,
-        "gateway_fees": 32084.0,
-        "packaging": 8725,
-        "total_opex": 68729.0,
-        "ebitda": 1194336.24,
-        "ebitda_margin_pct": 74.5,
-        "orders": 349
+        "shipping": 27271.37,
+        "packaging": 8020.99,
+        "total_opex": 67376.32,
+        "ebitda": 1163604.92,
+        "ebitda_margin_pct": 72.5,
+        "orders": 349,
+        "payment_gateway_fees": 32083.96,
+        "ad_spend": 311214.46,
+        "ad_spend_is_estimate": true,
+        "net_profit_after_ads": 852390.46,
+        "net_margin_after_ads_pct": 53.1
       },
       {
         "month": "2025-08",
@@ -7579,13 +7610,17 @@
         "cogs": 456853,
         "gross_profit": 1470470.68,
         "gross_margin_pct": 76.3,
-        "shipping": 30240,
-        "gateway_fees": 38546.0,
-        "packaging": 9450,
-        "total_opex": 78236.0,
-        "ebitda": 1430780.68,
-        "ebitda_margin_pct": 74.2,
-        "orders": 378
+        "shipping": 32764.5,
+        "packaging": 9636.62,
+        "total_opex": 80947.59,
+        "ebitda": 1389523.09,
+        "ebitda_margin_pct": 72.1,
+        "orders": 378,
+        "payment_gateway_fees": 38546.47,
+        "ad_spend": 373900.79,
+        "ad_spend_is_estimate": true,
+        "net_profit_after_ads": 1015622.3,
+        "net_margin_after_ads_pct": 52.7
       },
       {
         "month": "2025-09",
@@ -7596,13 +7631,17 @@
         "cogs": 381164,
         "gross_profit": 1273148.92,
         "gross_margin_pct": 77.0,
-        "shipping": 29520,
-        "gateway_fees": 33086.0,
-        "packaging": 9225,
-        "total_opex": 71831.0,
-        "ebitda": 1234403.92,
-        "ebitda_margin_pct": 74.6,
-        "orders": 369
+        "shipping": 28123.32,
+        "packaging": 8271.56,
+        "total_opex": 69481.14,
+        "ebitda": 1203667.78,
+        "ebitda_margin_pct": 72.8,
+        "orders": 369,
+        "payment_gateway_fees": 33086.26,
+        "ad_spend": 320936.71,
+        "ad_spend_is_estimate": true,
+        "net_profit_after_ads": 882731.07,
+        "net_margin_after_ads_pct": 53.4
       },
       {
         "month": "2025-10",
@@ -7613,13 +7652,17 @@
         "cogs": 478544,
         "gross_profit": 1477155.25,
         "gross_margin_pct": 75.5,
-        "shipping": 32880,
-        "gateway_fees": 39114.0,
-        "packaging": 10275,
-        "total_opex": 82269.0,
-        "ebitda": 1434000.25,
-        "ebitda_margin_pct": 73.3,
-        "orders": 411
+        "shipping": 33246.89,
+        "packaging": 9778.5,
+        "total_opex": 82139.38,
+        "ebitda": 1395015.87,
+        "ebitda_margin_pct": 71.3,
+        "orders": 411,
+        "payment_gateway_fees": 39113.99,
+        "ad_spend": 379405.65,
+        "ad_spend_is_estimate": true,
+        "net_profit_after_ads": 1015610.22,
+        "net_margin_after_ads_pct": 51.9
       },
       {
         "month": "2025-11",
@@ -7630,13 +7673,17 @@
         "cogs": 457907,
         "gross_profit": 1464575.39,
         "gross_margin_pct": 76.2,
-        "shipping": 31760,
-        "gateway_fees": 38450.0,
-        "packaging": 9925,
-        "total_opex": 80135.0,
-        "ebitda": 1422890.39,
-        "ebitda_margin_pct": 74.0,
-        "orders": 397
+        "shipping": 32682.2,
+        "packaging": 9612.41,
+        "total_opex": 80744.26000000001,
+        "ebitda": 1383831.13,
+        "ebitda_margin_pct": 72.0,
+        "orders": 397,
+        "payment_gateway_fees": 38449.65,
+        "ad_spend": 372961.58,
+        "ad_spend_is_estimate": true,
+        "net_profit_after_ads": 1010869.55,
+        "net_margin_after_ads_pct": 52.6
       },
       {
         "month": "2025-12",
@@ -7647,13 +7694,17 @@
         "cogs": 485480,
         "gross_profit": 1483678.49,
         "gross_margin_pct": 75.3,
-        "shipping": 33840,
-        "gateway_fees": 39383.0,
-        "packaging": 10575,
-        "total_opex": 83798.0,
-        "ebitda": 1439263.49,
-        "ebitda_margin_pct": 73.1,
-        "orders": 423
+        "shipping": 33475.69,
+        "packaging": 9845.79,
+        "total_opex": 82704.65,
+        "ebitda": 1400973.84,
+        "ebitda_margin_pct": 71.1,
+        "orders": 423,
+        "payment_gateway_fees": 39383.17,
+        "ad_spend": 382016.75,
+        "ad_spend_is_estimate": true,
+        "net_profit_after_ads": 1018957.09,
+        "net_margin_after_ads_pct": 51.7
       },
       {
         "month": "2026-01",
@@ -7664,13 +7715,17 @@
         "cogs": 463457,
         "gross_profit": 1536230.3,
         "gross_margin_pct": 76.8,
-        "shipping": 34080,
-        "gateway_fees": 39994.0,
-        "packaging": 10650,
-        "total_opex": 84724.0,
-        "ebitda": 1491500.3,
-        "ebitda_margin_pct": 74.6,
-        "orders": 426
+        "shipping": 33994.68,
+        "packaging": 9998.44,
+        "total_opex": 83986.87,
+        "ebitda": 1452243.43,
+        "ebitda_margin_pct": 72.6,
+        "orders": 426,
+        "payment_gateway_fees": 39993.75,
+        "ad_spend": 387939.34,
+        "ad_spend_is_estimate": true,
+        "net_profit_after_ads": 1064304.09,
+        "net_margin_after_ads_pct": 53.2
       },
       {
         "month": "2026-02",
@@ -7681,13 +7736,17 @@
         "cogs": 470325,
         "gross_profit": 1980134.8,
         "gross_margin_pct": 80.8,
-        "shipping": 39040,
-        "gateway_fees": 49009.0,
-        "packaging": 12200,
-        "total_opex": 100249.0,
-        "ebitda": 1928894.8,
-        "ebitda_margin_pct": 78.7,
-        "orders": 488
+        "shipping": 41657.82,
+        "packaging": 12252.3,
+        "total_opex": 102919.31999999999,
+        "ebitda": 1877215.48,
+        "ebitda_margin_pct": 76.6,
+        "orders": 488,
+        "payment_gateway_fees": 49009.2,
+        "ad_spend": 475389.2,
+        "ad_spend_is_estimate": true,
+        "net_profit_after_ads": 1401826.28,
+        "net_margin_after_ads_pct": 57.2
       },
       {
         "month": "2026-03",
@@ -7703,7 +7762,12 @@
         "packaging": 17741.13,
         "ebitda": 1994981.38,
         "ebitda_margin_pct": 56.2,
-        "channel_note": "Shopify only \u2014 Myntra/AJIO pending"
+        "channel_note": "Shopify only \u2014 Myntra/AJIO pending",
+        "total_opex": 149025.53,
+        "ad_spend": 689773.33,
+        "ad_spend_is_estimate": false,
+        "net_profit_after_ads": 1305208.05,
+        "net_margin_after_ads_pct": 36.8
       }
     ],
     "by_category": [
@@ -7883,12 +7947,419 @@
     ],
     "ebitda": 15196819.9,
     "ebitda_margin": 69.7,
-    "note": "COGS calculated from actual units \u00d7 user-provided unit costs. 3223 units across 5 categories. OpEx is estimated (returns handling + platform fees)."
+    "note": "COGS calculated from actual units \u00d7 user-provided unit costs. 3223 units across 5 categories. OpEx is estimated (returns handling + platform fees).",
+    "summary": {
+      "gross_sales": 28887227.4,
+      "discounts": 5987503.66,
+      "returns": 1108391.31,
+      "net_sales": 21791332.43,
+      "cogs": 5673330,
+      "gross_profit": 16118002.43,
+      "gross_margin_pct": 74.0,
+      "shipping": 370452.65,
+      "payment_gateway_fees": 435826.66,
+      "packaging": 108956.66,
+      "total_operating_expenses": 915235.97,
+      "ebitda": 15202766.46,
+      "ebitda_margin_pct": 69.8,
+      "net_profit_before_tax": 15202766.46,
+      "period": "Apr 2025 \u2013 Mar 2026",
+      "opex_note": "Shipping (1.7%), Payment Gateway (2.0%), and Packaging (0.5%) extrapolated proportionally to net sales using March 2026 actuals as benchmark. Replace with actuals when FSHIP / Easebuzz / packaging vendor invoices arrive.",
+      "ad_spend": 4228935.79,
+      "net_profit_after_ads": 10973830.67,
+      "net_margin_after_ads_pct": 50.4
+    },
+    "monthly": [
+      {
+        "month": "2025-04",
+        "gross_sales": 1105277.0,
+        "discounts": 151888.3,
+        "returns": 37592.2,
+        "net_sales": 915796.5,
+        "cogs": 214611,
+        "gross_profit": 701185.5,
+        "gross_margin_pct": 76.6,
+        "shipping": 15568.54,
+        "packaging": 4578.98,
+        "total_opex": 38463.45,
+        "ebitda": 662722.05,
+        "ebitda_margin_pct": 72.4,
+        "orders": 195,
+        "payment_gateway_fees": 18315.93,
+        "ad_spend": 177664.52,
+        "ad_spend_is_estimate": true,
+        "net_profit_after_ads": 485057.53,
+        "net_margin_after_ads_pct": 53.0
+      },
+      {
+        "month": "2025-05",
+        "gross_sales": 658696.0,
+        "discounts": 108417.74,
+        "returns": 151348.5,
+        "net_sales": 398929.76,
+        "cogs": 135370,
+        "gross_profit": 263559.76,
+        "gross_margin_pct": 66.1,
+        "shipping": 6781.81,
+        "packaging": 1994.65,
+        "total_opex": 16755.06,
+        "ebitda": 246804.7,
+        "ebitda_margin_pct": 61.9,
+        "orders": 123,
+        "payment_gateway_fees": 7978.6,
+        "ad_spend": 77392.37,
+        "ad_spend_is_estimate": true,
+        "net_profit_after_ads": 169412.33,
+        "net_margin_after_ads_pct": 42.5
+      },
+      {
+        "month": "2025-06",
+        "gross_sales": 1749044.0,
+        "discounts": 274588.67,
+        "returns": 29398.14,
+        "net_sales": 1445057.19,
+        "cogs": 352182,
+        "gross_profit": 1092875.19,
+        "gross_margin_pct": 75.6,
+        "shipping": 24565.97,
+        "packaging": 7225.29,
+        "total_opex": 60692.4,
+        "ebitda": 1032182.79,
+        "ebitda_margin_pct": 71.4,
+        "orders": 320,
+        "payment_gateway_fees": 28901.14,
+        "ad_spend": 280341.09,
+        "ad_spend_is_estimate": true,
+        "net_profit_after_ads": 751841.7,
+        "net_margin_after_ads_pct": 52.0
+      },
+      {
+        "month": "2025-07",
+        "gross_sales": 2096270.8599999999,
+        "discounts": 427161.02,
+        "returns": 64911.6,
+        "net_sales": 1604198.24,
+        "cogs": 373217,
+        "gross_profit": 1230981.24,
+        "gross_margin_pct": 76.7,
+        "shipping": 27271.37,
+        "packaging": 8020.99,
+        "total_opex": 67376.32,
+        "ebitda": 1163604.92,
+        "ebitda_margin_pct": 72.5,
+        "orders": 349,
+        "payment_gateway_fees": 32083.96,
+        "ad_spend": 311214.46,
+        "ad_spend_is_estimate": true,
+        "net_profit_after_ads": 852390.46,
+        "net_margin_after_ads_pct": 53.1
+      },
+      {
+        "month": "2025-08",
+        "gross_sales": 2427028.0,
+        "discounts": 492094.32,
+        "returns": 7610.0,
+        "net_sales": 1927323.68,
+        "cogs": 456853,
+        "gross_profit": 1470470.68,
+        "gross_margin_pct": 76.3,
+        "shipping": 32764.5,
+        "packaging": 9636.62,
+        "total_opex": 80947.59,
+        "ebitda": 1389523.09,
+        "ebitda_margin_pct": 72.1,
+        "orders": 378,
+        "payment_gateway_fees": 38546.47,
+        "ad_spend": 373900.79,
+        "ad_spend_is_estimate": true,
+        "net_profit_after_ads": 1015622.3,
+        "net_margin_after_ads_pct": 52.7
+      },
+      {
+        "month": "2025-09",
+        "gross_sales": 2080938.92,
+        "discounts": 387694.35,
+        "returns": 38931.65,
+        "net_sales": 1654312.92,
+        "cogs": 381164,
+        "gross_profit": 1273148.92,
+        "gross_margin_pct": 77.0,
+        "shipping": 28123.32,
+        "packaging": 8271.56,
+        "total_opex": 69481.14,
+        "ebitda": 1203667.78,
+        "ebitda_margin_pct": 72.8,
+        "orders": 369,
+        "payment_gateway_fees": 33086.26,
+        "ad_spend": 320936.71,
+        "ad_spend_is_estimate": true,
+        "net_profit_after_ads": 882731.07,
+        "net_margin_after_ads_pct": 53.4
+      },
+      {
+        "month": "2025-10",
+        "gross_sales": 2688996.61,
+        "discounts": 617949.36,
+        "returns": 115348.0,
+        "net_sales": 1955699.25,
+        "cogs": 478544,
+        "gross_profit": 1477155.25,
+        "gross_margin_pct": 75.5,
+        "shipping": 33246.89,
+        "packaging": 9778.5,
+        "total_opex": 82139.38,
+        "ebitda": 1395015.87,
+        "ebitda_margin_pct": 71.3,
+        "orders": 411,
+        "payment_gateway_fees": 39113.99,
+        "ad_spend": 379405.65,
+        "ad_spend_is_estimate": true,
+        "net_profit_after_ads": 1015610.22,
+        "net_margin_after_ads_pct": 51.9
+      },
+      {
+        "month": "2025-11",
+        "gross_sales": 2748034.61,
+        "discounts": 657394.6799999999,
+        "returns": 168157.54,
+        "net_sales": 1922482.39,
+        "cogs": 457907,
+        "gross_profit": 1464575.39,
+        "gross_margin_pct": 76.2,
+        "shipping": 32682.2,
+        "packaging": 9612.41,
+        "total_opex": 80744.26000000001,
+        "ebitda": 1383831.13,
+        "ebitda_margin_pct": 72.0,
+        "orders": 397,
+        "payment_gateway_fees": 38449.65,
+        "ad_spend": 372961.58,
+        "ad_spend_is_estimate": true,
+        "net_profit_after_ads": 1010869.55,
+        "net_margin_after_ads_pct": 52.6
+      },
+      {
+        "month": "2025-12",
+        "gross_sales": 2723266.2600000002,
+        "discounts": 598460.27,
+        "returns": 155647.5,
+        "net_sales": 1969158.49,
+        "cogs": 485480,
+        "gross_profit": 1483678.49,
+        "gross_margin_pct": 75.3,
+        "shipping": 33475.69,
+        "packaging": 9845.79,
+        "total_opex": 82704.65,
+        "ebitda": 1400973.84,
+        "ebitda_margin_pct": 71.1,
+        "orders": 423,
+        "payment_gateway_fees": 39383.17,
+        "ad_spend": 382016.75,
+        "ad_spend_is_estimate": true,
+        "net_profit_after_ads": 1018957.09,
+        "net_margin_after_ads_pct": 51.7
+      },
+      {
+        "month": "2026-01",
+        "gross_sales": 2585651.34,
+        "discounts": 492090.67,
+        "returns": 93873.37,
+        "net_sales": 1999687.3,
+        "cogs": 463457,
+        "gross_profit": 1536230.3,
+        "gross_margin_pct": 76.8,
+        "shipping": 33994.68,
+        "packaging": 9998.44,
+        "total_opex": 83986.87,
+        "ebitda": 1452243.43,
+        "ebitda_margin_pct": 72.6,
+        "orders": 426,
+        "payment_gateway_fees": 39993.75,
+        "ad_spend": 387939.34,
+        "ad_spend_is_estimate": true,
+        "net_profit_after_ads": 1064304.09,
+        "net_margin_after_ads_pct": 53.2
+      },
+      {
+        "month": "2026-02",
+        "gross_sales": 3315472.8,
+        "discounts": 758499.19,
+        "returns": 106513.81,
+        "net_sales": 2450459.8,
+        "cogs": 470325,
+        "gross_profit": 1980134.8,
+        "gross_margin_pct": 80.8,
+        "shipping": 41657.82,
+        "packaging": 12252.3,
+        "total_opex": 102919.31999999999,
+        "ebitda": 1877215.48,
+        "ebitda_margin_pct": 76.6,
+        "orders": 488,
+        "payment_gateway_fees": 49009.2,
+        "ad_spend": 475389.2,
+        "ad_spend_is_estimate": true,
+        "net_profit_after_ads": 1401826.28,
+        "net_margin_after_ads_pct": 57.2
+      },
+      {
+        "month": "2026-03",
+        "gross_sales": 4708551.0,
+        "discounts": 1021265.09,
+        "returns": 139059.0,
+        "net_sales": 3548226.91,
+        "cogs": 1404220,
+        "gross_profit": 2144006.91,
+        "gross_margin_pct": 60.4,
+        "shipping": 60319.86,
+        "payment_gateway_fees": 70964.54,
+        "packaging": 17741.13,
+        "ebitda": 1994981.38,
+        "ebitda_margin_pct": 56.2,
+        "channel_note": "Shopify only \u2014 Myntra/AJIO pending",
+        "total_opex": 149025.53,
+        "ad_spend": 689773.33,
+        "ad_spend_is_estimate": false,
+        "net_profit_after_ads": 1305208.05,
+        "net_margin_after_ads_pct": 36.8
+      }
+    ]
   },
   "marketing": {
-    "period": "March 2026",
-    "note": "Ad spend data available from March 2026 onwards. Historical Apr 2025\u2013Feb 2026 ad spend not yet provided.",
+    "period": "Apr 2025 \u2013 Mar 2026",
+    "note": "March 2026 actual from invoices (Meta \u20b97.15L, Google \u20b999K). Apr 2025\u2013Feb 2026 ESTIMATED at 19.4% of net sales using March ROAS as benchmark \u2014 replace with actual Meta/Google invoices when available.",
     "monthly_ad_spend": [
+      {
+        "month": "2025-04",
+        "meta_pre_gst": 155989.45,
+        "meta_gst": 28078.1,
+        "meta_total": 184067.55,
+        "google_pre_gst": 21675.07,
+        "google_gst": 3901.51,
+        "google_total": 25576.58,
+        "total_pre_gst": 177664.52,
+        "total_with_gst": 209644.13,
+        "is_estimate": true
+      },
+      {
+        "month": "2025-05",
+        "meta_pre_gst": 67950.5,
+        "meta_gst": 12231.09,
+        "meta_total": 80181.59,
+        "google_pre_gst": 9441.87,
+        "google_gst": 1699.54,
+        "google_total": 11141.41,
+        "total_pre_gst": 77392.37,
+        "total_with_gst": 91323.0,
+        "is_estimate": true
+      },
+      {
+        "month": "2025-06",
+        "meta_pre_gst": 246139.48,
+        "meta_gst": 44305.11,
+        "meta_total": 290444.59,
+        "google_pre_gst": 34201.61,
+        "google_gst": 6156.29,
+        "google_total": 40357.9,
+        "total_pre_gst": 280341.09,
+        "total_with_gst": 330802.49,
+        "is_estimate": true
+      },
+      {
+        "month": "2025-07",
+        "meta_pre_gst": 273246.3,
+        "meta_gst": 49184.33,
+        "meta_total": 322430.63,
+        "google_pre_gst": 37968.16,
+        "google_gst": 6834.27,
+        "google_total": 44802.43,
+        "total_pre_gst": 311214.46,
+        "total_with_gst": 367233.06,
+        "is_estimate": true
+      },
+      {
+        "month": "2025-08",
+        "meta_pre_gst": 328284.89,
+        "meta_gst": 59091.28,
+        "meta_total": 387376.17,
+        "google_pre_gst": 45615.9,
+        "google_gst": 8210.86,
+        "google_total": 53826.76,
+        "total_pre_gst": 373900.79,
+        "total_with_gst": 441202.93,
+        "is_estimate": true
+      },
+      {
+        "month": "2025-09",
+        "meta_pre_gst": 281782.43,
+        "meta_gst": 50720.84,
+        "meta_total": 332503.27,
+        "google_pre_gst": 39154.28,
+        "google_gst": 7047.77,
+        "google_total": 46202.05,
+        "total_pre_gst": 320936.71,
+        "total_with_gst": 378705.32,
+        "is_estimate": true
+      },
+      {
+        "month": "2025-10",
+        "meta_pre_gst": 333118.16,
+        "meta_gst": 59961.27,
+        "meta_total": 393079.43,
+        "google_pre_gst": 46287.49,
+        "google_gst": 8331.75,
+        "google_total": 54619.24,
+        "total_pre_gst": 379405.65,
+        "total_with_gst": 447698.67,
+        "is_estimate": true
+      },
+      {
+        "month": "2025-11",
+        "meta_pre_gst": 327460.27,
+        "meta_gst": 58942.85,
+        "meta_total": 386403.12,
+        "google_pre_gst": 45501.31,
+        "google_gst": 8190.24,
+        "google_total": 53691.55,
+        "total_pre_gst": 372961.58,
+        "total_with_gst": 440094.66,
+        "is_estimate": true
+      },
+      {
+        "month": "2025-12",
+        "meta_pre_gst": 335410.71,
+        "meta_gst": 60373.93,
+        "meta_total": 395784.64,
+        "google_pre_gst": 46606.04,
+        "google_gst": 8389.09,
+        "google_total": 54995.13,
+        "total_pre_gst": 382016.75,
+        "total_with_gst": 450779.76,
+        "is_estimate": true
+      },
+      {
+        "month": "2026-01",
+        "meta_pre_gst": 340610.74,
+        "meta_gst": 61309.93,
+        "meta_total": 401920.67,
+        "google_pre_gst": 47328.6,
+        "google_gst": 8519.15,
+        "google_total": 55847.75,
+        "total_pre_gst": 387939.34,
+        "total_with_gst": 457768.42,
+        "is_estimate": true
+      },
+      {
+        "month": "2026-02",
+        "meta_pre_gst": 417391.72,
+        "meta_gst": 75130.51,
+        "meta_total": 492522.23,
+        "google_pre_gst": 57997.48,
+        "google_gst": 10439.55,
+        "google_total": 68437.03,
+        "total_pre_gst": 475389.2,
+        "total_with_gst": 560959.26,
+        "is_estimate": true
+      },
       {
         "month": "2026-03",
         "meta_pre_gst": 605822.06,
@@ -7904,14 +8375,14 @@
     "channels": [
       {
         "channel": "Meta (Facebook + Instagram)",
-        "pre_gst": 605822.06,
-        "with_gst": 714870.03,
+        "pre_gst": 3713206.71,
+        "with_gst": 4381583.92,
         "pct_of_total": 87.8
       },
       {
         "channel": "Google Ads",
-        "pre_gst": 83951.27,
-        "with_gst": 99062.5,
+        "pre_gst": 515729.08,
+        "with_gst": 608560.33,
         "pct_of_total": 12.2
       }
     ],
@@ -7949,7 +8420,15 @@
         "spend": 8328.54,
         "pct": 1.4
       }
-    ]
+    ],
+    "fy_metrics": {
+      "total_ad_spend_pre_gst": 4228935.79,
+      "total_ad_spend_with_gst": 4990144.23,
+      "shopify_net_sales": 21791332.43,
+      "ad_to_revenue_pct": 19.4,
+      "roas": 5.15,
+      "note": "ROAS computed on net sales. Apr-Feb ad spend is extrapolated estimate."
+    }
   },
   "data_pending": {
     "march_2026": {
@@ -7960,20 +8439,24 @@
       "shipping_invoice": "PENDING \u2014 AAJ Supply Chain March invoice"
     },
     "historical": {
-      "ad_spend_apr25_feb26": "PENDING \u2014 only March 2026 ad data available"
+      "ad_spend_apr25_feb26": "EXTRAPOLATED at 19.4% of net sales \u2014 replace with actual Meta/Google invoices",
+      "bank_statements_apr25_feb26": "PENDING \u2014 HDFC bank statements for Apr 2025 \u2013 Feb 2026 needed for true cash-basis monthly cash flow",
+      "fship_logistics_apr25_feb26": "PENDING \u2014 actual shipping invoices (FSHIP); current values extrapolated at 1.7% of net sales",
+      "easebuzz_settlements_apr25_feb26": "PENDING \u2014 gateway fee actuals; current values extrapolated at 2.0% of net sales",
+      "packaging_invoices": "PENDING \u2014 packaging vendor invoices; extrapolated at 0.5% of net sales"
     },
     "period_covered": "Apr 2025 - Mar 2026 (March is Shopify-only, ad spend March-only)",
     "as_of": "2026-05-25"
   },
   "cash_flow": {
-    "period": "March 2026",
-    "source": "HDFC Bank ...2576 statement",
-    "note": "Direct cash flow from bank statement. Captures actual cash movements (timing may differ from accrual P&L).",
-    "opening_balance": 8787.75,
-    "closing_balance": 214667.47,
-    "total_inflows": 3026522.7,
-    "total_outflows": 2820642.98,
-    "net_cash_flow": 205879.72,
+    "period": "Apr 2025 \u2013 Mar 2026",
+    "source": "HDFC Bank ...2576 (March actual) + P&L-derived estimates (Apr 2025\u2013Feb 2026)",
+    "note": "Monthly cash flow is an ACCRUAL approximation (net sales \u2212 COGS \u2212 OpEx \u2212 ad spend). Only March 2026 has actual bank statement data. Add bank statements for Apr 2025\u2013Feb 2026 for true cash basis.",
+    "opening_balance": null,
+    "closing_balance": null,
+    "total_inflows": 21791332.43,
+    "total_outflows": 10817501.76,
+    "net_cash_flow": 10973830.67,
     "inflows_breakdown": [
       {
         "source": "Easebuzz (Shopify gateway)",
@@ -8096,6 +8579,230 @@
         "difference": 2937.5,
         "explanation": "Google Ads is prepaid (auto-debit). \u20b92,937 acts as advance credit going into April."
       }
+    },
+    "march_2026_actual": {
+      "source": "HDFC Bank ...2576 statement",
+      "note": "Direct cash flow from bank statement. Captures actual cash movements (timing may differ from accrual P&L).",
+      "opening_balance": 8787.75,
+      "closing_balance": 214667.47,
+      "total_inflows": 3026522.7,
+      "total_outflows": 2820642.98,
+      "net_cash_flow": 205879.72,
+      "inflows_breakdown": [
+        {
+          "source": "Easebuzz (Shopify gateway)",
+          "amount": 2222113.19,
+          "count": 32
+        },
+        {
+          "source": "AAJ Supply (COD remittance)",
+          "amount": 446210.0,
+          "count": 3
+        },
+        {
+          "source": "Myntra Payouts",
+          "amount": 340136.37,
+          "count": 31
+        },
+        {
+          "source": "Other inflows",
+          "amount": 8478.0,
+          "count": 3
+        },
+        {
+          "source": "Other inflows (ICICI)",
+          "amount": 6477.46,
+          "count": 2
+        },
+        {
+          "source": "Razorpay",
+          "amount": 3107.68,
+          "count": 1
+        }
+      ],
+      "outflows_breakdown": [
+        {
+          "source": "SNTLY Studio (manufacturing)",
+          "amount": 1086645.0,
+          "count": 6
+        },
+        {
+          "source": "Meta / Facebook Ads",
+          "amount": 495746.0,
+          "count": 2
+        },
+        {
+          "source": "Forward Fashions (supplier)",
+          "amount": 290798.0,
+          "count": 3
+        },
+        {
+          "source": "Team / Owner withdrawals",
+          "amount": 185318.0,
+          "count": 7
+        },
+        {
+          "source": "Varthagam International (supplier)",
+          "amount": 174425.0,
+          "count": 2
+        },
+        {
+          "source": "GST payment",
+          "amount": 164036.0,
+          "count": 1
+        },
+        {
+          "source": "Other UPI/NEFT outflows",
+          "amount": 148522.0,
+          "count": 20
+        },
+        {
+          "source": "Chinco Silk Mills (supplier)",
+          "amount": 120000.0,
+          "count": 1
+        },
+        {
+          "source": "Google Ads",
+          "amount": 102000.0,
+          "count": 5
+        },
+        {
+          "source": "Bajaj Finance (loan EMI)",
+          "amount": 50000.0,
+          "count": 1
+        },
+        {
+          "source": "Shopify subscription",
+          "amount": 2149.98,
+          "count": 1
+        },
+        {
+          "source": "Other outflows",
+          "amount": 1003.0,
+          "count": 1
+        }
+      ],
+      "key_observations": [
+        "Easebuzz inflows \u20b92,222,113 = Shopify prepaid gateway revenue",
+        "Myntra payouts \u20b9340,136 = marketplace revenue (NOT in dashboard yet)",
+        "AAJ Supply Chain \u20b9446,210 = COD remittance",
+        "Meta payment \u20b9495,746 = likely Feb 2026 invoice (March's \u20b97.15L due in April)",
+        "Google Ads \u20b9102,000 = prepaid auto-debit covering March's \u20b999K invoice",
+        "SNTLY Studio (manufacturing) \u20b91,086,645 = production payments",
+        "GST paid \u20b9164,036 in March"
+      ],
+      "reconciliation_gaps": {
+        "shopify_revenue_vs_collections": {
+          "shopify_total": 3687548.71,
+          "bank_collections_easebuzz_cod": 2668323.19,
+          "gap": 1019225.52,
+          "explanation": "Gap is normal timing \u2014 Easebuzz typically settles T+2/T+3, COD remittance is delayed by AAJ. ~\u20b910L of March sales would settle in early April."
+        },
+        "meta_ad_invoice_vs_payment": {
+          "march_invoice": 714870.03,
+          "march_payment": 495746.0,
+          "gap": 219124.03,
+          "explanation": "Meta is NET 30. The \u20b94.96L payment is for the Feb invoice. March invoice (\u20b97.15L) due in April."
+        },
+        "google_ads_invoice_vs_payment": {
+          "march_invoice": 99062.5,
+          "march_payment": 102000.0,
+          "difference": 2937.5,
+          "explanation": "Google Ads is prepaid (auto-debit). \u20b92,937 acts as advance credit going into April."
+        }
+      }
+    },
+    "monthly_summary": [
+      {
+        "month": "2025-04",
+        "inflows": 915796.5,
+        "outflows": 430738.97,
+        "net_cash_flow": 485057.53,
+        "is_estimate": true
+      },
+      {
+        "month": "2025-05",
+        "inflows": 398929.76,
+        "outflows": 229517.43,
+        "net_cash_flow": 169412.33,
+        "is_estimate": true
+      },
+      {
+        "month": "2025-06",
+        "inflows": 1445057.19,
+        "outflows": 693215.49,
+        "net_cash_flow": 751841.7,
+        "is_estimate": true
+      },
+      {
+        "month": "2025-07",
+        "inflows": 1604198.24,
+        "outflows": 751807.78,
+        "net_cash_flow": 852390.46,
+        "is_estimate": true
+      },
+      {
+        "month": "2025-08",
+        "inflows": 1927323.68,
+        "outflows": 911701.38,
+        "net_cash_flow": 1015622.3,
+        "is_estimate": true
+      },
+      {
+        "month": "2025-09",
+        "inflows": 1654312.92,
+        "outflows": 771581.85,
+        "net_cash_flow": 882731.07,
+        "is_estimate": true
+      },
+      {
+        "month": "2025-10",
+        "inflows": 1955699.25,
+        "outflows": 940089.03,
+        "net_cash_flow": 1015610.22,
+        "is_estimate": true
+      },
+      {
+        "month": "2025-11",
+        "inflows": 1922482.39,
+        "outflows": 911612.84,
+        "net_cash_flow": 1010869.55,
+        "is_estimate": true
+      },
+      {
+        "month": "2025-12",
+        "inflows": 1969158.49,
+        "outflows": 950201.4,
+        "net_cash_flow": 1018957.09,
+        "is_estimate": true
+      },
+      {
+        "month": "2026-01",
+        "inflows": 1999687.3,
+        "outflows": 935383.21,
+        "net_cash_flow": 1064304.09,
+        "is_estimate": true
+      },
+      {
+        "month": "2026-02",
+        "inflows": 2450459.8,
+        "outflows": 1048633.52,
+        "net_cash_flow": 1401826.28,
+        "is_estimate": true
+      },
+      {
+        "month": "2026-03",
+        "inflows": 3548226.91,
+        "outflows": 2243018.86,
+        "net_cash_flow": 1305208.05,
+        "is_estimate": false
+      }
+    ],
+    "fy_totals": {
+      "total_inflows_estimate": 21791332.43,
+      "total_outflows_estimate": 10817501.76,
+      "net_cash_flow_estimate": 10973830.67,
+      "note": "Estimate based on P&L. Replace with actual bank statements for cash-basis accuracy."
     }
   }
 }

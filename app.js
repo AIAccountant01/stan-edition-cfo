@@ -1176,15 +1176,19 @@ function renderMarketing(data) {
   var noteEl = document.getElementById('marketing-note');
   if (noteEl) noteEl.textContent = (mkt.note || '') + ' Currently showing: ' + (mkt.period || '—');
 
-  var m = mkt.march_metrics || {};
+  // Prefer full-year metrics if available, else fall back to march_metrics
+  var fy = mkt.fy_metrics || mkt.march_metrics || {};
+  var march = mkt.march_metrics || {};
   var kpiEl = document.getElementById('marketing-kpis');
   if (kpiEl) {
     kpiEl.innerHTML = '';
     var kpis = [
-      { label: 'Total Ad Spend (Pre-GST)', value: fmtINR(m.total_ad_spend_pre_gst || 0), sub: 'March 2026' },
-      { label: 'Total Ad Spend (With GST)', value: fmtINR(m.total_ad_spend_with_gst || 0), sub: '18% IGST included' },
-      { label: 'Ad / Revenue', value: (m.ad_to_revenue_pct || 0) + '%', sub: 'vs Shopify net sales only' },
-      { label: 'ROAS (Shopify)', value: (m.roas || 0) + 'x', sub: 'conservative — excludes marketplace revenue' },
+      { label: 'FY Ad Spend (Pre-GST)', value: fmtINR(fy.total_ad_spend_pre_gst || 0), sub: 'Apr 2025 – Mar 2026 (Apr-Feb estimated)' },
+      { label: 'FY Ad Spend (With GST)', value: fmtINR(fy.total_ad_spend_with_gst || 0), sub: '18% IGST included' },
+      { label: 'Ad / Revenue (FY)', value: (fy.ad_to_revenue_pct || 0) + '%', sub: 'vs net sales' },
+      { label: 'ROAS (FY)', value: (fy.roas || 0) + 'x', sub: 'Shopify revenue / ad spend' },
+      { label: 'March Actual Spend', value: fmtINR(march.total_ad_spend_pre_gst || 0), sub: 'invoice-verified' },
+      { label: 'March ROAS', value: (march.roas || 0) + 'x', sub: 'Shopify net only' },
     ];
     kpis.forEach(function(k) {
       kpiEl.innerHTML += buildKpiCard(k.label, k.value, k.sub, '');
@@ -1225,7 +1229,8 @@ function renderMarketing(data) {
     mBody.innerHTML = '';
     (mkt.monthly_ad_spend || []).forEach(function(m) {
       var tr = document.createElement('tr');
-      tr.innerHTML = '<td>' + m.month + '</td>' +
+      var flag = m.is_estimate ? ' <span style="color:#999;font-size:11px;">(est.)</span>' : ' <span style="color:#0d8a4a;font-size:11px;">(actual)</span>';
+      tr.innerHTML = '<td>' + m.month + flag + '</td>' +
         '<td>' + fmtINR(m.meta_pre_gst) + '</td>' +
         '<td>' + fmtINR(m.google_pre_gst) + '</td>' +
         '<td><strong>' + fmtINR(m.total_pre_gst) + '</strong></td>' +
@@ -1243,25 +1248,58 @@ function renderCashFlow(data) {
   var noteEl = document.getElementById('cashflow-note');
   if (noteEl) noteEl.textContent = (cf.note || '') + ' Period: ' + (cf.period || '—');
 
+  // Use March actual sub-object for detailed breakdown, FY totals at the top
+  var march = cf.march_2026_actual || {};
+  var fy = cf.fy_totals || {};
+
   var kpiEl = document.getElementById('cashflow-kpis');
   if (kpiEl) {
     kpiEl.innerHTML = '';
     var kpis = [
-      { label: 'Opening Balance', value: fmtINR(cf.opening_balance), sub: '1 Mar 2026' },
-      { label: 'Closing Balance', value: fmtINR(cf.closing_balance), sub: '31 Mar 2026' },
-      { label: 'Total Inflows', value: fmtINR(cf.total_inflows), sub: 'cash received' },
-      { label: 'Total Outflows', value: fmtINR(cf.total_outflows), sub: 'cash paid' },
-      { label: 'Net Cash Flow', value: fmtINR(cf.net_cash_flow), sub: (cf.net_cash_flow >= 0 ? 'cash positive' : 'cash negative') },
+      { label: 'FY Inflows (Est.)', value: fmtINR(cf.total_inflows || 0), sub: 'Accrual proxy: net sales' },
+      { label: 'FY Outflows (Est.)', value: fmtINR(cf.total_outflows || 0), sub: 'COGS + OpEx + Ads' },
+      { label: 'FY Net Cash Flow (Est.)', value: fmtINR(cf.net_cash_flow || 0), sub: 'Apr 25 – Mar 26' },
+      { label: 'March Opening Bal.', value: fmtINR(march.opening_balance || 0), sub: '1 Mar 2026 (HDFC actual)' },
+      { label: 'March Closing Bal.', value: fmtINR(march.closing_balance || 0), sub: '31 Mar 2026 (HDFC actual)' },
+      { label: 'March Net (Actual)', value: fmtINR(march.net_cash_flow || 0), sub: (march.net_cash_flow >= 0 ? 'cash positive' : 'cash negative') },
     ];
     kpis.forEach(function(k) {
-      kpiEl.innerHTML += buildKpiCard(k.label, k.value, k.sub, k.label === 'Net Cash Flow' && cf.net_cash_flow >= 0 ? 'kpi-success' : '');
+      kpiEl.innerHTML += buildKpiCard(k.label, k.value, k.sub, k.label === 'FY Net Cash Flow (Est.)' && cf.net_cash_flow >= 0 ? 'kpi-success' : '');
     });
   }
 
+  // Monthly cash flow summary table (new) — render before inflows/outflows
+  var monthlyTbl = document.getElementById('cashflow-monthly-table');
+  if (!monthlyTbl) {
+    // Inject monthly summary table dynamically if HTML doesn't have it
+    var obsParent = document.getElementById('cashflow-observations');
+    if (obsParent && cf.monthly_summary) {
+      var section = document.createElement('div');
+      section.className = 'card';
+      section.style.marginBottom = '24px';
+      var rowsHtml = '';
+      (cf.monthly_summary || []).forEach(function(r) {
+        var flag = r.is_estimate ? ' <span style="color:#999;font-size:11px;">(est.)</span>' : ' <span style="color:#0d8a4a;font-size:11px;">(actual)</span>';
+        var netColor = r.net_cash_flow >= 0 ? '#0d8a4a' : '#d33';
+        rowsHtml += '<tr><td>' + r.month + flag + '</td>' +
+          '<td>' + fmtINR(r.inflows) + '</td>' +
+          '<td>' + fmtINR(r.outflows) + '</td>' +
+          '<td style="color:' + netColor + ';font-weight:600;">' + fmtINR(r.net_cash_flow) + '</td></tr>';
+      });
+      section.innerHTML = '<h3 class="chart-title">Monthly Cash Flow Summary (FY25-26)</h3>' +
+        '<p class="chart-subtitle">Apr-Feb is accrual approximation; March uses actual bank statement</p>' +
+        '<table class="data-table" id="cashflow-monthly-table"><thead><tr>' +
+        '<th>Month</th><th>Inflows</th><th>Outflows</th><th>Net Cash Flow</th>' +
+        '</tr></thead><tbody>' + rowsHtml + '</tbody></table>';
+      obsParent.parentElement.insertBefore(section, obsParent.parentElement.firstChild.nextSibling);
+    }
+  }
+
+  // March-actual inflows/outflows tables
   var inBody = document.querySelector('#cashflow-inflows-table tbody');
   if (inBody) {
     inBody.innerHTML = '';
-    (cf.inflows_breakdown || []).forEach(function(r) {
+    (march.inflows_breakdown || cf.inflows_breakdown || []).forEach(function(r) {
       var tr = document.createElement('tr');
       tr.innerHTML = '<td>' + r.source + '</td>' +
         '<td>' + r.count + '</td>' +
@@ -1273,7 +1311,7 @@ function renderCashFlow(data) {
   var outBody = document.querySelector('#cashflow-outflows-table tbody');
   if (outBody) {
     outBody.innerHTML = '';
-    (cf.outflows_breakdown || []).forEach(function(r) {
+    (march.outflows_breakdown || cf.outflows_breakdown || []).forEach(function(r) {
       var tr = document.createElement('tr');
       tr.innerHTML = '<td>' + r.source + '</td>' +
         '<td>' + r.count + '</td>' +
@@ -1285,7 +1323,7 @@ function renderCashFlow(data) {
   var obsEl = document.getElementById('cashflow-observations');
   if (obsEl) {
     var html = '<ul style="margin:0;padding-left:20px;line-height:1.7;">';
-    (cf.key_observations || []).forEach(function(o) {
+    (march.key_observations || cf.key_observations || []).forEach(function(o) {
       html += '<li>' + o + '</li>';
     });
     html += '</ul>';
@@ -2182,7 +2220,7 @@ function parseDevice(ua) {
     // Pre-launch spend
     if (msg.match(/pre.?launch|fy24|fy 24/)) {
       var fy = data.fy24_pl;
-      if (!fy) return 'FY24-25 pre-launch data is not loaded in this dashboard. The current P&L covers FY25-26 (Apr 2025 - Feb 2026).';
+      if (!fy) return 'FY24-25 pre-launch data is not loaded in this dashboard. The current P&L covers FY25-26 (Apr 2025 - Mar 2026).';
       return 'FY24-25 pre-launch spend: ' + fmtCrL(fy.total_cost) + '. Note: This is excluded from the current P&L which covers FY25-26 only.';
     }
 
