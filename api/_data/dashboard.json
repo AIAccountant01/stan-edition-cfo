@@ -2,8 +2,8 @@
   "client": "Stan Edition",
   "brand": "Stan Edition",
   "website": "stanedition.com",
-  "generated_at": "2026-03-23T14:43:43.607883",
-  "period": "Apr 2025 \u2013 Feb 2026",
+  "generated_at": "2026-05-25T17:07:54.719656",
+  "period": "Apr 2025 \u2013 Mar 2026",
   "currency": "INR",
   "overview": {
     "kpis": [
@@ -200,9 +200,22 @@
         "aov": 6794.0,
         "discounts": 758499.19,
         "returns": 106513.81
+      },
+      {
+        "month": "2026-03",
+        "orders": 682,
+        "gross_sales": 4708551.0,
+        "net_sales": 3548226.91,
+        "discounts": 1021265.09,
+        "returns": 139059.0,
+        "total_sales": 0,
+        "sessions": 0,
+        "visitors": 0,
+        "conversion_rate": 0,
+        "aov": 0
       }
     ],
-    "period": "Apr 2025 \u2013 Feb 2026",
+    "period": "Apr 2025 \u2013 Mar 2026",
     "profitability_kpis": [
       {
         "label": "Gross Profit",
@@ -3515,7 +3528,7 @@
         "pct_of_gross": 0.2
       }
     ],
-    "period": "Apr 2025 \u2013 Feb 2026",
+    "period": "Apr 2025 \u2013 Mar 2026",
     "note": "Payments CSV covers 3,526 of 3,879 orders (91%). 353 orders have no gateway payment record. Primary gateway: Gokwik (UPI + Cards). COD ~13% of transactions.",
     "reconciliation": {
       "revenue_gross": 24178676.400000002,
@@ -6078,6 +6091,12 @@
         "sessions": 38553,
         "orders": 488,
         "conversion": 1.27
+      },
+      {
+        "month": "2026-03",
+        "sessions": 53700,
+        "orders": 682,
+        "conversion": 1.27
       }
     ]
   },
@@ -6289,7 +6308,7 @@
       {
         "title": "No Marketing Attribution Data",
         "detail": "We have FY24-25 Meta Ads spend (\u20b93.8L) but no FY25-26 ad data. Cannot calculate ROAS, CPA, or true CAC.",
-        "action": "Share Meta Ads export for Apr 2025 \u2013 Feb 2026 to compute marketing efficiency."
+        "action": "Share Meta Ads export for Apr 2025 \u2013 Feb 2026 (March now ingested) to compute marketing efficiency."
       }
     ],
     "opportunities": [
@@ -6309,7 +6328,7 @@
     "available": [
       {
         "source": "Shopify Sales CSV",
-        "period": "Apr 2025 \u2013 Feb 2026",
+        "period": "Apr 2025 \u2013 Mar 2026",
         "records": "334 days",
         "status": "complete"
       },
@@ -6321,19 +6340,19 @@
       },
       {
         "source": "Shopify Sessions CSV",
-        "period": "Apr 2025 \u2013 Feb 2026",
+        "period": "Apr 2025 \u2013 Mar 2026",
         "records": "343K sessions",
         "status": "complete"
       },
       {
         "source": "Shopify Discounts CSV",
-        "period": "Apr 2025 \u2013 Feb 2026",
+        "period": "Apr 2025 \u2013 Mar 2026",
         "records": "66 codes",
         "status": "complete"
       },
       {
         "source": "Order Exports",
-        "period": "Apr 2025 \u2013 Feb 2026",
+        "period": "Apr 2025 \u2013 Mar 2026",
         "records": "3,200 orders",
         "status": "complete"
       },
@@ -6345,19 +6364,19 @@
       },
       {
         "source": "Taxes Report",
-        "period": "Apr 2025 \u2013 Feb 2026",
+        "period": "Apr 2025 \u2013 Mar 2026",
         "records": "\u20b9903 total",
         "status": "complete"
       },
       {
         "source": "Returns Report",
-        "period": "Apr 2025 \u2013 Feb 2026",
+        "period": "Apr 2025 \u2013 Mar 2026",
         "records": "334 days",
         "status": "complete"
       },
       {
         "source": "Payment Gateways",
-        "period": "Apr 2025 \u2013 Feb 2026",
+        "period": "Apr 2025 \u2013 Mar 2026",
         "records": "3,526 txns",
         "status": "complete"
       },
@@ -6460,6 +6479,12 @@
         "orders": 438,
         "gmv": 913071,
         "aov": 3553
+      },
+      {
+        "month": "2026-03",
+        "orders": 682,
+        "gmv": 4708551.0,
+        "aov": 5202.68
       }
     ],
     "fulfillment": [
@@ -6612,6 +6637,14 @@
         "cogs": 553350,
         "gross_profit": 1255029,
         "margin_pct": 69.4
+      },
+      {
+        "month": "2026-03",
+        "units": 1172,
+        "revenue": 3548226.91,
+        "cogs": 1404220,
+        "gross_profit": 2144006.91,
+        "margin_pct": 60.4
       }
     ],
     "top_products": [
@@ -6988,7 +7021,7 @@
         "pct_of_total": 0.0
       }
     ],
-    "period": "Apr 2025 \u2013 Feb 2026",
+    "period": "Apr 2025 \u2013 Mar 2026",
     "note": "GST breakdown from Shopify taxes report. 23 states with tax activity. Karnataka (home state) uses CGST+SGST, other states use IGST.",
     "effective_tax_rate": 1.82
   },
@@ -7040,14 +7073,18 @@
       {
         "month": "2026-02",
         "returns_value": 106514
+      },
+      {
+        "month": "2026-03",
+        "returns_value": 139059.0
       }
     ],
-    "period": "Apr 2025 \u2013 Feb 2026"
+    "period": "Apr 2025 \u2013 Mar 2026"
   },
   "profit_loss": {
-    "period": "Apr 2025 \u2013 Feb 2026",
+    "period": "Apr 2025 \u2013 Mar 2026",
     "currency": "INR",
-    "note": "P&L based on Shopify sales data + actual COGS provided. Apr-Jun COGS estimated using avg COGS/order from Jul-Feb actuals. Shipping, packaging, and gateway fees are estimated.",
+    "note": "P&L based on Shopify sales data + actual COGS provided. Apr-Jun COGS estimated using avg COGS/order from Jul-Mar actuals. Shipping, packaging, and gateway fees are estimated.",
     "summary": {
       "gross_sales": 28887227.4,
       "discounts": 5987503.66,
