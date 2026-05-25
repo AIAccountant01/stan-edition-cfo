@@ -222,6 +222,8 @@ function renderDashboard(data) {
     { name: 'Discounts', fn: renderDiscounts },
     { name: 'Sessions', fn: renderSessions },
     { name: 'ProfitLoss', fn: renderProfitLoss },
+    { name: 'Marketing', fn: renderMarketing },
+    { name: 'CashFlow', fn: renderCashFlow },
     { name: 'FY24', fn: renderFY24 },
     { name: 'Intelligence', fn: renderIntelligence },
     { name: 'Advisory', fn: renderAdvisory },
@@ -1163,6 +1165,131 @@ function renderProfitLoss(data) {
         '<td class="text-right font-bold">' + (totNet > 0 ? fmtPct(totEbitda / totNet * 100) : '—') + '</td>';
       mtbody.appendChild(totTr);
     }
+  }
+}
+
+// ===== 9a. Marketing =====
+function renderMarketing(data) {
+  var mkt = data.marketing;
+  if (!mkt) return;
+
+  var noteEl = document.getElementById('marketing-note');
+  if (noteEl) noteEl.textContent = (mkt.note || '') + ' Currently showing: ' + (mkt.period || '—');
+
+  var m = mkt.march_metrics || {};
+  var kpiEl = document.getElementById('marketing-kpis');
+  if (kpiEl) {
+    kpiEl.innerHTML = '';
+    var kpis = [
+      { label: 'Total Ad Spend (Pre-GST)', value: fmtINR(m.total_ad_spend_pre_gst || 0), sub: 'March 2026' },
+      { label: 'Total Ad Spend (With GST)', value: fmtINR(m.total_ad_spend_with_gst || 0), sub: '18% IGST included' },
+      { label: 'Ad / Revenue', value: (m.ad_to_revenue_pct || 0) + '%', sub: 'vs Shopify net sales only' },
+      { label: 'ROAS (Shopify)', value: (m.roas || 0) + 'x', sub: 'conservative — excludes marketplace revenue' },
+    ];
+    kpis.forEach(function(k) {
+      kpiEl.innerHTML += buildKpiCard(k.label, k.value, k.sub, '');
+    });
+  }
+
+  // Channels
+  var chBody = document.querySelector('#marketing-channels-table tbody');
+  if (chBody) {
+    chBody.innerHTML = '';
+    (mkt.channels || []).forEach(function(c) {
+      var tr = document.createElement('tr');
+      tr.innerHTML = '<td>' + c.channel + '</td>' +
+        '<td>' + fmtINR(c.pre_gst) + '</td>' +
+        '<td>' + fmtINR(c.with_gst) + '</td>' +
+        '<td>' + c.pct_of_total + '%</td>';
+      chBody.appendChild(tr);
+    });
+  }
+
+  // Top campaigns
+  var campBody = document.querySelector('#marketing-campaigns-table tbody');
+  if (campBody) {
+    campBody.innerHTML = '';
+    (mkt.top_meta_campaigns || []).forEach(function(c, i) {
+      var tr = document.createElement('tr');
+      tr.innerHTML = '<td>' + (i+1) + '</td>' +
+        '<td>' + c.campaign + '</td>' +
+        '<td>' + fmtINR(c.spend) + '</td>' +
+        '<td>' + c.pct + '%</td>';
+      campBody.appendChild(tr);
+    });
+  }
+
+  // Monthly
+  var mBody = document.querySelector('#marketing-monthly-table tbody');
+  if (mBody) {
+    mBody.innerHTML = '';
+    (mkt.monthly_ad_spend || []).forEach(function(m) {
+      var tr = document.createElement('tr');
+      tr.innerHTML = '<td>' + m.month + '</td>' +
+        '<td>' + fmtINR(m.meta_pre_gst) + '</td>' +
+        '<td>' + fmtINR(m.google_pre_gst) + '</td>' +
+        '<td><strong>' + fmtINR(m.total_pre_gst) + '</strong></td>' +
+        '<td>' + fmtINR(m.total_with_gst) + '</td>';
+      mBody.appendChild(tr);
+    });
+  }
+}
+
+// ===== 9b. Cash Flow =====
+function renderCashFlow(data) {
+  var cf = data.cash_flow;
+  if (!cf) return;
+
+  var noteEl = document.getElementById('cashflow-note');
+  if (noteEl) noteEl.textContent = (cf.note || '') + ' Period: ' + (cf.period || '—');
+
+  var kpiEl = document.getElementById('cashflow-kpis');
+  if (kpiEl) {
+    kpiEl.innerHTML = '';
+    var kpis = [
+      { label: 'Opening Balance', value: fmtINR(cf.opening_balance), sub: '1 Mar 2026' },
+      { label: 'Closing Balance', value: fmtINR(cf.closing_balance), sub: '31 Mar 2026' },
+      { label: 'Total Inflows', value: fmtINR(cf.total_inflows), sub: 'cash received' },
+      { label: 'Total Outflows', value: fmtINR(cf.total_outflows), sub: 'cash paid' },
+      { label: 'Net Cash Flow', value: fmtINR(cf.net_cash_flow), sub: (cf.net_cash_flow >= 0 ? 'cash positive' : 'cash negative') },
+    ];
+    kpis.forEach(function(k) {
+      kpiEl.innerHTML += buildKpiCard(k.label, k.value, k.sub, k.label === 'Net Cash Flow' && cf.net_cash_flow >= 0 ? 'kpi-success' : '');
+    });
+  }
+
+  var inBody = document.querySelector('#cashflow-inflows-table tbody');
+  if (inBody) {
+    inBody.innerHTML = '';
+    (cf.inflows_breakdown || []).forEach(function(r) {
+      var tr = document.createElement('tr');
+      tr.innerHTML = '<td>' + r.source + '</td>' +
+        '<td>' + r.count + '</td>' +
+        '<td>' + fmtINR(r.amount) + '</td>';
+      inBody.appendChild(tr);
+    });
+  }
+
+  var outBody = document.querySelector('#cashflow-outflows-table tbody');
+  if (outBody) {
+    outBody.innerHTML = '';
+    (cf.outflows_breakdown || []).forEach(function(r) {
+      var tr = document.createElement('tr');
+      tr.innerHTML = '<td>' + r.source + '</td>' +
+        '<td>' + r.count + '</td>' +
+        '<td>' + fmtINR(r.amount) + '</td>';
+      outBody.appendChild(tr);
+    });
+  }
+
+  var obsEl = document.getElementById('cashflow-observations');
+  if (obsEl) {
+    var html = '<ul style="margin:0;padding-left:20px;line-height:1.7;">';
+    (cf.key_observations || []).forEach(function(o) {
+      html += '<li>' + o + '</li>';
+    });
+    html += '</ul>';
+    obsEl.innerHTML = html;
   }
 }
 

@@ -245,6 +245,14 @@
       <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
       Profit &amp; Loss
     </a>
+    <a href="#" data-section="marketing">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-5v12L3 13v-2z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
+      Marketing
+    </a>
+    <a href="#" data-section="cashflow">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+      Cash Flow
+    </a>
     <a href="#" data-section="fy24" style="display:none">
       <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/><line x1="6" y1="14" x2="8" y2="14"/><line x1="12" y1="14" x2="16" y2="14"/></svg>
       FY24-25 P&amp;L
@@ -568,6 +576,87 @@
     <div class="gap-note">
       <span class="gap-icon">⚠</span>
       <span id="pl-note">Shipping, packaging, and gateway fees are estimated. Share actual logistics and payment data for precise P&amp;L.</span>
+    </div>
+  </section>
+
+  <!-- Marketing -->
+  <section id="sec-marketing" class="section">
+    <div class="section-header">
+      <h1>Marketing</h1>
+      <p id="marketing-note">Ad spend, ROAS, and campaign performance.</p>
+    </div>
+    <div class="kpi-grid" id="marketing-kpis"></div>
+    <div class="chart-grid">
+      <div class="chart-card">
+        <div class="chart-title">Channel Breakdown</div>
+        <div class="chart-subtitle">Meta vs Google share of ad spend</div>
+        <div class="table-wrap">
+          <table id="marketing-channels-table">
+            <thead><tr><th>Channel</th><th>Pre-GST</th><th>With GST</th><th>% of Total</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Top Meta Campaigns</div>
+        <div class="chart-subtitle">By spend, March 2026</div>
+        <div class="table-wrap">
+          <table id="marketing-campaigns-table">
+            <thead><tr><th>#</th><th>Campaign</th><th>Spend (Pre-GST)</th><th>% of Meta</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="chart-grid">
+      <div class="chart-card full-width">
+        <div class="chart-title">Monthly Ad Spend</div>
+        <div class="chart-subtitle">Invoice values; historical (Apr 2025 – Feb 2026) pending</div>
+        <div class="table-wrap">
+          <table id="marketing-monthly-table">
+            <thead><tr><th>Month</th><th>Meta (Pre-GST)</th><th>Google (Pre-GST)</th><th>Total Pre-GST</th><th>Total w/ GST</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cash Flow -->
+  <section id="sec-cashflow" class="section">
+    <div class="section-header">
+      <h1>Cash Flow</h1>
+      <p id="cashflow-note">Direct cash flow from HDFC bank statement.</p>
+    </div>
+    <div class="kpi-grid" id="cashflow-kpis"></div>
+    <div class="chart-grid">
+      <div class="chart-card">
+        <div class="chart-title">Inflows Breakdown</div>
+        <div class="chart-subtitle">Cash received in March</div>
+        <div class="table-wrap">
+          <table id="cashflow-inflows-table">
+            <thead><tr><th>Source</th><th>Count</th><th>Amount</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Outflows Breakdown</div>
+        <div class="chart-subtitle">Cash paid in March</div>
+        <div class="table-wrap">
+          <table id="cashflow-outflows-table">
+            <thead><tr><th>Source</th><th>Count</th><th>Amount</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="chart-grid">
+      <div class="chart-card full-width">
+        <div class="chart-title">Reconciliation Notes</div>
+        <div class="chart-subtitle">Key gaps between accrual P&amp;L and cash movements</div>
+        <div id="cashflow-observations"></div>
+      </div>
     </div>
   </section>
 

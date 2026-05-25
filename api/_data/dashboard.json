@@ -9,19 +9,19 @@
     "kpis": [
       {
         "label": "Total Orders",
-        "value": 3879,
+        "value": 4561,
         "format": "number",
         "delta": "+14.6% MoM"
       },
       {
         "label": "Gross Sales",
-        "value": 24178676.400000002,
+        "value": 28887227.4,
         "format": "currency",
         "delta": ""
       },
       {
         "label": "Net Sales",
-        "value": 18243105.52,
+        "value": 21791332.43,
         "format": "currency",
         "delta": "+22.5% MoM"
       },
@@ -206,27 +206,27 @@
     "profitability_kpis": [
       {
         "label": "Gross Profit",
-        "value": 13973995.52,
+        "value": 16118002.43,
         "format": "currency"
       },
       {
         "label": "Gross Margin",
-        "value": 76.6,
+        "value": 74.0,
         "format": "percent"
       },
       {
         "label": "COGS",
-        "value": 4269110,
+        "value": 5673330,
         "format": "currency"
       },
       {
         "label": "EBITDA (Est.)",
-        "value": 13201838.52,
+        "value": 15196819.9,
         "format": "currency"
       },
       {
         "label": "EBITDA Margin",
-        "value": 72.4,
+        "value": 69.7,
         "format": "percent"
       },
       {
@@ -240,7 +240,7 @@
       "return_rate": 4.0
     },
     "tax_kpi": {
-      "total_tax": 332850.91,
+      "total_tax": 405076.97,
       "effective_rate": 1.82
     },
     "payments_kpi": {
@@ -3268,27 +3268,27 @@
     "categories": [
       {
         "category": "Linen Shirts",
-        "units_sold": 2581,
-        "revenue": 11354428,
-        "avg_price": 4401,
+        "units_sold": 3415,
+        "revenue": 15489816.0,
+        "avg_price": 4536,
         "unique_skus": 130,
         "cogs_per_unit": 1450,
         "gross_margin_pct": 67.0
       },
       {
         "category": "Linen Pants",
-        "units_sold": 226,
-        "revenue": 893328,
-        "avg_price": 3955,
+        "units_sold": 274,
+        "revenue": 1112991.0,
+        "avg_price": 4062,
         "unique_skus": 20,
         "cogs_per_unit": 1380,
         "gross_margin_pct": 65.1
       },
       {
         "category": "T-Shirts (Supima)",
-        "units_sold": 351,
-        "revenue": 468650,
-        "avg_price": 1336,
+        "units_sold": 633,
+        "revenue": 811950.0,
+        "avg_price": 1283,
         "unique_skus": 37,
         "cogs_per_unit": 420,
         "gross_margin_pct": 68.5
@@ -3304,9 +3304,9 @@
       },
       {
         "category": "Pants",
-        "units_sold": 32,
-        "revenue": 49100,
-        "avg_price": 1532,
+        "units_sold": 40,
+        "revenue": 59300.0,
+        "avg_price": 1482,
         "unique_skus": 13,
         "cogs_per_unit": 1280,
         "gross_margin_pct": 16.6
@@ -3540,10 +3540,10 @@
     }
   },
   "customers": {
-    "total_customers": 2408,
-    "new_customers": 1928,
-    "repeat_customers": 480,
-    "repeat_rate": 19.9,
+    "total_customers": 2883,
+    "new_customers": 2403,
+    "repeat_customers": 678,
+    "repeat_rate": 23.5,
     "avg_ltv": 2825,
     "avg_orders_per_customer": 1.32,
     "frequency_distribution": [
@@ -3593,120 +3593,153 @@
     "states": [
       {
         "state": "Maharashtra",
-        "orders": 475,
-        "revenue": 1590814.73,
+        "orders": 622,
+        "revenue": 2319029.24,
         "customers": 385,
         "aov": 3349,
         "pct_of_orders": 23.9,
-        "pct_of_revenue": 23.3
+        "pct_of_revenue": 23.3,
+        "pct_revenue": 22.5
       },
       {
         "state": "Karnataka",
-        "orders": 265,
-        "revenue": 861320.13,
+        "orders": 362,
+        "revenue": 1366326.34,
         "customers": 217,
         "aov": 3250,
         "pct_of_orders": 13.3,
-        "pct_of_revenue": 12.6
+        "pct_of_revenue": 12.6,
+        "pct_revenue": 13.3
       },
       {
         "state": "Gujarat",
-        "orders": 208,
-        "revenue": 716114.54,
+        "orders": 259,
+        "revenue": 1044318.31,
         "customers": 154,
         "aov": 3443,
         "pct_of_orders": 10.5,
-        "pct_of_revenue": 10.5
+        "pct_of_revenue": 10.5,
+        "pct_revenue": 10.2
       },
       {
         "state": "Telangana",
-        "orders": 193,
-        "revenue": 670103.54,
+        "orders": 250,
+        "revenue": 964017.6,
         "customers": 156,
         "aov": 3472,
         "pct_of_orders": 9.7,
-        "pct_of_revenue": 9.8
-      },
-      {
-        "state": "Tamil Nadu",
-        "orders": 121,
-        "revenue": 429037.19,
-        "customers": 98,
-        "aov": 3546,
-        "pct_of_orders": 6.1,
-        "pct_of_revenue": 6.3
-      },
-      {
-        "state": "Kerala",
-        "orders": 100,
-        "revenue": 349769.18,
-        "customers": 79,
-        "aov": 3498,
-        "pct_of_orders": 5.0,
-        "pct_of_revenue": 5.1
+        "pct_of_revenue": 9.8,
+        "pct_revenue": 9.4
       },
       {
         "state": "Delhi",
-        "orders": 97,
-        "revenue": 336711.78,
+        "orders": 149,
+        "revenue": 596564.12,
         "customers": 77,
         "aov": 3471,
         "pct_of_orders": 4.9,
-        "pct_of_revenue": 4.9
+        "pct_of_revenue": 4.9,
+        "pct_revenue": 5.8
+      },
+      {
+        "state": "Tamil Nadu",
+        "orders": 144,
+        "revenue": 574902.38,
+        "customers": 98,
+        "aov": 3546,
+        "pct_of_orders": 6.1,
+        "pct_of_revenue": 6.3,
+        "pct_revenue": 5.6
       },
       {
         "state": "Uttar Pradesh",
-        "orders": 82,
-        "revenue": 291985.24,
+        "orders": 130,
+        "revenue": 563567.67,
         "customers": 72,
         "aov": 3561,
         "pct_of_orders": 4.1,
-        "pct_of_revenue": 4.3
-      },
-      {
-        "state": "Andhra Pradesh",
-        "orders": 81,
-        "revenue": 265135.2,
-        "customers": 64,
-        "aov": 3273,
-        "pct_of_orders": 4.1,
-        "pct_of_revenue": 3.9
+        "pct_of_revenue": 4.3,
+        "pct_revenue": 5.5
       },
       {
         "state": "Haryana",
-        "orders": 73,
-        "revenue": 265671.45,
+        "orders": 112,
+        "revenue": 495903.59,
         "customers": 65,
         "aov": 3639,
         "pct_of_orders": 3.7,
-        "pct_of_revenue": 3.9
+        "pct_of_revenue": 3.9,
+        "pct_revenue": 4.8
       },
       {
-        "state": "West Bengal",
-        "orders": 45,
-        "revenue": 158019.88,
-        "customers": 36,
-        "aov": 3512,
-        "pct_of_orders": 2.3,
-        "pct_of_revenue": 2.3
+        "state": "Kerala",
+        "orders": 125,
+        "revenue": 455347.46,
+        "customers": 79,
+        "aov": 3498,
+        "pct_of_orders": 5.0,
+        "pct_of_revenue": 5.1,
+        "pct_revenue": 4.4
+      },
+      {
+        "state": "Andhra Pradesh",
+        "orders": 100,
+        "revenue": 386477.36,
+        "customers": 64,
+        "aov": 3273,
+        "pct_of_orders": 4.1,
+        "pct_of_revenue": 3.9,
+        "pct_revenue": 3.8
       },
       {
         "state": "Rajasthan",
-        "orders": 30,
-        "revenue": 112266.89,
+        "orders": 55,
+        "revenue": 288808.27,
         "customers": 25,
         "aov": 3742,
         "pct_of_orders": 1.5,
-        "pct_of_revenue": 1.6
+        "pct_of_revenue": 1.6,
+        "pct_revenue": 2.8
+      },
+      {
+        "state": "West Bengal",
+        "orders": 62,
+        "revenue": 249633.64,
+        "customers": 36,
+        "aov": 3512,
+        "pct_of_orders": 2.3,
+        "pct_of_revenue": 2.3,
+        "pct_revenue": 2.4
+      },
+      {
+        "state": "Punjab",
+        "orders": 41,
+        "revenue": 184761.77,
+        "customers": 17,
+        "aov": 4028,
+        "pct_of_orders": 1.2,
+        "pct_of_revenue": 1.4,
+        "pct_revenue": 1.8
       },
       {
         "state": "Chhattisgarh",
-        "orders": 28,
-        "revenue": 110972.88,
+        "orders": 36,
+        "revenue": 152014.59,
         "customers": 23,
         "aov": 3963,
         "pct_of_orders": 1.4,
-        "pct_of_revenue": 1.6
+        "pct_of_revenue": 1.6,
+        "pct_revenue": 1.5
+      },
+      {
+        "state": "Madhya Pradesh",
+        "orders": 36,
+        "revenue": 136740.09,
+        "customers": 21,
+        "aov": 2953,
+        "pct_of_orders": 1.2,
+        "pct_of_revenue": 1.0,
+        "pct_revenue": 1.3
       },
       {
         "state": "Odisha",
@@ -3715,25 +3748,8 @@
         "customers": 19,
         "aov": 3833,
         "pct_of_orders": 1.3,
-        "pct_of_revenue": 1.5
-      },
-      {
-        "state": "Madhya Pradesh",
-        "orders": 23,
-        "revenue": 67923.74,
-        "customers": 21,
-        "aov": 2953,
-        "pct_of_orders": 1.2,
-        "pct_of_revenue": 1.0
-      },
-      {
-        "state": "Punjab",
-        "orders": 23,
-        "revenue": 92634.1,
-        "customers": 17,
-        "aov": 4028,
-        "pct_of_orders": 1.2,
-        "pct_of_revenue": 1.4
+        "pct_of_revenue": 1.5,
+        "pct_revenue": 1.0
       },
       {
         "state": "Goa",
@@ -3742,16 +3758,8 @@
         "customers": 19,
         "aov": 3582,
         "pct_of_orders": 1.1,
-        "pct_of_revenue": 1.2
-      },
-      {
-        "state": "Bihar",
-        "orders": 17,
-        "revenue": 53140.87,
-        "customers": 17,
-        "aov": 3126,
-        "pct_of_orders": 0.9,
-        "pct_of_revenue": 0.8
+        "pct_of_revenue": 1.2,
+        "pct_revenue": 0.8
       },
       {
         "state": "Jammu and Kashmir",
@@ -3760,7 +3768,18 @@
         "customers": 12,
         "aov": 3680,
         "pct_of_orders": 0.8,
-        "pct_of_revenue": 0.8
+        "pct_of_revenue": 0.8,
+        "pct_revenue": 0.5
+      },
+      {
+        "state": "Bihar",
+        "orders": 17,
+        "revenue": 53140.87,
+        "customers": 17,
+        "aov": 3126,
+        "pct_of_orders": 0.9,
+        "pct_of_revenue": 0.8,
+        "pct_revenue": 0.5
       },
       {
         "state": "Assam",
@@ -3769,7 +3788,8 @@
         "customers": 13,
         "aov": 3705,
         "pct_of_orders": 0.7,
-        "pct_of_revenue": 0.7
+        "pct_of_revenue": 0.7,
+        "pct_revenue": 0.5
       },
       {
         "state": "Chandigarh",
@@ -3778,7 +3798,8 @@
         "customers": 5,
         "aov": 3625,
         "pct_of_orders": 0.5,
-        "pct_of_revenue": 0.5
+        "pct_of_revenue": 0.5,
+        "pct_revenue": 0.4
       },
       {
         "state": "Jharkhand",
@@ -3787,16 +3808,8 @@
         "customers": 6,
         "aov": 3256,
         "pct_of_orders": 0.5,
-        "pct_of_revenue": 0.4
-      },
-      {
-        "state": "Uttarakhand",
-        "orders": 6,
-        "revenue": 18779.63,
-        "customers": 6,
-        "aov": 3130,
-        "pct_of_orders": 0.3,
-        "pct_of_revenue": 0.3
+        "pct_of_revenue": 0.4,
+        "pct_revenue": 0.3
       },
       {
         "state": "Manipur",
@@ -3805,7 +3818,18 @@
         "customers": 4,
         "aov": 4110,
         "pct_of_orders": 0.3,
-        "pct_of_revenue": 0.3
+        "pct_of_revenue": 0.3,
+        "pct_revenue": 0.2
+      },
+      {
+        "state": "Uttarakhand",
+        "orders": 6,
+        "revenue": 18779.63,
+        "customers": 6,
+        "aov": 3130,
+        "pct_of_orders": 0.3,
+        "pct_of_revenue": 0.3,
+        "pct_revenue": 0.2
       },
       {
         "state": "Himachal Pradesh",
@@ -3814,16 +3838,8 @@
         "customers": 2,
         "aov": 3834,
         "pct_of_orders": 0.2,
-        "pct_of_revenue": 0.2
-      },
-      {
-        "state": "Tripura",
-        "orders": 3,
-        "revenue": 11133.52,
-        "customers": 3,
-        "aov": 3711,
-        "pct_of_orders": 0.2,
-        "pct_of_revenue": 0.2
+        "pct_of_revenue": 0.2,
+        "pct_revenue": 0.1
       },
       {
         "state": "Meghalaya",
@@ -3832,16 +3848,18 @@
         "customers": 3,
         "aov": 4281,
         "pct_of_orders": 0.2,
-        "pct_of_revenue": 0.2
+        "pct_of_revenue": 0.2,
+        "pct_revenue": 0.1
       },
       {
-        "state": "Nagaland",
+        "state": "Tripura",
         "orders": 3,
-        "revenue": 9206.37,
+        "revenue": 11133.52,
         "customers": 3,
-        "aov": 3069,
+        "aov": 3711,
         "pct_of_orders": 0.2,
-        "pct_of_revenue": 0.1
+        "pct_of_revenue": 0.2,
+        "pct_revenue": 0.1
       },
       {
         "state": "Puducherry",
@@ -3850,7 +3868,18 @@
         "customers": 2,
         "aov": 3704,
         "pct_of_orders": 0.2,
-        "pct_of_revenue": 0.2
+        "pct_of_revenue": 0.2,
+        "pct_revenue": 0.1
+      },
+      {
+        "state": "Nagaland",
+        "orders": 3,
+        "revenue": 9206.37,
+        "customers": 3,
+        "aov": 3069,
+        "pct_of_orders": 0.2,
+        "pct_of_revenue": 0.1,
+        "pct_revenue": 0.1
       },
       {
         "state": "Andaman and Nicobar Islands",
@@ -3859,7 +3888,8 @@
         "customers": 2,
         "aov": 3155,
         "pct_of_orders": 0.1,
-        "pct_of_revenue": 0.1
+        "pct_of_revenue": 0.1,
+        "pct_revenue": 0.1
       },
       {
         "state": "Sikkim",
@@ -3868,7 +3898,8 @@
         "customers": 1,
         "aov": 4419,
         "pct_of_orders": 0.1,
-        "pct_of_revenue": 0.1
+        "pct_of_revenue": 0.1,
+        "pct_revenue": 0.0
       }
     ],
     "top_cities": [
@@ -3883,14 +3914,24 @@
         "revenue": 476924.61
       },
       {
-        "city": "PUNE, Maharashtra",
-        "orders": 79,
-        "revenue": 252084.15
+        "city": "Mumbai",
+        "orders": 77,
+        "revenue": 392652.11
+      },
+      {
+        "city": "Bangalore",
+        "orders": 63,
+        "revenue": 324171.53
       },
       {
         "city": "HYDERABAD, Telangana",
         "orders": 78,
         "revenue": 261538.98
+      },
+      {
+        "city": "PUNE, Maharashtra",
+        "orders": 79,
+        "revenue": 252084.15
       },
       {
         "city": "AHMEDABAD, Gujarat",
@@ -3913,14 +3954,34 @@
         "revenue": 151928.92
       },
       {
-        "city": "SURAT, Gujarat",
-        "orders": 33,
-        "revenue": 108452.51
+        "city": "Hyderabad",
+        "orders": 31,
+        "revenue": 142973.83
+      },
+      {
+        "city": "Ahmedabad",
+        "orders": 19,
+        "revenue": 136583.24
+      },
+      {
+        "city": "Gurgaon",
+        "orders": 25,
+        "revenue": 108940.91
       },
       {
         "city": "ERNAKULAM, Kerala",
         "orders": 33,
         "revenue": 108858.04
+      },
+      {
+        "city": "SURAT, Gujarat",
+        "orders": 33,
+        "revenue": 108452.51
+      },
+      {
+        "city": "Pune",
+        "orders": 24,
+        "revenue": 108153.1
       },
       {
         "city": "RANGA REDDY, Telangana",
@@ -3933,26 +3994,21 @@
         "revenue": 91048.68
       },
       {
-        "city": "NEW DELHI, Delhi",
-        "orders": 21,
-        "revenue": 69147.36
+        "city": "Ranga Reddy",
+        "orders": 12,
+        "revenue": 82316.75
       },
       {
-        "city": "COIMBATORE, Tamil Nadu",
-        "orders": 20,
-        "revenue": 62649.07
-      },
-      {
-        "city": "MEDCHAL MALKAJGIRI, Telangana",
-        "orders": 19,
-        "revenue": 64974.15
+        "city": "New Delhi",
+        "orders": 16,
+        "revenue": 81473.59
       }
     ],
     "total_states": 31,
-    "coverage_orders": 1986,
+    "coverage_orders": 2668,
     "coverage_pct": 51.2,
-    "note": "Geographic data from 3200 order export rows. Covers 1986 unique orders (51.2% of 3,879 total). 679 orders have no geographic data in the exports.",
-    "period": "Apr 2025 \u2013 Feb 2026"
+    "note": "Shopify orders only. Marketplace orders excluded. March 2026 added. Myntra/AJIO March pending.",
+    "period": "Apr 2025 - Mar 2026"
   },
   "discounts": {
     "total_discount_value": 4966238.57,
@@ -6993,20 +7049,21 @@
     "currency": "INR",
     "note": "P&L based on Shopify sales data + actual COGS provided. Apr-Jun COGS estimated using avg COGS/order from Jul-Feb actuals. Shipping, packaging, and gateway fees are estimated.",
     "summary": {
-      "gross_sales": 24178676.400000002,
-      "discounts": 4966238.57,
-      "returns": 969332.31,
-      "net_sales": 18243105.52,
-      "cogs": 4269110,
-      "gross_profit": 13973995.52,
-      "gross_margin_pct": 76.6,
-      "shipping": 310320,
-      "payment_gateway_fees": 364862.0,
-      "packaging": 96975,
-      "total_operating_expenses": 772157.0,
-      "ebitda": 13201838.52,
-      "ebitda_margin_pct": 72.4,
-      "net_profit_before_tax": 13201838.52
+      "gross_sales": 28887227.4,
+      "discounts": 5987503.66,
+      "returns": 1108391.31,
+      "net_sales": 21791332.43,
+      "cogs": 5673330,
+      "gross_profit": 16118002.43,
+      "gross_margin_pct": 74.0,
+      "shipping": 370639.86,
+      "payment_gateway_fees": 435826.54,
+      "packaging": 114716.13,
+      "total_operating_expenses": 921182.53,
+      "ebitda": 15196819.9,
+      "ebitda_margin_pct": 69.7,
+      "net_profit_before_tax": 15196819.9,
+      "period": "Apr 2025 - Mar 2026"
     },
     "monthly": [
       {
@@ -7195,38 +7252,54 @@
         "ebitda": 1928894.8,
         "ebitda_margin_pct": 78.7,
         "orders": 488
+      },
+      {
+        "month": "2026-03",
+        "gross_sales": 4708551.0,
+        "discounts": 1021265.09,
+        "returns": 139059.0,
+        "net_sales": 3548226.91,
+        "cogs": 1404220,
+        "gross_profit": 2144006.91,
+        "gross_margin_pct": 60.4,
+        "shipping": 60319.86,
+        "payment_gateway_fees": 70964.54,
+        "packaging": 17741.13,
+        "ebitda": 1994981.38,
+        "ebitda_margin_pct": 56.2,
+        "channel_note": "Shopify only \u2014 Myntra/AJIO pending"
       }
     ],
     "by_category": [
       {
         "category": "Linen Shirts",
-        "units_sold": 2581,
-        "revenue": 11354428,
-        "cogs": 3742450,
-        "gross_profit": 7611978,
-        "gross_margin_pct": 67.0,
+        "units_sold": 3415,
+        "revenue": 15489816.0,
+        "cogs": 4951750,
+        "gross_profit": 10538066.0,
+        "gross_margin_pct": 68.0,
         "cogs_per_unit": 1450,
-        "avg_selling_price": 4401
+        "avg_selling_price": 4536
       },
       {
         "category": "Linen Pants",
-        "units_sold": 226,
-        "revenue": 893328,
-        "cogs": 311880,
-        "gross_profit": 581448,
-        "gross_margin_pct": 65.1,
+        "units_sold": 274,
+        "revenue": 1112991.0,
+        "cogs": 378120,
+        "gross_profit": 734871.0,
+        "gross_margin_pct": 66.0,
         "cogs_per_unit": 1380,
-        "avg_selling_price": 3955
+        "avg_selling_price": 4062
       },
       {
         "category": "T-Shirts (Supima)",
-        "units_sold": 351,
-        "revenue": 468650,
-        "cogs": 147420,
-        "gross_profit": 321230,
-        "gross_margin_pct": 68.5,
+        "units_sold": 633,
+        "revenue": 811950.0,
+        "cogs": 265860,
+        "gross_profit": 546090.0,
+        "gross_margin_pct": 67.3,
         "cogs_per_unit": 420,
-        "avg_selling_price": 1336
+        "avg_selling_price": 1283
       },
       {
         "category": "Oxford Shirts",
@@ -7240,13 +7313,13 @@
       },
       {
         "category": "Pants",
-        "units_sold": 32,
-        "revenue": 49100,
-        "cogs": 40960,
-        "gross_profit": 8140,
-        "gross_margin_pct": 16.6,
+        "units_sold": 40,
+        "revenue": 59300.0,
+        "cogs": 51200,
+        "gross_profit": 8100.0,
+        "gross_margin_pct": 13.7,
         "cogs_per_unit": 1280,
-        "avg_selling_price": 1532
+        "avg_selling_price": 1482
       }
     ],
     "cogs_breakdown": [
@@ -7314,9 +7387,9 @@
     "gross_sales": 24178676.400000002,
     "total_discounts": 4966238.57,
     "net_sales": 18243105.52,
-    "total_cogs": 4269110,
-    "gross_profit": 13973995.52,
-    "gross_margin": 76.6,
+    "total_cogs": 5673330,
+    "gross_profit": 16118002.43,
+    "gross_margin": 74.0,
     "cogs_breakdown": [
       {
         "category": "Linen Shirts",
@@ -7360,8 +7433,8 @@
       }
     ],
     "avg_cogs_per_unit": 1325,
-    "total_units_sold": 3223,
-    "estimated_opex": 772157.0,
+    "total_units_sold": 4395,
+    "estimated_opex": 921182.53,
     "opex_breakdown": [
       {
         "item": "Returns Handling",
@@ -7372,8 +7445,221 @@
         "amount": 547293
       }
     ],
-    "ebitda": 13201838.52,
-    "ebitda_margin": 72.4,
+    "ebitda": 15196819.9,
+    "ebitda_margin": 69.7,
     "note": "COGS calculated from actual units \u00d7 user-provided unit costs. 3223 units across 5 categories. OpEx is estimated (returns handling + platform fees)."
+  },
+  "marketing": {
+    "period": "March 2026",
+    "note": "Ad spend data available from March 2026 onwards. Historical Apr 2025\u2013Feb 2026 ad spend not yet provided.",
+    "monthly_ad_spend": [
+      {
+        "month": "2026-03",
+        "meta_pre_gst": 605822.06,
+        "meta_gst": 109047.97,
+        "meta_total": 714870.03,
+        "google_pre_gst": 83951.27,
+        "google_gst": 15111.23,
+        "google_total": 99062.5,
+        "total_pre_gst": 689773.33,
+        "total_with_gst": 813932.53
+      }
+    ],
+    "channels": [
+      {
+        "channel": "Meta (Facebook + Instagram)",
+        "pre_gst": 605822.06,
+        "with_gst": 714870.03,
+        "pct_of_total": 87.8
+      },
+      {
+        "channel": "Google Ads",
+        "pre_gst": 83951.27,
+        "with_gst": 99062.5,
+        "pct_of_total": 12.2
+      }
+    ],
+    "march_metrics": {
+      "total_ad_spend_pre_gst": 689773.33,
+      "total_ad_spend_with_gst": 813932.53,
+      "shopify_net_sales": 3548226.91,
+      "ad_to_revenue_pct": 19.4,
+      "roas": 5.14,
+      "note": "ROAS conservative \u2014 only Shopify revenue. Marketplace (Myntra/AJIO) would improve ratio."
+    },
+    "top_meta_campaigns": [
+      {
+        "campaign": "Instagram - SP_Adv_Nov25",
+        "spend": 301821.58,
+        "pct": 49.8
+      },
+      {
+        "campaign": "Instagram - TJ_LINEN",
+        "spend": 175871.42,
+        "pct": 29.0
+      },
+      {
+        "campaign": "Instagram - ASC - SUPIMA",
+        "spend": 53376.32,
+        "pct": 8.8
+      },
+      {
+        "campaign": "Instagram - ASC - DENIM",
+        "spend": 21326.16,
+        "pct": 3.5
+      },
+      {
+        "campaign": "Marketing Messages - TJ_LINEN",
+        "spend": 8328.54,
+        "pct": 1.4
+      }
+    ]
+  },
+  "data_pending": {
+    "march_2026": {
+      "myntra_orders": "PENDING \u2014 Myntra March settlement/order file",
+      "ajio_orders": "PENDING \u2014 AJIO March settlement/order file",
+      "shopify_returns": "PENDING \u2014 separate returns over time CSV not provided",
+      "supplier_invoices": "PENDING \u2014 SNTLY Studio, Forward Fashions, Chinco Silk, Varthagam invoices",
+      "shipping_invoice": "PENDING \u2014 AAJ Supply Chain March invoice"
+    },
+    "historical": {
+      "ad_spend_apr25_feb26": "PENDING \u2014 only March 2026 ad data available"
+    },
+    "period_covered": "Apr 2025 - Mar 2026 (March is Shopify-only, ad spend March-only)",
+    "as_of": "2026-05-25"
+  },
+  "cash_flow": {
+    "period": "March 2026",
+    "source": "HDFC Bank ...2576 statement",
+    "note": "Direct cash flow from bank statement. Captures actual cash movements (timing may differ from accrual P&L).",
+    "opening_balance": 8787.75,
+    "closing_balance": 214667.47,
+    "total_inflows": 3026522.7,
+    "total_outflows": 2820642.98,
+    "net_cash_flow": 205879.72,
+    "inflows_breakdown": [
+      {
+        "source": "Easebuzz (Shopify gateway)",
+        "amount": 2222113.19,
+        "count": 32
+      },
+      {
+        "source": "AAJ Supply (COD remittance)",
+        "amount": 446210.0,
+        "count": 3
+      },
+      {
+        "source": "Myntra Payouts",
+        "amount": 340136.37,
+        "count": 31
+      },
+      {
+        "source": "Other inflows",
+        "amount": 8478.0,
+        "count": 3
+      },
+      {
+        "source": "Other inflows (ICICI)",
+        "amount": 6477.46,
+        "count": 2
+      },
+      {
+        "source": "Razorpay",
+        "amount": 3107.68,
+        "count": 1
+      }
+    ],
+    "outflows_breakdown": [
+      {
+        "source": "SNTLY Studio (manufacturing)",
+        "amount": 1086645.0,
+        "count": 6
+      },
+      {
+        "source": "Meta / Facebook Ads",
+        "amount": 495746.0,
+        "count": 2
+      },
+      {
+        "source": "Forward Fashions (supplier)",
+        "amount": 290798.0,
+        "count": 3
+      },
+      {
+        "source": "Team / Owner withdrawals",
+        "amount": 185318.0,
+        "count": 7
+      },
+      {
+        "source": "Varthagam International (supplier)",
+        "amount": 174425.0,
+        "count": 2
+      },
+      {
+        "source": "GST payment",
+        "amount": 164036.0,
+        "count": 1
+      },
+      {
+        "source": "Other UPI/NEFT outflows",
+        "amount": 148522.0,
+        "count": 20
+      },
+      {
+        "source": "Chinco Silk Mills (supplier)",
+        "amount": 120000.0,
+        "count": 1
+      },
+      {
+        "source": "Google Ads",
+        "amount": 102000.0,
+        "count": 5
+      },
+      {
+        "source": "Bajaj Finance (loan EMI)",
+        "amount": 50000.0,
+        "count": 1
+      },
+      {
+        "source": "Shopify subscription",
+        "amount": 2149.98,
+        "count": 1
+      },
+      {
+        "source": "Other outflows",
+        "amount": 1003.0,
+        "count": 1
+      }
+    ],
+    "key_observations": [
+      "Easebuzz inflows \u20b92,222,113 = Shopify prepaid gateway revenue",
+      "Myntra payouts \u20b9340,136 = marketplace revenue (NOT in dashboard yet)",
+      "AAJ Supply Chain \u20b9446,210 = COD remittance",
+      "Meta payment \u20b9495,746 = likely Feb 2026 invoice (March's \u20b97.15L due in April)",
+      "Google Ads \u20b9102,000 = prepaid auto-debit covering March's \u20b999K invoice",
+      "SNTLY Studio (manufacturing) \u20b91,086,645 = production payments",
+      "GST paid \u20b9164,036 in March"
+    ],
+    "reconciliation_gaps": {
+      "shopify_revenue_vs_collections": {
+        "shopify_total": 3687548.71,
+        "bank_collections_easebuzz_cod": 2668323.19,
+        "gap": 1019225.52,
+        "explanation": "Gap is normal timing \u2014 Easebuzz typically settles T+2/T+3, COD remittance is delayed by AAJ. ~\u20b910L of March sales would settle in early April."
+      },
+      "meta_ad_invoice_vs_payment": {
+        "march_invoice": 714870.03,
+        "march_payment": 495746.0,
+        "gap": 219124.03,
+        "explanation": "Meta is NET 30. The \u20b94.96L payment is for the Feb invoice. March invoice (\u20b97.15L) due in April."
+      },
+      "google_ads_invoice_vs_payment": {
+        "march_invoice": 99062.5,
+        "march_payment": 102000.0,
+        "difference": 2937.5,
+        "explanation": "Google Ads is prepaid (auto-debit). \u20b92,937 acts as advance credit going into April."
+      }
+    }
   }
 }
