@@ -6423,7 +6423,7 @@
   "orders": {
     "summary": {
       "total_orders_in_exports": 3200,
-      "export_coverage": "Apr 2025 \u2013 Feb 2026",
+      "export_coverage": "Apr 2025 \u2013 Mar 2026",
       "total_gmv": 6828680,
       "avg_order_value": 3438,
       "paid_orders": 1503,
@@ -6830,7 +6830,7 @@
       }
     ]
   },
-  "order_export_coverage": "Apr 2025 \u2013 Feb 2026 (3,200 unique orders from 64 export files)",
+  "order_export_coverage": "Apr 2025 \u2013 Mar 2026 (3,882 unique orders from 65 export files)",
   "taxes": {
     "total_sales_tax": 332850.91,
     "by_state": [
