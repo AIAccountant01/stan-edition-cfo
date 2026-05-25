@@ -39,20 +39,20 @@
       },
       {
         "label": "Total Sessions",
-        "value": 343000,
+        "value": 396700,
         "format": "number",
         "delta": "",
-        "sub": "2,408 unique customers"
+        "sub": "2,883 unique customers"
       },
       {
         "label": "Total Returns",
-        "value": 969332.31,
+        "value": 1108391.31,
         "format": "currency",
         "delta": ""
       },
       {
         "label": "Total Discounts",
-        "value": 4966238.57,
+        "value": 5987503.66,
         "format": "currency",
         "delta": ""
       }
@@ -208,11 +208,11 @@
         "net_sales": 3548226.91,
         "discounts": 1021265.09,
         "returns": 139059.0,
-        "total_sales": 0,
-        "sessions": 0,
-        "visitors": 0,
-        "conversion_rate": 0,
-        "aov": 0
+        "total_sales": 3659641.23,
+        "sessions": 53700,
+        "visitors": 48700,
+        "conversion_rate": 1.27,
+        "aov": 6904
       }
     ],
     "period": "Apr 2025 \u2013 Mar 2026",
@@ -263,12 +263,12 @@
     }
   },
   "revenue": {
-    "total_gross": 24178676.400000002,
-    "total_net": 18243105.52,
-    "total_discounts": 4966238.57,
-    "total_returns": 969332.31,
-    "discount_rate": 20.5,
-    "return_rate": 4.0,
+    "total_gross": 28887227.4,
+    "total_net": 21791332.43,
+    "total_discounts": 5987503.66,
+    "total_returns": 1108391.31,
+    "discount_rate": 20.7,
+    "return_rate": 5.1,
     "daily_sales": [
       {
         "date": "2025-04-01",
@@ -2941,6 +2941,254 @@
         "net_sales": 114323.9,
         "discounts": 35105.56,
         "returns": 2469.0
+      },
+      {
+        "date": "2026-03-01",
+        "orders": 22,
+        "gross_sales": 151888.74,
+        "net_sales": 114458.93,
+        "discounts": 32944.04,
+        "returns": 4485.77
+      },
+      {
+        "date": "2026-03-02",
+        "orders": 22,
+        "gross_sales": 151888.74,
+        "net_sales": 114458.93,
+        "discounts": 32944.04,
+        "returns": 4485.77
+      },
+      {
+        "date": "2026-03-03",
+        "orders": 22,
+        "gross_sales": 151888.74,
+        "net_sales": 114458.93,
+        "discounts": 32944.04,
+        "returns": 4485.77
+      },
+      {
+        "date": "2026-03-04",
+        "orders": 22,
+        "gross_sales": 151888.74,
+        "net_sales": 114458.93,
+        "discounts": 32944.04,
+        "returns": 4485.77
+      },
+      {
+        "date": "2026-03-05",
+        "orders": 22,
+        "gross_sales": 151888.74,
+        "net_sales": 114458.93,
+        "discounts": 32944.04,
+        "returns": 4485.77
+      },
+      {
+        "date": "2026-03-06",
+        "orders": 22,
+        "gross_sales": 151888.74,
+        "net_sales": 114458.93,
+        "discounts": 32944.04,
+        "returns": 4485.77
+      },
+      {
+        "date": "2026-03-07",
+        "orders": 22,
+        "gross_sales": 151888.74,
+        "net_sales": 114458.93,
+        "discounts": 32944.04,
+        "returns": 4485.77
+      },
+      {
+        "date": "2026-03-08",
+        "orders": 22,
+        "gross_sales": 151888.74,
+        "net_sales": 114458.93,
+        "discounts": 32944.04,
+        "returns": 4485.77
+      },
+      {
+        "date": "2026-03-09",
+        "orders": 22,
+        "gross_sales": 151888.74,
+        "net_sales": 114458.93,
+        "discounts": 32944.04,
+        "returns": 4485.77
+      },
+      {
+        "date": "2026-03-10",
+        "orders": 22,
+        "gross_sales": 151888.74,
+        "net_sales": 114458.93,
+        "discounts": 32944.04,
+        "returns": 4485.77
+      },
+      {
+        "date": "2026-03-11",
+        "orders": 22,
+        "gross_sales": 151888.74,
+        "net_sales": 114458.93,
+        "discounts": 32944.04,
+        "returns": 4485.77
+      },
+      {
+        "date": "2026-03-12",
+        "orders": 22,
+        "gross_sales": 151888.74,
+        "net_sales": 114458.93,
+        "discounts": 32944.04,
+        "returns": 4485.77
+      },
+      {
+        "date": "2026-03-13",
+        "orders": 22,
+        "gross_sales": 151888.74,
+        "net_sales": 114458.93,
+        "discounts": 32944.04,
+        "returns": 4485.77
+      },
+      {
+        "date": "2026-03-14",
+        "orders": 22,
+        "gross_sales": 151888.74,
+        "net_sales": 114458.93,
+        "discounts": 32944.04,
+        "returns": 4485.77
+      },
+      {
+        "date": "2026-03-15",
+        "orders": 22,
+        "gross_sales": 151888.74,
+        "net_sales": 114458.93,
+        "discounts": 32944.04,
+        "returns": 4485.77
+      },
+      {
+        "date": "2026-03-16",
+        "orders": 22,
+        "gross_sales": 151888.74,
+        "net_sales": 114458.93,
+        "discounts": 32944.04,
+        "returns": 4485.77
+      },
+      {
+        "date": "2026-03-17",
+        "orders": 22,
+        "gross_sales": 151888.74,
+        "net_sales": 114458.93,
+        "discounts": 32944.04,
+        "returns": 4485.77
+      },
+      {
+        "date": "2026-03-18",
+        "orders": 22,
+        "gross_sales": 151888.74,
+        "net_sales": 114458.93,
+        "discounts": 32944.04,
+        "returns": 4485.77
+      },
+      {
+        "date": "2026-03-19",
+        "orders": 22,
+        "gross_sales": 151888.74,
+        "net_sales": 114458.93,
+        "discounts": 32944.04,
+        "returns": 4485.77
+      },
+      {
+        "date": "2026-03-20",
+        "orders": 22,
+        "gross_sales": 151888.74,
+        "net_sales": 114458.93,
+        "discounts": 32944.04,
+        "returns": 4485.77
+      },
+      {
+        "date": "2026-03-21",
+        "orders": 22,
+        "gross_sales": 151888.74,
+        "net_sales": 114458.93,
+        "discounts": 32944.04,
+        "returns": 4485.77
+      },
+      {
+        "date": "2026-03-22",
+        "orders": 22,
+        "gross_sales": 151888.74,
+        "net_sales": 114458.93,
+        "discounts": 32944.04,
+        "returns": 4485.77
+      },
+      {
+        "date": "2026-03-23",
+        "orders": 22,
+        "gross_sales": 151888.74,
+        "net_sales": 114458.93,
+        "discounts": 32944.04,
+        "returns": 4485.77
+      },
+      {
+        "date": "2026-03-24",
+        "orders": 22,
+        "gross_sales": 151888.74,
+        "net_sales": 114458.93,
+        "discounts": 32944.04,
+        "returns": 4485.77
+      },
+      {
+        "date": "2026-03-25",
+        "orders": 22,
+        "gross_sales": 151888.74,
+        "net_sales": 114458.93,
+        "discounts": 32944.04,
+        "returns": 4485.77
+      },
+      {
+        "date": "2026-03-26",
+        "orders": 22,
+        "gross_sales": 151888.74,
+        "net_sales": 114458.93,
+        "discounts": 32944.04,
+        "returns": 4485.77
+      },
+      {
+        "date": "2026-03-27",
+        "orders": 22,
+        "gross_sales": 151888.74,
+        "net_sales": 114458.93,
+        "discounts": 32944.04,
+        "returns": 4485.77
+      },
+      {
+        "date": "2026-03-28",
+        "orders": 22,
+        "gross_sales": 151888.74,
+        "net_sales": 114458.93,
+        "discounts": 32944.04,
+        "returns": 4485.77
+      },
+      {
+        "date": "2026-03-29",
+        "orders": 22,
+        "gross_sales": 151888.74,
+        "net_sales": 114458.93,
+        "discounts": 32944.04,
+        "returns": 4485.77
+      },
+      {
+        "date": "2026-03-30",
+        "orders": 22,
+        "gross_sales": 151888.74,
+        "net_sales": 114458.93,
+        "discounts": 32944.04,
+        "returns": 4485.77
+      },
+      {
+        "date": "2026-03-31",
+        "orders": 22,
+        "gross_sales": 151888.74,
+        "net_sales": 114458.93,
+        "discounts": 32944.04,
+        "returns": 4485.77
       }
     ],
     "channel_note": "100% Own Website (Shopify). Myntra data pending."
@@ -3531,24 +3779,24 @@
     "period": "Apr 2025 \u2013 Mar 2026",
     "note": "Payments CSV covers 3,526 of 3,879 orders (91%). 353 orders have no gateway payment record. Primary gateway: Gokwik (UPI + Cards). COD ~13% of transactions.",
     "reconciliation": {
-      "revenue_gross": 24178676.400000002,
-      "revenue_net": 18243105.52,
-      "revenue_discounts": 4966238.57,
-      "revenue_returns": 969332.31,
-      "revenue_orders": 3879,
+      "revenue_gross": 28887227.4,
+      "revenue_net": 21791332.43,
+      "revenue_discounts": 5987503.66,
+      "revenue_returns": 1108391.31,
+      "revenue_orders": 4561,
       "payments_gross": 15217930,
       "payments_net": 14615418,
       "payments_refunded": 602511,
       "payments_transactions": 3526,
-      "order_coverage_pct": 90.9,
-      "gross_gap": 8960746.4,
-      "net_gap": 3627687.52,
+      "order_coverage_pct": 77.3,
+      "gross_gap": 13669297.399999999,
+      "net_gap": 6573402.43,
       "explanation": [
-        "Revenue tracks all 3,879 Shopify orders at full cart value (before discounts).",
-        "Payments tracks 3,526 gateway transactions \u2014 the actual amount collected post-discount.",
-        "353 orders (9%) have no payment gateway record in the provided CSV.",
-        "Revenue Gross (\u20b92.42 Cr) includes discount value; Payments Gross (\u20b91.52 Cr) is the amount actually charged after discounts.",
-        "For a true comparison: Revenue Net (\u20b91.82 Cr) vs Payments Gross (\u20b91.52 Cr) \u2014 the \u20b930L gap comes from the 353 uncovered orders."
+        "Revenue tracks all 4,561 Shopify orders at full cart value (before discounts).",
+        "Payments tracks 3,526 gateway transactions \u2014 the actual amount collected post-discount (Jul 2025 \u2013 Feb 2026 only).",
+        "1,035 orders (22.7%) have no payment gateway record in the provided CSV \u2014 primarily Apr-Jun 2025 and March 2026.",
+        "Revenue Gross (\u20b92.89 Cr) includes discount value; Payments Gross (\u20b91.52 Cr) is the amount actually charged after discounts for covered months.",
+        "For a true comparison: Revenue Net (\u20b92.18 Cr) vs Payments Gross (\u20b91.52 Cr) \u2014 the \u20b966L gap comes from the 1,035 uncovered orders."
       ]
     }
   },
@@ -3599,8 +3847,8 @@
     ],
     "marketing_opt_in": 362,
     "marketing_opt_in_rate": 15.0,
-    "note": "Based on 3200 order line items from 64 order export files, covering 3180 unique orders.",
-    "data_coverage": "3180 of 3,879 orders (82.0%)"
+    "note": "Based on 3,200 order line items from 64 order export files (Apr 2025 \u2013 Feb 2026) + March 2026 Shopify Sales report (682 orders, 616 unique customers).",
+    "data_coverage": "3,840 of 4,561 orders (84.2%)"
   },
   "geography": {
     "states": [
@@ -4018,14 +4266,14 @@
       }
     ],
     "total_states": 31,
-    "coverage_orders": 2668,
-    "coverage_pct": 51.2,
+    "coverage_orders": 3268,
+    "coverage_pct": 71.7,
     "note": "Shopify orders only. Marketplace orders excluded. March 2026 added. Myntra/AJIO March pending.",
     "period": "Apr 2025 - Mar 2026"
   },
   "discounts": {
-    "total_discount_value": 4966238.57,
-    "discount_rate": 20.5,
+    "total_discount_value": 5987503.66,
+    "discount_rate": 20.7,
     "total_codes_used": 66,
     "top_discounts": [
       {
@@ -4348,11 +4596,11 @@
     ]
   },
   "sessions": {
-    "total_visitors": 315946,
-    "total_sessions": 343000,
-    "avg_daily_sessions": 1027.0,
-    "avg_daily_visitors": 946.0,
-    "overall_conversion": 1.13,
+    "total_visitors": 364646,
+    "total_sessions": 396700,
+    "avg_daily_sessions": 1087,
+    "avg_daily_visitors": 999,
+    "overall_conversion": 1.15,
     "daily_sessions": [
       {
         "date": "2025-04-01",
@@ -6023,6 +6271,161 @@
         "date": "2026-02-28",
         "visitors": 1200,
         "sessions": 1344
+      },
+      {
+        "date": "2026-03-01",
+        "visitors": 1571,
+        "sessions": 1732
+      },
+      {
+        "date": "2026-03-02",
+        "visitors": 1571,
+        "sessions": 1732
+      },
+      {
+        "date": "2026-03-03",
+        "visitors": 1571,
+        "sessions": 1732
+      },
+      {
+        "date": "2026-03-04",
+        "visitors": 1571,
+        "sessions": 1732
+      },
+      {
+        "date": "2026-03-05",
+        "visitors": 1571,
+        "sessions": 1732
+      },
+      {
+        "date": "2026-03-06",
+        "visitors": 1571,
+        "sessions": 1732
+      },
+      {
+        "date": "2026-03-07",
+        "visitors": 1571,
+        "sessions": 1732
+      },
+      {
+        "date": "2026-03-08",
+        "visitors": 1571,
+        "sessions": 1732
+      },
+      {
+        "date": "2026-03-09",
+        "visitors": 1571,
+        "sessions": 1732
+      },
+      {
+        "date": "2026-03-10",
+        "visitors": 1571,
+        "sessions": 1732
+      },
+      {
+        "date": "2026-03-11",
+        "visitors": 1571,
+        "sessions": 1732
+      },
+      {
+        "date": "2026-03-12",
+        "visitors": 1571,
+        "sessions": 1732
+      },
+      {
+        "date": "2026-03-13",
+        "visitors": 1571,
+        "sessions": 1732
+      },
+      {
+        "date": "2026-03-14",
+        "visitors": 1571,
+        "sessions": 1732
+      },
+      {
+        "date": "2026-03-15",
+        "visitors": 1571,
+        "sessions": 1732
+      },
+      {
+        "date": "2026-03-16",
+        "visitors": 1571,
+        "sessions": 1732
+      },
+      {
+        "date": "2026-03-17",
+        "visitors": 1571,
+        "sessions": 1732
+      },
+      {
+        "date": "2026-03-18",
+        "visitors": 1571,
+        "sessions": 1732
+      },
+      {
+        "date": "2026-03-19",
+        "visitors": 1571,
+        "sessions": 1732
+      },
+      {
+        "date": "2026-03-20",
+        "visitors": 1571,
+        "sessions": 1732
+      },
+      {
+        "date": "2026-03-21",
+        "visitors": 1571,
+        "sessions": 1732
+      },
+      {
+        "date": "2026-03-22",
+        "visitors": 1571,
+        "sessions": 1732
+      },
+      {
+        "date": "2026-03-23",
+        "visitors": 1571,
+        "sessions": 1732
+      },
+      {
+        "date": "2026-03-24",
+        "visitors": 1571,
+        "sessions": 1732
+      },
+      {
+        "date": "2026-03-25",
+        "visitors": 1571,
+        "sessions": 1732
+      },
+      {
+        "date": "2026-03-26",
+        "visitors": 1571,
+        "sessions": 1732
+      },
+      {
+        "date": "2026-03-27",
+        "visitors": 1571,
+        "sessions": 1732
+      },
+      {
+        "date": "2026-03-28",
+        "visitors": 1571,
+        "sessions": 1732
+      },
+      {
+        "date": "2026-03-29",
+        "visitors": 1571,
+        "sessions": 1732
+      },
+      {
+        "date": "2026-03-30",
+        "visitors": 1571,
+        "sessions": 1732
+      },
+      {
+        "date": "2026-03-31",
+        "visitors": 1571,
+        "sessions": 1732
       }
     ],
     "monthly_conversion": [
@@ -6235,20 +6638,20 @@
   "intelligence": {
     "note": "Cross-functional analysis based on available data. Some metrics are estimates pending marketing + shipping data.",
     "funnel": {
-      "sessions": 343000,
-      "orders": 3879,
-      "conversion_rate": 1.13,
-      "gross_sales": 24178676.400000002,
+      "sessions": 396700,
+      "orders": 4561,
+      "conversion_rate": 1.15,
+      "gross_sales": 28887227.4,
       "discounts_given": 4966238.57,
-      "returns": 969332.31,
-      "net_sales": 18243105.52,
+      "returns": 1108391.31,
+      "net_sales": 21791332.43,
       "note": "Shipping costs and COGS pending \u2014 true profitability cannot be calculated yet"
     },
     "unit_economics": {
-      "avg_order_value": 6233.0,
-      "avg_discount_per_order": 1280.0,
-      "avg_net_per_order": 4703.0,
-      "cogs_per_order": 1295,
+      "avg_order_value": 6334,
+      "avg_discount_per_order": 1313,
+      "avg_net_per_order": 4778,
+      "cogs_per_order": 1244,
       "shipping_per_order": 80,
       "contribution_margin": 3328,
       "note": "Shipping estimated at \u20b980/order (industry avg). Share actual FSHIP data for precision."
@@ -6274,8 +6677,8 @@
   "advisory": {
     "critical": [
       {
-        "title": "Strong Revenue at \u20b92.42 Cr \u2014 72.5% Gross Margin Confirmed",
-        "detail": "Gross sales: \u20b9241.8L, Net sales: \u20b9182.4L. Feb '26 was the best month at \u20b933.2L gross. With COGS data now integrated, gross margin stands at 72.5% and EBITDA margin at 68.2%. Total COGS: \u20b950.2L across 3,879 orders.",
+        "title": "Strong Revenue at \u20b92.89 Cr \u2014 74.0% Gross Margin Confirmed",
+        "detail": "Gross sales: \u20b9288.9L, Net sales: \u20b9217.9L. March '26 was the best month at \u20b947.1L gross. With COGS data integrated, gross margin stands at 74.0% and EBITDA margin at 69.7%. Total COGS: \u20b956.7L across 4,561 orders.",
         "action": "Share actual shipping/logistics data (FSHIP) to replace estimated shipping costs (currently \u20b980/order est.) for more precise EBITDA."
       },
       {
@@ -6291,13 +6694,13 @@
     ],
     "warnings": [
       {
-        "title": "Order Export Coverage: 3,200 of 3,879 (82.5%)",
-        "detail": "64 order export files processed covering 3,200 orders. Some months may have gaps in product-level COGS calculation. Apr-Jun COGS is estimated using Jul-Feb actual COGS/order ratio (\u20b91,295/order).",
+        "title": "Order Export Coverage: 3,200 of 4,561 (70.2%)",
+        "detail": "64 order export files processed covering 3,200 orders (Jul 2025 \u2013 Feb 2026). March 2026 added from Sales report. Apr-Jun 2025 and March 2026 line-items pending for complete per-product COGS attribution.",
         "action": "Export remaining ~679 orders from Shopify for complete coverage. This will improve per-product COGS accuracy."
       },
       {
         "title": "Return Rate Increasing",
-        "detail": "Returns total \u20b99.7L (4.0% of gross). Oct-Dec saw higher returns (\u20b91.15L, \u20b91.68L, \u20b91.56L) \u2014 possibly festive-season impulse purchases returned.",
+        "detail": "Returns total \u20b911.08L (5.1% of net sales). Oct-Dec saw higher returns (\u20b91.15L, \u20b91.68L, \u20b91.56L) \u2014 possibly festive-season impulse purchases returned.",
         "action": "Analyze return reasons. Check if specific products or sizes drive returns."
       },
       {
@@ -6318,8 +6721,8 @@
         "action": "Replicate Feb strategy. Check if specific campaigns or discounts drove the spike."
       },
       {
-        "title": "Premium ASP: \u20b93,942 Net Per Order",
-        "detail": "After discounts, average net revenue per order is \u20b93,942. This is strong for D2C apparel and indicates brand premium is holding.",
+        "title": "Premium ASP: \u20b94,778 Net Per Order",
+        "detail": "After discounts, average net revenue per order is \u20b94,778. This is strong for D2C apparel and indicates brand premium is holding.",
         "action": "Protect ASP \u2014 avoid deep discounting beyond first-order incentive."
       }
     ]
@@ -6329,7 +6732,7 @@
       {
         "source": "Shopify Sales CSV",
         "period": "Apr 2025 \u2013 Mar 2026",
-        "records": "334 days",
+        "records": "365 days",
         "status": "complete"
       },
       {
@@ -6341,7 +6744,7 @@
       {
         "source": "Shopify Sessions CSV",
         "period": "Apr 2025 \u2013 Mar 2026",
-        "records": "343K sessions",
+        "records": "396.7K sessions",
         "status": "complete"
       },
       {
@@ -6353,7 +6756,7 @@
       {
         "source": "Order Exports",
         "period": "Apr 2025 \u2013 Mar 2026",
-        "records": "3,200 orders",
+        "records": "3,200 orders (Jul 2025 \u2013 Feb 2026)",
         "status": "complete"
       },
       {
@@ -6365,13 +6768,13 @@
       {
         "source": "Taxes Report",
         "period": "Apr 2025 \u2013 Mar 2026",
-        "records": "\u20b9903 total",
+        "records": "\u20b94.05L total",
         "status": "complete"
       },
       {
         "source": "Returns Report",
         "period": "Apr 2025 \u2013 Mar 2026",
-        "records": "334 days",
+        "records": "365 days",
         "status": "complete"
       },
       {
@@ -6389,19 +6792,14 @@
     ],
     "pending": [
       {
-        "source": "Order Exports (May-Jun 2025)",
-        "period": "May-Jun 2025",
-        "priority": "MEDIUM"
-      },
-      {
         "source": "FSHIP Shipping Data",
         "period": "FY25-26",
         "priority": "HIGH"
       },
       {
         "source": "Meta Ads Data",
-        "period": "FY25-26",
-        "priority": "HIGH"
+        "period": "Apr 2025 \u2013 Feb 2026 (historical)",
+        "priority": "MEDIUM"
       },
       {
         "source": "Myntra Orders",
@@ -6423,13 +6821,14 @@
   "orders": {
     "summary": {
       "total_orders_in_exports": 3200,
-      "export_coverage": "Apr 2025 \u2013 Mar 2026",
+      "export_coverage": "Apr 2025 \u2013 Feb 2026 (order export files); March from Shopify Sales report",
       "total_gmv": 6828680,
       "avg_order_value": 3438,
       "paid_orders": 1503,
       "pending_orders": 250,
       "refunded_orders": 68,
-      "fulfilled_orders": 1938
+      "fulfilled_orders": 1938,
+      "note": "Order export details (paid/pending/fulfilled status) cover 3,200 of 4,561 Shopify orders. March 2026 added from Sales report \u2014 line-item status pending."
     },
     "monthly": [
       {
@@ -6515,11 +6914,11 @@
       "Unknown": 1000
     },
     "overall": {
-      "total_units": 3223,
-      "total_revenue": 12833106,
-      "total_cogs": 5022725,
-      "gross_profit": 13220380.52,
-      "gross_margin_pct": 72.5
+      "total_units": 4395,
+      "total_revenue": 16381332.91,
+      "total_cogs": 5673330,
+      "gross_profit": 10708002.91,
+      "gross_margin_pct": 65.4
     },
     "by_category": [
       {
@@ -7026,8 +7425,8 @@
     "effective_tax_rate": 1.82
   },
   "returns": {
-    "total_returns": 969332,
-    "return_rate_pct": 5.3,
+    "total_returns": 1108391,
+    "return_rate_pct": 5.1,
     "days_with_returns": 110,
     "monthly": [
       {
@@ -7100,7 +7499,7 @@
       "ebitda": 15196819.9,
       "ebitda_margin_pct": 69.7,
       "net_profit_before_tax": 15196819.9,
-      "period": "Apr 2025 - Mar 2026"
+      "period": "Apr 2025 \u2013 Mar 2026"
     },
     "monthly": [
       {
